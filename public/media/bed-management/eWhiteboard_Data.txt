@@ -1,0 +1,904 @@
+Mr Giovanni PRINZI||Glass|06 Jan - 08:55||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Hoeller3 TEST||General Medicine|09 Dec - 16:46|22 Dec|||Any|No|07 Jan|06 Jan - 11:19|Received referral|Stroke|30 Dec - 13:26|05 Jan - 11:20|05 Jan - 11:19|||||||||||||||In progress|||05 Jan - 11:21|04 Dec - 11:19||||||||Further information required|30 Dec - 13:26|||04 Dec - 11:19||Sent referral|30 Dec - 13:27|||30 Dec - 13:25|||||Test Ward DO NOT Use          |North Swindon Practice|NHS Swindon Ccg|Home||||||
+Mr Ian FRIDLINGTON||Tasker|25 Nov - 00:36||||||||||||||||||||||||||||||||||||||||||||||||||||||Immediate Theatre|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Ian Mark RAYNER||Satish|07 Jan - 11:30|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr John Barry LANE||Respiratory |05 Jan - 13:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Sparcells Surgery|NHS Swindon Ccg|||||||
+Mr John D STEVENSON||Glass|07 Jan - 09:55||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr John STURGEON||Lawrence|07 Jan - 11:10|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mr Jose COLACO||Hanson|06 Jan - 10:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Keith LESTER||Alexander|06 Jan - 09:10||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Leonard M RIVERS||McCrea|02 Jan - 13:30|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DISCHARGE LOUNGE|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Leonard Patrick DAVIES||Coombs|02 Jan - 19:53||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Leslie Ian RICHARDSON||Smith|06 Jan - 09:05||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Buckley Medical Centre|National Commissioning Hub 1|||||||
+Mr Lourenco Manuel Xavi PALHA||Hegde|07 Jan - 08:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Marc TAYLOR||Gupta|07 Jan - 11:50|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Mark Anthony MANDEL||Gunasekera|04 Jan - 15:02|07 Jan|||Dove Unit|Yes|||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mr Mark WENBAN||Singh-Ranger|07 Jan - 09:16||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr Michael J HANRAHAN||Alexander|07 Jan - 08:55||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Michael PRICE||Shetty|06 Jan - 22:27||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Miguel RAPAGAO||Singh-Ranger|07 Jan - 07:58||||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Patrick TRUEMAN||Ahmed|05 Jan - 16:55||||RESP|Yes|||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Paul Galloway TAYLOR||Rigby|07 Jan - 12:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mr Peter Andrew KEMP||Glass|06 Jan - 16:23||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr Peter BECKHELLING||Beck|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Philip MACNAMARA||Hollinghurst|07 Jan - 11:30|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Spa Medical Centre|NHS Wiltshire Ccg|||||||
+Mr Richard WATKINS||Pegden|08 Dec - 07:32||||||||||||||||||||||||||||||||||||||||||||||||||||||RENAL UNIT |Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr Robert Alan BRYCE||Cichero|04 Jan - 14:11||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr Robert MARKLOVE||Coombs|02 Jan - 18:50|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Robert MUIR||Onyirioha|04 Jan - 11:17|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Lodge Surgery|NHS Wiltshire Ccg|||||||
+Mr Robert PREVOST||Hegde|06 Jan - 08:40||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Rodney M SCOTT||Hegde|07 Jan - 08:45||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Simon GOULD||Singh-Ranger|07 Jan - 10:49||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Mr Slawomir NIERUCHALSKI||Alexander|05 Jan - 09:35||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Stanley T BARNES||Stanton|23 Dec - 01:33|11 Jan|31 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Sylwester OSTROWSKI||McCrea|05 Jan - 22:40|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Test DAVEY||Hughes|01 Dec - 08:05|18 Dec|||ACU|Yes|05 Jan|05 Jan - 10:31|In progress|Stroke|05 Jan - 10:32|06 Jan - 08:25|06 Jan - 13:18|06 Jan - 13:20|16 Dec - 08:53|Sent referral|06 Jan - 13:20|||06 Jan - 13:18||Sent referral|05 Jan - 10:32|||05 Jan - 10:31||Sent referral|05 Jan - 10:32|||05 Jan - 10:31||Sent referral|05 Jan - 10:32||16 Dec - 08:45|05 Jan - 10:31||Sent referral|05 Jan - 10:32|||05 Jan - 10:31||Sent referral|05 Jan - 10:32||16 Dec - 08:52|05 Jan - 10:31||Yes|Yes|Yes|Test Ward DO NOT Use          |Sparcells Surgery|NHS Swindon Ccg|Teal||||||
+Mr Thomas D BOWDEN||Mukherjee|30 Dec - 22:06|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DISCHARGE LOUNGE|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Tony HONOUR||Hegde|06 Jan - 07:40||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr William JOHNSTON||Ahmed|06 Jan - 14:33||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mrs Amarjit Kaur TAR||Hollinghurst|07 Jan - 07:00|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mrs Charlotte CUNDY||Alexander|05 Jan - 08:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mrs Christine LUDLOW||Cullimore|06 Jan - 07:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Claire SMITH||Allen|06 Jan - 12:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mrs Dawn LEINSTER||Toneva|07 Jan - 07:10|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Old Town Surgery|NHS Swindon Ccg|||||||
+Mrs Dawn P RICHARDS||Brooks|07 Jan - 07:00|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Deborah Jane CROOK||Joseph|07 Jan - 09:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Dorothy POLLICOTT||Lee|08 Dec - 17:27|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||PROSPECT HOSPICE (GWH BEDS)|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Dorothy STONE||Lawrence|29 Dec - 16:58|05 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Giovanna ITALIANO||Kerry|12 Dec - 20:00||||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Great Western Surgery|NHS Swindon Ccg|||||||
+Mrs Helga Michele WHITELEY||Nag|07 Jan - 06:02||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Hyacinth IRVING||Lee|20 Dec - 11:38|29 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||PROSPECT HOSPICE (GWH BEDS)|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jacqueline Denise MCCARTHY||Alexander|07 Jan - 07:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Jadwiga Z GRABIANSKA||Chalstrey|05 Jan - 21:42||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Jaqueline Lundie GOURLAY||Ullah|24 Dec - 20:09|31 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Jean Dorothy HARE||Hegde|07 Jan - 08:25||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jillian Rose LANCASHIRE||Juniper|06 Jan - 07:40||||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Janine SAGE||Hanson|07 Jan - 07:55||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Market Lavington Surgery|NHS Wiltshire Ccg|||||||
+Mrs Joyce M HILL||Hegde|07 Jan - 10:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Julie Margaret TINKLER||Glass|06 Jan - 12:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs June TANNER||Thorn|05 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Kristy TAYLOR||Hughes|07 Jan - 00:06||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Linda Anne MACFARLANE||Singh-Ranger|07 Jan - 10:48||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Avenue Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Linda BARBER||Alexander|06 Jan - 13:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mrs Loraine Evelyn PAGE||McCrea|31 Dec - 13:17|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mrs Maisie BLANCHARD||Shetty|05 Jan - 10:30|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Margaret COURTNEY||Thorn|05 Jan - 12:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Maria Lesley LOWE||Singh-Ranger|07 Jan - 08:23||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Mary ATKINS||Glass|07 Jan - 07:10|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr David MORLEY|02|White|30 Nov - 22:59|07 Jan|14 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Edmund STRONG|02|ChippenhamNurseLead|06 Jan - 09:30|23 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Box Surgery|NHS Wiltshire Ccg|||||||
+Mr Edward Page GEARY|02|Claridge|02 Jan - 21:16|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Hugh B SAYCE|02|Coombs|01 Jan - 12:46|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr Graham SEDDON|02|Yiin|31 Dec - 17:42|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mr Joao Francisco FERNANDES|02|Ramadurai|26 Dec - 14:17||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Kenneth G HAINES|02|Barnes|29 Dec - 00:11|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mr Kenneth GRIFFITHS|02|Stanton|26 Dec - 09:42|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Matthew ROWLEY|02|WarminsterNurseLead|09 Jun - 16:00||25 Jul|F10 Housing needs/homeless|||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Salisbury Medical Practice|NHS Wiltshire Ccg|||||||
+Mr Robert GOUGH|02|Anwer|16 Dec - 18:42|31 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr Simroy HARVEY|02|ChippenhamNurseLead|22 Dec - 18:45|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mr Thomas JARMAN|02|Bhattacharya|19 Dec - 05:25|18 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Steven PURSEY|02|Deo|03 Jan - 19:34|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|The Freshbrook Surgery|Ridge Green Medical Practice|||||||
+Mrs Dorothy SLY|02|Ipe|23 Dec - 15:00||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Edna Mary THORPE|02|Watson|19 Dec - 11:47|11 Jan|24 Dec|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Enid June RAWLINGS|02|Ramadurai|07 Oct - 18:00||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Crossroads Surgery|Abbey Meads Medical Pract|||||||
+Mrs Gertrude EDWARDS|02|Coombs|01 Jan - 20:04|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Lechlade Medical Centre|NHS Gloucestershire Ccg|||||||
+Mrs Jean GUNNING|02|Turner|06 Jan - 20:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jean M ROOTES|02|Ramadurai|29 Dec - 11:50||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Kvetuse BIELSKI|02|Shaw|21 Dec - 18:45|04 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mrs Maria Ann SPICE|02|Hyde|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mrs Myrna PIPER|02|WarminsterNurseLead|24 Dec - 15:30||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Lovemead Group Practice|NHS Wiltshire Ccg|||||||
+Mrs Maureen BAILEY|02|Gunasekera|06 Jan - 19:27|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Nellie PENFOLD|02|Turner|29 Dec - 20:38||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Patricia W SIDDALL|02|Turner|24 Dec - 16:48||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Vera CRANFIELD|02|ChippenhamNurseLead|06 Jan - 15:45|23 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Lovemead Group Practice|NHS Wiltshire Ccg|||||||
+Mrs Susan JOHNSTON|02|Ahmed|06 Jan - 20:32|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Ms Diana JONES|02|Finch|30 Dec - 12:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Market Lavington Surgery|NHS Wiltshire Ccg|||||||
+Ms Doreen DEVEN|02|ChippenhamNurseLead|09 Dec - 21:30|26 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Lodge Surgery|NHS Wiltshire Ccg|||||||
+Ms Eileen WING|02|WarminsterNurseLead|04 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Lovemead Group Practice|NHS Wiltshire Ccg|||||||
+Ms Gurmeet SAHOTA|02|Cullimore|06 Jan - 07:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Eldene Health Centre|NHS Swindon Ccg|||||||
+Miss Diane CULLEN|07|Ahmed|05 Jan - 20:24|11 Jan|||SSU|No|06 Jan|||||||||||||||||||||||||||||||||||||||||||||No|No|No|NEPTUNE|Phoenix Surgery|NHS Swindon Ccg|||||||
+Miss Hayley DURNFORD|08|Abdelrazik|06 Jan - 15:33||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Master Mason WILLIS|08|Gowda|06 Dec - 14:52||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Miss SOPHIE COMER|08|Daskas|04 Dec - 02:13||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Miss Pilar ACOSTA-SANCHEZ|08|Anwer|05 Jan - 16:36||||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Clifford James RAYSON|08|Lawrence|29 Dec - 14:29|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr David BLASS|08|Ipe|03 Jan - 13:06|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Harold BROOKES|08|Ahmed|06 Jan - 20:54||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mr Robert Eric GRANT|08|White|25 Dec - 19:31|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr Norman WHITE|08|Ahmed|06 Jan - 17:21||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mr Patrick MCMANAMON|08|Deo|03 Jan - 23:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Peter W LYNN|08|Onyirioha|25 Oct - 04:44|11 Jan|17 Nov|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr John FABER|08|Barnes|31 Dec - 20:56|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Jonathan FISHER|08|WarminsterNurseLead|21 Dec - 15:10||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Avenue Surgery|NHS Wiltshire Ccg|||||||
+Mr John Thomas BROOKES|08|Finch|22 Dec - 17:00|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Dorothy HARRIS|08|Sonkor|03 Jan - 16:38|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Debra Ann MCPHILLIPS|08|Shetty|24 Dec - 04:56|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Diana CLARKE|08|Claridge|31 Dec - 18:15|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Dummy TEST|08|Pegden|06 Jan - 09:02|11 Jan|06 Jan|F27 Safe guarding ||||||||||||||||||||||||||||||||||||||||||Sent referral|06 Jan - 10:05|||06 Jan - 10:04|||||Test Ward DO NOT Use          |Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Carol Lynn LEE|08|Williams|07 Jan - 10:44||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr William I DONALD|08|White|03 Jan - 16:22|07 Jan|07 Jan|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Steven WILLIAMS|08|Ahmed|05 Jan - 21:17||||SSU|No|||In progress||||06 Jan - 14:26|06 Jan - 14:29||||||||||||||||||06 Jan - 14:26|||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Kingswood Surgery|NHS Swindon Ccg|SSU||||||
+Mr Stewart James DODSON|08|McCrea|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Margaret Maureen HARES|08|Watson|05 Jan - 13:15|11 Jan|||Aldbourne||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Margaret FIRTH|08|Yiin|30 Dec - 17:22|19 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Merchiston Surgery|NHS Swindon Ccg|||||||
+Ms Dorothy DAVIDSON|08|Shaw|18 Dec - 11:00|18 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|St James Surgery|NHS Wiltshire Ccg|||||||
+Mrs Vanessa Elizabeth REED|08|Sullivan|07 Jan - 07:38||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mrs Mona McArithur HORN|08|Gunasekera|24 Dec - 17:51|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Sandra Elaine MUSGRAVE|08|Allen|04 Jan - 18:08||||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Phyllis Rosemary BURGOYNE|08|Rigby|05 Jan - 08:00|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Rachael Jennife MARSH|09|Sinha|05 Jan - 06:15||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mrs Rosemary Jane BAXTER|09|Claridge|30 Dec - 04:09|09 Jan|07 Jan|F21 Waiting for external agency assessment/residential/nursing home|||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mrs Rosemary DIMMOCK|09|WarminsterNurseLead|11 Nov - 20:30||03 Dec|F25 Waiting for placement offer for mental health/residential or nursing|||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Lovemead Group Practice|NHS Wiltshire Ccg|||||||
+Mrs Sheona Macdonald HOUSTON|09|Hollinghurst|07 Jan - 07:26|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mrs Geraldine M TURPIE|13|Williams|07 Jan - 10:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Terry Desmond ACOTT|13|Ullah|02 Jan - 20:58|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Claire Rebecca FAIRBAIRN|13|Abdelrazik|06 Jan - 03:35||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Mrs Audrey ROBINSON|13|White|05 Jan - 21:14|10 Jan|||Teal|No|||||||06 Jan - 12:24|||||||||||||||||||||||||||||||||||||||No|No|Yes|TEAL - OLDER PERSONS SHORT STAY UNIT|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mrs Doris Louise SCUTTS|13|Ahmed|04 Jan - 20:34||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mr Peter COLLINS|13|Beck|06 Jan - 12:00||||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr Nigel Denys CARTER|13|Jones|05 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mr Jean-Marc LA TOUCHE|13|Shetty|06 Jan - 18:46|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mr Gordon CULLINGFORD|13|Gunasekera|20 Dec - 10:45|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr James BELTON|13|Mackinlay|23 Dec - 23:19|08 Jan|05 Jan|F12 Waiting for DART plan|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Anthony A BROWN|13|Ahmed|07 Jan - 10:50||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|St James Surgery|NHS Wiltshire Ccg|||||||
+Miss Girl of Claire FAIRBAIRN|13|Gowda|06 Jan - 16:50||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Master Thilakshan KALIYUKAVARATHAN|13|Bates|07 Jan - 00:36||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Master Boy of Lauren WOOD|14|Grain|05 Jan - 09:59||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mr Barrie LEECH|14|Shaw|22 Dec - 18:35|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|White Horse Health Centre|NHS Wiltshire Ccg|||||||
+Mr Alan PHILPOTT|14|Gunasekera|29 Dec - 23:08|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr George BROTHERSTON|14|Jones|02 Dec - 00:24|10 Jan|29 Dec|F3 Waiting for transfer to Acute Hospital for treatment - tertiary fit for trave|||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Francisco Xavierinho DOURADO|14|Onyirioha|18 Nov - 09:49|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Cornelius THOMPSON|14|Ahmed|29 Dec - 10:03|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr John AMOR|14|Payne|30 Dec - 23:22|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|St James Surgery|NHS Wiltshire Ccg|||||||
+Mr John BRAY|14|Ear Nose & Throat|05 Jan - 10:05|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mr Michael Leslie HUMPHRIES|14|Brooks|04 Jan - 07:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Ronald WINTER|14|Coombs|01 Jan - 10:08|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mr Ronald George WHITING|14|Hughes|06 Jan - 15:05|07 Jan|||||||Completed referral||||07 Jan - 09:00||07 Jan - 10:00||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mr Philip TRICKETT|14|Williams|07 Jan - 11:20||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Elsie BUTLER|14|Finch|06 Jan - 08:35||||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Castle Practice|NHS Wiltshire Ccg|||||||
+Mr William IVERMEE|14|Mukherjee|30 Dec - 17:07|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Ivy GREEN|14|Sonkor|11 Dec - 18:17|11 Jan|18 Dec|F12 Waiting for DART plan|||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Janet WILLS|14|Ullah|02 Jan - 21:42||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Lauren Nicole WOOD|14|Midwife|05 Jan - 09:10||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mr Giovanni TUCCI|17|Ahmed|06 Jan - 16:46||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Whalebridge Practice|NHS Swindon Ccg|||||||
+Miss Ariya MANRO|17|Broomfield|03 Jan - 00:05||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Miss Girl of Emma AUSTIN|17|Gowda|06 Jan - 22:33||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Miss Emily Jayne BEARMAN|17|Sonkor|28 Dec - 22:14|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mrs Testa Kelly TEST|14|Pegden|01 Dec - 12:59|16 Dec|21 Dec|F7 Waiting for health care Fast track funding decision|Any|No|04 Jan|01 Jan - 11:38|Sent referral|Trauma|04 Jan - 11:41||01 Jan - 11:39|||Completed referral|01 Dec - 13:03|||04 Jan - 11:39|03 Jan - 11:42|Completed referral||||04 Jan - 11:39|05 Jan - 11:42|In progress|||05 Jan - 11:43|01 Jan - 11:39||Further information required||||01 Jan - 11:39||Not appropriate referral|01 Dec - 13:03|||02 Jan - 11:39||Completed referral||||01 Jan - 11:39|04 Jan - 11:44|Yes|Yes|Yes|Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|Home||||||
+Ms Ada Stella STEVENS|14|Yiin|05 Jan - 20:58|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Maureen Ann JACKSON|14|Foley|01 Jan - 23:05|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Patricia Jean FRASER|14|White|31 Dec - 01:50|10 Jan|05 Jan|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Michelle DUFF|15|Smith|26 Dec - 12:00|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Rachel RUSHEN|15|Sonkor|25 Dec - 11:53|08 Jan|07 Jan|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Old Town Surgery|NHS Swindon Ccg|||||||
+Ms June Rose WHITTLE|15|Ahmed|07 Jan - 10:32||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Ms Ruby COXHEAD|15|White|31 Dec - 13:28|07 Jan|07 Jan|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|North Swindon Practice|NHS Swindon Ccg|||||||
+Ms Valerie Pamela WOTTON|15|Foley|29 Dec - 18:02|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Great Western Surgery|NHS Swindon Ccg|||||||
+Mr William Jesse SMITH|15|Watson|21 Dec - 18:07|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Alice Ruth BROWN|15|Ahmed|06 Jan - 21:04||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mrs Anne E QUIRK|15|Yiin|29 Dec - 19:24|06 Jan|05 Jan|F14 Waiting for Physio approval for discharge|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Norman HUGHES|15|Mukherjee|06 Jan - 01:17|14 Jan|||Falcon - ASU|No||||||||||||||||||||||||||||Completed referral||||06 Jan - 08:35|06 Jan - 11:00||||||||||||||||TEAL|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Peter DIXON|15|Gunasekera|06 Jan - 11:06|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr John Reginald OGLES|15|ChippenhamNurseLead|31 Dec - 16:40|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|White Horse Health Centre|NHS Wiltshire Ccg|||||||
+Mr Christopher CLEMENTS|15|Shetty|06 Jan - 10:25||||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr David WALTERS|15|Mackinlay|30 Dec - 00:12|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr Jacob ALDRIDGE|15|Allen|05 Jan - 12:58||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Goon SOO|15|Bhatia|29 Dec - 17:30|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Andrew MATHIAS|15|Ahmed|06 Jan - 17:46||||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Andrew Stuart POMEROY|15|Ramcharitar|07 Jan - 07:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Old Town Surgery|NHS Swindon Ccg|||||||
+Mr Albert Charles HULL|15|Bhatia|09 Nov - 12:10|28 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Alan Martin ROYLE|16|Deo|05 Jan - 11:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Miss Sophie BLACK|16|Sonkor|06 Jan - 11:07|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Old Town Surgery|NHS Swindon Ccg|||||||
+Mrs Santhanayki THEVARASA|22|Rigby|04 Jan - 22:08|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mrs Pauline Bridget JONES|22|Hollinghurst|30 Dec - 14:27|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Kadia M POUND|22|Onyirioha|31 Dec - 13:09|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Old Town Surgery|NHS Swindon Ccg|||||||
+Mrs Mary SANDBACH|22|Finch|05 Jan - 03:19|11 Jan|||DOME|No|||Sent referral||06 Jan - 11:00||06 Jan - 11:12||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Phoenix Surgery|NHS Gloucestershire Ccg|Jupiter||||||
+Mrs Janet LANE|23|Ahmed|06 Jan - 20:13||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Master Mary TEST|16|Hughes|16 Dec - 10:22|18 Dec|16 Dec|F1 Waiting return to other Acute Hosp - fit to travel|Any|No|14 Jan|14 Jan - 15:00|Sent referral|DART|05 Jan - 11:33|16 Dec - 16:25|01 Jan - 11:31|16 Dec - 16:26|16 Dec - 16:27|Received referral|16 Dec - 12:04|05 Jan - 11:33|16 Dec - 13:15|01 Jan - 11:31|16 Dec - 13:17|Further information required|16 Dec - 12:04|16 Dec - 13:14|16 Dec - 13:16|01 Jan - 11:31|16 Dec - 13:17|Not appropriate referral|16 Dec - 12:04|16 Dec - 13:14|16 Dec - 13:16|01 Jan - 11:31|16 Dec - 13:17|In progress|16 Dec - 12:04|16 Dec - 13:14|04 Jan - 11:34|01 Jan - 11:32|16 Dec - 13:17|Completed referral|16 Dec - 12:04|16 Dec - 13:14|16 Dec - 13:16|01 Jan - 11:32|04 Jan - 11:34|Completed referral|16 Dec - 16:25|16 Dec - 13:14|21 Dec - 15:16|01 Jan - 11:32|01 Jan - 12:00|Yes|Yes|Yes|Test Ward DO NOT Use          |Eldene Health Centre|NHS Swindon Ccg|Home||||||
+Master Boy of Violet D'MELLO|16|Gowda|05 Jan - 10:24||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Edward William TANNER|16|Shetty|23 Dec - 16:24|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Edward Albert J MATTHEWS|16|Tasker|06 Jan - 04:21|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr George SOUTH|16|Shetty|06 Jan - 14:34|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mr David Robert SIMS|16|Shaw|06 Jan - 16:17|20 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr John Kenneth GREEN|16|Manchip|07 Jan - 08:34||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mr John Alastair F SMITH|16|Mukherjee|21 Dec - 18:14|12 Jan|29 Dec|F27 Safe guarding |||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Michael John BODEN|16|Ahmed|06 Jan - 15:57|||||||||||||||||||||||||||||||||||||||||||||Sent referral|06 Jan - 16:27|||06 Jan - 16:26|||||NEPTUNE|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Anita REYNOLDS|16|Ahmed|04 Jan - 20:11||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Stephen PORTSMITH|16|Mackinlay|03 Jan - 17:59|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mrs Eleanor CARTER|16|Ahmed|07 Jan - 02:42||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Winifred LUCKETT|16|White|05 Jan - 09:24|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Violet D'MELLO|16|Sullivan|04 Jan - 17:51||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Joy SMITH|16|Ghaffar|21 Dec - 07:45|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Avenue Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Helen A CANNINGS|16|McCrea|05 Jan - 01:36|12 Jan|||Mercury|No||||||||||||||||Sent referral|06 Jan - 13:37|||06 Jan - 13:36|||||||||||||||||||||||||||||MERCURY|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Frances GUNNING|17|Ahmed|06 Jan - 07:54||||RESP||||In progress||||06 Jan - 09:00|06 Jan - 15:10|06 Jan - 10:00||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Grosvenor Medical Centre|NHS South Cheshire Ccg|||||||
+Mrs Mabel Jean ASHPLANT|17|Ullah|02 Jan - 21:17|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mrs Vera COLGAN|17|White|10 Oct - 12:04|12 Jan|05 Nov|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Yvonne Rose YOUNG|17|Joseph|30 Dec - 17:18|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Rosalie Camilla RANDALL|17|Deo|03 Nov - 07:00|12 Jan|31 Dec|F5 Waiting for discharge to assess|||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Cornerstone Practice|NHS Swindon Ccg|||||||
+Mrs Patricia Anne BERRISFORD|17|Ivory|06 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Peter Edward GAWN|17|Beck|05 Jan - 12:00|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr John LEWIS|17|ChippenhamNurseLead|26 Oct - 12:20|22 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Colerne|Three Shires Medical Practice|||||||
+Mr Brian WILDS|17|Mukherjee|20 Dec - 06:21|11 Jan|30 Dec|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mr Frederick L WADE|17|Yiin|30 Dec - 00:05|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Ms Kathleen GRIBBLE|23|Onyirioha|10 Dec - 00:43|08 Jan|29 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Ms Isabel HUGHES|23|Watson|18 Dec - 12:35|08 Jan|22 Dec|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mrs Barbara WAYE|23|Finch|04 Jan - 00:43|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Falkland Surgery|NHS Great Yarmouth and Waveney Ccg|||||||
+Mrs Catherine Roma DODSON|23|Chak|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Mervyn Frederick STILES|23|Mukherjee|04 Jan - 15:07|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Percy BONNER|23|Ipe|26 Dec - 17:27|07 Jan|07 Jan|F24 Fit and no clear plan|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Patrick Test TEST|23|General Medicine|04 Jan - 11:50||||Any|No|07 Jan|07 Jan - 10:56|Not appropriate referral|Trauma|||05 Jan - 10:57|||||||||Further information required||||05 Jan - 10:57||||||||||||||In progress|||05 Jan - 10:58|05 Jan - 10:57||||||||Yes|No|No|Test Ward DO NOT Use          |Duke of Gloucester Medical Centre|National Commissioning Hub 1|Home||||||
+Mr Richard SLOAN|23|Rigby|04 Jan - 14:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mr Ronald BERRY|23|Burgess|14 Nov - 12:29|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr Robert RICHARDSON|23|Hegde|21 Dec - 17:40|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Miss Girl of Nicola RICHARDSON|23|Gowda|07 Jan - 06:11||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr Antonio ROSSI|23|Foley|27 Dec - 04:33|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|New Court Surgery|NHS Wiltshire Ccg|||||||
+Miss Nicola L RICHARDSON|23|Sinha|02 Jan - 17:56||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr Herbert William JONES|23|Ahmed|06 Jan - 16:33||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Horst-Franz HEPNAR|24|Ipe|21 Nov - 00:35|07 Jan|15 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Lodge Surgery|NHS Wiltshire Ccg|||||||
+Mr Geoffrey Martin DENTITH|24|Finch|05 Jan - 17:30||||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mr David B LITTLE|24|Mukherjee|05 Jan - 10:29|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr David K BRENTON|24|Chandrasekaran|19 Dec - 02:36|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Miss Danielle LAWRENCE|24|Nag|06 Jan - 20:10||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Kevin DORAN|24|Thorn|01 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Betty TEST|24|General Medicne|04 Jan - 11:52||||Any|No|08 Jan|05 Jan - 11:45|Completed referral|DART|04 Jan - 11:54||04 Jan - 11:54||04 Jan - 12:19|Sent referral|05 Jan - 10:54|||05 Jan - 10:53||||||||||||||Received referral||05 Jan - 10:54||05 Jan - 10:53||Further information required||||05 Jan - 10:53||Completed referral||||04 Jan - 11:54|04 Jan - 11:55|No|No|Yes|Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|Home||||||
+Mrs Elsie Lillian WHITE|24|Ahmed|07 Jan - 02:18||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Vaughan GALE|24|Allen|05 Jan - 07:10|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Bourne Valley Practice|NHS Wiltshire Ccg|||||||
+Mr William TARRY|24|Ahmed|07 Jan - 01:02||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Terence ROWE|24|Hegde|21 Dec - 16:21|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mrs Nicola HOWARD|24|Rigby|04 Jan - 22:54|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Jamila KHATOON|24|Jones|08 Dec - 14:15|13 Jan|17 Dec|F19 Waiting for clinical assessments/ results |||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Sparcells Surgery|NHS Swindon Ccg|||||||
+Mrs Husinya REIDY|24|Alexander|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Mary Josephine SHEERAN|24|Mackinlay|04 Jan - 01:04|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Katie Alice MORRIS|24|Abdelrazik|06 Jan - 15:24||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Great Western Surgery|NHS Swindon Ccg|||||||
+Mrs Mary Rose BOWERMAN||Burgess|07 Jan - 11:20|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Patricia Ann MAW||Ahmed|06 Jan - 21:15||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Rose FULLER||Sivakumaran|17 Jun - 13:08|02 Jul|02 Jul|F15 Ready for home today-ask if they are confident nothing will stop discharge|||||||||||||||||||||||||||||||||||||||||||||||||||PROSPECT HOSPICE (GWH BEDS)|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mrs Rosemary A BUCKLER||Glass|07 Jan - 09:39||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Rosemary Ann O'GORMAN||Hanson|05 Jan - 07:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Saira BEGUM||Smith|07 Jan - 08:35||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Samantha ORCHARD||Gamal-Eldeen|04 Jan - 12:16|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mrs Santana RODRIGUES||Ullah|27 Dec - 19:50|04 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mrs Sheila J BOSLEY||Carswell|07 Jan - 07:10|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Tina NEATE||Payne|05 Jan - 11:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mrs Valerie Rita COLLETT||Lawrence|07 Jan - 11:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Great Western Surgery|NHS Swindon Ccg|||||||
+Ms Charlotte Victoria HARLING||Midwife|07 Jan - 02:19||||||||||||||||||||||||||||||||||||||||||||||||||||||WHITEHORSE BIRTH CENTRE|Burbage Surgery|NHS Wiltshire Ccg|||||||
+Ms Evelyn INESON||Finch|06 Jan - 21:36||||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Great Western Surgery|NHS Swindon Ccg|||||||
+Ms Gillian IRVIN||Alexander|06 Jan - 08:26||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Westrop Surgery|NHS Swindon Ccg|||||||
+Ms Jacqueline CARR||Glass|06 Jan - 13:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Ms Jacqueline SHEEN||Claridge|06 Jan - 13:27||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Ms Juliana Rosa Olivieira JONES||Allen|04 Jan - 11:19||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Ms Kim Susan TREMBLEN||Hawkins|07 Jan - 11:20|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Ms Margaret Euphemia HUNTER||Claridge|06 Jan - 14:34||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Ms Penny TEST||Hughes|31 Dec - 09:07||||Home|Yes|07 Jan|14 Jan - 09:00||||||||||||||Not appropriate referral|06 Jan - 18:06|||06 Jan - 18:05||||||||||||||||||||||||||Yes|||Test Ward DO NOT Use          |Shrivenham Medical Centre|National Commissioning Hub 1|HAEM|06 Jan - 15:39|Received referral||06 Jan - 15:39||
+Ms Petra ROWAN||Singh-Ranger|07 Jan - 08:02||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Peartree Lane Surgery|NHS East and North Hertfordshire Ccg|||||||
+Ms Sandra STEWART||Toneva|07 Jan - 08:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Sparcells Surgery|NHS Swindon Ccg|||||||
+Ms Violet K SLATER||Lee|08 Dec - 17:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||PROSPECT HOSPICE (GWH BEDS)|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Ms Rita GRAY|01|WarminsterNurseLead|14 Dec - 15:30||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Smallbrook Surgery|NHS Wiltshire Ccg|||||||
+Ms Rita GRIFFITHS|01|Kendall|07 Jan - 09:40||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Ms Joan Gladys ELLIOTT|01|Ramadurai|05 Jan - 20:30||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Ms Joyce Emily PRICE|01|Turner|18 Dec - 14:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Westrop Surgery|NHS Swindon Ccg|||||||
+Ms Joan Audrey WATERMAN|01|WarminsterNurseLead|19 Dec - 22:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Ms Heather Elizabeth CARR|01|Turner|22 Dec - 22:55||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Ms Barbara STEVENS|01|Ullah|02 Jan - 18:25|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Purton Surgery|NHS Wiltshire Ccg|||||||
+Ms Dorothy S J CHECKLEY|01|ChippenhamNurseLead|24 Dec - 15:21|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Ms Amarjit KAUR|01|Ramadurai|04 Dec - 16:40||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mrs Violet Gertrude ROSS|01|Turner|13 Dec - 13:16||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Ms Ignore AAA|02|Ahmed|01 Dec - 15:17|27 Dec|09 Dec|F5 Waiting for discharge to assess|Any|Yes|04 Jan|12 Dec - 12:00|In progress|DART|08 Dec - 13:49||06 Jan - 17:29|04 Jan - 17:13||In progress|||04 Jan - 11:19|31 Dec - 11:18||Sent referral|04 Jan - 17:13|||31 Dec - 11:35||Sent referral|04 Jan - 17:13|||31 Dec - 11:35||Sent referral|04 Jan - 17:13|||06 Jan - 08:00||||||||||||||Yes|||Test Ward DO NOT Use          |The Hermitage Surgery|NHS Swindon Ccg|Any|06 Jan - 12:00|Sent referral|06 Jan - 12:00|||
+Ms Janet DOEL|02|ChippenhamNurseLead|29 Nov - 17:00|16 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Spa Medical Centre|NHS Wiltshire Ccg|||||||
+Ms Mary Ann SIMMONDS|02|Turner|05 Jan - 22:32||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|North Swindon Practice|NHS Swindon Ccg|||||||
+Ms Sheila CLARK|02|WarminsterNurseLead|21 Dec - 19:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|White Horse Health Centre|NHS Wiltshire Ccg|||||||
+Ms Serena MATTHEWS|03|Smith|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Ms Janet HOPLEY|03|WarminsterNurseLead|06 Nov - 16:20||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Lovemead Group Practice|NHS Wiltshire Ccg|||||||
+Ms Janice LEWIS|03|McCrea|25 Nov - 17:16|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Ms Freda IRVINE|03|Mukherjee|30 Dec - 11:11|09 Jan|04 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Ms Agnes F WILKINSON|03|Alexander|31 Dec - 11:00|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Penhill Surgery|Abbey Meads Medical Pract|||||||
+Mrs Rebecca Lisa HALL|03|Sullivan|07 Jan - 08:52||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Margaret W WILKINS|03|Ipe|03 Dec - 03:23||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Marian Elaine GEDGE|03|Hawkins|06 Jan - 11:00|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mrs Marilyn PRESTON|03|ChippenhamNurseLead|04 Dec - 20:15|23 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mrs Kathleen BARTRAM|03|Gunasekera|27 Nov - 12:39|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|St James Surgery|NHS Wiltshire Ccg|||||||
+Mrs Joan RADFORD|03|Turner|12 Nov - 16:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Eldene Health Centre|NHS Swindon Ccg|||||||
+Mrs Gladys REEVES|03|Ahmed|25 Dec - 09:00|31 Dec|31 Dec|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Phoenix Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Irene M LOVEGROVE|03|Ipe|29 Nov - 16:55||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Hilda HULBERT|03|ChippenhamNurseLead|31 Dec - 18:20|17 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mrs Ethel Maud BOWLES|03|Ipe|06 Jan - 17:30||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Eldene Health Centre|NHS Swindon Ccg|||||||
+Mrs Enid BUCHANAN|03|Finch|28 Dec - 15:00||||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Avon Valley Practice|NHS Wiltshire Ccg|||||||
+Mrs Emily YOUNG|03|WarminsterNurseLead|04 Jan - 22:10||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|TILL ORCHARD|The Orchard Partnership|||||||
+Mrs Dorothy NICHOLS|03|Turner|26 Nov - 19:01||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Betty GAIGER|03|Watson|18 Dec - 11:29|09 Jan|24 Dec|F8 Waiting for continuing health care package|||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|St.Peter's Road Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Annabelle MEHMET|03|Turner|06 Jan - 19:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mr Terence Raymond BISHOP|03|Beck|05 Jan - 07:20|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mr Samuel HOLDER|03|ChippenhamNurseLead|22 Dec - 18:45|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mr Steven GEOSITS|03|Shetty|07 Jan - 02:38||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Park Surgery(Cv)|NHS Gloucestershire Ccg|||||||
+Mrs Angela Helen AHMAD|03|Turner|21 Dec - 15:50||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr William KNOWLES|03|ChippenhamNurseLead|24 Dec - 17:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Porch Surgery|NHS Wiltshire Ccg|||||||
+Mr Vernon IFILL|03|Yiin|29 Dec - 11:04|19 Jan|05 Jan|F4 Waiting for community placement|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Stella Elsie WILLIAMS|04|Claridge|02 Dec - 19:39|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Violet M J MITCHELL|04|Mukherjee|04 Dec - 16:00|05 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Ms Maria Lopes Oliveira FORTUNA|04|Ahmed|05 Jan - 23:00|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Ms Margaret JONES|04|Ipe|13 Oct - 09:15||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Westrop Surgery|NHS Swindon Ccg|||||||
+Ms Pamela WINNING|04|Ahmed|07 Jan - 09:15||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Stephanie KILSHAW|05|Shetty|07 Jan - 04:06||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Phoenix Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Sylvia PHILLIPS|05|WarminsterNurseLead|10 Dec - 17:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Giffords Primary Care Ctr|NHS Wiltshire Ccg|||||||
+Mrs Teresa W LIBBY|05|McCrea|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mrs Zekine OZGER|05|Shetty|06 Jan - 08:26|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Ashington House Surgery|NHS Swindon Ccg|||||||
+Ms Joan BRICE|05|Claridge|03 Jan - 21:15|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Avenue Surgery|NHS Gloucestershire Ccg|||||||
+Ms Jean LEA|05|Anwer|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Shirley A HEDGE|05|White|31 Dec - 02:48|07 Jan|07 Jan|F15 Ready for home today-ask if they are confident nothing will stop discharge|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mrs Margaret Jean WOOD|05|Yiin|03 Jan - 19:02|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Lisa Michelle DIXON|05|Suresh|05 Jan - 11:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs June Heather GODWIN|05|Ahmed|05 Jan - 22:14||||DOME|No|||||||06 Jan - 12:35|||||||||In progress|||05 Jan - 17:50|05 Jan - 21:30||||||||||||||||||||||||||No|No|No|LINNET - ACUTE MEDICAL UNIT|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Gillian GILSHENAN|05|Gunasekera|03 Jan - 23:44|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Old School House Surgery|NHS Wiltshire Ccg|||||||
+Mrs Elizabeth HOBBS|05|Mukherjee|31 Dec - 18:11|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Castle Practice|Castle Practice|||||||
+Mrs Doreen CHARLES|05|WarminsterNurseLead|16 Dec - 16:10||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mrs Doris BALL|05|Shaw|14 Dec - 11:15|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Giffords Primary Care Ctr|NHS Wiltshire Ccg|||||||
+Mrs Audrey WYLIE|05|Watson|28 Dec - 20:41|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Unknown|Unknown|||||||
+Mrs Avril Joy AYRES|05|Ahmed|05 Jan - 09:05||||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mr Patrick KEATING|05|Shetty|06 Jan - 20:34|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Morris SMITH|05|Ivory|06 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Keith R WATSON|05|White|02 Jan - 13:31|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr John LAMB|05|Barnes|31 Dec - 09:08|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Edward James LITTLE|05|Onyirioha|25 Dec - 06:17|08 Jan|06 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Unknown|Unknown|||||||
+Mr Donald S WEBB|05|Ahmed|05 Jan - 12:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr David KLEIFF|05|Pyrovolou|07 Jan - 09:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mr David ORAM|05|Blesing|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Antony J MORRISSEY|05|Ghaffar|31 Dec - 21:21|16 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Allen A HAINES|05|Ahmed|03 Jan - 11:50|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Purton Surgery|NHS Wiltshire Ccg|||||||
+Miss Marie TEST|05|Surgery|09 Dec - 15:52|23 Dec|09 Dec|F1 Waiting return to other Acute Hosp - fit to travel|Any|Yes|23 Dec|23 Dec - 13:30|Sent referral|Trauma|09 Dec - 16:00||||||||||||||||||||||||||||||||||||||||||||Test Ward DO NOT Use          |Unknown|Unknown|Linnet - Acute Medical Unit - Monito||||||
+Miss Loen HILLS|05|Zengeya|11 Dec - 14:06||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|North Swindon Practice|NHS Swindon Ccg|||||||
+Miss Grace SMITH|05|Mappa|24 Dec - 13:35||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Ms Elizabeth SHARPE|09|Yiin|04 Jan - 22:00|09 Jan|07 Jan|F15 Ready for home today-ask if they are confident nothing will stop discharge|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Margaret WEAVER|09|Ahmed|18 Dec - 17:20|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Maria ZUKOWSKI|09|Sonkor|03 Jan - 13:55|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Eldene Surgery|NHS Swindon Ccg|||||||
+Mrs Linda TAYLOR|09|Gunasekera|19 Oct - 22:30|08 Jan|02 Nov|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Geraldine WARWICK|09|Ahmed|05 Jan - 18:51|||||No|||Completed referral||||06 Jan - 09:00||06 Jan - 14:42|||||||||||||||||||||||||||||||||||||No|No|No|KINGFISHER - AMBULATORY CARE|Merchiston Surgery|NHS Swindon Ccg|SSU||||||
+Mrs Joyce Mary ELLIOTT|09|Rigby|22 Dec - 00:45|30 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Joyce VICKERS|09|Mukherjee|23 Dec - 19:06|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Annabelle CREWE|09|ChippenhamNurseLead|23 Oct - 15:40|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Bradford-On-Avon and Melksham Health|NHS Wiltshire Ccg|||||||
+Mrs Betty MCFARLANE|09|Stanton|03 Jan - 12:55|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Joseph James MORGAN|09|Shetty|06 Jan - 14:01|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Joseph SEALEY|09|Ahmed|07 Jan - 00:41||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Malcolm C JOHNSON|09|Green|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Great Western Surgery|NHS Swindon Ccg|||||||
+Mr Leonard L BAWN|09|Lawrence|29 Dec - 18:01|06 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Michael Lewis FRANKLIN|09|Madhavan|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Oliver H MARTIN|09|White|20 Dec - 10:07|07 Jan|07 Jan|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mr Raymond Eric CLARIDGE|09|Ullah|03 Jan - 02:36|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Robin HUMPHRIES|09|Ahmed|04 Jan - 01:38|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Harold Ernest SEWELL|09|White|21 Dec - 01:03|14 Jan|31 Dec|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Crossroads Surgery|Abbey Meads Medical Pract|||||||
+Mr Ismail GULOGLU|09|Foley|31 Dec - 17:37|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mr Davey DOEY-TEST|09|Hughes|05 Jan - 12:36|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||Test Ward DO NOT Use          |Old Town Surgery|NHS Swindon Ccg|||||||
+Miss Girl of Rachael MARSH|09|Gowda|06 Jan - 02:58||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Miss Kaci-Lee JONES|09|Bates|07 Jan - 00:36||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Phoenix Surgery|NHS Swindon Ccg|||||||
+Miss Irene B MOCK|10|Gunasekera|03 Jan - 05:54|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Miss Sarah Angela MATTIA|10|Watson|29 Dec - 07:38|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Miss Mary M READ|10|Yiin|23 Dec - 05:58|19 Jan|07 Jan|F12 Waiting for DART plan|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Allan CAMERON|10|Blesing|07 Jan - 11:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr Clifford WORDSWORTH|10|Foley|02 Jan - 13:49|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Graham Hamilton PARK-HILL|10|Madhavan|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr George H DIXEY|10|White|03 Jan - 02:01|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Frank WEEKS|10|Ahmed|04 Jan - 15:28|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Lodge Surgery|NHS Wiltshire Ccg|||||||
+Mr Phillip Kennett RANDERSON|10|Alexander|05 Jan - 14:25|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Old Town Surgery|NHS Swindon Ccg|||||||
+Mr Lami WAKO|10|Allen|04 Jan - 20:00|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Unknown|Unknown|||||||
+Mr Laurence Frederick TANN|10|Strait|01 Jan - 14:44||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Miss Emma Louise AUSTIN|17|Sullivan|06 Jan - 20:04||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Miss Kimberly Jane BLACKMAN|17|Griffiths|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr Arthur James SMITH|17|Gunasekera|27 Dec - 00:06|08 Jan|31 Dec|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Antony MOULDING|17|Onyirioha|27 Dec - 21:16|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mr Anthony James MAPSON|17|Singh-Ranger|06 Dec - 00:56|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Miss Girl of Hannah QUIRK|18|Gowda|05 Jan - 14:45||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Miss Gabrielle MORRIS|18|Sonkor|05 Jan - 16:22|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Kenneth STONE|18|ChippenhamNurseLead|31 Dec - 16:25|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Tolsey Surgery|NHS Wiltshire Ccg|||||||
+Mr Martin SIMSON|18|Ahmed|04 Jan - 21:07||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Old School House Surgery|NHS Wiltshire Ccg|||||||
+Mr Richard Simon ETTENFIELD|18|Gunasekera|30 Dec - 22:39|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mrs Emilia LUBIENIECKI|18|White|31 Dec - 20:29|05 Jan|05 Jan|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Carmel PASSFIELD|18|Mukherjee|02 Jan - 17:33|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Stephen GOFFE|18|Stanton|05 Jan - 20:01|11 Jan|||RESP|No|||In progress||||06 Jan - 09:00|06 Jan - 10:00|||||||||||||||||||||||||||||||||||||||||SATURN|Old Town Surgery|NHS Swindon Ccg|||||||
+Mr Tanner DOODY|18|Bates|07 Jan - 01:54||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Nicola ASHTON|18|Griffiths|06 Jan - 08:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Old School House Surgery|NHS Wiltshire Ccg|||||||
+Mrs Patricia June GRUBB|18|Barnes|21 Dec - 18:05|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Pauline HARDY|18|Payne|05 Jan - 07:20|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Ms Hannah QUIRK|18|Suresh|05 Jan - 13:20||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Krystyna KLECAN|18|Yiin|29 Dec - 17:13|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Judith Katharine T MILES|18|Joseph|03 Jan - 20:58|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Jacqueline Ann WEBB|18|Suresh|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mrs Jane MEAKIN|18|Brooks|06 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Bradford Road Medical Ctr|NHS Wiltshire Ccg|||||||
+Ms Phyllis Winifred MASON|18|Watson|08 Dec - 15:50|15 Jan|15 Dec|F7 Waiting for health care Fast track funding decision|||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Ms Mary CRITCHLEY|18|Ahmed|06 Jan - 12:30||||||||Sent referral||07 Jan - 09:50||07 Jan - 09:49||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|St.Peter's Road Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Jenny Emma JENKINS|19|Irby|06 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mrs Iris Lillian PAGE|19|Shetty|06 Jan - 18:20|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Ewa WYBACZ|19|Suresh|05 Jan - 21:55||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Park Lane Practice|NHS Swindon Ccg|||||||
+Ms Amy TEST|19|General Medicne|04 Jan - 10:52||||Any|No|06 Jan|06 Jan - 11:12|Sent referral|Stroke|04 Jan - 11:38||04 Jan - 11:13|||Sent referral|01 Jan - 11:13|||05 Jan - 11:12||Sent referral|04 Jan - 11:38|||04 Jan - 11:13||||||||In progress|||01 Jan - 11:14|05 Jan - 11:13||||||||Further information required||||05 Jan - 11:13||Yes|No|Yes|Test Ward DO NOT Use          |The Freshbrook Surgery|Ridge Green Medical Practice|Home||||||
+Mrs Phyllis WAKE|19|Ipe|04 Jan - 14:00|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Eldene Surgery|NHS Swindon Ccg|||||||
+Mrs Sarah SOWDEN|19|Alexander|05 Jan - 16:49|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Roy KNIGHT|19|ChippenhamNurseLead|05 Jan - 21:45|19 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Ms Margaret Rose MANNERS|24|Finch|02 Jan - 23:13|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Margaret ARMSTRONG|25|Mackinlay|01 Jan - 17:25|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Joanna Louise LANDER|25|Hollinghurst|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Maureen Fiona READE|25|Hegde|04 Jan - 17:45|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Ms Gladys BOOTLE|25|Finch|22 Dec - 09:48|15 Jan|29 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Ronald SIMPSON|25|Ahmed|06 Jan - 12:15||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Twyford Practice|NHS Wokingham Ccg|||||||
+Mrs Carol IRBY|25|Ahmed|05 Jan - 18:28||||Saturn|No|||In progress||||06 Jan - 12:46|06 Jan - 15:22|06 Jan - 12:47||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Michael BRADBROOK|25|Singh-Ranger|25 Dec - 08:04|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Tilehurst Surgery|NHS North & West Reading Ccg|||||||
+Mr Peter B ROBINSON|25|Chandrasekaran|27 Nov - 18:13|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Miss Sharon SEAGO|25|Kendall|31 Dec - 19:47||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Eddy JONES|25|Mukherjee|07 Jan - 04:19|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Colin Brian Terence BUTLER|25|Finch|10 Nov - 20:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr Brian John MARSHALL|25|Finch|04 Jan - 16:51|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Eric WOOD|25|Deo|04 Jan - 04:18|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|St.Peter's Road Surgery|NHS Gloucestershire Ccg|||||||
+Mr Harry COOK|26|Jones|29 Dec - 19:30|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Burbage Surgery|NHS Wiltshire Ccg|||||||
+Miss Constance Mary WELLS|26|Kerry|20 Nov - 11:56|11 Jan|06 Jan|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Eldene Health Centre|NHS Swindon Ccg|||||||
+Miss Florence PARK|26|Carswell|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Miss Girl of Laura EMM|26|Gowda|05 Jan - 16:23||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mr Richard GREIG|26|Mukherjee|01 Dec - 18:13|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Melville Hedley G BLAKE|26|Mukherjee|30 Dec - 22:39|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Leslie DAY|26|Foley|30 Dec - 18:35|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mrs Brenda K CARVEY|26|Finch|04 Jan - 23:32|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Betty SMITH|26|Hegde|02 Jan - 07:30|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Avenue Surgery|NHS Gloucestershire Ccg|||||||
+Mr Thomas William MCCARTHY|26|Ipe|30 Dec - 04:02|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mr Tyrone WHEELER|26|Lawrence|27 Dec - 18:23|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Jubilee Field Surgery|NHS Wiltshire Ccg|||||||
+Ms Heike WATTS|26|Nag|06 Jan - 19:20||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Hazel Elsie BOOTY|26|Ahmed|06 Jan - 23:14||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Laura Elise EMM|26|Suresh|05 Jan - 04:40||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mrs Lesley A HAM|27|McCrea|29 Dec - 11:27|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mrs Thelma JONES|27|Hegde|31 Dec - 20:58|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Seema PAWAR|27|Suresh|05 Jan - 07:44||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mrs Anne WORBOYS|27|Yates|07 Jan - 07:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|NYTHE SURGERY|Victoria Cross Surgery|||||||
+Mr Scott WELLS|27|Ahmed|07 Jan - 01:48||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Bernice SATIN|27|Onyirioha|27 Dec - 00:20|11 Jan|07 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Daphne ENGLEFIELD|27|Finch|10 Dec - 20:32|08 Jan|22 Dec|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mrs Maureen BUNDOCK|Ch|Ahmed|05 Jan - 15:21||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mrs Sandra Maria DENEKA|01|Mukherjee|26 Dec - 08:57|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Rosemary REYNOLDS|01|Turner|01 Jan - 17:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Ruth JEFFERY|01|Ipe|23 Dec - 14:00||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Rosemary Frances WEBSTER|01|Deo|07 Jan - 07:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Market Lavington Surgery|NHS Wiltshire Ccg|||||||
+Mrs Phyllis M BISHOP|01|Finch|06 Jan - 14:03||||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Mavis Joan CUFF|01|ChippenhamNurseLead|09 Dec - 17:15|26 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Adcroft Surgery|Wiltshire Pct|||||||
+Mrs Myra CUTLER|01|Turner|30 Dec - 20:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Marian KING|01|ChippenhamNurseLead|01 Dec - 16:00|18 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Porch Surgery|NHS Wiltshire Ccg|||||||
+Mrs Marion Elizabet BRADBURY-WESTON|01|Sonkor|28 Nov - 20:58|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Margaret EXTON|01|Ipe|05 Dec - 20:12||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mrs Kathleen G LAW|01|Finch|29 Dec - 00:34|15 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Kathleen TANNER|01|Ipe|14 Dec - 17:30||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Joanna Bernice TERRY|01|Deo|31 Dec - 09:54|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|The Freshbrook Surgery|Ridge Green Medical Practice|||||||
+Mrs Jean GRAHAM|01|Rigby|04 Jan - 23:44|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jeanette COOPER|01|Turner|06 Jan - 19:01||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Felicity PITT|01|Turner|20 Nov - 18:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Burdwood Surgery|NHS Newbury and District Ccg|||||||
+Mrs Dorothy MCDONAGH|01|McCrea|31 Dec - 18:42|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Unknown|Unknown|||||||
+Mrs Beverley BICKERTON|01|Turner|08 Dec - 05:20||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Barbara GUY|01|Ipe|08 Dec - 18:10||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Shun TO|01|Stanton|26 Dec - 12:42|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Roy JARVIS|01|Joseph|04 Dec - 16:31|08 Jan|31 Dec|F5 Waiting for discharge to assess|||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Robert W HIGHMOOR|01|Ramadurai|17 Dec - 20:32||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Peter JONES|01|Turner|24 Dec - 09:12||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Neil Antony BUSTIN|01|Turner|06 Jan - 00:40||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Penhill Surgery|Abbey Meads Medical Pract|||||||
+Mr Mesut YURT|01|Ahmed|06 Jan - 18:46||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mr Leslie R WELLEN|01|WarminsterNurseLead|25 Nov - 00:10||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr Leslie REYNOLDS|01|khan|07 Jan - 09:10||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Kenneth William George HILL|01|Ipe|04 Jan - 18:41||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Kevin Charles WARD|01|Barnes|05 Jan - 11:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr John DOYLE|01|Yiin|29 Dec - 01:01|12 Jan|05 Jan|F4 Waiting for community placement|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr James Stephen NOYES|01|Ipe|01 Dec - 02:13|07 Jan|29 Dec|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mr Jan Henry KESSELRING|01|Ashmore|06 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Ian Denis CROWLEY|01|Turner|22 Dec - 11:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Harry George GULLIVER|01|Broomfield|03 Jan - 18:51||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mr Herbert Leslie STROUD|01|ChippenhamNurseLead|20 Dec - 23:55||||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Euton Constantine JOHNSON|01|Turner|03 Dec - 17:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Robert Harold SCUTTS|03|Ahmed|05 Jan - 23:52||||Falcon - ASU|No|||Sent referral||06 Jan - 11:20||06 Jan - 11:19||||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Crossroads Surgery|Abbey Meads Medical Pract|Falcon - ASU||||||
+Mr Ronald HARPER|03|Ipe|07 Dec - 16:35||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mr Ronald William TICKNER|03|WarminsterNurseLead|07 Dec - 20:30||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|White Horse Health Centre|NHS Wiltshire Ccg|||||||
+Mr Maurice WARNER|03|Ramadurai|23 Dec - 17:03||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mr Kenneth HEEB|03|ChippenhamNurseLead|02 Jan - 17:20|16 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Bradford Road Medical Ctr|NHS Wiltshire Ccg|||||||
+Mr John CANNONS|03|Turner|29 Dec - 14:58||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Jonathan SECKER|03|Lowndes|07 Jan - 10:50||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr John LANGER|03|Ahmed|28 Dec - 23:48|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Burford Surgery|NHS Oxfordshire Ccg|||||||
+Mr Graham LOOSEMORE|03|Ahmed|31 Dec - 06:33|07 Jan|06 Jan|F12 Waiting for DART plan|||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mr Henry BLAKE|03|Barnes|05 Jan - 19:34||||CARDIO|No|||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Gary HOUSE|03|Claridge|29 Dec - 11:51|08 Jan|31 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Douglas Alfred YOUNG|03|Anwer|07 Jan - 09:15||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr Colin P PREEN|03|Mackinlay|04 Jan - 01:27|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Mr Christopher REYNOLDS|03|Barnes|03 Jan - 02:31|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Brian GLASS|03|WarminsterNurseLead|06 Jan - 16:45||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Bradford Road Medical Ctr|NHS Wiltshire Ccg|||||||
+Mr Anthony BATCHELOR|03|Ahmed|07 Jan - 00:50||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Andrew John STEVENS|03|Brooks|04 Jan - 11:48|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Alan BROWNING|03|Burgess|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|WANBOROUGH SURGERY|Ramsbury Surgery|||||||
+Miss Marie Louise TEST|03|Medicine|09 Dec - 16:02|21 Dec|||Linnet - Acute Medical Unit|No|21 Dec|05 Jan - 14:00|Completed referral|DART||||09 Dec - 16:05|18 Dec - 10:48|Completed referral|||||09 Dec - 09:00|Received referral||09 Dec - 10:00||||Further information required||||||Not appropriate referral||||||In progress|||09 Dec - 16:06|||||||||No|Yes|No|Test Ward DO NOT Use          |Carfax Health Enterprise|NHS Swindon Ccg|Linnet - Acute Medical Unit||||||
+Miss Girl of Claire PARKES|03|Bates|06 Jan - 15:33||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Master Boy of Kelly QUINCE|03|Broomfield|03 Jan - 14:03||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Master Boy of Samantha ETHERTON|03|Gowda|04 Jan - 16:20||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|New Court Surgery|NHS Wiltshire Ccg|||||||
+Miss Anne BELL|03|Turner|01 Jan - 17:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Miss Girl of Donna COLMER|04|Gowda|31 Dec - 21:58||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Miss Georgina GEORGE|04|Shetty|07 Jan - 00:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Cornwall Road Med Pract|NHS Dorset Ccg|||||||
+Mr Albert STAINER|04|WarminsterNurseLead|17 Dec - 17:25||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Spa Medical Centre|NHS Wiltshire Ccg|||||||
+Mr Antony Edwin VAUGHAN|04|Madhavan|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Brian Albert MOIR|04|Finch|18 Dec - 18:13|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Cecil Hugh OCKWELL|04|Onyirioha|30 Dec - 18:40|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr David Granville DAVIES|04|Ramadurai|31 Dec - 18:15||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Fred CAMAC|04|Turner|30 Dec - 15:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Unknown|Unknown|||||||
+Master Akshaj RANGU|05|Bates|07 Jan - 04:44||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Whalebridge Practice|NHS Swindon Ccg|||||||
+Master Boy of Carla MAPSTONE|06|Daskas|01 Jan - 18:38||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Master Boy of Charlotte MASON|06|Gowda|31 Dec - 02:23||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Whalebridge Practice|NHS Swindon Ccg|||||||
+Master Boy of Sophie QUINN|06|King|05 Jan - 13:15||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Agnelo Jose FERNANDES|06|Broomfield|02 Jan - 20:25||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Miss Sophie Louise Anne QUINN|06|Suresh|05 Jan - 13:10||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Bartley HERNON|06|Stanton|06 Jan - 14:59|12 Jan|||||||Sent referral||06 Jan - 16:18||06 Jan - 16:16||||||||||||||||||||||||||||||||||||||||||SATURN|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mr Arthur MCGROATY|06|Ullah|03 Jan - 03:08||||Falcon - ASU|No|||In progress||||06 Jan - 11:17|06 Jan - 11:18|||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Cowplain Family Practice|NHS South Eastern Hampshire Ccg|Falcon - ASU||||||
+Mr Dennis George PALMER|06|White|29 Dec - 15:07|08 Jan|05 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr Dennis Ivor PAGET|06|Williamson|05 Jan - 07:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Francis Patrick JOYCE|06|Alexander|07 Dec - 09:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Graham LINETON|06|Ahmed|04 Jan - 22:28||||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Barton Surgery|NHS South Devon and Torbay Ccg|||||||
+Mr Martin R JACKS|06|Laird|04 Jan - 23:00|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Barbara FENNELL|06|Rigby|05 Jan - 09:09|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Beverley Kim RAWLINGS|06|Cullimore|05 Jan - 12:20|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Elizabeth Walton NEILD|06|khan|07 Jan - 11:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mr Stephen JOBBINS|06|Shetty|06 Jan - 18:20||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr Roy HOPKINS|06|Ahmed|26 Dec - 22:18|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Gwendy June SHOOSMITH|06|Williams|07 Jan - 09:55||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mrs Freda Elsie O'NEIL|06|Sonkor|27 Dec - 23:31|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mrs Georgina L CURTIS|06|WarminsterNurseLead|14 Dec - 18:35||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Janet KING|06|Claridge|04 Jan - 19:43|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Kathleen SMITH|06|Kendall|07 Jan - 10:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mrs Marilyn PHRIPP|06|WarminsterNurseLead|14 Oct - 13:10||03 Dec|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Adcroft Surgery|Wiltshire Pct|||||||
+Mrs Rosanne BURCH|06|Thorn|31 Dec - 18:42|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Mavis THOMPSON|06|ChippenhamNurseLead|03 Dec - 20:00|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Tisbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Peggy I WEEKS|06|Tasker|18 Dec - 23:32|11 Jan|28 Dec|F12 Waiting for DART plan|||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Olive J E MATTHEWS|06|Yiin|06 Jan - 11:56|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|New Court Surgery|NHS Wiltshire Ccg|||||||
+Ms Judy TEST|06|Hughes|03 Jan - 11:50||||STROKE|Yes|10 Jan|10 Jan - 11:01|Completed referral|Stroke|||04 Jan - 08:49|04 Jan - 09:27|04 Jan - 09:29|In progress|04 Jan - 10:12|04 Jan - 10:37|07 Jan - 09:23|04 Jan - 10:12||In progress|04 Jan - 15:21|04 Jan - 15:39|07 Jan - 09:23|04 Jan - 15:21||In progress|04 Jan - 16:19|||04 Jan - 16:18||In progress|04 Jan - 09:09|||04 Jan - 09:08||Sent referral|04 Jan - 14:20|||04 Jan - 14:19||Not appropriate referral||||04 Jan - 11:01|||||Test Ward DO NOT Use          |Spa Medical Centre|NHS Wiltshire Ccg|STROKE||||||
+Brother Doodlejake TEST||Pegden|06 Jan - 09:27||||||||||||||||||||||||||||||||||||||||||||||||||||||Test Ward DO NOT Use          |Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Miss Claire JONES||Allen|05 Jan - 07:53|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TREATMENT CTR DISCHARGE LOUNGE|Kingswood Surgery|NHS Swindon Ccg|||||||
+Miss Eve Lorraine POCOCK||Hanson|07 Jan - 08:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Miss Girl of Charlotte HARLING||Gowda|07 Jan - 04:41||||||||||||||||||||||||||||||||||||||||||||||||||||||WHITEHORSE BIRTH CENTRE|Burbage Surgery|NHS Wiltshire Ccg|||||||
+Miss Joanne SUMNER||Thorn|05 Jan - 11:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Miss Laura Ellen DAVIES||Allen|04 Jan - 12:29||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Miss Laura MORGAN||McCrea|06 Jan - 20:51||||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Great Western Surgery|NHS Swindon Ccg|||||||
+Miss Leanne HADDRELL||Smith|04 Jan - 04:38|07 Jan|06 Jan|F5 Waiting for discharge to assess|||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Miss Mary HARTE||Burgess|06 Jan - 13:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Miss Nicola Jane SMITH||Glass|07 Jan - 11:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Smallbrook Surgery|NHS Wiltshire Ccg|||||||
+Miss Rio Marie MIDDLETON||Sullivan|07 Jan - 10:42||||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH EPU|Cornerstone Practice|NHS Swindon Ccg|||||||
+Miss Rochelle Jay FENTON||Coombs|03 Jan - 03:53|05 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Kingswood Surgery|NHS Swindon Ccg|||||||
+Miss Stella JONES||Singh-Ranger|07 Jan - 10:41||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Alan RAVENSCROFT||Hegde|07 Jan - 09:10||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr Alfred James MILLS||Mathur|07 Jan - 07:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Andrew SMALL||Glass|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Barrie Philip Nigel WHIBLEY||Mukherjee|31 Dec - 23:40|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DISCHARGE LOUNGE|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Barry Nigel Charles KEMPTON||Claridge|06 Jan - 09:35||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Benjamin Edmund TEST||Hughes|06 Jan - 15:43|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||Test Ward DO NOT Use          |Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Brian FLITTON||Hawary|07 Jan - 11:20|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Brian John POWELL||Joseph|06 Jan - 14:07||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Brian W BETTERTON||Barnes|04 Jan - 13:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DISCHARGE LOUNGE|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Brian WIDLAKE||Shetty|06 Jan - 14:59||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Old School House Surgery|NHS Wiltshire Ccg|||||||
+Mr Bruce NICHOLLS||Alexander|05 Jan - 21:50|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TREATMENT CTR DISCHARGE LOUNGE|Unknown|Unknown|||||||
+Mr Christopher REID||Alexander|06 Jan - 16:34||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Colin THOMSON||Beck|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr Daniel Paul KING||Satish|07 Jan - 11:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Old Town Surgery|NHS Swindon Ccg|||||||
+Mr David POTTER||Burgess|06 Jan - 13:33||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Lechlade Medical Centre|NHS Gloucestershire Ccg|||||||
+Mr David SANGER||Shetty|06 Jan - 08:37||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mr Douglas Kenneth HART||Ahmed|06 Jan - 06:19||||SSU||||||||06 Jan - 12:21||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Dudley STEVENS||Hanson|06 Jan - 09:20||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr Emil BETA||Foley|01 Jan - 14:23|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DISCHARGE LOUNGE|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Francis Michael OGLEY||Glass|07 Jan - 09:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Gary SUMNER||Glass|07 Jan - 11:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Geoffrey BULL||Alexander|05 Jan - 13:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mr Geoffrey F HULBERT||Alexander|11 Dec - 13:30||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Eldene Health Centre|NHS Swindon Ccg|||||||
+Mr George Finlay DUGUID||Payne|06 Jan - 13:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ENDOSCOPY|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Gilbert Royston COOK||Lawrence|07 Jan - 07:25|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||THEATRES ADMISSION LOUNGE|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Vivian J MORGAN|10|Beck|06 Jan - 11:50|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mrs Glynis COOPER|10|Sternberg|07 Jan - 11:27||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Jacqueline WINTERS|10|Ivory|06 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Lima THOMAS|10|Abdelrazik|06 Jan - 15:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Karon J I GOEBEL|10|Ahmed|05 Jan - 15:25||||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Kerryann GOUDIE|10|Smith|25 Nov - 10:34|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mrs Mary HARRIS|10|ChippenhamNurseLead|27 Nov - 15:00|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Ms Jane Patricia JACKSON|10|Onyirioha|31 Dec - 17:22|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Ms Anita Jane KEEGAN|10|Ahmed|06 Jan - 14:59||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mrs Pauline CURTIS|10|White|04 Jan - 19:02|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Mrs Nicola Ruth HARRIS|10|Chaudhry|04 Jan - 07:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Phillipa Margaret PHELPS|10|Griffiths|06 Jan - 08:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Ms Patricia RIDGWAY|10|Finch|22 Dec - 17:00|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Old School House Surgery|NHS Wiltshire Ccg|||||||
+Ms Kim Carol BENFIELD|10|Ahmed|31 Dec - 00:03|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Unknown Grace Ignore TEST|10|Pegden|07 Jan - 08:47|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||Test Ward DO NOT Use          |Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Patricia WILSON|11|Stanton|04 Jan - 20:12|11 Jan|||Saturn||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Myrtle MARSHALL|11|Gunasekera|06 Jan - 01:16|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Ashington House Surgery|NHS Swindon Ccg|||||||
+Ms Ann Margaret O'BRIEN|11|Strait|01 Jan - 17:50|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Violet E HOLDER|11|White|31 Dec - 11:08|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Marjorie A WICKS|11|Finch|03 Jan - 17:00|15 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Jillian Susan TURNER|11|Madhavan|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mrs Andrea PHILLIPS|11|Satish|25 Dec - 01:26|31 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mrs Betty PEACOCK|11|Bhattacharya|29 Dec - 23:09|06 Jan|06 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Diane HAYNE|11|Sonkor|04 Jan - 07:36|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Edna May WARD|11|Watson|26 Dec - 01:48|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr John Nichol NORTH|11|Ahmed|06 Jan - 22:51||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr Richard IDDON|11|Foley|30 Dec - 14:17|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Romney House Surgery|NHS Gloucestershire Ccg|||||||
+Mr Michael Frederick TURNER|11|Beck|23 Dec - 11:55|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Percival Frederick ING|11|White|28 Dec - 17:00|07 Jan|31 Dec|F12 Waiting for DART plan|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Eldene Health Centre|NHS Swindon Ccg|||||||
+Mr Gary D FRY|11|Coombs|01 Jan - 21:45|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Franco DE|11|ChippenhamNurseLead|04 Jan - 14:45|18 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Bradford Road Medical Ctr|NHS Wiltshire Ccg|||||||
+Mr David William FISHER|11|Payne|05 Jan - 07:00|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Eldene Surgery|NHS Swindon Ccg|||||||
+Miss Rosemary Margaret MCLAREN|11|Smith|24 Dec - 00:09|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|New Court Surgery|NHS Wiltshire Ccg|||||||
+Miss Patricia Edith ELLINGTON|11|Yiin|30 Dec - 16:51|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Miss Aylah Paige HOLMES|11|Ahmed|06 Jan - 19:25||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Ann Marie Henderson EAVIS|19|Mukherjee|22 Dec - 16:36|11 Jan|07 Jan|F4 Waiting for community placement|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Anne MANSER|19|Ahmed|05 Jan - 19:03||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Lansdowne Surgery|NHS Wiltshire Ccg|||||||
+Mr Robert GOUGH|19|Ahmed|07 Jan - 05:18||||||||Completed referral||||07 Jan - 09:00||07 Jan - 10:15||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Philip Charles MARTIN|19|Tasker|05 Jan - 16:38|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr Michael BARSBY|19|Stanton|06 Jan - 14:35|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mr Joe LOVERIDGE|19|Brooks|28 Dec - 15:28|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Miss Julie Catherine CLARKE|19|Joseph|30 Dec - 22:10|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Miss Audrey L ARNOLD|19|Chandrasekaran|11 Dec - 10:28|07 Jan|16 Dec|F23 Out of area medically fit|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Master Boy of WYBACZ|19|Gowda|06 Jan - 13:16||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Adam Paul WAINWRIGHT|19|Pyrovolou|07 Jan - 08:44||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Gordon E BARRETT|19|Gunasekera|03 Jan - 16:39|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Mr David BARNES|19|Nag|06 Jan - 22:28||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Brian WAUGHMAN|20|Ahmed|06 Jan - 23:19|||||||||||||||||||||||||||Sent referral|07 Jan - 09:30|||07 Jan - 09:29|||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Brian MORGAN|20|Shaw|12 Nov - 18:27|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mr James David John GRIFFITHS|20|Ahmed|04 Jan - 14:24||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mr Hoeller TEST|20|General Medicne|09 Dec - 16:51|31 Dec|||Any|No|09 Jan|09 Jan - 11:00|Sent referral|Trauma|09 Dec - 16:53|||||Received referral||05 Jan - 11:09||01 Jan - 12:00||Received referral|30 Dec - 11:28|04 Jan - 10:43||30 Dec - 11:27||Completed referral||||01 Jan - 11:08|05 Jan - 11:09|Sent referral|30 Dec - 13:29|||30 Dec - 11:28||||||||Further information required||||02 Jan - 11:09||No|Yes|No|Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|Home||||||
+Miss Kerry WARRINGTON|20|Abdelrazik|06 Jan - 15:19||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr Alan Mervyn SANDERSON|20|Ipe|02 Jan - 01:08|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Master Joshua BUDIANU|20|Bates|07 Jan - 07:51||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|The Freshbrook Surgery|Ridge Green Medical Practice|||||||
+Master Boy of Kerry WARRINGTON|20|Gowda|07 Jan - 04:35||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Miss Jane CHILD|20|Ahmed|05 Jan - 15:48||||SSU|No|07 Jan|||||||||||||||||||||Sent referral|07 Jan - 09:56|||07 Jan - 09:29|||||||||||||||||||||||KINGFISHER - MEDICAL TRIAGE UNIT|Victoria Road Surgery|NHS Coastal West Sussex Ccg|SSU||||||
+Mr John Frank Phillips HILL|20|Watson|05 Jan - 15:15|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr William ASTY|20|Lawrence|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Annie Mary TODD|20|Mukherjee|29 Dec - 21:27|12 Jan|04 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Emma ANGELL|20|Alexander|05 Jan - 12:09|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Kintbury & Woolton Hill Surgery|NHS Newbury and District Ccg|||||||
+Mrs Pauline BURGESS|20|Stanton|04 Jan - 08:42|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Pauline Mary JEFFERIES|20|Joseph|01 Jan - 19:07|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jessica BLUNDELL|20|Hyde|13 Dec - 03:20|06 Jan|06 Jan|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Lechlade Medical Centre|NHS Gloucestershire Ccg|||||||
+Mrs Joyce WEST|20|Finch|05 Jan - 22:24|13 Jan|||Saturn||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Peter SIMPSON|27|Watson|02 Jan - 20:27|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Master Boy of Seema PAWAR|27|Gowda|06 Jan - 06:06||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Anthony THOMSON|27|Ipe|05 Jan - 02:25|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Arthur R JONES|27|Barnes|24 Dec - 11:40|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Alfred J BAILEY|27|Mukherjee|27 Nov - 21:04|11 Jan|10 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Francis A SLINN|27|Ahmed|04 Jan - 18:54||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Byron REES|27|Shetty|06 Jan - 11:56|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mr Clifford WATSON|27|Mukherjee|07 Jan - 08:28||||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mr Donald SCULL|28|Finch|23 Dec - 23:34|07 Jan|30 Dec|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr David HARRISON|28|Ramcharitar|28 Dec - 20:36|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Francis William OCKWELL|28|Satish|04 Dec - 12:29|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Edward EASTERBROOK|28|Ahmed|04 Jan - 18:43||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Great Western Surgery|NHS Swindon Ccg|||||||
+Master Boy of Joanna BLASZCZYK|28|Gowda|06 Jan - 10:31||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Miss Kayleigh Natalie COTTRELL|28|Satish|07 Jan - 07:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr Robert GRAY|28|Mukherjee|06 Jan - 22:52|14 Jan|||||||Sent referral||07 Jan - 06:31||07 Jan - 06:30||||||||||||||||||||||||||||||||||||||||||TEAL|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr John G F MOSS|28|Coombs|14 Dec - 15:37|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Anne C SIMPKINS|28|Ipe|24 Dec - 05:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Park Surgery(Cv)|NHS Gloucestershire Ccg|||||||
+Mrs Annie Isobel PERRYMAN|28|Hegde|05 Jan - 15:21|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mr Tony HAMLEY|28|Stanton|27 Dec - 04:53|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|The Freshbrook Surgery|Ridge Green Medical Practice|||||||
+Mrs Molly DANIELS|28|Ahmed|06 Jan - 17:20||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Ms Katie TESTING|28|Ahmed|17 Dec - 16:22|20 Dec|||Beech|No|07 Jan|07 Jan - 12:00|Sent referral|DART|05 Jan - 10:47||05 Jan - 10:47|||||||||Sent referral|05 Jan - 10:48|||05 Jan - 10:47||Sent referral|05 Jan - 10:50|||05 Jan - 10:49||Sent referral|05 Jan - 10:49|||05 Jan - 10:47||||||||||||||Yes|Yes|Yes|Test Ward DO NOT Use          |Eldene Surgery|NHS Swindon Ccg|Beech||||||
+Mrs Heather Margaret PROUT|28|Mukherjee|20 Nov - 12:17||11 Dec|F21 Waiting for external agency assessment/residential/nursing home|||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Joanna BLASZCZYK|28|Abdelrazik|06 Jan - 07:20||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jannette M LEWINGTON|28|Ullah|01 Jan - 21:55|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Mary KENNAH|29|Barnes|24 Dec - 18:58|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Mary DIXON|29|Alexander|06 Jan - 01:30|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Merchiston Surgery|NHS Swindon Ccg|||||||
+Ms Ivy AXFORD|29|Stanton|25 Dec - 03:11|07 Jan|07 Jan|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Nancy WHITAKER|29|Finch|22 Dec - 16:00|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Shelley WILLIAMS|29|Ahmed|06 Jan - 18:12||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Ms Shirley May MORETON|29|Ahmed|05 Jan - 10:44||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Ms Sanita FRANKOW|29|Ipe|30 Dec - 11:16|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Eldene Surgery|NHS Swindon Ccg|||||||
+Mrs Cherryl HARRIES|29|Hegde|31 Dec - 11:48|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Judith Shirlie JONES|20|Hollinghurst|05 Jan - 07:00|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Lydia Olufunmilayo FASOYE|20|Brooks|29 Dec - 13:15|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mrs Mandy MCCARTHY|21|Mukherjee|26 Nov - 20:33|12 Jan|17 Dec|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mrs Marion Elizabeth M MILDENHALL|21|Ivory|04 Jan - 07:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Marion K DIXON|21|Finch|06 Jan - 11:46|13 Jan|||Saturn|No||||||||||||||||Sent referral|06 Jan - 17:19|||06 Jan - 17:19|||||||||||||||||||||||||||||WOODPECKER|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Louise SHANKS|21|Abdelrazik|06 Jan - 07:20||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Ms Dorothy HOPSON|21|Deo|31 Dec - 15:17|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Ms June F BLANCHARD|21|Foley|17 Dec - 23:19|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Elizabeth RUFF|21|Onyirioha|27 Dec - 08:28|08 Jan|31 Dec|F27 Safe guarding |||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Timothy BARTON|21|Ahmed|05 Jan - 00:46||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr Michael WYNNIATT|21|Ahmed|04 Jan - 13:53|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Master Boy of Louise SHANKS|21|Gowda|06 Jan - 11:54||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Lord Graeme TEST|21|General Medicne|04 Jan - 11:30||||Home|No|07 Jan|08 Jan - 12:00|Sent referral|DART|09 Dec - 11:05||05 Jan - 11:01|04 Jan - 11:35||||||||||||||In progress|||05 Jan - 11:06|03 Sep - 11:04||||||04 Jan - 11:34||||||||||||||No||No|Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|Home||||||
+Mr Anthony F E BEAVEN|21|Kerry|05 Jan - 15:50||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr Gordon Robert JOHNSON|21|Lawrence|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mr Daniel GAIGER|21|Ipe|01 Jan - 17:51|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Daniel Lee CAMPBELL|21|Hegde|05 Jan - 12:55|13 Jan|||Neptune|No|||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Eldene Health Centre|NHS Swindon Ccg|Neptune||||||
+Mr Davey DOEY-TEST-ONE|22|Pegden|01 Dec - 06:49|24 Dec|09 Dec|F4 Waiting for community placement|AMU|Yes|05 Jan|05 Jan - 10:24|Sent referral|DART|05 Jan - 10:25|08 Dec - 10:07|05 Jan - 10:25|16 Dec - 12:46||Sent referral|05 Jan - 10:25|||05 Jan - 10:25||Sent referral|05 Jan - 10:25|||05 Jan - 10:25||Sent referral|05 Jan - 10:25|||05 Jan - 10:25||Sent referral|05 Jan - 10:25|||05 Jan - 10:25||Sent referral|05 Jan - 10:26|||05 Jan - 10:25||Sent referral|05 Jan - 10:26|||05 Jan - 10:25||Yes|Yes|Yes|Test Ward DO NOT Use          |Sparcells Surgery|NHS Swindon Ccg|AMU||||||
+Mr Gilbert J KNOTT|22|Mukherjee|02 Jan - 07:51|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Master Boy of Anna MAGUIRE|22|Gowda|06 Jan - 17:09||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|North Swindon Practice|NHS Swindon Ccg|||||||
+Master Emilio HONEYMAN|22|OKeeffe|19 Nov - 11:00||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Patrick J CROXFORD|22|Chak|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr John BIGGLESTONE|22|Coombs|28 Dec - 22:06|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Courtyard Surgery|NHS Wiltshire Ccg|||||||
+Mr Martyn BENFIELD|22|Ahmed|06 Jan - 23:46||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Leonard Eric ELLERY|22|Ahmed|06 Jan - 18:44||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr William J ELDER|22|Hegde|31 Dec - 20:26|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Walter F AVENELL|22|Ipe|05 Jan - 14:02|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr Wayne MATCHETT|22|Ahmed|05 Jan - 12:05||||||||||||||||||||||||||||||||||||||||||||||||||||||OBSERVATION WARD (A&E)|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mrs Anna Louise MAGUIRE|22|Sinha|05 Jan - 20:00||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Ronald Charles GELL|32|Ahmed|04 Jan - 11:28|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mrs Irene Ruby BORISSOFF|32|Mukherjee|27 Nov - 18:12|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Heather WEIR|32|Ahmed|07 Jan - 00:48||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Old Town Surgery|NHS Swindon Ccg|||||||
+Mrs Pamela Mary SMITH|32|Mukherjee|21 Dec - 21:09|11 Jan|04 Jan|F25 Waiting for placement offer for mental health/residential or nursing|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mrs Mavis Deloris DUFFUS|32|Ahmed|07 Jan - 10:12|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mrs Sarah DANIELS|33|Strait|01 Jan - 19:53|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Crossroads Surgery|Abbey Meads Medical Pract|||||||
+Mr Roger SUMMERFIELD|33|Finch|03 Jan - 04:06|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Mr Peter SMITH|33|Mukherjee|17 Jul - 17:07|18 Sep|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mr Leonard William JACKSON|33|Joseph|01 Jan - 14:57|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Mrs Daphne BROOKE|33|Mukherjee|05 Jan - 14:42|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Barbara Ruth SELWOOD|33|Ullah|31 Dec - 00:15|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Ridge Green Medical Practice|NHS Swindon Ccg|||||||
+Mrs Amanda Jane DAVIES|33|Ipe|13 Dec - 23:39|07 Jan|05 Jan|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Eldene Surgery|NHS Swindon Ccg|||||||
+Mr Tony COLLINS|33|Bhattacharya|11 Dec - 18:36|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr David COHEN|33|Stanton|21 Dec - 18:35|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Mr David Norman WILLIAMS|34|Joseph|19 Dec - 20:05|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mr Brian T MITCHELL|34|Finch|04 Jan - 16:46|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Hugh Cecil NEWTON|34|Ahmed|05 Jan - 03:46|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Frederick ELLIOTT|34|Mukherjee|23 Dec - 19:00|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Market Lavington Surgery|NHS Wiltshire Ccg|||||||
+Mr Terry KIRBY|34|Onyirioha|04 Jan - 23:59|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Ivy May HALESTRAP|34|Mukherjee|28 Dec - 12:51|09 Jan|02 Jan|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Ms Mary E FRADGLEY|34|White|02 Jan - 11:09|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mrs Joan BAMPFIELD|35|White|25 Dec - 08:52|05 Jan|06 Jan|F24 Fit and no clear plan|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Phoenix Surgery|NHS Gloucestershire Ccg|||||||
+Mr Stanley Fall SHENTON|35|Finch|05 Jan - 00:25|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Evelyn IND|35|Mukherjee|30 Dec - 14:51|11 Jan|05 Jan|F19 Waiting for clinical assessments/ results |||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Leonard HARPER|35|Joseph|30 Dec - 14:41|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Park Surgery(Cv)|NHS Gloucestershire Ccg|||||||
+Mr Maurice W PARTRIDGE|35|Mukherjee|02 Jan - 16:30|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|St James Surgery|NHS Wiltshire Ccg|||||||
+Mr Ronald James SALSBURY|35|Onyirioha|01 Jan - 18:09|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr Eric HARDING|35|Finch|21 Dec - 22:05|07 Jan|05 Jan|F24 Fit and no clear plan|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Donald WESTALL|35|Ghaffar|23 Dec - 17:02|01 Jan|31 Dec|F8 Waiting for continuing health care package|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Mr Lukasz DOMAGALA|36|Joseph|04 Jan - 11:44|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr William Wilson TURPIE|36|Joseph|20 Dec - 23:10|07 Jan|04 Jan|F5 Waiting for discharge to assess|||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mrs Joan E F MABBUTT|36|Coombs|03 Jan - 15:14|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Phyllis SELF|36|Ipe|18 Dec - 22:07|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mr Donald Roland HOLBROW|37|Ipe|12 Dec - 22:42|07 Jan|07 Jan|F24 Fit and no clear plan|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Richard Norval MARLEY|29|Mukherjee|07 Dec - 22:07|11 Jan|21 Dec|F5 Waiting for discharge to assess|||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Purton Surgery|NHS Wiltshire Ccg|||||||
+Master Boy of Abigail LAWES|29|Gowda|06 Jan - 10:12||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Miss Abigail LAWES|29|Sullivan|04 Jan - 17:53||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr George KITSON|29|Chandrasekaran|22 Nov - 19:01|12 Jan|31 Dec|F6 Waiting for intermediate care bed|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mr David G POOLE|29|Pyrovolou|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Donald Jack HARDEN|29|Finch|02 Jan - 18:30|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Miss Kadie D HARRIS|30|Coombs|03 Jan - 12:39|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Cornerstone Practice|NHS Swindon Ccg|||||||
+Miss Girl of Janete OLIVEIRA|30|Gowda|05 Jan - 18:00||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mr Neil MORETON|30|Barnes|01 Jan - 15:06|09 Jan|07 Jan|F24 Fit and no clear plan|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mr Nigel Dennis Charles HARMAN|30|Onyirioha|02 Dec - 21:29|11 Jan|30 Dec|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Beryl S GRIGGS|30|Mukherjee|29 Dec - 19:00|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Ruby Beatrice LAMBERT|30|Mukherjee|05 Jan - 14:30|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mrs Pamela DEANS|30|Smith|28 Dec - 16:38|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mrs Patricia Alice LEA|30|Ahmed|05 Jan - 19:00||||||||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - SHORT STAY UNIT|Westrop Surgery|NHS Swindon Ccg|||||||
+Ms Josie GAGE|30|Ipe|05 Jan - 00:55|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Malmesbury Primary Care Centre|NHS Wiltshire Ccg|||||||
+Ms Janete OLIVEIRA|30|Suresh|05 Jan - 12:15||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mrs Violet Elizabeth KNIGHT|30|Ullah|02 Jan - 16:25|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mrs Maria MCNIVEN|30|Pyrovolou|07 Jan - 09:05||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Mrs Linda DEMERY|30|Finch|09 Dec - 22:05|08 Jan|18 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Garneta Anne AMBROSE|31|Ahmed|06 Jan - 21:53||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Ida Mary PRIDAY|31|Mukherjee|04 Jan - 17:46|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Irene COTTER|31|Finch|11 Dec - 21:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Barcroft Medical Centre|NHS Wiltshire Ccg|||||||
+Mrs Daphne COMLEY|31|Allen|04 Jan - 20:47|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Dorothy GRATTON|31|Kerry|23 Dec - 20:21|07 Jan|06 Jan|F5 Waiting for discharge to assess|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Northcroft Surgery|NHS Newbury and District Ccg|||||||
+Mrs Eleanor M CONRADI|31|Ipe|24 Dec - 18:31|07 Jan|29 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mr John Wyndham GEORGE|31|Smith|04 Jan - 10:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Victoria Cross Surgery|NHS Swindon Ccg|||||||
+Mr David James BULL|31|Hyde|27 Dec - 14:39|07 Jan|07 Jan|F24 Fit and no clear plan|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Frank Godfrey WEBBER|31|Ullah|01 Jan - 23:16|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|The Hermitage Surgery|NHS Swindon Ccg|||||||
+Mr Guido TORCHIA|31|Finch|31 Dec - 14:53|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr Ian HENDERSON|32|Ahmed|05 Jan - 21:58|12 Jan|||SSU|No|||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Fern Hill Practice|NHS Oxfordshire Ccg|||||||
+Mr Bryan J ARCHER|32|Ahmed|29 Dec - 16:34|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mr Michael FANNING|32|Claridge|06 Jan - 06:19|13 Jan|||Neptune|No|||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Malcolm J W GAINEY|32|Finch|04 Jan - 05:50|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Beversbrook Medical Centre|NHS Wiltshire Ccg|||||||
+Mr Michael John DAVIDSON|32|Kerry|14 Nov - 16:05|11 Jan|07 Dec|F18 Waiting for social care reablement or health home based|||||||||||||||||||||||||||||||||||||||||||||||||||SATURN|Unknown|Unknown|||||||
+Mr Dennis BULLOCK|01|ChippenhamNurseLead|18 Dec - 19:31|14 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|St James Surgery|NHS Wiltshire Ccg|||||||
+Mr Constanancio D'SA|01|Ramadurai|04 Dec - 13:05||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Park Lane Practice|NHS Swindon Ccg|||||||
+Mr Craig TEST-ACCOUNT|01|Beck|05 Jan - 10:22||||CARDIO|Yes|08 Jan||Sent referral|DART|05 Jan - 10:30||05 Jan - 10:30|||||||||||||||||||||||||||||||||||||||Yes|Yes|Yes|Test Ward DO NOT Use          |Cherry Orchard|The Orchard Partnership|CARDIO||||||
+Mr Charles David R KING|01|Davies|06 Jan - 09:32||||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|North Swindon Practice|NHS Swindon Ccg|||||||
+Mr Charles Robert WADDLE|01|Ipe|24 Nov - 18:15||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Christopher MAYNARD|01|WarminsterNurseLead|03 Jan - 14:50||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Bradford Road Medical Ctr|NHS Wiltshire Ccg|||||||
+Mr Bernard Leslie E STRATTON|01|WarminsterNurseLead|14 Oct - 23:27||03 Dec|F25 Waiting for placement offer for mental health/residential or nursing|||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Market Lavington Surgery|NHS Wiltshire Ccg|||||||
+Mr Anthony J P HAYES|01|Green|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Anthony SILVER|01|Satish|03 Dec - 17:53|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Station House Surgery|Ridgeway View Family Practice|||||||
+Mr Antony Hayward BOLLEN|01|ChippenhamNurseLead|08 Nov - 12:00|25 Nov|18 Nov|F11 Waiting for patient/family choice or input to decision making|||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Jubilee Field Surgery|NHS Wiltshire Ccg|||||||
+Mr Albert Peter PIMM|01|Ipe|25 Dec - 05:12||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|The Lawn Medical Centre|NHS Swindon Ccg|||||||
+Miss Margaret E WOODMAN|01|Ipe|25 Nov - 13:04||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Westrop Surgery|NHS Swindon Ccg|||||||
+Miss Laura BROWN|01|Kuchynka|07 Jan - 10:55||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Miss Carol Ann GOODINGS|01|Ghaffar|23 Dec - 17:13|13 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Master Boy of Kylie HOLT|01|OKeeffe|21 Dec - 17:03||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Master Boy of Samantha OGBOURNE|01|Gowda|31 Dec - 15:56||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Kingswood Surgery|NHS Swindon Ccg|||||||
+Master Jack LAVERS|01|Bates|09 Dec - 12:32||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Merchiston Surgery|NHS Swindon Ccg|||||||
+Master Riley LAVERS|01|Zengeya|17 Dec - 16:00||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Merchiston Surgery|NHS Swindon Ccg|||||||
+Master Henry SMITTEN|02|Broomfield|30 Dec - 23:07||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Master Boy of Tracie SHANNON|02|Gowda|06 Jan - 19:27||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Phoenix Surgery|NHS Gloucestershire Ccg|||||||
+Master Boy of Eleanor WEBSTER|02|Gowda|04 Jan - 15:00||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Miss Janet Doris SMITH|02|Ahmed|06 Jan - 20:18||||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Miss Hannah SELLARS|02|Coombs|28 Dec - 20:14|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Ashington House Surgery|NHS Swindon Ccg|||||||
+Miss Jacqueline IVE|02|Turner|01 Jan - 17:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Miss Sian Nicole RAPER|02|Yates|07 Jan - 07:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Miss Siobhan COLE|02|Davies|07 Jan - 10:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Miss Pamela SAVAGE|02|Ahmed|07 Jan - 09:51||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Avenue Surgery|NHS Gloucestershire Ccg|||||||
+Miss Paulina MAGIERA|02|Abdelrazik|06 Jan - 02:54||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr Alan Fred COOMBS|02|Ramadurai|21 Dec - 18:06||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Arthur AKERMAN|02|WarminsterNurseLead|07 Dec - 15:45||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Adcroft Surgery|Wiltshire Pct|||||||
+Mr Christopher EVERED|02|Blesing|07 Jan - 11:33||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr David C HORE|02|Turner|06 Jan - 22:11||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr David GOODWIN|02|Ramadurai|31 Dec - 17:00||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Feed TEST|04|Satish|02 Dec - 11:48||03 Dec|F1 Waiting return to other Acute Hosp - fit to travel|AMU|Yes|05 Jan|31 Dec - 09:30||||||||||||||||||||Sent referral|06 Jan - 18:19|||06 Jan - 18:18|||||||||||||||||||||||Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|Linnet - Acute Medical Unit - Monito||||||
+Mr Gordon HARRIS|04|WarminsterNurseLead|06 Jan - 10:50||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Box Surgery|NHS Wiltshire Ccg|||||||
+Mr John Holbrook BROOKS|04|Ipe|27 Oct - 18:15||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Kenneth Charles TUCKER|04|Ahmed|06 Jan - 20:33||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Abbey Meads Medical Pract|NHS Swindon Ccg|||||||
+Mr James FRANKLIN|04|Anwer|07 Jan - 09:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr Leigh GOUGH|04|Brooks|04 Jan - 07:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Malcolm BURGESS|04|Green|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mr Peter WHITE|04|WarminsterNurseLead|03 Jan - 20:45||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Lovemead Group Practice|NHS Wiltshire Ccg|||||||
+Mr Paul Ian BOOTH|04|ChippenhamNurseLead|14 Dec - 20:15|31 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mr William R CHAPMAN|04|Yiin|02 Jan - 01:36|07 Jan|05 Jan|F4 Waiting for community placement|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Great Western Surgery|NHS Swindon Ccg|||||||
+Mr William W T CURTIS|04|Ramadurai|29 Dec - 11:45||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mr Thomas Grant WALLER|04|Ahmed|06 Jan - 01:30||||Kingfisher - Short Stay Unit|Yes|08 Jan||||||||||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Christine POPE|04|Ipe|22 Dec - 19:37||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Claire CURTIS|04|Burgess|06 Jan - 12:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Bampton Surgery|NHS Oxfordshire Ccg|||||||
+Mrs Eileen JENKINS|04|WarminsterNurseLead|24 Nov - 16:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Avenue Surgery|NHS Wiltshire Ccg|||||||
+Mrs Elizabeth Nora BARTLETT|04|Turner|23 Nov - 18:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Hilda AINGE|04|ChippenhamNurseLead|02 Jan - 14:30|19 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - CEDAR WARD|Bradford Road Medical Ctr|NHS Wiltshire Ccg|||||||
+Mrs Jean MANSELL|04|White|03 Jan - 20:57|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Mrs Keeley P WILLIAMS|04|Hawkins|06 Jan - 07:20|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Ashington House Surgery|NHS Swindon Ccg|||||||
+Mrs Kerry HILLS|04|Shetty|06 Jan - 14:01||||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Julie Diana WILMOTT|04|Ramadurai|23 Dec - 18:40||||||||||||||||||||||||||||||||||||||||||||||||||||||FOREST - SEQOL|Park Lane Practice|NHS Swindon Ccg|||||||
+Mrs Lesley Edwina CARR|04|Ahmed|06 Jan - 22:55||||||||In progress||||06 Jan - 16:00|07 Jan - 10:10||||||||Sent referral|07 Jan - 10:09|||07 Jan - 10:08|||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Great Western Surgery|NHS Swindon Ccg|||||||
+Mrs Linda HUDD|04|Pegden|04 Jan - 17:55||||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mrs Linda Karen HERBERT|04|Rigby|04 Jan - 22:50|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Margaret BOWLER|04|Turner|05 Jan - 21:00||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Mrs Renee ROOKES|04|Gunasekera|29 Dec - 21:14|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Mrs Scarlet MONGAN|04|Shetty|06 Jan - 09:28|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Unknown|Unknown|||||||
+Mrs Pauline MONGER|04|WarminsterNurseLead|04 Dec - 20:10||||||||||||||||||||||||||||||||||||||||||||||||||||||WARMINSTER - LONGLEAT WARD|Bradford-On-Avon and Melksham Health|NHS Wiltshire Ccg|||||||
+Mrs Pearl E PONTIN|04|Turner|29 Dec - 20:28||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Maureen RICE|04|Barnes|05 Jan - 22:23|10 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Elm Tree Surgery|NHS Swindon Ccg|||||||
+Mrs Molly TANNER|04|Turner|02 Dec - 13:15||||||||||||||||||||||||||||||||||||||||||||||||||||||ORCHARD - SEQOL|Ridgeway View Family Practice|NHS Swindon Ccg|||||||
+Ms Denise HILTON|04|White|06 Jan - 14:51|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Mrs Tracie SHANNON|04|Gamal-Eldeen|03 Jan - 11:40||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Phoenix Surgery|NHS Gloucestershire Ccg|||||||
+Ms Joan SKINNER|06|White|01 Dec - 21:39|05 Jan|06 Jan|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Ms Patricia CLARKE|06|Gunasekera|02 Jan - 21:44|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Ms Lily E OAKEY|06|Finch|20 Nov - 13:30|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Burbage Surgery|NHS Wiltshire Ccg|||||||
+Sir Francis J B SYKES|06|Barnes|31 Dec - 23:40|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Ms Samantha Jane EVANS|07|Ahmed|06 Jan - 15:58||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Phoenix Surgery|NHS Swindon Ccg|||||||
+Ms Lindsey Jane DUCKER|07|White|19 Dec - 08:55|06 Jan|06 Jan|F13 Waiting for occupational therapy approval for discharge|||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Hawthorn Medical Centre|NHS Swindon Ccg|||||||
+Ms Florence M DENNING|07|Watson|27 Dec - 02:44|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Ms Barbara RYAN|07|Tasker|05 Jan - 16:59|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Mrs Jane CALLENDER|07|Horne|07 Jan - 09:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY THERAPY UNIT|Lechlade Medical Centre|NHS Gloucestershire Ccg|||||||
+Mrs Jennifer LYFORD|07|Pain Management|07 Jan - 10:30||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Jean POINTIN|07|Lawrence|29 Dec - 20:46|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Botley Medical Centre|NHS Oxfordshire Ccg|||||||
+Mrs Iris Joyce BETTLES|07|Gunasekera|25 Nov - 18:47|11 Jan|08 Dec|F22 Waiting for start or restart of package of care|||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mr Thomas H KEEN|07|White|04 Jan - 23:18|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mrs Alma F PREBBLE|07|Watson|18 Dec - 16:30|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mrs Edna May HOWLETT|07|Yiin|02 Jan - 15:44|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|New Court Surgery|NHS Wiltshire Ccg|||||||
+Mr John HALE|07|Ahmed|03 Jan - 12:33|07 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr John DULLEA|07|Deo|05 Jan - 07:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Whalebridge Practice|NHS Swindon Ccg|||||||
+Mr John Ernest BRONGER|07|McCrea|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CATH LAB RECOVERY|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Michael Stuart Craig WILSON|07|Ahmed|24 Dec - 12:31|31 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||DOVE UNIT|Merchiston Surgery|NHS Swindon Ccg|||||||
+Mr Michael JOYCE|07|Stanton|05 Jan - 05:11|11 Jan|||RESP|No|||Sent referral||06 Jan - 11:00||06 Jan - 11:15||||||||||||||||||||||||||||||||||||||||||SATURN|Pewsey Surgery|NHS Wiltshire Ccg|Saturn||||||
+Mr Raymond George SAUNDERS|07|Bhattacharya|16 Dec - 09:57|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mr Reginald James MILLER|07|Ahmed|07 Jan - 01:26||||CARDIO|No|||||||07 Jan - 07:43||||||||||||||||||||||||||||||||||||||||||KINGFISHER - AMBULATORY CARE|Park Lane Practice|NHS Swindon Ccg|CARDIO||||||
+Mr Harold LEWINGTON|07|Barnes|01 Jan - 21:17|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WCC - CORONARY CARE UNIT|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Elvis TEST|07|Coombs|10 Dec - 07:00|31 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|||||||
+Mr George Anthony COX|07|Ahmed|05 Jan - 20:20||||||||||||||||||||||||||||||||||||||||||||||||||||||SURGICAL ASSESSMENT UNIT|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Daniel Richard BRIGGS|07|Price|07 Jan - 10:00||||||||||||||||||||||||||||||||||||||||||||||||||||||COATE WATER UNIT|Phoenix Surgery|NHS Swindon Ccg|||||||
+Mr Christopher OUSEY|07|Finch|28 Dec - 17:50|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Miss Megan KILMARTIN|07|Ahmed|25 Dec - 13:12|30 Dec|||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Waterside Medical Centre|NHS South Warwickshire Ccg|||||||
+Miss Nicola LILES|07|Gamal-Eldeen|26 Dec - 18:13||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|Old Town Surgery|NHS Swindon Ccg|||||||
+Master Curtis MAHER|07|Grain|04 Jan - 16:42||||||||||||||||||||||||||||||||||||||||||||||||||||||CHILDREN'S UNIT|Ashington House Surgery|NHS Swindon Ccg|||||||
+Master Boy of Bridie ISAACS|07|Gowda|04 Jan - 06:35||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Carfax Health Enterprise|NHS Swindon Ccg|||||||
+Miss Kathryn Louise OWEN|07|Gamal-Eldeen|01 Jan - 11:59|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|White Horse Medical Practice|NHS Oxfordshire Ccg|||||||
+Miss Girl of Marianne CURTIS|07|Gowda|29 Dec - 06:40||||||||||||||||||||||||||||||||||||||||||||||||||||||SCBU|Lambourn Surgery|NHS Newbury and District Ccg|||||||
+Dr Add A New Patient TEST|11|Gibbs|17 Nov - 13:36|21 Dec|||Home|No|06 Jan|06 Jan - 11:00|Received referral|Stroke|01 Dec - 12:18|04 Jan - 11:50|04 Jan - 11:48|||In progress|01 Dec - 12:18||01 Jan - 11:51|01 Jan - 11:49||Completed referral|01 Dec - 12:18|||01 Jan - 11:49|05 Jan - 11:51|Not appropriate referral|01 Dec - 12:18|||||Further information required|01 Dec - 12:18|30 Dec - 13:33||||Further information required|01 Dec - 12:19|||||||||||No|Yes|No|Test Ward DO NOT Use          |Unknown|Unknown|Any||||||
+Miss Claire Louise CARLEY|12|Sullivan|07 Jan - 08:00||||||||||||||||||||||||||||||||||||||||||||||||||||||DELIVERY SUITE|Priory Road Medical Centre|NHS Swindon Ccg|||||||
+Miss Kirsty Louise WHEELER|12|Suresh|05 Jan - 17:20||||||||||||||||||||||||||||||||||||||||||||||||||||||HAZEL|Southbroom Surgery|NHS Wiltshire Ccg|||||||
+Mr Dennis Roger WALTERS|12|Ahmed|07 Jan - 09:05||||||||||||||||||||||||||||||||||||||||||||||||||||||LINNET - ACUTE MEDICAL UNIT|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr Daniel Terence WAY|12|Satish|06 Jan - 11:30|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||ALDBOURNE|Ramsbury Surgery|NHS Wiltshire Ccg|||||||
+Mr Claude ELMS|12|ChippenhamNurseLead|28 Dec - 15:00|20 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||CHIPPENHAM - MULBERRY WARD|Rowden Surgery|NHS Wiltshire Ccg|||||||
+Mr Brian Paul BARK|12|Ullah|02 Jan - 20:56||||||||||||||||||||||||||||||||||||||||||||||||||||||ITU/HDU|Westrop Surgery|NHS Swindon Ccg|||||||
+Mr Geoffrey Clift POOLE|12|Jones|29 Dec - 20:31|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AMPNEY|Moredon Medical Centre|NHS Swindon Ccg|||||||
+Mr Roger HEAFIELD|12|Thorn|04 Jan - 10:30|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Cricklade Surgery|NHS Wiltshire Ccg|||||||
+Mrs Dorothy GRIFFIN|12|Gunasekera|27 Dec - 10:50|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||WOODPECKER|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Mrs Audrey Gwendoline WILLIAMS|12|White|25 Dec - 07:40|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Purton Surgery|NHS Wiltshire Ccg|||||||
+Mrs Christine M SWANBOROUGH|12|Smith|29 Dec - 14:07|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Pewsey Surgery|NHS Wiltshire Ccg|||||||
+Mrs Anna Maria BROWN|12|Yiin|27 Dec - 21:37|12 Jan|06 Jan|F4 Waiting for community placement|||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mr Test TEST|12|Glass|07 Jan - 10:37|08 Jan|||STROKE|No|14 Jan|14 Jan - 08:00||||||||Received referral||07 Jan - 10:48||07 Jan - 10:47||||||||||||||||||||||||||||||||No|No|No|Test Ward DO NOT Use          |Taw Hill Medical Practice|NHS Swindon Ccg|STROKE|07 Jan - 10:46|Sent referral|07 Jan - 10:47|||
+Mr Stephen L WARREN|12|Shetty|06 Jan - 08:21|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MELDON|Kingswood Surgery|NHS Swindon Ccg|||||||
+Mrs Jillian WATKINS|12|Shetty|06 Jan - 18:01|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Westrop Surgery|NHS Swindon Ccg|||||||
+Mrs Jean Mary WALLACE|12|Mukherjee|27 Nov - 18:17|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Mrs Maria WATTS|12|Stanton|06 Jan - 02:55|11 Jan|||SSU||07 Jan||||||||||||||||||||||||||||||||||||||||||||||||SATURN|North Swindon Practice|NHS Swindon Ccg|||||||
+Mrs Margaret Rose WESTLAND|12|Ahmed|05 Jan - 17:27|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Northlands Surgery|NHS Wiltshire Ccg|||||||
+Mrs Joyce E CARVER|12|White|04 Jan - 17:35|09 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TEAL - OLDER PERSONS SHORT STAY UNIT|Tinkers Lane Surgery|NHS Wiltshire Ccg|||||||
+Ms Florence R HALTON|12|Watson|24 Dec - 20:48|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|New Court Surgery|NHS Wiltshire Ccg|||||||
+Ms Jillian Louise TAYLOR|12|Ahmed|05 Jan - 01:28|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||SHALBOURNE UNIT|Marlborough Surgery|NHS Wiltshire Ccg|||||||
+Ms Marilyn Jane GIBBON|12|Madhavan|07 Jan - 07:45||||||||||||||||||||||||||||||||||||||||||||||||||||||DAY SURGERY UNIT (ASU)|Hilary Cottage Surgery|NHS Gloucestershire Ccg|||||||
+Ms Phyllis MCGILL|13|Bhattacharya|15 Dec - 20:50|06 Jan|29 Dec|F20 Waiting for external agency assessment/social care/mental health|||||||||||||||||||||||||||||||||||||||||||||||||||MERCURY|Park Lane Practice|NHS Swindon Ccg|||||||
+Ms Jean CULVERWELL|13|Ahmed|06 Jan - 14:15||||||||Sent referral||06 Jan - 16:20||06 Jan - 16:19||||||||||||||||||||||||||||||||||||||||||NEPTUNE|Eldene Surgery|NHS Swindon Ccg|||||||
+Mrs Wendy Elizabeth Maud COLLINS|13|Finch|13 Dec - 19:45|29 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||AILESBURY (SAVERNAKE)|Patford House Surgery Partnership|NHS Wiltshire Ccg|||||||
+Mrs Kay PAINTING|13|Sonkor|01 Jan - 14:08|12 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||BEECH|Hathaway Surgery|NHS Wiltshire Ccg|||||||
+Mrs Margaret ANDREWS|13|Yiin|30 Dec - 12:43|19 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||FALCON - ASU|Hungerford Surgery|NHS Newbury and District Ccg|||||||
+Mrs Marilyn Mildred HEILMANN|13|Deo|01 Jan - 22:46|08 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||TRAUMA UNIT|Old School House Surgery|NHS Wiltshire Ccg|||||||
+Mrs Janina DOLACINSKA|13|White|05 Jan - 07:38|11 Jan|||||||||||||||||||||||||||||||||||||||||||||||||||||JUPITER|Park Lane Practice|NHS Swindon Ccg|||||||

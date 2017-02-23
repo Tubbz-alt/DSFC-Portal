@@ -1,0 +1,139 @@
+/*!
+ * Bootstrap v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+
+
+.navbar .nav {
+	display: block;
+	float: left;
+	left: 0;
+	margin: 5px 11px 0 0;
+	position: relative;
+}
+.nav {
+	list-style: outside none none;
+	margin-bottom: 20px;
+	margin-left: 0;
+}
+ul, ol {
+	margin: 0 0 10px 25px;
+	padding: 0;
+}
+.navbar .nav > li {
+	float: left;
+}
+.dropup, .dropdown {
+	position: relative;
+}
+li {
+	line-height: 20px;
+}
+.navbar .nav > li > a {
+	color: #777;
+	float: none;
+	padding: 10px 12px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #fff;
+}
+.nav > li > a {
+	display: block;
+}
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+	border-bottom-color: #777;
+	border-top-color: #777;
+}
+.navbar .nav .dropdown-toggle .caret {
+	margin-top: 8px;
+}
+.nav .dropdown-toggle .caret {
+	border-bottom-color: #08c;
+	border-top-color: #08c;
+	margin-top: 6px;
+}
+.dropdown .caret {
+	margin-left: 2px;
+	margin-top: 8px;
+}
+.caret {
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #000;
+	content: "";
+	display: inline-block;
+	height: 0;
+	vertical-align: top;
+	width: 0;
+}
+.navbar .nav > li > a {
+	color: #777;
+	text-shadow: 0 1px 0 #fff;
+}
+.navbar .container {
+	width: auto;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+body {
+	color: #333;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+.navbar-inner {
+	background-color: #fafafa;
+	background-image: linear-gradient(to bottom, #fff, #f2f2f2);
+	background-repeat: repeat-x;
+	border: 1px solid #d4d4d4;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	min-height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.navbar {
+	margin-bottom: 20px;
+	overflow: visible;
+}
+.row::before, .row::after {
+	content: "";
+	display: table;
+	line-height: 0;
+}
+.row::after {
+	clear: both;
+}
+.row::before, .row::after {
+	content: "";
+	display: table;
+	line-height: 0;
+}
+.row {
+	margin-left: -20px;
+}
+.span4 {
+	width: 300px;
+}
+[class*="span"] {
+	float: left;
+	margin-left: 20px;
+	min-height: 1px;
+}
+.span8 {
+	width: 620px;
+}
+.pack-title {
+	overflow-wrap: break-word;
+	padding-top: 15px;
+}
+.text-right {
+	text-align: right;
+}

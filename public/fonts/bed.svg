@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<g>
+	<rect x="1.414" y="7.89" fill="#FFFFFF" width="13.136" height="0.829"/>
+	<rect x="1.414" y="11.912" fill="#FFFFFF" width="13.136" height="2.071"/>
+	<rect x="3.266" y="8.28" fill="#FFFFFF" width="0.756" height="5.118"/>
+	<rect x="5.069" y="8.28" fill="#FFFFFF" width="0.755" height="5.118"/>
+	<rect x="6.702" y="8.28" fill="#FFFFFF" width="0.755" height="5.118"/>
+	<rect x="8.555" y="8.28" fill="#FFFFFF" width="0.755" height="5.118"/>
+	<rect x="10.213" y="8.28" fill="#FFFFFF" width="0.755" height="5.118"/>
+	<rect x="12.016" y="8.28" fill="#FFFFFF" width="0.756" height="5.118"/>
+	<path fill="#FFFFFF" d="M2.236,15.323c0,0.162-0.131,0.293-0.292,0.293H1.676c-0.162,0-0.293-0.131-0.293-0.293V7.037
+		c0-0.162,0.131-0.292,0.293-0.292h0.269c0.161,0,0.292,0.131,0.292,0.292V15.323z"/>
+	<circle fill="#FFFFFF" cx="1.81" cy="6.647" r="0.902"/>
+	<path fill="#FFFFFF" d="M14.617,15.274c0,0.161-0.131,0.293-0.292,0.293h-0.269c-0.161,0-0.293-0.132-0.293-0.293V6.988
+		c0-0.162,0.132-0.292,0.293-0.292h0.269c0.161,0,0.292,0.131,0.292,0.292V15.274z"/>
+	<circle fill="#FFFFFF" cx="14.19" cy="6.599" r="0.901"/>
+	<path fill="#FFFFFF" d="M11.918,0.968c0,0.162-0.131,0.292-0.293,0.292H3.948c-0.161,0-0.292-0.131-0.292-0.292V0.676
+		c0-0.162,0.131-0.292,0.292-0.292h7.677c0.162,0,0.293,0.131,0.293,0.292V0.968z"/>
+	<rect x="4.545" y="1.175" fill="#FFFFFF" width="0.421" height="2.121"/>
+	<rect x="10.688" y="1.175" fill="#FFFFFF" width="0.421" height="2.121"/>
+	<polygon fill="#FFFFFF" points="4.655,2.221 4.982,2.882 5.71,2.988 5.183,3.502 5.307,4.228 4.655,3.885 4.003,4.228 4.127,3.502 
+		3.6,2.988 4.329,2.882 	"/>
+	<polygon fill="#FFFFFF" points="10.778,2.221 11.104,2.882 11.834,2.988 11.306,3.502 11.431,4.228 10.778,3.885 10.127,4.228 
+		10.25,3.502 9.724,2.988 10.452,2.882 	"/>
+	<rect x="7.689" y="1.047" fill="#FFFFFF" width="0.292" height="2.175"/>
+	<path fill="#FFFFFF" d="M9.37,2.4"/>
+	<path fill="#FFFFFF" d="M7.525,5.042c0-1.363,1.019-2.486,2.337-2.654C9.63,2.313,9.382,2.272,9.125,2.272
+		c-1.338,0-2.423,1.084-2.423,2.422c0,1.077,0.704,1.989,1.676,2.303C7.854,6.509,7.525,5.814,7.525,5.042z"/>
+</g>
+</svg>

@@ -1,0 +1,26 @@
+{
+	"patient_safety": {
+		"name": "Patient Safety",
+		"majors": "2/0",
+		"minors": "2",
+		"paeds_ED": "2",
+		"ED_Obs": "0",
+		"status_overall": "6"
+	},
+	"EDD_capacity": {
+		"name": "EDD Capacity",
+		"majors": "12/2",
+		"minors": "6",
+		"paeds_ED": "5",
+		"ED_Obs": "0",
+		"status_overall": "23"
+	},	
+	"EDD_flow": {
+		"name": "EDD Flow",
+		"majors": "0/0",
+		"minors": "0",
+		"paeds_ED": "0",
+		"ED_Obs": "0",
+		"status_overall": "0"
+	}	
+}

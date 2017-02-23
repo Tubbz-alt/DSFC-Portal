@@ -1,0 +1,82 @@
+/*patients details strats*/
+
+.patient-detail-hover{color:rgb(74,60,51)}
+
+.patient-detail-hover:link {
+    text-decoration: none;
+}
+
+.patient-detail-hover:hover{
+
+color:rgb(0,136,204);
+}
+
+
+.section-header h2 {
+	color: #1482d0;
+	font: 600 italic 22px/22px "Conv_Lato-Regular_1";
+	margin: 0;
+	float:left;
+}
+.import-button {
+	background: #000 none repeat scroll 0 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font: 600 14px/18px "Conv_Lato-Regular_1";
+	padding: 7px 10px 10px 4px;
+}
+
+.import-button:hover{ text-decoration:none; color:#fff; opacity:0.8;}
+
+.import-button span {
+  background: rgba(0, 0, 0, 0) url("../images/excel_icon.png") no-repeat scroll center center;
+  border-right: 1px solid #fff;
+  float: left;
+  height: 20px;
+  margin: 0 6px 1px 3px;
+  padding: 0 32px 0 0;
+  width: 20px;
+}
+
+.dtls-row-content {
+	background: #fff none repeat scroll 0 0;
+	color: #252525;
+	float: left;
+	font: italic 14px/12px "Conv_Lato-Regular_1";
+	padding: 9px 10px;
+	width: 100%;
+}
+.dtls-row {
+	float: left;
+	margin: 0 0 23px;
+	width: 100%;
+}
+.dtls-row-head {
+	color: #252525;
+	float: left;
+	font: 15px/15px "Conv_Lato-Regular_1";
+	padding: 9px 10px;
+	width: 100%;
+	min-height: 35px;
+}
+.dtls-row-content {
+	background: #fff none repeat scroll 0 0;
+	color: #252525;
+	float: left;
+	font: italic 14px/12px "Conv_Lato-Regular_1";
+	min-height: 35px;
+	padding: 9px 10px;
+	width: 100%;
+}
+.dtls-row .col-md-4:nth-child(2n+1) {
+	background: #e7e7e7 none repeat scroll 0 0;
+}
+.dtls-row .col-md-4 {
+	background: #dedede none repeat scroll 0 0;
+	padding: 0;
+}
+
+/*patients details ends*/

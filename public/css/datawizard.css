@@ -1,0 +1,431 @@
+.definitions-table > tbody > tr > td {
+	vertical-align: middle;
+}
+
+
+.definitions-table > tbody > tr .nationaltable {
+	vertical-align: top ;
+}
+
+.definitions-table > tbody > td .nationaltable {
+	vertical-align: top
+}
+.definitions-table > tbody > td .nationaltablemapping {
+	vertical-align: top ;
+}
+.definitions-table >  td .localtablehidden {
+	vertical-align: top ;
+}
+.text-center.localtablehidden {
+	vertical-align: top;
+}
+.nationaltablemapping .nationaltable .text-center {
+	vertical-align: top !important;
+}
+
+.definitions-table .alternativecolor:nth-child(odd) {
+	background-color: #e2e2e2 ;
+}
+
+.details-hover {
+	cursor: pointer;
+	cursor: hand;
+}
+.nationalinactive{
+	display: none;
+}
+.localinactive{
+	display: none;
+}
+.nationalactive{
+	display: block;
+}
+.localactive{
+	display: block;
+}
+#wizardcsvDataModel .modal-dialog {
+	margin: 30px auto;
+	width: 900px;
+}
+.filter-table {
+	width: 100%;
+	float: left;
+	margin-left: 16px;
+}
+.vertical.default_list {
+	list-style: none;
+}
+.default_list li{
+	font-size: 11px;
+}
+ARTICLE LABEL {
+	background: #0072c6  none repeat scroll 0 0;
+	color: white;
+	display: block;
+	font-size: 16px;
+	font-weight: 100;
+	line-height: 20px;
+	padding: 10px 0 10px 10px;
+	width: 100%;
+}
+.six.columns input {
+	margin-left: 10px;
+}
+#recordscount > span {
+	margin-left: 41px !important;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+#select_all {
+	width: 87px;
+	font-size: 12px;
+}
+.table th {
+	font-size: 14px;
+}
+/*.btn.btn-primary.mapfunction {
+    margin-bottom: -30px;
+}*/
+.yourDiv{
+	position:absolute;
+	top: 123px;
+}
+.form-group.datasetdiv {
+	margin-bottom: -35px;
+	position: absolute;
+	z-index: 99999;
+	width: 33%;
+}
+.maps{
+
+}
+.btn.btn-primary.btn-info-full.next-step-mapping.dataset {
+	margin-right: 10px;
+}
+.list-inline.pull-right {
+	margin-top: 10px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+
+	padding: -0.5em 1em !important;
+
+}
+.tabBlock-content {
+
+	padding: 10px 0 !important;
+
+}
+.filestatus{
+	padding: 8px !important;
+}
+
+#myModalfileinfo .modal-body {
+	height: 220px;
+}
+#myModalfileinfo  .modal-dialog {
+	width: 779px;
+}
+.wizardcsvDataModelpopup{
+	display: none;
+}
+.definitions-table .invisible-data{
+	display:none;
+}
+.definitions-table .invisible-data-final{
+	display:none;
+}
+.definitions-table{
+	border: medium none;
+}
+
+.definitions-table.table-striped.table-bordered.definitions-table td {
+	border: medium none;
+}
+.definitions-table.table-striped.table-bordered.definitions-table th {
+	border: medium none;
+}
+.definitions-table-modal.table-striped.table-bordered td {
+	border: medium none;
+}
+.definitions-table-modal.table-striped.table-bordered th {
+	border: medium none;
+}
+
+
+
+.donate-now {
+	list-style-type:none;
+	margin:1px 0 0 0;
+	padding:0;
+}
+
+.donate-now li {
+	float: left;
+	margin: 0 46px 0 0;
+}
+
+.donate-now label {
+	cursor: pointer;
+	padding: 14px;
+}
+.donate-now label input[type="checkbox"], input[type="radio"] {
+	line-height: normal;
+	margin: 4px 16px 0;
+}
+
+
+
+.donate-now-grouping {
+	list-style-type:none;
+	margin:1px 0 0 0;
+	padding:0;
+}
+
+.donate-now-grouping li {
+	float: left;
+	width: 50%;
+
+
+}
+
+.donate-now-grouping label {
+	background-color: #808080;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	height: 50px;
+	padding: 5px;
+	width: 98%;
+
+
+	border-radius: 8px;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	border: 1px solid #000;
+}
+
+
+.hidedatabutton{
+	display: none;
+}
+.default_list{
+	height: 300px;
+	overflow-y: scroll;
+}
+.mapping-finish{
+	margin-right: -19px;
+}
+.mapping-map{
+	margin-right: -5px;
+}
+.national-label{
+	margin-left: 5px;
+	width: 99%;
+	color: black;
+
+}
+.national-label span{
+
+	color: white;
+
+}
+#oneoremoremappingDataModel .modal-dialog {
+	margin: 30px auto;
+	width: 96%;
+}
+.national-label > fieldset {
+	float: right;
+	width: 70%;
+}
+.complete-wizard-final-oneoremore{
+	margin-right: 24px;
+}
+.table_header_color_white{
+	color:white;
+}
+/* .remove_last_element tr th:last-child {
+     display:none;
+ }*/
+.complete-wizard-local-national {
+	margin-right: 26px;
+}
+#wizardcsvDataModelLabel{
+	padding-left: 30px;
+}
+
+
+.radio_item{
+	display: none !important;
+}
+
+.label_item {
+	opacity: 0.1;
+}
+
+.radio_item:checked + label {
+	opacity: 1;
+	width:100px;
+	height:100px;
+}
+
+label {
+	cursor: pointer;
+}
+.table tbody tr th{
+	border-top: 0 solid #ddd !important;
+}
+
+table tr.fill {
+	background: #979797 !important;
+	color: #FFFFFF;
+}
+.aeadata td {
+	font-size: 10px !important;
+	vertical-align: middle !important;
+}
+.aeadata th{
+	vertical-align: top !important;
+	font-size: 12px !important;
+}
+
+.aeadata td:nth-child(2), .table-wrapper th:nth-child(2) {
+	width: 10% !important;
+}
+.aeadata td:nth-child(7), .table-wrapper th:nth-child(7) {
+	width: 10% !important;
+}
+.aeadata td:nth-child(6), .table-wrapper th:nth-child(6) {
+	width: 10% !important;
+}
+.aeadata td:nth-child(10), .table-wrapper th:nth-child(10) {
+	width: 10% !important;
+}
+.margin-top-20 {
+	margin-top: -20px;
+}
+#DataTables_Table_0_length select {
+	height: 30px;
+	margin-left: 16px;
+	margin-top: 5px;
+}
+
+.tableheader.active {
+	background: #fff;
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+table.dataTable thead th, table.dataTable thead td {
+	border-bottom: none;
+	padding: 10px 18px;
+}
+.localtable td {
+	padding: 1px !important;
+}
+.extracolumn{
+	font-size: 12px;
+	font-weight: bold;
+}
+#tnrdataconnection .modal-dialog {
+	margin: 30px auto;
+	width: 933px;
+}
+
+
+#tnrdataconnection .modal{
+	display: block !important;
+}
+#tnrdataconnection .modal-dialog{
+	overflow-y: initial !important
+}
+#tnrdataconnection .modal-body{
+	height: 400px;
+	overflow-y: auto;
+}
+
+#tnrdataconnectionresult .modal-dialog {
+	margin: 30px auto;
+	width: 660px;
+}
+.boldtext{
+	font-weight: bold;
+}
+
+.groupparentdiv .text {
+	margin-left: 5px;
+}
+.groupparentdiv a {
+	box-sizing: border-box;
+	text-align: center;
+}
+#datatypegroup .modal-dialog {
+	margin: 30px auto;
+	width: 1000px;
+}
+
+#codedvaluegroup .modal-dialog {
+	margin: 30px auto;
+	width: 900px;
+}
+#datatypegroup .dataTables_filter {
+	margin-top: -68px;
+}
+#codedvaluegroup .dataTables_filter {
+	margin-top: -68px;
+}
+
+
+
+
+.fixed_headers tbody, .fixed_headers thead
+{
+	width: 100% !important;
+	display: block;
+}
+
+.fixed_headers tbody
+{
+	overflow: auto;
+	height: 300px;
+}
+.fixed_headers .secondth{
+	width: 222px !important;"
+}
+
+
+.fixed_headers th {
+	width: 100%;
+}
+.fixed_headers tbody th, .fixed_headers tbody td {
+	padding: 12px 198px !important;
+}
+.fixed_headers th {
+	padding: 5px 182px !important;
+}
+
+
+.fixed_headers_coded tbody, .fixed_headers_coded thead
+{
+	display: block;
+}
+
+.fixed_headers_coded tbody
+{
+	overflow: auto;
+	height: 500px;
+}
+
+.fixed_headers_coded {
+	width: 350px; /* can be dynamic */
+}
+
+.fixed_headers_coded th
+{
+	width: 75px;
+}
+.fixed_headers_coded thead th {
+
+	padding: 10px 107px !important;
+}
