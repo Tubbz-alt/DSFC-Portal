@@ -33,6 +33,10 @@
              background:#FFFFEF;
              color:#000000 !important;
          }
+         a.current:hover {
+             
+             color: #ffffff !important;
+         }
  .nav-collapse.collapse.user-nav li {
      text-align: center;
      width: 160px;

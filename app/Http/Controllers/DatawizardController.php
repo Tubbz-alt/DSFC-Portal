@@ -249,10 +249,10 @@ class DatawizardController extends Controller
 
         $dataitemlist = CsvReferenca::
         leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-            ->join('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+           // ->join('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
             ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-            ->where('emdatawizard.status','=',1)
-            ->where('emdefinitionstable.mappedCodedStatus','=',1)
+           // ->where('emdatawizard.status','=',1)
+          //  ->where('emdefinitionstable.mappedCodedStatus','=',1)
             ->orderBy('emdefinitionstable.dataItemName','ASC')
             ->lists('dataItemName','dataItemName')->all();
 
@@ -298,7 +298,7 @@ class DatawizardController extends Controller
         if(!empty($datare['grouped_data_item'])){
             Session::put('grouped_selected_name', $datare['grouped_data_item']);
         $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-            ->where('emgroupinfo.groupName','=',$datare['grouped_data_item'])
+            ->where('emdefinitionstable.dataItemName','=',$datare['grouped_data_item'])
             ->groupBy('emgroupinfo.groupName')
             ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
             ->get();
@@ -359,7 +359,6 @@ class DatawizardController extends Controller
 
         $fileTitle = $formFields['file_title'];
         $filedescription = $formFields['filedescription'];
-
 
 
         // SET UPLOAD PATH
@@ -965,8 +964,549 @@ class DatawizardController extends Controller
     }
     public function getHelp()
     {
-        $help_definitions_data=   HelpModel::orderBy('helpTabName','ASC')->get();
+        $help_database =   HelpModel::orderBy('helpTabName','ASC')->where('helpTabName','=','Databases')->get();
+        $help_ae =   HelpModel::orderBy('helpTabName','ASC')->where('helpTabName','=','A&E')->get();
+        $help_inpatient =   HelpModel::orderBy('helpTabName','ASC')->where('helpTabName','=','Inpatient')->get();
+        $help_outpatient =   HelpModel::orderBy('helpTabName','ASC')->where('helpTabName','=','Outpatient')->get();
 
-        return view("dashboards.help",compact('help_definitions_data'));
+        return view("dashboards.help",compact('help_database','help_ae','help_inpatient','help_outpatient'));
     }
+
+    public function getFilterTnr(Request $request)
+    {
+
+        $data = $request->all();
+
+
+        if(!empty($data['database'])){
+            Session::put('database_selected_name', $data['database']);
+        }
+        if(!empty($data['tablename'])){
+            Session::put('table_selected_name', $data['tablename']);
+        }
+
+        if(!empty($data['searchvalue']) && !empty($data['tablename']) ) {
+            $searchkey= $data['searchvalue'];
+            $tablenames= $data['tablename'];
+
+       /*     $aeadatas =Aeadata::
+            leftjoin('emtnrconnecteddata','emaeadatadefinition.tnrId','=','emtnrconnecteddata.tnrDataId')
+                ->leftjoin('emdefinitionstable','emtnrconnecteddata.dataLocalId','=','emdefinitionstable.definitionID')
+
+                ->whereRaw(" `emaeadatadefinition`.`tnrItemName` LIKE '%$searchkey%' or 
+                `emaeadatadefinition`.`tnrDataItemDescription` LIKE '%$searchkey%'
+                or `emaeadatadefinition`.`dataType` LIKE '%$searchkey%' or `emaeadatadefinition`.`required` LIKE '%$searchkey%'
+                or `emaeadatadefinition`.`isDerivedItem` LIKE '%$searchkey%' ")
+                ->where('emaeadatadefinition.tableName','=',$data['tablename'])
+                ->get();*/
+
+            $aeadatas =   DB::select("select * from `emaeadatadefinition` left join `emtnrconnecteddata` on 
+                `emaeadatadefinition`.`tnrId` = `emtnrconnecteddata`.`tnrDataId` left join `emdefinitionstable` 
+                on `emtnrconnecteddata`.`dataLocalId` = `emdefinitionstable`.`definitionID`
+                 where(`emaeadatadefinition`.`tnrItemName` LIKE '%$searchkey%' or
+                `emaeadatadefinition`.`tnrDataItemDescription` LIKE '%$searchkey%'
+                or `emaeadatadefinition`.`dataType` LIKE '%$searchkey%' or `emaeadatadefinition`.`required`
+                 LIKE '%$searchkey%'
+                or `emaeadatadefinition`.`isDerivedItem` LIKE '%$searchkey%' ) 
+                and `emaeadatadefinition`.`tableName` = '$tablenames' ");
+
+        }else{
+
+            if(!empty($data['tablename'])){
+                Session::put('table_selected_name', $data['tablename']);
+
+                $aeadatas =Aeadata::
+                leftjoin('emtnrconnecteddata','emaeadatadefinition.tnrId','=','emtnrconnecteddata.tnrDataId')
+                    ->leftjoin('emdefinitionstable','emtnrconnecteddata.dataLocalId','=','emdefinitionstable.definitionID')
+
+                    ->orderBy('tnrConnectStatus','DESC')
+                    ->where('tableName','=',$data['tablename'])
+                    ->get();
+
+            }elseif(!empty($data['database'])){
+
+                Session::put('database_selected_name', $data['database']);
+                $aeadatas =Aeadata::
+                leftjoin('emtnrconnecteddata','emaeadatadefinition.tnrId','=','emtnrconnecteddata.tnrDataId')
+                    ->leftjoin('emdefinitionstable','emtnrconnecteddata.dataLocalId','=','emdefinitionstable.definitionID')
+                    ->where('dataBaseName','=',$data['database'])
+                    ->orderBy('tnrConnectStatus','DESC')
+
+                    ->get();
+            }else{
+                $aeadatas =Aeadata::
+                leftjoin('emtnrconnecteddata','emaeadatadefinition.tnrId','=','emtnrconnecteddata.tnrDataId')
+                    ->leftjoin('emdefinitionstable','emtnrconnecteddata.dataLocalId','=','emdefinitionstable.definitionID')
+                    ->orderBy('tnrConnectStatus','DESC')
+                    ->get();
+            }
+
+        }
+
+
+
+
+        foreach($aeadatas as $aeadata){
+            echo " <tr class=\"stileone\">
+
+                                            <td class=\"text-center \"><span
+                                                        class=\"boldtext\">$aeadata->dataBaseName</span>
+                                                <br>";
+                                                if(!empty($aeadata->tableName)){
+                                                    echo "<span class=\"extracolumn\"></span><br>
+                                                    $aeadata->tableName ";
+                                               }else{
+                                                    echo "<span class=\"extracolumn\">-</span><br>";
+                                               }
+
+                                           echo" </td>
+
+                                            <td class=\"text-center \">
+                                                <span class=\"boldtext\">$aeadata->tnrItemName</span>
+                                                <br>";
+                                                if(!empty($aeadata->tnrDataItemDescription)){
+                                                    echo"<span class=\"extracolumn\"></span><br>
+                                                    $aeadata->tnrDataItemDescription ";
+                                                }else{
+                                                    echo"<span class=\"extracolumn\">-</span><br>";
+                                               }
+
+                                            echo"</td>
+
+                                            <td class=\"text-center\">$aeadata->dataType</td>
+
+
+                                            <td class=\"text-center\">$aeadata->isDerivedItem<br>";
+                                                if(!empty($aeadata->derivationMethodology)){
+                                                    echo "<span class=\"extracolumn\"></span><br>
+                                                    $aeadata->derivationMethodology";
+                                                    }
+                                                else{
+                                                    echo"<span class=\"extracolumn\">-</span><br>";
+                                                }
+                                            echo"</td>
+
+
+                                            <td class=\"text-center\">$aeadata->authorName
+                                                <br>$aeadata->createdDate
+                                            </td>
+
+
+                                            <td class=\"text-center\">";
+
+                                                if(!empty($aeadata->dataDictionaryName)){
+
+                                                    echo "$aeadata->dataDictionaryName}} <br>";
+                                                }else{
+                                                    echo"<span class=\"extracolumn\">-</span><br>";
+                                                }
+                                                if (filter_var($aeadata->dataDictionaryLinks, FILTER_VALIDATE_URL) !== false){
+
+                                                   echo" <a target=\"_blank\" class=\"extracolumn\"
+                                                       href=\"$aeadata->dataDictionaryLinks\">Link</a>";
+                                                }
+
+
+
+
+                                           echo"</td>";
+                                            if(!empty($aeadata->codeTbc)){
+                                                echo"<td class=\"text-center details-control\"
+                                                    data-item-name=\"$aeadata->dataItemName\"
+                                                    id=\"$aeadata->tnrId\"><span
+                                                            class=\"btn btn-primary btn-sm showhidedataitemstnr\"
+                                                            data-item-name=\"$aeadata->dataItemName\"
+                                                            id=\"$aeadata->tnrId\">Show</span></td>";
+                                            }else{
+                                                echo"<td class=\"text-center\">$aeadata->codeTbc
+                                                    <br>$aeadata->codeDescriptionTbc
+                                                </td>";
+
+                                           }
+
+                                            echo"<td class=\"text-center\">";
+
+                                                if($aeadata->tnrConnectStatus==1){
+                                                    echo"<span class=\"btn-primary btn tnr-dataconnection-result\"
+                                                          data-tnrid=\"$aeadata->tnrId\">Show </span>";
+
+                                                }else{
+                                                    echo"<span class=\"btn-primary btn tnr-dataconnection\"
+                                                          data-name=\"$aeadata->tnrItemName\"
+                                                          data-tnrid=\"$aeadata->tnrId\">Reference Data Item  </span>";
+                                               }
+
+                                            echo"</td>
+                                            <td class=\"text-center\">
+                                                
+                                            </td>
+
+
+
+                                        </tr>";
+
+        }
+
+
+    }
+
+    public function datatype_code($str)
+    {
+
+        if ($str == "varchar") {
+            $str = 'Text';
+        } elseif ($str == "int") {
+            $str = 'integer';
+        } elseif ($str == "bigint") {
+            $str = 'integer';
+        } elseif ($str == "nvarchar") {
+            $str = 'text';
+        } elseif ($str == "date") {
+            $str = 'date';
+        } elseif ($str == "time") {
+            $str = 'time';
+        } elseif ($str == "datetime") {
+            $str = 'datetime';
+        }
+        return $str;
+    }
+
+    public function  getReferenceFilter(Request $request)
+    {
+        $datare = $request->all();
+        if(!empty($datare['dataitemname'])){
+            Session::put('dataitem_selected_name', $datare['dataitemname']);
+            $approved = DB::table('emconceptreferencedata')
+                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+                ->leftjoin('emdatatypemapp', 'emdefinitionstable.definitionID', '=', 'emdatatypemapp.dataMappedId')
+                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->where('emconceptreferencedata.status','=',1)
+                /* ->where('emdefinitionstable.mappedCodedComplete','=',0)*/
+                ->where('emdefinitionstable.dataItemName', '<>', '')
+                ->where('emdefinitionstable.dataItemName','=',$datare['dataitemname'])
+                ->orderBy('emdefinitionstable.isMapped','DESC')
+                ->groupBy('emdefinitionstable.dataItemName')
+                ->get();
+
+
+        }else{
+
+            $approved = DB::table('emconceptreferencedata')
+                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+                ->leftjoin('emdatatypemapp', 'emdefinitionstable.definitionID', '=', 'emdatatypemapp.dataMappedId')
+                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->where('emconceptreferencedata.status','=',1)
+                /* ->where('emdefinitionstable.mappedCodedComplete','=',0)*/
+                ->where('emdefinitionstable.dataItemName', '<>', '')
+                ->orderBy('emdefinitionstable.isMapped','DESC')
+                ->groupBy('emdefinitionstable.dataItemName')
+                ->get();
+
+        }
+
+        foreach($approved as $approved_data){
+
+            echo"  <tr class='stileone alternativecolor'>
+                                            <td class=\"text-left \">$approved_data->dataItemName</td>
+                                            <td class=\"text-left\">$approved_data->dataItemDescription</td>
+                                            <td class=\"text-center\">$approved_data->datasetBelongs</td>";
+
+                                            if($approved_data->datatypeMapStatus==1){
+                                                $datatype= $this->datatype_code(current(explode(' ',$approved_data->dataTypeMapName)));
+
+                                               echo" <td class=\"text-center\">$datatype</td>";
+                                            }else{
+                                                $codedvalue=$this->datatype_code(current(explode(' ',$approved_data->codedValueType)));
+                                                echo"<td class=\"text-center\">$codedvalue</td>";
+                                            }
+
+                                            echo"<td class=\"text-center\">";
+                                                if (filter_var($approved_data->sharePointLink, FILTER_VALIDATE_URL) !== false){
+                                                    echo"<a target=\"_blank\"
+                                                       href=\"$approved_data->sharePointLink\">$approved_data->sharePointLink</a>";
+                                                }else{
+                                                    echo "$approved_data->sharePointLink ";
+                                                }
+
+
+                                           echo"</td>";
+
+
+
+                                            if(!empty($approved_data->codedValueDescription)){
+                                                echo"<td class=\"text-center details-control\"  
+                                                data-item-name=\"$approved_data->dataItemName\"
+                                                 id=\"$approved_data->definitionID\"><span
+                                                            class=\"btn btn-primary btn-sm showhidedataitems\"
+                                                            data-item-name=\"$approved_data->dataItemName\"
+                                                            id=\"$approved_data->definitionID\">Show</span></td>";
+                                            }else{
+                                                echo"<td class=\"text-center\"></td>";
+                                            }
+
+
+
+
+
+                                                echo"<td class=\"text-center invisible-data\">$approved_data->codedValue</td>
+                                                <td class=\"text-center invisible-data\">$approved_data->codedValueDescription</td>
+                                                <td class=\"text-center invisible-data\">$approved_data->dataItemId</td>
+                                                <td class=\"text-center invisible-data\">$approved_data->dataItemVersionId</td>
+                                                <td class=\"text-center invisible-data\">$approved_data->codedValueId</td>
+                                                <td class=\"text-center invisible-data\">$approved_data->codedValueVersionId</td>
+                                                <td class=\"text-center invisible-data\">$approved_data->username</td>
+                                           
+                                            <td class=\"text-center\" style=\"width: 106px;\">";
+                                                if($approved_data->isMapped==1) {
+                                                    echo "<span>
+
+                                                    <a href=\"javascript:void(0)\">
+                                                        <span class=\" btn mapping_details_info\"
+                                                              style=\"border:1px solid #2e6da4\"
+                                                              data-ref-id=\"$approved_data->referenceDetailId\"
+                                                              data-item-name=\"$approved_data->dataItemName\">Mapped</span>
+                                                    </a>
+
+                                                   </span>";
+
+                                                }else {
+                                                    echo "<span>
+
+                                                    <a href=\"javascript:void(0)\"><span
+                                                                class=\"mappingdatabutton  btn-primary btn check-map check_$approved_data->definitionID\"
+                                                                data-reference=\"$approved_data->definitionID\"
+                                                                data-itemname=\"$approved_data->dataItemName\"
+                                                                >Map</span></a>
+
+                                                   </span>";
+
+
+                                                }
+                                            echo"</td>
+
+
+                                        </tr>";
+        }
+
+    }
+
+    public function  getMappingFilter(Request $request)
+    {
+
+        $datare = $request->all();
+
+
+        if(!empty($datare['mapping_data_item'])){
+            Session::put('mapped_selected_name', $datare['mapping_data_item']);
+            $mapped_item = CsvReferenca::
+            leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->join('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->where('emdatawizard.status','=',1)
+                ->where('emdefinitionstable.mappedCodedStatus','=',1)
+                ->where('emdefinitionstable.dataItemName','=',$datare['mapping_data_item'])
+                ->orderBy('emdefinitionstable.referenceDetailId','DESC')
+                ->get();
+        }else{
+            $mapped_item = CsvReferenca::
+            leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->join('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->where('emdatawizard.status','=',1)
+                ->where('emdefinitionstable.mappedCodedStatus','=',1)
+                ->orderBy('emdefinitionstable.referenceDetailId','DESC')
+                ->get();
+
+        }
+
+        foreach ($mapped_item as $mapped){
+            echo "<tr class=\"stileone alternativecolor\">
+
+                                            <td class=\"text-center\">$mapped->dataItemName</td>";
+
+                                            if($mapped->dataItem=="Local"){
+                                                echo"<td class=\"text-center\"></td>";
+
+                                            }else{
+                                                if(!empty($mapped->codedValue)){
+                                                    echo"<td class=\"text-center\"><span
+                                                                data-national=\"$mapped->mappingInfo\"
+                                                                data-item=\"$mapped->dataItemName\"
+                                                                class=\"btn btn-primary btn-sm oneormoremappingfinal showhidedata\"
+                                                                data-item-name=\"$mapped->dataItemName\"
+                                                                id=\"$mapped->definitionID\">Show</span></td>";
+                                                }else{
+                                                    echo"<td class=\"text-center\"></td>";
+                                                }
+                                            }
+
+
+                                            echo"<td class=\"text-center\"><span class=\"btn  \"
+                                                                          style=\"border:1px solid #2e6da4\">Mapped To</span>
+                                            </td>
+
+
+                                      
+                                                <td class=\"text-center invisible-data\">$mapped->codedValue</td>
+                                                <td class=\"text-center invisible-data\">$mapped->codedValueDescription</td>
+                                                <td class=\"text-center invisible-data\">$mapped->dataItemId</td>
+                                                <td class=\"text-center invisible-data\">$mapped->dataItemVersionId</td>
+                                                <td class=\"text-center invisible-data\">$mapped->codedValueId</td>
+                                                <td class=\"text-center invisible-data\">$mapped->codedValueVersionId</td>
+                                                <td class=\"text-center invisible-data\">$mapped->username</td>";
+
+
+                                            if($mapped->dataItem=="Local"){
+                                                echo"<td class=\"text-center\"><span class=\"btn  btn-primary\">Local</span></td>";
+
+                                            }else{
+                                                echo"<td class=\"text-center\">$mapped->mappingInfo</td>";
+                                            }
+
+
+                                        echo"</tr>";
+        }
+
+    }
+
+    public function getGroupingFilter(Request $request){
+        $datare = $request->all();
+        if(!empty($datare['grouped_data_item'])){
+            Session::put('grouped_selected_name', $datare['grouped_data_item']);
+            $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->where('emgroupinfo.groupName','=',$datare['grouped_data_item'])
+                ->groupBy('emgroupinfo.groupName')
+                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+                ->get();
+        }else{
+            $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->groupBy('emgroupinfo.groupName')
+                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+                ->get();
+
+        }
+
+
+        foreach ($dataset_group as $data){
+            echo " <tr class=' stileone'>
+
+
+                                            <td class='text-center'>$data->groupName</td>";
+                                            if($data->groupType=="coded"){
+                                                echo"<td class='text-center'>Coded Value</td>";
+                                            }else{
+                                                echo"<td class='text-center'>Data Item</td>";
+                                            }
+                                            echo"<td class='text-center'>0000$data->groupId</td>
+
+
+                                            <td class=\"text-center \">";
+                                                if($data->groupStatus==1){
+                                                   echo"<a class=\"btn btn-small btn-primary btn-sm groupingfilter showhidegroupdata\"
+                                                       data-status=\"approved\" data-type=\"$data->groupType\" data-patientid=\"$data->groupName\"
+                                                       id=\"$data->groupId\" href=\"javascript:void(0)\">Show</a>";
+                                                }else{
+                                                    echo"<a class=\"btn btn-small btn-primary btn-sm groupdatabutton\"
+                                                       data-status=\"approved\" href=\"javascript:void(0)\">Create Group</a>";
+                                                }
+
+                                            echo"</td>
+
+                                        </tr>";
+        }
+    }
+
+
+
+    public function getSearchHistory(Request $request){
+        $data = $request->all();
+
+        $mapped_item = CsvReferenca::
+        leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->join('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+            ->where('emdatawizard.status','=',1)
+            ->where('emdefinitionstable.mappedCodedStatus','=',1)
+            ->where('emdefinitionstable.dataItemName','LIKE', $data['searchvalue'] . '%')
+            ->orderBy('emdefinitionstable.referenceDetailId','DESC')
+            ->get();
+
+        $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+            ->where('emdefinitionstable.dataItemName','LIKE', $data['searchvalue'] . '%')
+            ->groupBy('emgroupinfo.groupName')
+            ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+            ->get();
+
+        $approved = DB::table('emconceptreferencedata')
+            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+            ->leftjoin('emdatatypemapp', 'emdefinitionstable.definitionID', '=', 'emdatatypemapp.dataMappedId')
+            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+            ->where('emconceptreferencedata.status','=',1)
+            /* ->where('emdefinitionstable.mappedCodedComplete','=',0)*/
+            ->where('emdefinitionstable.dataItemName', '<>', '')
+            ->where('emdefinitionstable.dataItemName','LIKE', $data['searchvalue'] . '%')
+            ->orderBy('emdefinitionstable.isMapped','DESC')
+            ->groupBy('emdefinitionstable.dataItemName')
+            ->get();
+
+        $baseurl =url("/dashboard/data-wizard");
+        $baseurlgrouping =url("/dashboard/data-wizard");
+        echo"<div class='col-md-12'>";
+
+
+        foreach($approved as $approveddata){
+            $urlsearch = url("/dashboard/data-wizard?data_item=$approveddata->dataItemName");
+            echo "<div class='row col-md-12' style='margin-top: 30px;'>
+                      <div class='searchhistorydata ' >
+                              <a href='$urlsearch'>  
+                           <span class=\"search-title\" id='dataitem'> Reference Data</span></a><br>
+                          <span class='search - link'>  $baseurlgrouping</span>
+                            <span class=\"search-para\">$approveddata->dataItemName</span>
+                            <span class=\"search-para\">$approveddata->codedValueDescription</span>
+                      </div>
+                     
+                    </div>";
+
+        }
+
+        foreach($mapped_item as $data){
+            $urlsearch = url("/dashboard/data-wizard?mapping_data_item=$data->dataItemName");
+                 echo "<div class='row col-md-12' style='margin-top: 30px;'>
+                      <div class='searchhistorydata ' >
+                              <a href='$urlsearch' >  
+                           <span class=\"search-title\" id='mapping'> Mapping</span></a><br>
+                          <span class='search - link'>  $baseurlgrouping</span>
+                            <span class=\"search-para\">$data->dataItemName</span>
+                            <span class=\"search-para\">$data->codedValueDescription</span>
+                      </div>
+                     
+                    </div>";
+
+        }
+
+        foreach($dataset_group as $groupitem){
+            $urlgroup = url("/dashboard/data-wizard?grouped_data_item=$groupitem->dataItemName");
+            echo "<div class='row col-md-12' style='margin-top: 30px;'>
+                      <div class='searchhistorydata' >
+                              <a href='$urlgroup'>  
+                           <span class=\"search-title\" id='group'> Grouping</span></a><br>
+                           <span class='search - link'>  $baseurlgrouping</span>
+                            <span class=\"search-para\">$groupitem->dataItemName</span>
+                            <span class=\"search-para\">$groupitem->codedValueDescription</span>
+                      </div>
+                     
+                    </div>";
+
+        }
+
+    echo"</div>";
+
+    }
+
+
+
+
 }

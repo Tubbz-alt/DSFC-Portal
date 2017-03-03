@@ -212,7 +212,7 @@ function datatype($str){
 					<section class="col-sm-12 table-responsive margin-top-10">
 						<div >
 
-							{!! Form::open(array('url' => 'admin/reference-data/store-national-data','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
+							{!! Form::open(array('url' => 'admin/reference-data/store-national-data','files' => true,'onsubmit'=>' return checkfileformatvalid()', 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
 
 							<div>
@@ -275,6 +275,29 @@ function datatype($str){
 	<script src="{{ url('js/jquery.bootstrap-growl.js') }}"></script>
 	<script src="{{ url('js/jquery.dataTables.min.js') }}"></script>
 	<script>
+
+		function checkfileformatvalid()
+		{
+
+			var valtxtFileUpload = $("#txtFileUpload").val();
+			if(valtxtFileUpload == ''){
+				alert("Please Choose File");
+				return false;
+			}
+			else{
+				var extvaltxtFileUpload = valtxtFileUpload.split('.').pop();
+				if(extvaltxtFileUpload!="csv") {
+					$("#txtFileUpload").val('');
+					alert("Please Choose The File In Right Format");
+					return false;
+				}
+			}
+
+		}
+
+
+
+
 		$( function() {
 			$( "#datepicker1" ).datepicker({
 				dateFormat: "yy-mm-dd"

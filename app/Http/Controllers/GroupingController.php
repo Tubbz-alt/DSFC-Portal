@@ -280,7 +280,7 @@ class GroupingController extends Controller
 
         if($data['type']=="DataType"){
             echo'<div class="container" style="text-align: center">
-            <table style="display: inline-block;text-align: center;"><tr class="additionaldata"> <td class="invisible-data-final " colspan="11" id="group_data_hidden_'.$data['localPatientID'].'" align="center">
+            <table  class="table definitions-table" style="display: inline-block;text-align: center;width: 10%"><tr class="additionaldata"> <td class="invisible-data-final " colspan="11" id="group_data_hidden_'.$data['localPatientID'].'" align="center">
          <div class="table  table-striped table-bordered  horizontal_scroll " style="width: 79%;">
                <tr style="background-color: #979797; color:white;">
             <th class="text-center">Data Item</th>

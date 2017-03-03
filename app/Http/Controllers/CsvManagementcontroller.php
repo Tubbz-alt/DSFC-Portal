@@ -1631,4 +1631,93 @@ class CsvManagementcontroller extends Controller
 
     }
 
+
+    public function postExportPagesExport(Request $request){
+
+        $data = $request->all();
+
+        if(!empty($data['startdate']) && !empty($data['enddate'])){
+            $startdate = $data['startdate'];
+            $date =$data['enddate'];
+            $date = strtotime($date);
+            $date = strtotime("+1 day", $date);
+            $endate = date('Y-m-d', $date) ;
+
+            $definitions_data =  CsvReferenca::
+            leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
+                ->leftjoin('emgroupinfo','emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->whereRaw("emdefinitionstable.createdDate BETWEEN '$startdate%' AND '$endate%' ")
+                ->orderBy('emdefinitionstable.dataItemName')
+                ->get();
+
+
+        }else{
+            $definitions_data =  CsvReferenca::
+            leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
+                ->leftjoin('emgroupinfo','emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->orderBy('emdefinitionstable.dataItemName')
+                ->get();
+
+        }
+
+
+
+
+        $filename = "Export" . date('Y-M-d') . ".csv";
+        $fp = fopen('php://output', 'w');
+        $header = array('Sl.No', 'Definition ID','Definition Version','Database','Table','Definition Name ',
+            'Definition Description', 'Data Type','Requirement','Code','Code Description','Code ID',
+            'Code Version', 'Derived','Derivation Methodology','Author','Created Date','Data Dictionary Name',
+            'Data Dictionary Link', 'Group ID','Group Name','Group Version','Group Description','Definition Type',
+            'Field Mapping', 'Code Mapping','Upload Date'
+            );
+
+        header('Content-type: application/csv');
+        header('Content-Disposition: attachment; filename=' . $filename);
+        fputcsv($fp, $header);
+
+        $i = 1;
+        foreach ($definitions_data as $pages) {
+
+
+
+            fputcsv($fp, array($i, "0000".$i, "0000".$i,
+                $pages->dataBaseName, $pages->tableName,$pages->tnrItemName,$pages->tnrDataItemDescription,
+                $pages->dataType,$pages->required,$pages->codeTbc,$pages->codeDescriptionTbc,
+                "","",$pages->isDerivedItem,$pages->derivationMethodology,$pages->authorName,$pages->createdDate,
+                $pages->dataDictionaryName,$pages->dataDictionaryLinks,$pages->groupId,$pages->groupName,
+               "",$pages->groupName,"","",$pages->updatedDate
+                ));
+            $i = $i + 1;
+        }
+        exit;
+
+        return view('admin.datamanagement.export-data',compact('definitions_data','dditems','selected'));
+
+
+    }
+
+    public function getExportData(){
+
+
+        $definitions_data =  DB::table('emconceptreferencedata')
+        ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+        ->leftjoin('emdatawizard','emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+        ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
+        ->leftjoin('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+        ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+        ->orderBy('emdefinitionstable.dataItemName')
+        ->get();
+
+
+        return view('admin.datamanagement.export-data',compact('definitions_data','dditems','selected'));
+
+
+    }
+
+
 }

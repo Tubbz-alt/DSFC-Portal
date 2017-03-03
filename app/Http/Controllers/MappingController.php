@@ -363,11 +363,38 @@ class MappingController extends Controller
                 ->orderBy('ddItemCodeText','ASC')
                 ->groupBy('emmappedcoded.mappedColor')
                 ->get();
+
+              
         }else{
             $nationalstatus="nodatafound";
             $national_codes = "";
 
         }
+
+        // dd($national_codes);
+
+        $sql_mapp_code= array();
+        $sql_mapp_value = array();
+        if(!empty($definitions_data ) && !empty($national_codes))
+        {
+          foreach ($definitions_data as $definition) 
+          {
+              $sql_mapp_value[] = $definition->codedValue;
+            // print($definition->codedValue);
+          }
+         
+          
+          foreach ($national_codes as $national) 
+          {
+           
+            $sql_mapp_code[] = $national->ddItemCodeText;
+          }
+        }
+
+        else{
+
+        }
+ 
 
         echo'<div class="container" style="text-align: center">
 <table style="display: inline-block;text-align: center;"><tr class="additionaldata ">
@@ -457,6 +484,40 @@ class MappingController extends Controller
 
             }
 
+               echo "</table>
+                       </td>
+                  <td class='text-center sqlButton'>
+                    <table class=\"table  table-striped  definitions-table horizontal_scroll\">
+               <tr style=\"background-color: #979797; color:white;\" >
+              <span  class='btn btn-primary btn-sm' id='sqlButton_popup'>SQL</span>
+               </tr><div class='modal fade' id='sql_modal' >
+                      <div class='modal-dialog'>
+                            <div class='modal-content'>
+                                <div class='modal-header'>
+                                    <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+                                    <h4 class='modal-title'>SQL Code Information</h4>
+                                </div>
+                                <div class='modal-body'><div class='row'><div class='col-md-6' >";
+                                  echo("<strong>Local Code</strong><br><br>");
+                                     foreach($sql_mapp_code as $code)
+                                     {
+                                        echo("$code<br>");
+                                        
+                                     }
+                                     echo "</div><div class='col-md-6'>";
+                                     echo("<strong>National Code</strong><br><br>");
+                                      foreach ($sql_mapp_value as $value) {
+                                           echo("$value<br>");
+                                        }
+
+                               echo " </div></div></div>
+                                <div class='modal-footer'>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+               </div>";
 
 
               echo "</table>
@@ -568,9 +629,8 @@ class MappingController extends Controller
                             <td>$data->datasetBelongs</td>
                             <td>$data->dataItem</td>
                             <td>$data->mappingInfo</td>
-                             <td>$data->sharePointLink</td>
                             <td>$data->mappingComments</td>
-                           
+                            <td>$data->sharePointLink</td>
               
                         </tr>";
 

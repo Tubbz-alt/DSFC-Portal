@@ -153,6 +153,9 @@
                             <li>
                                 <a href="{{url('admin/reference-data/help-data')}}">Help</a>
                             </li>
+                            <li>
+                                <a href="{{url('admin/reference-data/export-data')}}">Export</a>
+                            </li>
 
                             <li>
                                 <a href="{{ url('/dashboard') }}">Back to Dashboard</a>

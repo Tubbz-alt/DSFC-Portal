@@ -40,6 +40,13 @@ function datatype($str)
       #search_field{
           color: #000000;
       }
+      .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+          height: 27px;
+          margin-top: 2px;
+          min-width: 13px;
+          padding: 6px 27px;
+          width: 13px;
+      }
     </style>
     {{--*/ $user = Sentinel::getUser(); /*--}}
     <div class="file-data-loader">
@@ -59,7 +66,7 @@ function datatype($str)
                 <li class="tabname tabBlock-tab set-tab " id="dataitem">Reference Data</li>
                 <li class="tabname tabBlock-tab set-tab" id="mapping">Mapping</li>
                 <li class="tabname tabBlock-tab set-tab" id="group">Group</li>
-                <li class="tabname tabBlock-tab set-tab" >Search</li>
+                <li class="tabname tabBlock-tab set-tab" id="search">Search</li>
 {{--
                 <div >
                     <input type="text" name="q"  id="search_field" placeholder="Search" style="margin-top: 9px;margin-left:18px">
@@ -70,37 +77,50 @@ function datatype($str)
             <div class="tabBlock-content" id="contents">
                 <div class="aeadata tabBlock-pane">
 
-                    {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'filterform')) !!}
-                    <div class="col-md-12">
-                        <div class="pull-left">
-                            @if(!empty($database_selected_name))
-                            {!! Form::select('database_name', ['' => "Database Name"]  + $aeadatasdatabaelist,$database_selected_name,['class' => 'database_name form-control col-md-4','id' => 'database_name','data-token'=>csrf_token()]
-                            ) !!}
-                             @else
-                                {!! Form::select('database_name', ['' => "Database Name"]  + $aeadatasdatabaelist,null,['class' => 'database_name form-control col-md-4','id' => 'database_name','data-token'=>csrf_token()]
-                           ) !!}
+                    <section>
+                        <div class="row" style="margin-left: -15px">
+                            {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'filterform')) !!}
+                            <div class="col-md-12">
+                                <div class="pull-left">
+                                    @if(!empty($database_selected_name))
+                                        {!! Form::select('database_name', ['' => "Database Name"]  + $aeadatasdatabaelist,$database_selected_name,['class' => 'database_name form-control col-md-4','id' => 'database_name','data-token'=>csrf_token()]
+                                        ) !!}
+                                    @else
+                                        {!! Form::select('database_name', ['' => "Database Name"]  + $aeadatasdatabaelist,null,['class' => 'database_name form-control col-md-4','id' => 'database_name','data-token'=>csrf_token()]
+                                   ) !!}
 
-                            @endif
+                                    @endif
+                                </div>
+                                <div class="pull-left" style="margin-left: 10px;">
+                                    @if(!empty($table_selected_name))
+                                        {!! Form::select('table_name', ['' => "Table Name"]  + $aeadatastablelist,$table_selected_name,['class' => 'table_name form-control col-md-4','id' => 'table_name','data-token'=>csrf_token()]
+                                      ) !!}
+                                    @else
+                                        {!! Form::select('table_name', ['' => "Table Name"]  + $aeadatastablelist,null,['class' => 'table_name form-control col-md-4','id' => 'table_name','data-token'=>csrf_token()]
+                                ) !!}
+                                    @endif
+                                </div>
+
+
+
+                                <div id="filterdata" align="right">
+                                    <label>  <input type="search" id="tnrsearch" placeholder="Search" aria-controls="DataTables_Table_0"></label>
+                                </div>
+
+
+
+
+                                {!! Form::close() !!}
+
+
+                            </div>
                         </div>
-                        <div class="pull-left" style="margin-left: 10px;">
-                            @if(!empty($table_selected_name))
-                            {!! Form::select('table_name', ['' => "Table Name"]  + $aeadatastablelist,$table_selected_name,['class' => 'table_name form-control col-md-4','id' => 'table_name','data-token'=>csrf_token()]
-                          ) !!}
-                            @else
-                                {!! Form::select('table_name', ['' => "Table Name"]  + $aeadatastablelist,null,['class' => 'table_name form-control col-md-4','id' => 'table_name','data-token'=>csrf_token()]
-                        ) !!}
-                            @endif
-                        </div>
 
-                        <div class="pull-right" id="filterdata">
-
-                        </div>
-                        {!! Form::close() !!}
+                    </section>
 
 
-                    </div>
 
-                    <section class="ane-items table-responsive col-md-12" style="margin-top:10px;">
+                    <section class="ane-items table-responsive" style="margin-top:10px;">
 
 
                         <div class="panel panel-default">
@@ -128,7 +148,7 @@ function datatype($str)
 
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="aeadatafilterdata">
 
                                     @foreach ($aeadatas as $aeadata)
                                         <tr class="stileone">
@@ -158,13 +178,6 @@ function datatype($str)
                                             </td>
 
                                             <td class="text-center">{{$aeadata->dataType}}</td>
-                                            {{--<td class="text-center">{{$aeadata->required}}</td>--}}
-
-
-
-                                          {{--  <td class="text-center">{{$aeadata->codeTbc}}
-                                                <br>{{$aeadata->codeDescriptionTbc}}
-                                            </td>--}}
 
 
                                             <td class="text-center">{{$aeadata->isDerivedItem}} <br>
@@ -228,9 +241,7 @@ function datatype($str)
 
                                             </td>
                                             <td class="text-center">
-                                                <span><a href="javascript:void(0)">
-                                                        <span class="btn-primary btn">Mapping</span></a>
-                                                </span>
+
                                             </td>
 
 
@@ -254,38 +265,47 @@ function datatype($str)
                 </div>
 
                 <div class="dataitems tabBlock-pane">
+
                     <section>
-                    {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'dataitemfilterform')) !!}
+                        <div class="row" style="margin-left: -15px">
+                            {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'dataitemfilterform')) !!}
+                            <div class="col-md-12">
+                                <div class="pull-left">
+                                    @if(!empty($dataitem_selected_name))
+                                        {!! Form::select('data_item', ['' => "Data Item"]  + $dataitemlist,$dataitem_selected_name,['class' => 'data_item form-control col-md-4','id' => 'data_item','data-token'=>csrf_token()]
+                                        ) !!}
+                                    @else
+                                        {!! Form::select('data_item', ['' => "Data Item"]  + $dataitemlist,null,['class' => 'data_item form-control col-md-4','id' => 'data_item','data-token'=>csrf_token()]
+                                   ) !!}
+
+                                    @endif
+                                </div>
+
+                                <div class="text-center pull-left" style="width:62%">
+
+                                    <a href="{{url('media/uploads/Definitions upload 29122016.csv')}}"
+                                       class="btn btn-primary btn-sm" download target="_blank">Sample Data</a>
+
+                                    <button type="button" class="btn btn-primary btn-sm wizardcsvDataModel" data-toggle="modal"
+                                            data-target="#wizardcsvDataModel">Import Data
+                                    </button>
+                                </div>
 
 
-                        <div class="pull-left">
-                            @if(!empty($dataitem_selected_name))
-                                {!! Form::select('data_item', ['' => "Data Item"]  + $dataitemlist,$dataitem_selected_name,['class' => 'data_item form-control col-md-4','id' => 'data_item','data-token'=>csrf_token()]
-                                ) !!}
-                            @else
-                                {!! Form::select('data_item', ['' => "Data Item"]  + $dataitemlist,null,['class' => 'data_item form-control col-md-4','id' => 'data_item','data-token'=>csrf_token()]
-                           ) !!}
+                                <div id="reference_datas" align="right"></div>
 
-                            @endif
+
+
+
+                                {!! Form::close() !!}
+
+
+                            </div>
                         </div>
-                        {!! Form::close() !!}
-
-                        <div class="text-center">
-
-                            <a href="{{url('media/uploads/Definitions upload 29122016.csv')}}"
-                               class="btn btn-primary btn-sm" download target="_blank">Sample Data</a>
-
-                            <button type="button" class="btn btn-primary btn-sm wizardcsvDataModel" data-toggle="modal"
-                                    data-target="#wizardcsvDataModel">Import Data
-                            </button>
-                            <div class="pull-right" id="reference_datas" align="right"></div>
-
-
-                        </div>
-                   
-
 
                     </section>
+
+
 
                     <section class=" table-responsive" style="margin-top:10px;">
                         <div class="panel panel-default">
@@ -319,7 +339,7 @@ function datatype($str)
 
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="referencedatafilter">
                                     @foreach ($approved as $approved_data)
 
                                         <tr class="stileone alternativecolor">
@@ -397,27 +417,7 @@ function datatype($str)
 
 
                                         </tr>
-                    {{--                    <tr class="additionaldata">
-                                            <td class="invisible-data " colspan="11"
-                                                id="coded_values_dataitems_{{$approved_data->definitionID}}"
-                                                align="center">
-                                                <table class="table table-striped table-bordered definitions-table remove_last_element"
-                                                       style="width: 70%;">
-                                                    <tr style="background-color: #979797; "
-                                                        class="table_header_color_white">
-                                                        <th class="text-center ">Coded Value</th>
-                                                        <th class="text-left ">Coded Value Description</th>
-                                                        <th class="text-center "></th>
 
-                                                    </tr>
-                                                    <tbody id="filterdatadataitems{{$approved_data->definitionID}}">
-
-                                                    </tbody>
-                                                </table>
-
-                                            </td>
-
-                                        </tr>--}}
 
 
                                     @endforeach
@@ -498,7 +498,7 @@ function datatype($str)
 
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="mappingdatafilter">
 
                                     @foreach ($mapped_item as $mapped)
 
@@ -547,31 +547,7 @@ function datatype($str)
 
 
                                         </tr>
-                            {{--            <tr class="additionaldata ">
 
-                                            <td class="invisible-data-final " colspan="11"
-                                                id="coded_values_mapping_final_{{$mapped->definitionID}}"
-                                                align="center">
-                                                <table class="table  table-striped table-bordered definitions-table horizontal_scroll">
-                                                    --}}{{--<thead>
-                                                    <tr style="border: 0px;">
-                                                        <th class="text-center" colspan="1" ><span class="btn" style="background-color: #ed7d31;color: white;">Imported Coded Values</span></th>
-
-                                                        <th class="text-center" colspan="1" ><span class="btn" style="background-color: #ed7d31;color: white;">National Coded Values</span></th>
-                                                    </tr>
-                                                    </thead>--}}{{--
-
-                                                    <tbody id="importedcodedvaluesfinal"
-                                                           class="tbodyrecords_national importedcodedvaluesfinal_{{$mapped->definitionID}}">
-
-                                                    </tbody>
-
-
-                                                </table>
-
-                                            </td>
-
-                                        </tr>--}}
 
 
                                     @endforeach
@@ -589,34 +565,42 @@ function datatype($str)
 
                 <div class="group tabBlock-pane">
 
+
+
                     <section>
+                        <div class="row" style="margin-left: -15px">
+                            {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'groupfilterform')) !!}
+                            <div class="col-md-12">
+                                <div class="pull-left">
+                                    @if(!empty($grouped_selected_name))
+                                        {!! Form::select('grouped_data_item', ['' => "Data Item Group"]  + $groupitemlist,$grouped_selected_name,['class' => 'grouped_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        ) !!}
+                                    @else
+                                        {!! Form::select('grouped_data_item', ['' => "Data Item Group"]  + $groupitemlist,null,['class' => 'grouped_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                   ) !!}
 
-                        {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'groupfilterform')) !!}
+                                    @endif
+                                </div>
 
-                            <div class="pull-left">
-                                @if(!empty($grouped_selected_name))
-                                    {!! Form::select('grouped_data_item', ['' => "Group Name"]  + $groupitemlist,$grouped_selected_name,['class' => 'grouped_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
-                                    ) !!}
-                                @else
-                                    {!! Form::select('grouped_data_item', ['' => "Group Name"]  + $groupitemlist,null,['class' => 'grouped_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
-                               ) !!}
+                                <div class="text-center pull-left" style="width:70%">
 
-                                @endif
+                                <a href="javascript:void(0)" class="btn btn-primary btn-sm datatypegroupselecter"> Data Item
+                                    Group</a>
+
+                                <a href="javascript:void(0)" class="btn btn-primary btn-sm codedvaluegroupselecter"> Coded Value
+                                    Group</a>
+                                </div>
+
+                                <div id="grouping_datas" align="right"></div>
+
+
+
+
+                                {!! Form::close() !!}
+
+
                             </div>
-
-
-                            {!! Form::close() !!}
-
-
-                        <div class="text-center">
-                            <a href="javascript:void(0)" class="btn btn-primary btn-sm datatypegroupselecter"> Data Type
-                                Group</a>
-
-                            <a href="javascript:void(0)" class="btn btn-primary btn-sm codedvaluegroupselecter"> Coded Value
-                                Group</a>
-                            <div class="pull-right" id="grouping_datas" align="right"></div>
                         </div>
-
 
                     </section>
 
@@ -645,7 +629,7 @@ function datatype($str)
 
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="groupfilter">
 
                                     @foreach ($dataset_group as $data)
 
@@ -724,10 +708,49 @@ function datatype($str)
 
                 <div class="tabBlock-pane">
 
-                    <form action="">
+                 {{--   <script>
+                        (function() {
+                            var cx = '015030308875679439343:qj8_kbn_d_w';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:search></gcse:search>--}}
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <div id="custom-search-input">
+                                <div class="input-group col-md-5">
+                                    <input type="text" class="search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary searchbtn" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="searchhistory"></div>
+
+
+                   
+
+
+
+
+
+                 {{--   <form action="">
                         <label>Search:  <input class="" placeholder="" aria-controls="DataTables_Table_1" type="search"></label>
                         <input class="btn btn-primary btn-sm" value="Go" type="button" id="tipue_search_button" >
-                    </form>
+                    </form>--}}
 
                 </div>
 
@@ -784,7 +807,7 @@ function datatype($str)
                                     </div>
 
                                     <div class="col-md-3" style="margin-left:-74px;">
-                                    {!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'groupitemlist_coded','data-token'=>csrf_token()]) !!}
+                                    {!! Form::select('groupitemlist_coded', ['selected_grp' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'groupitemlist_coded','data-token'=>csrf_token()]) !!}
                                     </div>
 
                                     <div class="col-md-12">
@@ -1956,12 +1979,17 @@ function datatype($str)
     <script src="{{ url('js/jquery.validate.min.js') }}"></script>
     <script src="{{ url('js/jquery.stickytableheaders.min.js') }}"></script>
     <script src="{{ url('js/tipuesearch/tipuesearch.js') }}"></script>
-
-
+    <script src="{{ url('js/searchbox.js') }}"></script>
     <script>
 
         $(document).ready(function () {
-
+            $('input.search').searchbox({
+                url: '/dashboard/data-wizard',
+                param: 'q',
+                dom_id: '#thumbnails',
+                delay: 250,
+                loading_css: '#spinner'
+            })
 
             $('#search_field').on('keyup', function() {
                 var value = $(this).val();
@@ -2114,8 +2142,9 @@ function datatype($str)
 
             })
 
-
+            $(".groupitemlist_coded option[value='selected_grp']").remove();
             $(document).on('change', '#groupitemlist_coded', function (e) {
+
                 var mapping_status = $(this).val();
                 var checked = []
                 $("input[name='wizard_list[]']:checked").each(function () {
@@ -2261,22 +2290,126 @@ function datatype($str)
 
             });
 
-            $(".table_name").change(function () {
-                $("form#filterform").submit();
-            });
-            $(".database_name").change(function () {
-                $("form#filterform").submit();
+            $(document).on("change", ".database_name", function (e) {
+                var database = $(this).val();
+
+                var tablename=  $(".table_name").val();
+
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/filter-tnr")}}',
+                    type: 'GET',
+                    data: {"database": database,"tablename": tablename},
+                    success: function (data) {
+
+                        $('#aeadatafilterdata').html(data);
+
+
+                    }
+                });
             });
 
-            $(".data_item").change(function () {
-                $("form#dataitemfilterform").submit();
+            $(document).on("change", ".table_name", function (e) {
+                var searchvalue = $('#tnrsearch').val();
+                var tablename = $(this).val();
+                var database=  $(".database_name").val();
+
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/filter-tnr")}}',
+                    type: 'GET',
+                    data: {"database": database,"tablename": tablename,"searchvalue":searchvalue},
+                    success: function (data) {
+
+                        $('#aeadatafilterdata').html(data);
+
+
+                    }
+                });
             });
-            $(".mapping_data_item").change(function () {
-                $("form#mappingfilterform").submit();
+
+
+            $(document).on("keypress", "#tnrsearch", function (e) {
+                var searchvalue = $(this).val();
+                var database=  $(".database_name").val();
+                var tablename=  $(".table_name").val();
+
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/filter-tnr")}}',
+                    type: 'GET',
+                    data: {"database": database,"tablename": tablename,"searchvalue":searchvalue},
+                    success: function (data) {
+
+                        $('#aeadatafilterdata').html(data);
+
+
+                    }
+                });
             });
-            $(".grouped_data_item").change(function () {
-                $("form#groupfilterform").submit();
+
+
+
+            $(document).on("change", ".data_item", function (e) {
+                var dataitemname = $(this).val();
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/reference-filter")}}',
+                    type: 'GET',
+                    data: {"dataitemname": dataitemname},
+                    success: function (data) {
+
+
+
+                        $('#referencedatafilter').html(data);
+
+                    }
+                });
             });
+
+            $(document).on("change", ".mapping_data_item", function (e) {
+                var mapping_data_item = $(this).val();
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/mapping-filter")}}',
+                    type: 'GET',
+                    data: {"mapping_data_item": mapping_data_item},
+                    success: function (data) {
+
+                        $('#mappingdatafilter').html(data);
+
+                    }
+                });
+            });
+
+            $(document).on("change", ".search-query", function (e) {
+                var searchvalue = $(this).val();
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/search-history")}}',
+                    type: 'GET',
+                    data: {"searchvalue": searchvalue},
+                    success: function (data) {
+
+                        $('#searchhistory').html(data);
+
+                    }
+                });
+            });
+
+            $(document).on("change", ".grouped_data_item", function (e) {
+                var grouped_data_item = $(this).val();
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/grouping-filter")}}',
+                    type: 'GET',
+                    data: {"grouped_data_item": grouped_data_item},
+                    success: function (data) {
+
+                        $('#groupfilter').html(data);
+
+                    }
+                });
+            });
+
+
+
+
+
+
 
             $('.addingextradata').click(function () {
                 $('#ticketsDemosss').append($('<div style="margin-top:5px;" class="col-md-12"> <input type="text" name="extracolumndata[]" id="extracolumndata" placeholder="Add your Extra Columns "> </div>'));
@@ -2387,7 +2520,7 @@ function datatype($str)
             var aea_datatable = $('.filtertable_aea').DataTable({
                 "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
                 "bPaginate": true,
-                "searching": true,
+                "searching": false,
 
                 "dom": '<"top"f>rt<"bottom"ilp><"clear">',
                 "bFilter": false,
@@ -2410,7 +2543,8 @@ function datatype($str)
             });
             @endif
 
-              $('.filtertable_aea').on('click', '.showhidedataitemstnr', function () {
+
+             $(document).on("click",".filtertable_aea .showhidedataitemstnr", function (e) {
                 var tr = $(this).parents('tr');
                 var row = aea_datatable.row( tr );
                 var id = $(this).attr('id');
@@ -2449,11 +2583,14 @@ function datatype($str)
             } );
 
 
-          @if (count($approved) > 0)
+
+
+            @if (count($approved) > 0)
             var reference_datatable = $('.reference-datatable').DataTable({
                 "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
                 "bPaginate": true,
                 "searching": true,
+
 
                 "dom": '<"top"f>rt<"bottom"ilp><"clear">',
                 "bFilter": true,
@@ -2466,21 +2603,30 @@ function datatype($str)
                 }
 
             });
+
             /*$('div#DataTables_Table_0_filter').appendTo("#filterdata_reference_data");*/
             @endif
 
 
-            $('.reference-datatable').on('click', '.showhidedataitems', function () {
+
+
+
+            $(document).on("click",".reference-datatable .showhidedataitems", function (e) {
+
 
                 if ($(this).text() == "Show")
                     $(this).text("Hide")
                 else
                     $(this).text("Show");
+
                 var tr = $(this).parents('tr');
+
                 var row = reference_datatable.row( tr );
+
 
                 if ( row.child.isShown() ) {
                     // This row is already open - close it
+
                     row.child.hide();
                     tr.removeClass('shown');
                 }
@@ -2499,8 +2645,9 @@ function datatype($str)
                         type: 'POST',
                         success: function (data) {
                             var d = $("#filterdatadataitems" + id).html(data);
-                            row.child( data ).show();
+                            row.child(data).show();
                             tr.addClass('shown');
+
                         }
 
                     });
@@ -2527,7 +2674,8 @@ function datatype($str)
             });
             @endif
 
-            $('.grouping-datatable').on('click', '.showhidegroupdata', function () {
+
+           $(document).on("click", ".grouping-datatable .showhidegroupdata", function (e) {
                 var tr = $(this).parents('tr');
                 var row = grouping_datatable.row( tr );
                 var id = $(this).attr('id');
@@ -2587,7 +2735,8 @@ function datatype($str)
             });
             @endif
 
-           $('.mapping-datatable').on('click', '.oneormoremappingfinal', function () {
+
+            $(document).on("click", ".mapping-datatable .oneormoremappingfinal", function (e) {
                 var tr = $(this).parents('tr');
                 var row = mapping_datatable.row( tr );
                 var id = $(this).attr('id');
@@ -2649,7 +2798,7 @@ function datatype($str)
      /*       reference_datatable.rows().every( function () {
                 this.child($( '<tr>'+'<td>1</td>'+'</tr>')).show();
         } );*/
-            $('div#DataTables_Table_0_filter').appendTo("#filterdata");
+//            $('div#DataTables_Table_0_filter').appendTo("#filterdata");
             $('div#reference-datatable_filter').appendTo("#reference_datas");
             $('div#mapping-datatable_filter').appendTo("#mapping_datas");
             $('div#DataTables_Table_1_filter').appendTo("#grouping_datas");
@@ -3284,6 +3433,7 @@ function datatype($str)
                     },
                     type: 'POST',
                     success: function (data) {
+
                         window.location.reload();
 
 
@@ -3476,6 +3626,22 @@ function datatype($str)
             /* hold the tabs even after the page refresh*/
             $(document).ready(function () {
                 $(".set-tab").click(function () {
+
+                    var data_tab_id = $(this).attr('id');
+
+                    $.ajax({
+                        url: '{{url("dashboard/data-wizard/set-tab")}}',
+                        type: 'GET',
+                        data: {"data_tab_id": data_tab_id},
+                        success: function (data) {
+
+                        }
+                    });
+
+                });
+
+
+                $(document).on('click', '.search-title', function (e) {
                     var data_tab_id = $(this).attr('id');
 
                     $.ajax({

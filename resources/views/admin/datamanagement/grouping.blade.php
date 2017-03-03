@@ -147,7 +147,7 @@
 				<tr>
 
 
-
+					<th class="text-center">Group ID</th>
 					<th class="text-center">Data Item Name</th>
 					<th class="text-center ">Data Type</th>
 					<th class="text-center">Group Name</th>
@@ -160,11 +160,24 @@
 				</tr>
 				</thead>
 				<tbody>
+				{{--*/ $k = 0 ;/*--}}
+				{{--*/ $temp = array(); /*--}}
 				@foreach ($definitions_data as $pl)
+					@if (!in_array($pl->groupName, $temp))
+						@if(!empty($pl->groupName))
+							{{--*/ $total = 1 /*--}}
+							{{--*/  $k++;
+                            $total = $total + 1;
 
+
+                         /*--}}
+						@endif
+
+					@endif
+					{{--*/ $num_padded_k = sprintf("%04d", $k); /*--}}
 					<tr>
 
-
+						<td  class="text-center">{{$num_padded_k}}</td>
 						<td class="text-center" >{{$pl->dataItemName}}</td>
 						<td class="text-center">{{$pl->codedValueType}}</td>
 						<td class="text-center ">{{$pl->groupName}}</td>
@@ -180,6 +193,7 @@
 						</td>
 
 					</tr>
+					{{--*/  $temp[]= $pl->groupName; /*--}}
 				@endforeach
 				@else
 					<tr>

@@ -1,6 +1,6 @@
 @extends('admin.home')
 
-@section('title', 'Mapping')
+@section('title', 'Export ')
 <link rel="stylesheet" type="text/css" href="{{url('js/datepicker/jquery-ui.css')}}">
 
 <style>
@@ -140,13 +140,14 @@
 	}
 
 </style>
+<link rel="stylesheet" type="text/css" href="{{url('css/jquery.dataTables.min.css')}}">
 @section('content')
 
 	<div id="content-wrapper" class="container">
 		<div class="col-md-12">
 
 			<div class="text-right">
-				{!! Form::open(array('url' => 'admin/reference-data/export-pages-mapping', 'method'=>'post')) !!}
+				{!! Form::open(array('url' => 'admin/reference-data/export-pages-export', 'method'=>'post')) !!}
 				<span class="exportdate">Start Date: <input name="startdate" class="inputs" type="text"  id="datepicker1"></span>
 				<span class="exportdate">End Date: <input name="enddate" class="inputs" type="text" id="datepicker2"></span>&nbsp;&nbsp;
 				{!! Form::submit('Export to CSV', array('class' => 'btn btn-primary btn-sm')) !!}
@@ -158,21 +159,45 @@
 		</div>
 
 		<section class="col-sm-12 table-responsive margin-top-10">
-		<table class="table table-striped table-bordered mapping-table">
+		<table class="table table-striped table-bordered export-table" id="export-table">
 			@if (count($definitions_data) > 0)
 
 				<thead>
 
 				<tr>
-					<th class="text-center ">Mapping ID </th>
-					<th class="text-center ">Data Item Name</th>
+					<th class="text-center ">Definition ID </th>
+					<th class="text-center ">Definition Version</th>
 
-					<th class="text-center ">Coded Value  </th>
-					<th class="text-center ">Coded Value Description </th>
-					<th class="text-center ">National Coded Value  </th>
-					<th class="text-center ">National Coded Value Description </th>
-					<th class="text-center ">Version </th>
-					<th class="text-center "> </th>
+					<th class="text-center ">Database</th>
+					<th class="text-center ">Table</th>
+
+					<th class="text-center ">Definition Name </th>
+					<th class="text-center ">Definition Description</th>
+					<th class="text-center ">Data Type </th>
+					<th class="text-center ">Requirement</th>
+
+					<th class="text-center "> Code</th>
+					<th class="text-center "> Code Description</th>
+					<th class="text-center "> Code ID</th>
+					<th class="text-center "> Code Version</th>
+
+					<th class="text-center ">Derived</th>
+					<th class="text-center ">Derivation Methodology</th>
+					<th class="text-center ">Author</th>
+					<th class="text-center ">Created Date</th>
+
+					<th class="text-center ">Data Dictionary Name</th>
+					<th class="text-center ">Data Dictionary Link</th>
+					<th class="text-center ">Group ID</th>
+					<th class="text-center ">Group Name</th>
+
+					<th class="text-center ">Group Version</th>
+					<th class="text-center ">Group Description</th>
+					<th class="text-center ">Definition Type</th>
+					<th class="text-center ">Field Mapping</th>
+
+					<th class="text-center ">Code Mapping</th>
+					<th class="text-center ">Upload Date</th>
 
 
 
@@ -180,9 +205,13 @@
 				</tr>
 				</thead>
 				<tbody>
-                {{--*/ $i = 0 /*--}}
+                {{--*/ $i = 0 ;/*--}}
+                {{--*/ $j = 0 ;/*--}}
+                {{--*/ $k = 0 ;/*--}}
 
                 {{--*/ $temp = array(); /*--}}
+                {{--*/ $temp2 = array(); /*--}}
+                {{--*/ $temp3 = array(); /*--}}
 				{{--*/  $a = count($definitions_data); /*--}}
 				@foreach ($definitions_data as $key => $data)
                     @if (!in_array($data->dataItemName, $temp))
@@ -194,30 +223,76 @@
  						/*--}}
 
                     @endif
-					{{--*/ $i_padded = sprintf("%04d", $i); /*--}}
+
+                     @if (!in_array($data->tableName, $temp2))
+						{{--*/ $total2 = 1 /*--}}
+                        {{--*/  $j++;
+                        $total2 = $total2 + 1;
+                        $reset2 = 0;
+
+ 						/*--}}
+
+                    @endif
+
+                    @if (!in_array($data->groupName, $temp3))
+                    	@if(!empty($data->groupName))
+							{{--*/ $total3 = 1 /*--}}
+	                        {{--*/  $k++;
+	                        $total3 = $total3 + 1;
+               			 
+
+ 						/*--}}
+ 						@endif
+
+                    @endif
+
 
 					<tr class='localtable stileone'>
 
-                        <td class='text-left'>{{$i_padded}}.{{$data->codedValueId}}.{{$data->definitionID}}</td>
-						<td class="text-center ">{{$data->dataItemName}} </td>
+                        <td class='text-center'>{{$j}} </td>
+                        <td class='text-center'>1</td>
 
+						<td class='text-center'>{{$data->dataBaseName}}  </td>
+						<td class='text-center' >{{$data->tableName}}</td>
 
-						<td class='text-center'>{{$data->codedValue}}  </td>
-						<td class='text-center' >{{$data->codedValueDescription}}</td>
+						<td class='text-center'>{{$data->tnrItemName}}</td>
+						<td class='text-center' >{{$data->tnrDataItemDescription}}</td>
+						<td class='text-center' >{{$data->dataType}}</td>
+						<td class='text-center' >{{$data->required}}</td>
 
-						<td class='text-center'>{{$data->ddItemCodeText}}</td>
-						<td class='text-center' >{{$data->ddCodedValueDescription}}</td>
-						<td class='text-center' >{{$data->dataItemVersionId}}</td>
-						@if($key==0)
+						<td class='text-center' >{{$data->codeTbc}}</td>
+						<td class='text-center' >{{$data->codeDescriptionTbc}}</td>
+						<td class='text-center' >0000{{$i}}</td>
+						<td class='text-center' >1</td>
 
-						@endif
+						<td class='text-center' >{{$data->isDerivedItem}}</td>
+						<td class='text-center' >{{$data->derivationMethodology}}</td>
+						<td class='text-center' >{{$data->authorName}}</td>
+						<td class='text-center' >{{$data->createdDate}}</td>
 
-						<td  class='text-center' style='vertical-align:middle;'>
-							<a class="btn btn-small btn-danger btn-sm destroymapping"
-							   href="javascript:void(0)"
-							   data-id="{{$data->definitionID}}" data-status="1"
-							   data-item="{{$data->dataItemName}}">Delete</a>
+						<td class='text-center' >{{$data->dataDictionaryName}}</td>
+						<td class='text-center' >{{$data->dataDictionaryLinks}}</td>
+						<td class='text-center' >{{$k}}</td>
+						<td class='text-center' >{{$data->groupName}}</td>
+
+						<td class='text-center' >1</td>
+						<td class='text-center' >{{$data->groupName}}</td>
+						<td class='text-center' >
+							@if(!empty($data->mappingInfo))
+								Mapping
+							@elseif(!empty($data->groupName))
+
+									Grouping
+							@elseif(!empty($data->tableName))
+								column
+							@else
+								Reference Data
+							@endif
 						</td>
+						<td class='text-center' ></td>
+						
+						<td class='text-center' ></td>
+						<td class='text-center' >{{$data->updated_at}}</td>
 
 						</tr>
 
@@ -225,6 +300,12 @@
 
                     {{--*/  $temp[]= $data->dataItemName; /*--}}
                     {{--*/  $reset++ /*--}}
+
+                    {{--*/  $temp2[]= $data->tableName; /*--}}
+                    {{--*/  $reset2++ /*--}}
+
+	                {{--*/  $temp3[]= $data->groupName; /*--}}
+	
 
 
 
@@ -251,6 +332,7 @@
 	@parent
 
 	<script src="{{ url('js/users/index.js') }}"></script>
+	<script src="{{ url('js/jquery.dataTables.min.js') }}"></script>
 	<script src="{{ url('js/datepicker/jquery-ui.js') }}"></script>
 	<script>
 		$( function() {
@@ -264,6 +346,14 @@
 
 		$(document).ready(function () {
 
+			$('#export-table').DataTable({
+				"bPaginate": true,
+				"bLengthChange": false,
+				"bFilter": false,
+				"bInfo": true,
+				"bAutoWidth": false,
+
+			});
 			$(document).on('click', '.oneormoremappingfinal ', function(e){
 				var id = $(this).attr('id');
 

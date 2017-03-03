@@ -83,7 +83,7 @@
 								</td>
 								<td class="text-center">
 									@if($user_permissions->permissions=="admin")
-
+									
 										@if(!empty($value->role_id))
 										{!! Form::checkbox('makeasadmin', $value->id, true, ['class' => 'makeasadmin user_list','data-status'=>'removeadmin'])!!}
 										@else
