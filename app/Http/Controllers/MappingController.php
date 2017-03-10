@@ -345,7 +345,7 @@ class MappingController extends Controller
         $data_id = $data['data_selected'];
         $user = Sentinel::getUser();
         $user_id = Sentinel::check()->id;
-
+        $sql_id = $data['data_item'];
 
         $definitions_data = DB::table('emconceptreferencedata')
             ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
@@ -492,8 +492,8 @@ class MappingController extends Controller
                   <td class='text-center sqlButton'>
                     <table class=\"table  table-striped  definitions-table horizontal_scroll\">
                <tr style=\"background-color: #979797; color:white;\" >
-              <span  class='btn btn-primary btn-sm' id='sqlButton_popup'>SQL</span>
-               </tr><div class='modal fade' id='sql_modal' >
+              <span  class='btn btn-primary btn-sm' data-name='$sql_id' id='sqlButton_popup'>SQL</span>
+               </tr><div class='modal fade' id='sql_modal_$sql_id' >
                       <div class='modal-dialog'>
                             <div class='modal-content'>
                                 <div class='modal-header'>

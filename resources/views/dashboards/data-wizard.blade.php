@@ -67,9 +67,20 @@ function datatype($str)
       #datatypegroup .dataTables_filter {
           margin-top: -85px;
       }
+      #codedvaluegroup .dataTables_filter {
+          margin-top: -84px;
+      }
+        .group_name_text_dt {    margin-top: -63px; margin-left: 180px;}
+      .group_name_select_dt {    margin-top: -63px; margin-left: 129px; width:167px;}
+        .coded_value_group_finish{ margin-right: 11px;}
 
+      table.groupingtable.border_no tbody th,
+      table.groupingtable.border_no tbody td,
+      .table.groupingtable.border_no>thead:first-child>tr:first-child>th {border:medium none; }
 
-
+      table.groupingtable.code-val-grp tbody th,
+      table.groupingtable.code-val-grp tbody td,
+      .table.groupingtable.code-val-grp>thead:first-child>tr:first-child>th {border:medium none; }
 
 
 
@@ -802,7 +813,7 @@ function datatype($str)
                 {!! Form::open(array('url' => 'dashboard/data-wizard/store-info','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
 
-                <div class="modal-header">
+                <div class="modal-header hide-modal-header-line">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
                             @foreach ($errors->all() as $error)
@@ -828,11 +839,11 @@ function datatype($str)
 
                                     <div class="col-md-5">
 
-                                    {!! Form::label('groupnamecoded', 'Group Name', array('class' => 'pull-left')) !!}
+
                                     <div class="form-group pull-left col-md-6">
 
 
-                                        {!! Form::text('groupnamecoded', '', array('class' => 'form-control col-md-3' , 'autocomplete' => 'off')) !!}
+                                        {!! Form::text('groupnamecoded', '', array('class' => 'form-control col-md-3 group_name_text_dt' , 'autocomplete' => 'off','placeholder'=>'Group Name')) !!}
                                     </div>
                                     </div>
 
@@ -841,7 +852,7 @@ function datatype($str)
                                     {{--</div>--}}
 
                                     <div class="col-md-2" style="margin-left:-74px;">
-                                        {!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'select_coded_val_group','data-token'=>csrf_token()]) !!}
+                                        {!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4 group_name_select_dt','id' => 'select_coded_val_group','data-token'=>csrf_token()]) !!}
                                     </div>
 
                                     <div class="col-md-12">
@@ -851,11 +862,11 @@ function datatype($str)
                                         </div>
 
                                         <div class="datagrid" id="recordslist">
-                                            <table class=" table groupingtable  table-striped table-bordered  horizontal_scroll">
+                                            <table class=" table groupingtable code-val-grp table-striped table-bordered  horizontal_scroll">
                                                 <thead>
                                                 <tr>
 
-                                                    <th class="text-center">Select</th>
+                                                    <th class="text-center"></th>
 
                                                     <th class="text-center">Data Item </th>
                                                     <th class="text-center">Coded Value</th>
@@ -916,7 +927,7 @@ function datatype($str)
                 {!! Form::open(array('url' => 'dashboard/data-wizard/store-info','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
 
-                <div class="modal-header data_item_group_header">
+                <div class="modal-header data_item_group_header hide-modal-header-line">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
                             @foreach ($errors->all() as $error)
@@ -938,7 +949,7 @@ function datatype($str)
                             <div id="data_item_group_search" align="right"></div>
                         </div>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
                     <section>
                         <div class="wizard">
 
@@ -961,12 +972,12 @@ function datatype($str)
                                         </div>
 
                                         <div class="datagrid datatypegrouphidesearch" id="recordslist">
-                                            <table class=" table groupingtable  table-striped table-bordered  horizontal_scroll">
+                                            <table class=" table groupingtable border_no   table-striped table-bordered  horizontal_scroll" >
                                                 <thead>
                                                 <tr>
 
-                                                    <th class="text-center">Select</th>
-                                                    <th class="text-center secondth">Data Item Name</th>
+                                                    <th class=" text-center" style="width:10px;"></th>
+                                                    <th class=" text-center seconth">Data Item </th>
 
 
                                                 </tr>
@@ -2137,7 +2148,7 @@ function datatype($str)
                             $('#recordscount').html("");
                             $.each(data, function (index, item) {
                                 var eachrow = "<tr>"
-                                        + "<td class='text-center'><input class='wizard_list' name='wizard_list_filter[]' value=" + item['definitionID'] + " type='checkbox'></td>"
+                                        + "<td class='text-center' style='width:10px;'><input class='wizard_list' name='wizard_list_filter[]' value=" + item['definitionID'] + " type='checkbox'></td>"
                                         + "<td class='text-center'>" + item['dataItemName'] + "</td>"
 
 
@@ -2148,14 +2159,14 @@ function datatype($str)
 
                             jQuery('.file-data-loader').hide();
                                 $('.groupingtable').DataTable({
-                                "bPaginate": true,
+                                "bPaginate": false,
                                 "bLengthChange": false,
                                 "bFilter": true,
                                 "bInfo": true,
                                 "bAutoWidth": false
                             });
 
-
+                            $("#DataTables_Table_3_info").hide();
 
                         }
 
@@ -2227,10 +2238,10 @@ function datatype($str)
 
                             jQuery('.file-data-loader').hide();
                             $('.groupingtable').DataTable({
-                                "bPaginate": true,
+                                "bPaginate": false,
                                 "bLengthChange": false,
                                 "bFilter": true,
-                                "bInfo": true,
+                                "bInfo": false,
                                 "bAutoWidth": false
                             });
 
@@ -2253,7 +2264,8 @@ function datatype($str)
 
             $(document).on('click', '#sqlButton_popup', function (e) 
             {
-                $("#sql_modal").modal("show");
+                var id = $(this).attr("data-name");
+                $("#sql_modal_"+id).modal("show");
             });
 
 
@@ -3821,10 +3833,10 @@ function datatype($str)
             $(document).on('change', '#select_coded_val_group', function (e) {
                 $('.groupingtable').DataTable().destroy();
                 var table =    $('.groupingtable').DataTable({
-                    "bPaginate": true,
+                    "bPaginate": false,
                     "bLengthChange": false,
                     "bFilter": true,
-                    "bInfo": true,
+                    "bInfo": false,
                     "bAutoWidth": false
                 });
                 table.columns(1).search( this.value ).draw();
@@ -3878,10 +3890,10 @@ function datatype($str)
 
                             jQuery('.file-data-loader').hide();
                             var a =  $('.groupingtable').DataTable({
-                                "bPaginate": true,
+                                "bPaginate": false,
                                 "bLengthChange": false,
                                 "bFilter": true,
-                                "bInfo": true,
+                                "bInfo": false,
                                 "bAutoWidth": false
                             });
 
