@@ -574,8 +574,8 @@ class DataitemController extends Controller
                                                        style="width: 100%;">';
         echo '<tr style="background-color: #979797;color:white; "
                                                         class="table_header_color_white">
-                                                        <th class="text-center ">Code (TBC)</th>
-                                                        <th class="text-center" style="width: 80%">Code Description (TBC)</th>
+                                                        <th class="text-center ">Code </th>
+                                                        <th class="text-center" style="width: 80%">Code Description </th>
                                                     
 
                                                     </tr>  ';

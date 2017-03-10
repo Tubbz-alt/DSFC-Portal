@@ -1680,20 +1680,72 @@ class CsvManagementcontroller extends Controller
         header('Content-Disposition: attachment; filename=' . $filename);
         fputcsv($fp, $header);
 
+
+
+        $k = 0;
         $i = 1;
+        $j = 1;
+        $l = 0;
+        $m = 0;
+        $tempdataset = array();
+        $temptnr = array();
         foreach ($definitions_data as $pages) {
 
+            if (!in_array($pages->tableName, $tempdataset)){
+                $l=0;
+                $i=$j;
+                if($k!=0) {
+                    $j = $k;
+
+                }
+                $k++;
+                $tempdataset[]= $pages->tableName;
+            }
+
+            if (!in_array($pages->tnrItemName, $temptnr)){
+                $m++;
+
+            }
+
+            $l++;
 
 
-            fputcsv($fp, array($i, "0000".$i, "0000".$i,
+            $i_padded = sprintf("%04d", $i);
+            $j_padded = sprintf("%04d", $j);
+            $k_padded = sprintf("%04d", $k);
+            $l_padded = sprintf("%04d", $l);
+            $m_padded = sprintf("%04d", $m);
+
+
+            fputcsv($fp, array($i, $m_padded, $i_padded.".".$j_padded.".".$k_padded.".".$l_padded,
                 $pages->dataBaseName, $pages->tableName,$pages->tnrItemName,$pages->tnrDataItemDescription,
                 $pages->dataType,$pages->required,$pages->codeTbc,$pages->codeDescriptionTbc,
                 "","",$pages->isDerivedItem,$pages->derivationMethodology,$pages->authorName,$pages->createdDate,
                 $pages->dataDictionaryName,$pages->dataDictionaryLinks,$pages->groupId,$pages->groupName,
-               "",$pages->groupName,"","",$pages->updatedDate
-                ));
-            $i = $i + 1;
+                "",$pages->groupName,"","",$pages->updatedDate
+            ));
+
+
+            //$k = $k + 1;
+            //$j = $j + 1;
+
+
+            $temptnr[]= $pages->tnrItemName;
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
         exit;
 
         return view('admin.datamanagement.export-data',compact('definitions_data','dditems','selected'));

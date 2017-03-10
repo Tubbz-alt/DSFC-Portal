@@ -68,6 +68,7 @@ class DatawizardController extends Controller
 
 
             if(!empty($datare['data_item'])){
+
                 Session::put('dataitem_selected_name', $datare['data_item']);
                 $approved = DB::table('emconceptreferencedata')
                     ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
@@ -77,7 +78,7 @@ class DatawizardController extends Controller
                     ->where('emconceptreferencedata.status','=',1)
                     /* ->where('emdefinitionstable.mappedCodedComplete','=',0)*/
                     ->where('emdefinitionstable.dataItemName', '<>', '')
-                    ->where('emdefinitionstable.dataItemName','=',$datare['data_item'])
+
                     ->orderBy('emdefinitionstable.isMapped','DESC')
                     ->groupBy('emdefinitionstable.dataItemName')
                     ->get();
@@ -1461,11 +1462,11 @@ class DatawizardController extends Controller
             $urlsearch = url("/dashboard/data-wizard?data_item=$approveddata->dataItemName");
             echo "<div class='row col-md-12' style='margin-top: 30px;'>
                       <div class='searchhistorydata ' >
-                              <a href='$urlsearch'>  
-                           <span class=\"search-title\" id='dataitem'> Reference Data</span></a><br>
-                          <span class='search - link'>  $baseurlgrouping</span>
-                            <span class=\"search-para\">$approveddata->dataItemName</span>
-                            <span class=\"search-para\">$approveddata->codedValueDescription</span>
+                              <a href='$urlsearch' id='search_reference'>  
+                           <span class=\"search-title\" > Reference Data</span></a><br>
+                        
+                            <span class=\"search-para\">Data Item : $approveddata->dataItemName</span>
+                            <span class=\"search-para\">Coded Value : $approveddata->codedValueDescription</span>
                       </div>
                      
                     </div>";
@@ -1476,11 +1477,11 @@ class DatawizardController extends Controller
             $urlsearch = url("/dashboard/data-wizard?mapping_data_item=$data->dataItemName");
                  echo "<div class='row col-md-12' style='margin-top: 30px;'>
                       <div class='searchhistorydata ' >
-                              <a href='$urlsearch' >  
-                           <span class=\"search-title\" id='mapping'> Mapping</span></a><br>
-                          <span class='search - link'>  $baseurlgrouping</span>
-                            <span class=\"search-para\">$data->dataItemName</span>
-                            <span class=\"search-para\">$data->codedValueDescription</span>
+                              <a href='$urlsearch' id='search_mapping'>  
+                           <span class=\"search-title\" > Mapping</span></a><br>
+                          
+                            <span class=\"search-para\">Data Item : $data->dataItemName</span>
+                            <span class=\"search-para\">Coded Value : $data->codedValueDescription</span>
                       </div>
                      
                     </div>";
@@ -1491,11 +1492,11 @@ class DatawizardController extends Controller
             $urlgroup = url("/dashboard/data-wizard?grouped_data_item=$groupitem->dataItemName");
             echo "<div class='row col-md-12' style='margin-top: 30px;'>
                       <div class='searchhistorydata' >
-                              <a href='$urlgroup'>  
-                           <span class=\"search-title\" id='group'> Grouping</span></a><br>
-                           <span class='search - link'>  $baseurlgrouping</span>
-                            <span class=\"search-para\">$groupitem->dataItemName</span>
-                            <span class=\"search-para\">$groupitem->codedValueDescription</span>
+                              <a href='$urlgroup' id= 'search_grouping'>  
+                           <span class=\"search-title\" > Grouping</span></a><br>
+                         
+                            <span class=\"search-para\">Data Item : $groupitem->dataItemName</span>
+                            <span class=\"search-para\">Coded Value : $groupitem->codedValueDescription</span>
                       </div>
                      
                     </div>";

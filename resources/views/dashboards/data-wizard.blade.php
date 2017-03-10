@@ -47,6 +47,33 @@ function datatype($str)
           padding: 6px 27px;
           width: 13px;
       }
+        .reference_data_item_search_cover{
+            width:auto;
+        }
+        .ref_close{
+            width:25px;
+        }
+      .connect-this-tnr-finish{ margin-right:70px ; }
+
+      table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {
+          cursor: default;
+      }
+        .hide-modal-header-line{ border-bottom:0px; }
+        .grouped_data_item { width:280px;}
+        .data_item_group_header{ min-height:59px;}
+      #datatypegroup .dataTables_filter { margin-top: -14px; }
+      .data_item_text {width: 120%;}
+        .finishdatatypegroup{ margin-right: 13px;}
+      #datatypegroup .dataTables_filter {
+          margin-top: -85px;
+      }
+
+
+
+
+
+
+
     </style>
     {{--*/ $user = Sentinel::getUser(); /*--}}
     <div class="file-data-loader">
@@ -62,7 +89,7 @@ function datatype($str)
         <div class="tabBlock">
             </br>
             <ul class="tabBlock-tabs datachallenge-info">
-                <li class="tabname tabBlock-tab set-tab is-active" id="tnr">TNR Data Definition</li>
+                <li class="tabname tabBlock-tab set-tab " id="tnr">TNR Data Definition</li>
                 <li class="tabname tabBlock-tab set-tab " id="dataitem">Reference Data</li>
                 <li class="tabname tabBlock-tab set-tab" id="mapping">Mapping</li>
                 <li class="tabname tabBlock-tab set-tab" id="group">Group</li>
@@ -582,7 +609,7 @@ function datatype($str)
                                     @endif
                                 </div>
 
-                                <div class="text-center pull-left" style="width:70%">
+                                <div class="text-center pull-left" style="width:60%">
 
                                 <a href="javascript:void(0)" class="btn btn-primary btn-sm datatypegroupselecter"> Data Item
                                     Group</a>
@@ -727,9 +754,9 @@ function datatype($str)
 
                             <div id="custom-search-input">
                                 <div class="input-group col-md-5">
-                                    <input type="text" class="search-query form-control" placeholder="Search" />
+                                    <input type="text" class="search-query form-control" id="search_input" placeholder="Search" />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-primary searchbtn" type="button">
+                                    <button class="btn btn-primary searchbtn" type="button" id="ref_search">
                                         <span class=" glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
@@ -790,6 +817,9 @@ function datatype($str)
                 <div class="modal-body">
                     <section>
                         <div class="wizard">
+                            <div id="group_name_error">
+
+                            </div>
 
 
                             <div class="tab-content">
@@ -806,8 +836,12 @@ function datatype($str)
                                     </div>
                                     </div>
 
-                                    <div class="col-md-3" style="margin-left:-74px;">
-                                    {!! Form::select('groupitemlist_coded', ['selected_grp' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'groupitemlist_coded','data-token'=>csrf_token()]) !!}
+                                    {{--<div class="col-md-3" style="margin-left:-74px;">--}}
+                                    {{--{!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'groupitemlist_coded','data-token'=>csrf_token()]) !!}--}}
+                                    {{--</div>--}}
+
+                                    <div class="col-md-2" style="margin-left:-74px;">
+                                        {!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'select_coded_val_group','data-token'=>csrf_token()]) !!}
                                     </div>
 
                                     <div class="col-md-12">
@@ -882,7 +916,7 @@ function datatype($str)
                 {!! Form::open(array('url' => 'dashboard/data-wizard/store-info','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
 
-                <div class="modal-header">
+                <div class="modal-header data_item_group_header">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
                             @foreach ($errors->all() as $error)
@@ -892,7 +926,17 @@ function datatype($str)
                     @endif
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="wizardcsvDataModelLabel">Data Type Group </h4>
+                        <div class="col-md-3">
+                            <h4 class="modal-title" id="wizardcsvDataModelLabel">Data Item Group </h4>
+                        </div>
+                        <div class="form-group col-md-3">
+
+
+                            {!! Form::text('groupnamegroup', '', array('class' => 'form-control data_item_text' , 'autocomplete' => 'off','placeholder'=>'Please enter name for this group')) !!}
+                        </div>
+                        <div class="col-md-6">
+                            <div id="data_item_group_search" align="right"></div>
+                        </div>
                 </div>
                 <div class="modal-body">
                     <section>
@@ -904,11 +948,7 @@ function datatype($str)
                                 <div class="tab-pane active" role="tabpanel" id="step1">
 
 
-                                    <div class="form-group col-md-6">
 
-                                        {!! Form::label('groupnamegroup', 'Group Name ') !!}
-                                        {!! Form::text('groupnamegroup', '', array('class' => 'form-control' , 'autocomplete' => 'off')) !!}
-                                    </div>
 
                                     <div class="form-group col-md-3  pull-right">
                                         <div id="datatypegroupsearch"></div>
@@ -1067,7 +1107,7 @@ function datatype($str)
                 {!! Form::open(array('url' => 'dashboard/data-item/store-info','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
 
-                <div class="modal-header">
+                <div class="modal-header hide-modal-header-line">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
                             @foreach ($errors->all() as $error)
@@ -1131,8 +1171,7 @@ function datatype($str)
 
                                         <div style="width: 100%;float: left">
                                             <article>
-                                                <label for="search">Please select the data set this Data Item belongs to
-                                                    from drop down below</label>
+                                                <label for="search">Please select the data set from the drop down options</label>
                                             </article>
                                             <div>
                                                 <div class="map_only" style="width: 100%">
@@ -1627,9 +1666,9 @@ function datatype($str)
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header hide-modal-header-line">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Mapped Information</h4>
+                    <h4 class="modal-title">Mapped Information : <span id="mapped_information_span"></span></h4>
                 </div>
                 <div class="modal-body">
                     <table class="table  table-striped table-bordered definitions-table horizontal_scroll">
@@ -1698,18 +1737,30 @@ function datatype($str)
     <div id="tnrdataconnection" class="modal fade" role="dialog">
         <div class="modal-dialog" style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Connect TND Data Definition :<span id="dataitemtitle"></span></h4>
+                <div class="modal-header" style="border-bottom:0px;">
+                    <div class="row">
+
+                        <div class="col-md-8">
+
+                            <h4 class="modal-title">Connect TND Data Definition :<span id="dataitemtitle"></span></h4>
+                        </div>
+                        <div class="col-md-4">
+
+                            <button type="button" class="close ref_close"  data-dismiss="modal">&times;</button>
+                            <div id="reference_data_item_search" class="reference_data_item_search_cover pull-right"></div>
+                        </div>
+
+
+                    </div>
                 </div>
                 <div class="modal-body">
                     <div id="hidfielddiv"></div>
                     <div class="">
 
-                        <table class="table table-striped table-bordered  " id="connecttntdatatablepopup">
+                        <table class="no-border  " id="connecttntdatatablepopup">
                             @if (count($approved) > 0)
                                 <thead class="tableheader">
-                                <tr>
+                                <tr class="tnr_popup_tr">
 
                                     <th class="text-center ">Data Item ID</th>
                                     <th class="text-center ">Data Item</th>
@@ -1980,9 +2031,50 @@ function datatype($str)
     <script src="{{ url('js/jquery.stickytableheaders.min.js') }}"></script>
     <script src="{{ url('js/tipuesearch/tipuesearch.js') }}"></script>
     <script src="{{ url('js/searchbox.js') }}"></script>
+      <script src="{{ url('js/jquery.cookie.js') }}"></script>
+    
     <script>
 
         $(document).ready(function () {
+
+            jQuery(window).load(function () 
+            {
+                if($.cookie('master_search') === 'ref')
+                {
+                    $("#dataitem").trigger("click");
+                }
+                else if($.cookie('master_search') === 'grp')
+                {
+                    $("#group").trigger("click");
+                }
+                else if($.cookie('master_search') === 'map')
+                {
+                   $("#mapping").trigger("click");
+                }
+                else{
+
+                }
+                $.cookie("master_search", null);
+            });
+
+            $(document).on('click', '#search', function (e) {
+               var search_input =  $.cookie('type_val');
+               if(search_input){
+                   $(".search-query").val(search_input);
+
+                   $("#search_input").trigger("keypress");
+
+
+               }
+
+            });
+            // master search in reference data check cookie for open tab
+            
+
+
+
+
+
             $('input.search').searchbox({
                 url: '/dashboard/data-wizard',
                 param: 'q',
@@ -2025,6 +2117,7 @@ function datatype($str)
                 }
 
                 $('#datatypegroup').modal('show');
+
                 $('.groupingtable').DataTable().destroy();
                 $.ajax({
                     url: "{{ url("dashboard/grouping/selected-data") }}",
@@ -2061,11 +2154,12 @@ function datatype($str)
                                 "bInfo": true,
                                 "bAutoWidth": false
                             });
-                
+
 
 
                         }
 
+//                        $("div#DataTables_Table_3_filter").appendTo("#data_item_group_search");
 
                     }
 
@@ -2076,73 +2170,14 @@ function datatype($str)
             })
 
 
-            $(document).on('click', '.codedvaluegroupselecter', function (e) {
-                var checked = []
-                $("input[name='wizard_list[]']:checked").each(function () {
-                    checked.push(parseInt($(this).val()));
-                });
-                var token = "{{csrf_token()}}";
-                if (checked == "") {
-                    checked = $(this).attr('data-reference');
-                    var datacount = "single";
-                } else {
-                    var datacount = "multiple";
-                }
-
-                $('#codedvaluegroup').modal('show');
-                $('.groupingtable').DataTable().destroy();
-                $.ajax({
-                    url: "{{ url("dashboard/grouping/selected-data-coded ") }}",
-                    data: {"data_selected": checked, "_token": token, "datacount": datacount},
-                    type: 'POST',
-                    success: function (data) {
-                        if (data == "Please Select Data") {
-                            var eachrow = "<tr class='dataqyality-issue'>"
-                                    + "<td class='text-center ' colspan='5'><h1 class='text-danger'>Please Select Data</h1></td>"
-                                    + "</tr>";
-                            $('#tbodyrecords').html(eachrow);
-                            jQuery('.file-data-loader').hide();
-                        } else {
-                            $('.dataqyality-issue').css('display', 'none');
-                            var i = 0;
-                            $('#tbodyrecords').html("");
-                            $('#recordscount').html("");
-                            $.each(data, function (index, item) {
-                                var eachrow = "<tr>"
-                                        + "<td class='text-center'><input class='wizard_list_filter_coded' name='wizard_list_filter_coded[]' value=" + item['definitionID'] + " type='checkbox'></td>"
-
-                                        + "<td class='text-center'>" + item['dataItemName'] + "</td>"
-                                        + "<td class='text-center'>" + item['codedValue'] + "</td>"
-                                        + "<td class='text-center'>" + item['codedValueDescription'] + "</td>"
 
 
-                                        + "</tr>";
-                                $('#tbodyrecords').append(eachrow);
-                                i++;
-                            });
-
-                            jQuery('.file-data-loader').hide();
-                            $('.groupingtable').DataTable({
-                                "bPaginate": true,
-                                "bLengthChange": false,
-                                "bFilter": true,
-                                "bInfo": true,
-                                "bAutoWidth": false
-                            });
 
 
-                        }
+//            $(".groupitemlist_coded option[value='selected_grp']").remove();
 
 
-                    }
 
-
-                });
-
-
-            })
-
-            $(".groupitemlist_coded option[value='selected_grp']").remove();
             $(document).on('change', '#groupitemlist_coded', function (e) {
 
                 var mapping_status = $(this).val();
@@ -2211,7 +2246,57 @@ function datatype($str)
 
             })
 
+            $("#sql_modal").on("shown.bs.modal",function()
+            {
+                $(this).find("name").focus();
+            });
 
+            $(document).on('click', '#sqlButton_popup', function (e) 
+            {
+                $("#sql_modal").modal("show");
+            });
+
+
+           //master search refernce
+
+            $(document).on("keypress", ".search-query", function (e) {
+                var searchvalue = $(this).val();
+                $.ajax({
+                    url: '{{url("dashboard/data-wizard/search-history")}}',
+                    type: 'GET',
+                    data: {"searchvalue": searchvalue},
+                    success: function (data) {
+
+                        $('#searchhistory').html(data);
+
+                    }
+                });
+            });
+
+            $(document).on('click', '#search_reference', function (e) 
+            {
+                var search_data = $(".search-query").val();
+                $.cookie("master_search", 'ref');
+                $.cookie("type_val", search_data);
+            });
+
+            $(document).on('click', '#search_grouping', function (e) 
+            {
+                var search_data = $(".search-query").val();
+                $.cookie("master_search", 'grp');
+                $.cookie("type_val", search_data);
+            });
+
+            $(document).on('click', '#search_mapping', function (e) 
+            {
+                var search_data = $(".search-query").val();
+                $.cookie("master_search", 'map');
+                $.cookie("type_val", search_data);
+            });
+
+
+            
+            
             $(document).on('click', '.group_list_filterdata', function (e) {
 
                 if ($(this).is(':checked')) {
@@ -2377,19 +2462,7 @@ function datatype($str)
                 });
             });
 
-            $(document).on("change", ".search-query", function (e) {
-                var searchvalue = $(this).val();
-                $.ajax({
-                    url: '{{url("dashboard/data-wizard/search-history")}}',
-                    type: 'GET',
-                    data: {"searchvalue": searchvalue},
-                    success: function (data) {
-
-                        $('#searchhistory').html(data);
-
-                    }
-                });
-            });
+            
 
             $(document).on("change", ".grouped_data_item", function (e) {
                 var grouped_data_item = $(this).val();
@@ -2515,6 +2588,7 @@ function datatype($str)
                 "bAutoWidth": false,
                 "searching": true
             });
+            $("div#connecttntdatatablepopup_filter").appendTo("#reference_data_item_search");
             @endif
            @if (count($aeadatas) > 0)
             var aea_datatable = $('.filtertable_aea').DataTable({
@@ -2545,6 +2619,7 @@ function datatype($str)
 
 
              $(document).on("click",".filtertable_aea .showhidedataitemstnr", function (e) {
+
                 var tr = $(this).parents('tr');
                 var row = aea_datatable.row( tr );
                 var id = $(this).attr('id');
@@ -2556,10 +2631,9 @@ function datatype($str)
                     // This row is already open - close it
                     row.child.hide();
                     tr.removeClass('shown');
+
                 }
                 else {
-
-
 
 
                     $("#coded_values_dataitems_" + id).toggleClass('invisible-data');
@@ -3395,6 +3469,8 @@ function datatype($str)
 
                         $('#mappinginforamtion').html(data);
                         $('#myModalmappingdetails').modal('show');
+                        $("#mapped_information_span").text(dataitemname);
+
 
                     }
                 });
@@ -3742,34 +3818,141 @@ function datatype($str)
 
             });
 
+            $(document).on('change', '#select_coded_val_group', function (e) {
+                $('.groupingtable').DataTable().destroy();
+                var table =    $('.groupingtable').DataTable({
+                    "bPaginate": true,
+                    "bLengthChange": false,
+                    "bFilter": true,
+                    "bInfo": true,
+                    "bAutoWidth": false
+                });
+                table.columns(1).search( this.value ).draw();
+            });
 
-            $(document).on('click', '.finishcodedvaluegroup', function (e) {
-                e.preventDefault();
+            $(document).on('click', '.codedvaluegroupselecter', function (e) {
+
                 var checked = []
-                var patientid = $('#localpatientidcoded').val();
-                var groupname = $('#groupnamecoded').val();
-                var sex = $('#sexcoded:checked').val();
-                var addressformatcode = $('#addressformatcodecoded').val();
-
-                var token = "{{csrf_token()}}";
-                $("input[name='wizard_list_filter_coded[]']:checked").each(function () {
+                $("input[name='wizard_list[]']:checked").each(function () {
                     checked.push(parseInt($(this).val()));
                 });
+                var token = "{{csrf_token()}}";
+                if (checked == "") {
+                    checked = $(this).attr('data-reference');
+                    var datacount = "single";
+                } else {
+                    var datacount = "multiple";
+                }
 
+                $('#codedvaluegroup').modal('show');
+                $('.groupingtable').DataTable().destroy();
                 $.ajax({
-                    url: "{{ url("dashboard/grouping/group-data-coded") }}",
-                    data: {
-                        "groupdata": checked, "patientid": patientid, "_token": token,
-                        "groupname": groupname, "sex": sex,
-                        "addressformatcode": addressformatcode
-                    },
+                    url: "{{ url("dashboard/grouping/selected-data-coded ") }}",
+                    data: {"data_selected": checked, "_token": token, "datacount": datacount},
                     type: 'POST',
                     success: function (data) {
-                        window.location.reload();
+                        if (data == "Please Select Data") {
+                            var eachrow = "<tr class='dataqyality-issue'>"
+                                    + "<td class='text-center ' colspan='5'><h1 class='text-danger'>Please Select Data</h1></td>"
+                                    + "</tr>";
+                            $('#tbodyrecords').html(eachrow);
+                            jQuery('.file-data-loader').hide();
+                        } else {
+                            $('.dataqyality-issue').css('display', 'none');
+                            var i = 0;
+                            $('#tbodyrecords').html("");
+                            $('#recordscount').html("");
+                            $.each(data, function (index, item) {
+                                var eachrow = "<tr>"
+                                        + "<td class='text-center'><input class='wizard_list_filter_coded' id='check_id' name='wizard_list_filter_coded[]' value=" + item['definitionID'] + " type='checkbox'></td>"
+
+                                        + "<td class='text-center'>" + item['dataItemName'] + "</td>"
+                                        + "<td class='text-center'>" + item['codedValue'] + "</td>"
+                                        + "<td class='text-center'>" + item['codedValueDescription'] + "</td>"
+
+
+                                        + "</tr>";
+                                $('#tbodyrecords').append(eachrow);
+                                i++;
+                            });
+
+                            jQuery('.file-data-loader').hide();
+                            var a =  $('.groupingtable').DataTable({
+                                "bPaginate": true,
+                                "bLengthChange": false,
+                                "bFilter": true,
+                                "bInfo": true,
+                                "bAutoWidth": false
+                            });
+
+
+                        }
+
+
                     }
 
 
                 });
+
+
+            })
+
+
+            var arr_zz = [];
+            $(document).on('click', '.wizard_list_filter_coded', function (e) {
+                if ($(this).is(":checked")) {
+                   arr_zz.push(parseInt($(this).val()));
+                }
+                else {
+
+                    var removeItem =$(this).val();
+                    arr_zz = jQuery.grep(arr_zz, function(value) {
+                        return value != removeItem ;
+                    });
+                }
+             });
+
+
+
+            $(document).on('click', '.finishcodedvaluegroup', function (e) {
+
+                e.preventDefault();
+//                var checked = []
+                var patientid = $('#localpatientidcoded').val();
+                var groupname = $('#groupnamecoded').val();
+                if(groupname == "")
+                {
+                    $("#group_name_error").append("<div class='alert alert-dismissible alert-danger' ><button type='button' class='close' data-dismiss='alert'>&times;</button><strong>Group Name Required!</strong></div>");
+                }
+                else{
+
+                    var sex = $('#sexcoded:checked').val();
+                    var addressformatcode = $('#addressformatcodecoded').val();
+
+                    var token = "{{csrf_token()}}";
+//                $("input[name='wizard_list_filter_coded[]']:checked").each(function () {
+//
+//                    checked.push(parseInt($(this).val()));
+//                });
+
+
+                    $.ajax({
+                        url: "{{ url("dashboard/grouping/group-data-coded") }}",
+                        data: {
+                            "groupdata": arr_zz, "patientid": patientid, "_token": token,
+                            "groupname": groupname, "sex": sex,
+                            "addressformatcode": addressformatcode
+                        },
+                        type: 'POST',
+                        success: function (data) {
+                            window.location.reload();
+                        }
+
+
+                    });
+                }
+
+
 
 
             });

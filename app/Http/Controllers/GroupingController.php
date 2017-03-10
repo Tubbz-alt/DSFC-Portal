@@ -371,6 +371,21 @@ class GroupingController extends Controller
 
         $user = Sentinel::getUser();
         $user_id = Sentinel::check()->id;
+
+        if($data['mapping_status'] == '')
+        {
+            $definitions_data = DB::table('emconceptreferencedata')
+                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->where('emconceptreferencedata.status','=',1)
+                ->where('emdefinitionstable.codedValue', '<>','')
+                ->whereNotIn('definitionID', function($q){
+                    $q->select('referenceDetailId')
+                        ->from('emgroupinfo')
+                        ->where('emgroupinfo.groupType', '=', 'coded');
+                })->get();
+            return $definitions_data;
+        }
+
         $definitions_data = DB::table('emconceptreferencedata')
             ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
             ->where('emconceptreferencedata.status','=',1)

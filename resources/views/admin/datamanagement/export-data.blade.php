@@ -146,7 +146,7 @@
 	<div id="content-wrapper" class="container">
 		<div class="col-md-12">
 
-			<div class="text-right">
+			<div class="text-center" style="padding-top: 50px;">
 				{!! Form::open(array('url' => 'admin/reference-data/export-pages-export', 'method'=>'post')) !!}
 				<span class="exportdate">Start Date: <input name="startdate" class="inputs" type="text"  id="datepicker1"></span>
 				<span class="exportdate">End Date: <input name="enddate" class="inputs" type="text" id="datepicker2"></span>&nbsp;&nbsp;
@@ -158,7 +158,7 @@
 
 		</div>
 
-		<section class="col-sm-12 table-responsive margin-top-10">
+		<!-- <section class="col-sm-12 table-responsive margin-top-10">
 		<table class="table table-striped table-bordered export-table" id="export-table">
 			@if (count($definitions_data) > 0)
 
@@ -319,7 +319,7 @@
 				@endif
 				</tbody>
 		</table>
-		</section>
+		</section> -->
 
 
 	</div>

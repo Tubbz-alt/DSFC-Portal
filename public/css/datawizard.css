@@ -429,3 +429,29 @@ table.dataTable thead th, table.dataTable thead td {
 
 	padding: 10px 107px !important;
 }
+
+/*
+search history*/
+.search-title{
+	font-weight:normal;
+	color:#1482d0;
+	font-size:18px;
+}
+.search-link{
+	color:#008443;
+}
+
+.search-link a{
+	color:#008443;
+	text-decoration:none
+}
+.searchbtn{
+	height: 34px;
+}
+
+.search-para{
+	display:block;
+	color:#6a6a6a;
+}
+
+.btn-group i{ cursor:pointer; text-decoration:none}

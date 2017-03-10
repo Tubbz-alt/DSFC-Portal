@@ -54,15 +54,12 @@
 										{{--*/  $i++; /*--}}
 								      {{--*/ $j = 1 /*--}}
 									@endif
-										{{--*/ $num_padded_k = sprintf("%04d", $i); /*--}}
-										{{--*/ $i_padded = sprintf("%04d", $i); /*--}}
-										{{--*/ $j_padded = sprintf("%04d", $j); /*--}}
-									<td class='text-center'>{{$num_padded_k}}</td>
+									<td class='text-center'>0000{{$i}}</td>
 									<td class='text-center'>{{$data->dataItemName}}</td>
 									<td class='text-center'>{{$data->codedValue}}</td>
 									<td class='text-center' >{{$data->codedValueDescription}}</td>
 									<td class='text-center' >{{$data->dataItemVersionId}}</td>
-									<td class='text-center' >{{$i_padded}}.{{$j_padded}}</td>
+									<td class='text-center' >0000{{$i}}.0000{{$j}}</td>
 									<td class='text-center' >{{$data->codedValueDescription}}</td>
 									<td  class="text-center">
                                       <a class="btn btn-small btn-danger btn-sm destroydataitem"

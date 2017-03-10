@@ -194,11 +194,11 @@
  						/*--}}
 
                     @endif
-					{{--*/ $i_padded = sprintf("%04d", $i); /*--}}
+
 
 					<tr class='localtable stileone'>
 
-                        <td class='text-left'>{{$i_padded}}.{{$data->codedValueId}}.{{$data->definitionID}}</td>
+                        <td class='text-center'>0000{{$i}}.{{$data->codedValueId}}.{{$data->definitionID}}</td>
 						<td class="text-center ">{{$data->dataItemName}} </td>
 
 

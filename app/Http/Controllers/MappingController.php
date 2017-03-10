@@ -339,6 +339,9 @@ class MappingController extends Controller
 
     public function postSelectedDataMoremappingFinal(Request $request){
         $data = $request->all();
+
+        $dataItem_from_sql = $data['data_item'];
+        $dataItem_value_sql = $data['nationalvalue'];
         $data_id = $data['data_selected'];
         $user = Sentinel::getUser();
         $user_id = Sentinel::check()->id;
@@ -386,7 +389,7 @@ class MappingController extends Controller
           
           foreach ($national_codes as $national) 
           {
-           
+
             $sql_mapp_code[] = $national->ddItemCodeText;
           }
         }
@@ -498,19 +501,29 @@ class MappingController extends Controller
                                     <h4 class='modal-title'>SQL Code Information</h4>
                                 </div>
                                 <div class='modal-body'><div class='row'><div class='col-md-6' >";
-                                  echo("<strong>Local Code</strong><br><br>");
-                                     foreach($sql_mapp_code as $code)
-                                     {
-                                        echo("$code<br>");
-                                        
-                                     }
-                                     echo "</div><div class='col-md-6'>";
-                                     echo("<strong>National Code</strong><br><br>");
-                                      foreach ($sql_mapp_value as $value) {
-                                           echo("$value<br>");
+                                  echo("<div style='text-align:left;'>CASE</div>");
+
+                                        foreach($sql_mapp_value as $i=>$c )
+                                        {
+                                            if(in_array($c,$sql_mapp_code)){}
+                                            else{
+                                               array_push($sql_mapp_code,'Local');
+                                            }
                                         }
 
-                               echo " </div></div></div>
+                                     foreach($sql_mapp_value as $value)
+                                     {
+                                        echo("WHEN $dataItem_from_sql = '$value' <br>");
+                                        
+                                     }
+                                     echo "</div><div class='col-md-6' style='text-align:left;'>";
+                                     echo("<br>");
+
+                                        foreach ($sql_mapp_code as $code) {
+                                           echo("THEN '$code'<br>");
+                                        }
+
+                               echo " </div></div><div style='text-align:left;'>ELSE null<br>END AS '$dataItem_value_sql'  ;</div></div>
                                 <div class='modal-footer'>
                                     
                                 </div>
