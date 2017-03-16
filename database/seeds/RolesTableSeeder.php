@@ -1,22 +1,44 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Role;
 
 class RolesTableSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
+     * Auto generated seed file
      *
      * @return void
      */
     public function run()
     {
-        DB::table('roles')->insert([
-        	          'slug' => 'user',
-                 	  'name' => 'user',
-                      'default' => 'true',
-                 	  'created_at' => date('Y-m-d H:i:s'),
-                 	  'updated_at' => date('Y-m-d H:i:s')]);
+        
+
+        \DB::table('roles')->delete();
+        
+        \DB::table('roles')->insert(array (
+            0 => 
+            array (
+                'id' => 1,
+                'slug' => 'administrator',
+                'name' => 'administrator',
+                'permissions' => NULL,
+                'default' => '',
+                'created_at' => '0000-00-00 00:00:00',
+                'updated_at' => '0000-00-00 00:00:00',
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'slug' => 'user',
+                'name' => 'user',
+                'permissions' => NULL,
+                'default' => 'true',
+                'created_at' => '0000-00-00 00:00:00',
+                'updated_at' => '0000-00-00 00:00:00',
+            ),
+        ));
+        
+        
     }
 }

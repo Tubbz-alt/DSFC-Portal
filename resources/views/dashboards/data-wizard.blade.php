@@ -59,7 +59,7 @@ function datatype($str)
           cursor: default;
       }
         .hide-modal-header-line{ border-bottom:0px; }
-        .grouped_data_item { width:280px;}
+        .mapping_data_item_new  { width:280px;}
         .data_item_group_header{ min-height:59px;}
       #datatypegroup .dataTables_filter { margin-top: -14px; }
       .data_item_text {width: 120%;}
@@ -70,7 +70,11 @@ function datatype($str)
       #codedvaluegroup .dataTables_filter {
           margin-top: -84px;
       }
-        .group_name_text_dt {    margin-top: -63px; margin-left: 180px;}
+      #DataTables_Table_1_wrapper .dataTables_filter input{ margin-left: 0.5em;display : none; }
+     #reference-datatable_wrapper .dataTables_filter input{ margin-left: 0.5em;display : none; }
+      #mapping-datatable_wrapper .dataTables_filter input { margin-left: 0.5em;display : none; }
+
+      .group_name_text_dt {    margin-top: -63px; margin-left: 180px;}
       .group_name_select_dt {    margin-top: -63px; margin-left: 129px; width:167px;}
         .coded_value_group_finish{ margin-right: 11px;}
 
@@ -100,7 +104,7 @@ function datatype($str)
         <div class="tabBlock">
             </br>
             <ul class="tabBlock-tabs datachallenge-info">
-                <li class="tabname tabBlock-tab set-tab " id="tnr">TNR Data Definition</li>
+                <li class="tabname tabBlock-tab set-tab is-active" id="tnr">TNR Data Definition</li>
                 <li class="tabname tabBlock-tab set-tab " id="dataitem">Reference Data</li>
                 <li class="tabname tabBlock-tab set-tab" id="mapping">Mapping</li>
                 <li class="tabname tabBlock-tab set-tab" id="group">Group</li>
@@ -478,13 +482,19 @@ function datatype($str)
                             {!! Form::open(array('url' => '/dashboard/data-wizard', 'method'=>'get','id'=>'mappingfilterform')) !!}
                             <div class="col-md-12">
                                 <div class="pull-left">
-                                    @if(!empty($mapped_selected_name))
+                                    <!-- @if(!empty($mapped_selected_name))
                                         {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,$mapped_selected_name,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
                                         ) !!}
                                     @else
                                         {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,null,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
                                    ) !!}
-
+                                    @endif -->
+                                     @if(!empty($mapped_selected_name))
+                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,$mapped_selected_name,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        ) !!}
+                                    @else
+                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,null,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                   ) !!}
                                     @endif
                                 </div>
 
@@ -611,10 +621,10 @@ function datatype($str)
                             <div class="col-md-12">
                                 <div class="pull-left">
                                     @if(!empty($grouped_selected_name))
-                                        {!! Form::select('grouped_data_item', ['' => "Data Item Group"]  + $groupitemlist,$grouped_selected_name,['class' => 'grouped_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        {!! Form::select('mapping_data_item_new', ['' => "Data Item Group"]  + $groupitemlist,$grouped_selected_name,['class' => 'mapping_data_item_new form-control col-md-4','id' => 'mapping_data_item_new','data-token'=>csrf_token()]
                                         ) !!}
                                     @else
-                                        {!! Form::select('grouped_data_item', ['' => "Data Item Group"]  + $groupitemlist,null,['class' => 'grouped_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        {!! Form::select('mapping_data_item_new', ['' => "Data Item Group"]  + $groupitemlist,null,['class' => 'mapping_data_item_new form-control col-md-4','id' => 'mapping_data_item_new','data-token'=>csrf_token()]
                                    ) !!}
 
                                     @endif
@@ -686,7 +696,7 @@ function datatype($str)
                                             <td class="text-center ">
                                                 @if($data->groupStatus==1)
                                                     <a class="btn btn-small btn-primary btn-sm groupingfilter showhidegroupdata"
-                                                       data-status="approved" data-type="{{$data->groupType}}" data-patientid="{{$data->groupName}}"
+                                                       data-status="approved" data-type="{{$data->groupType}}" data-patientid="{{$data->groupId}}"
                                                        id="{{$data->groupId}}" href="javascript:void(0)">Show</a>
                                                 @else
                                                     <a class="btn btn-small btn-primary btn-sm groupdatabutton"
@@ -828,9 +838,7 @@ function datatype($str)
                 <div class="modal-body">
                     <section>
                         <div class="wizard">
-                            <div id="group_name_error">
 
-                            </div>
 
 
                             <div class="tab-content">
@@ -843,7 +851,7 @@ function datatype($str)
                                     <div class="form-group pull-left col-md-6">
 
 
-                                        {!! Form::text('groupnamecoded', '', array('class' => 'form-control col-md-3 group_name_text_dt' , 'autocomplete' => 'off','placeholder'=>'Group Name')) !!}
+                                        {!! Form::text('groupnamecoded', '', array('class' => 'form-control col-md-3 group_name_text_dt' ,'id' => 'groupnamecoded', 'autocomplete' => 'off','placeholder'=>'Group Name')) !!}
                                     </div>
                                     </div>
 
@@ -862,6 +870,7 @@ function datatype($str)
                                         </div>
 
                                         <div class="datagrid" id="recordslist">
+
                                             <table class=" table groupingtable code-val-grp table-striped table-bordered  horizontal_scroll">
                                                 <thead>
                                                 <tr>
@@ -943,7 +952,7 @@ function datatype($str)
                         <div class="form-group col-md-3">
 
 
-                            {!! Form::text('groupnamegroup', '', array('class' => 'form-control data_item_text' , 'autocomplete' => 'off','placeholder'=>'Please enter name for this group')) !!}
+                            {!! Form::text('groupnamegroup', '', array('class' => 'form-control data_item_text' , 'id'=> 'groupnamegroup', 'autocomplete' => 'off','placeholder'=>'Please enter name for this group')) !!}
                         </div>
                         <div class="col-md-6">
                             <div id="data_item_group_search" align="right"></div>
@@ -2111,9 +2120,6 @@ function datatype($str)
 
 
 
-
-
-
             $(document).on('click', '.datatypegroupselecter', function (e) {
                 var checked = []
                 $("input[name='wizard_list[]']:checked").each(function () {
@@ -2444,35 +2450,35 @@ function datatype($str)
 
 
 
-            $(document).on("change", ".data_item", function (e) {
-                var dataitemname = $(this).val();
-                $.ajax({
-                    url: '{{url("dashboard/data-wizard/reference-filter")}}',
-                    type: 'GET',
-                    data: {"dataitemname": dataitemname},
-                    success: function (data) {
+            // $(document).on("change", ".data_item", function (e) {
+            //     var dataitemname = $(this).val();
+            //     $.ajax({
+            //         url: '{{url("dashboard/data-wizard/reference-filter")}}',
+            //         type: 'GET',
+            //         data: {"dataitemname": dataitemname},
+            //         success: function (data) {
 
 
 
-                        $('#referencedatafilter').html(data);
+            //             $('#referencedatafilter').html(data);
 
-                    }
-                });
-            });
+            //         }
+            //     });
+            // });
 
-            $(document).on("change", ".mapping_data_item", function (e) {
-                var mapping_data_item = $(this).val();
-                $.ajax({
-                    url: '{{url("dashboard/data-wizard/mapping-filter")}}',
-                    type: 'GET',
-                    data: {"mapping_data_item": mapping_data_item},
-                    success: function (data) {
+            // $(document).on("change", ".mapping_data_item", function (e) {
+            //     var mapping_data_item = $(this).val();
+            //     $.ajax({
+            //         url: '{{url("dashboard/data-wizard/mapping-filter")}}',
+            //         type: 'GET',
+            //         data: {"mapping_data_item": mapping_data_item},
+            //         success: function (data) {
 
-                        $('#mappingdatafilter').html(data);
+            //             $('#mappingdatafilter').html(data);
 
-                    }
-                });
-            });
+            //         }
+            //     });
+            // });
 
             
 
@@ -2668,7 +2674,32 @@ function datatype($str)
                 }
             } );
 
+            //Reference data tab select filter
+            $(document).on('change', '#data_item', function (e)
+            {
 
+                $('.reference-datatable').DataTable().destroy();
+
+                var reference_datatable = $('.reference-datatable').DataTable({
+                    "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
+                    "bPaginate": true,
+                    "searching": true,
+
+
+                    "dom": '<"top"f>rt<"bottom"ilp><"clear">',
+                    "bFilter": true,
+                    "bInfo": true,
+                    "bAutoWidth": false,
+
+                    /*"order": [[8, "desc"]],*/
+                    oLanguage: {
+                        sLengthMenu: "_MENU_"
+                    }
+
+                });
+
+                reference_datatable.columns(0).search( this.value ).draw();
+            });
 
 
             @if (count($approved) > 0)
@@ -2743,6 +2774,27 @@ function datatype($str)
                 }
             } );
 
+            //Grouping main tab select filter
+            $(document).on('change', '#mapping_data_item_new', function (e)
+            {
+                $('.grouping-datatable').DataTable().destroy();
+
+                var grouping_datatable = $('.grouping-datatable').DataTable({
+
+                    "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
+                    "bPaginate": true,
+                    "searching": true,
+                    "dom": '<"top"f>rt<"bottom"ilp><"clear">',
+                    "bFilter": false,
+                    "bInfo": true,
+                    "bAutoWidth": false,
+                    oLanguage: {
+                        sLengthMenu: "_MENU_"
+                    }
+                });
+
+                grouping_datatable.columns(0).search( this.value ).draw();
+            });
 
           @if (count($dataset_group) > 0)
             var grouping_datatable = $('.grouping-datatable').DataTable({
@@ -2802,7 +2854,27 @@ function datatype($str)
 
                 }
             } );
+            
+            //mapping main tab select filter mapping_data_item
+            $(document).on('change', '#mapping_data_item', function (e)
+            {
+                $('.mapping-datatable').DataTable().destroy();
 
+                var mapping_datatable = $('.mapping-datatable').DataTable({
+                    "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
+                    "bPaginate": true,
+                    "searching": true,
+                    "dom": '<"top"f>rt<"bottom"ilp><"clear">',
+                    "bFilter": true,
+                    "bInfo": true,
+                    "bAutoWidth": false,
+                    oLanguage: {
+                        sLengthMenu: "_MENU_"
+                    },
+                });
+
+                mapping_datatable.columns(0).search( this.value ).draw();
+            });
 
 
            @if (count($mapped_item) > 0)
@@ -3821,7 +3893,18 @@ function datatype($str)
                     },
                     type: 'POST',
                     success: function (data) {
-                        window.location.reload();
+                        if(data == "success"){
+                           window.location.reload();
+                        }
+                        else if(data == "error"){
+                            alert("Please add group name and data Item");
+                        }else if(data == "name_error"){
+                            alert("Group name already Exists");
+                        }
+                        else{
+
+                        }
+
                     }
 
 
@@ -3934,7 +4017,7 @@ function datatype($str)
                 var groupname = $('#groupnamecoded').val();
                 if(groupname == "")
                 {
-                    $("#group_name_error").append("<div class='alert alert-dismissible alert-danger' ><button type='button' class='close' data-dismiss='alert'>&times;</button><strong>Group Name Required!</strong></div>");
+                    alert("Please Enter Group Name");
                 }
                 else{
 
@@ -3957,7 +4040,19 @@ function datatype($str)
                         },
                         type: 'POST',
                         success: function (data) {
-                            window.location.reload();
+                            if(data =="success"){
+                                window.location.reload();
+                            }
+                            else if(data=="name_error") {
+                                alert("Group Name already Exists");
+                            }
+                            else if(data=="error"){
+                                alert("Please add data item and group name");
+                            }
+                            else{
+
+                            }
+
                         }
 
 

@@ -16,6 +16,7 @@ use App\Models\Datawizard;
 use App\Models\Groupinginfo;
 use App\Models\ChangeRequest;
 use App\Models\HelpModel;
+use App\Models\GroupData;
 use App\Models\NAtionalData;
 use App\Models\Aeadata;
 use Sentinel;
@@ -36,16 +37,17 @@ class CsvManagementcontroller extends Controller
             ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
             ->leftjoin('comment', 'emconceptreferencedata.conceptReferenceDataId', '=', 'comment.referenceDetailId')
             ->groupBy('emconceptreferencedata.conceptReferenceDataId')
-            ->orderBy('emconceptreferencedata.createdDate','DESC')
+            ->orderBy('emconceptreferencedata.createdDate', 'DESC')
             ->get();
 
 
         $reply_comments = DB::table('comment')->get();
-        return view('admin.datamanagement.index', compact('file_info','reply_comments'));
+        return view('admin.datamanagement.index', compact('file_info', 'reply_comments'));
     }
 
-    public function postDataApproval(Request $request){
-        $data =$request->all();
+    public function postDataApproval(Request $request)
+    {
+        $data = $request->all();
         $id = $data['data_id'];
         $updated_date = date("Y-m-d H:i:s");
         $message = array(
@@ -57,22 +59,22 @@ class CsvManagementcontroller extends Controller
         CsvReferenca::where('conceptReferenceDataId', '=', $id)->update($message);
 
 
-
     }
 
-    public function postComments(Request $request){
-        $data =$request->all();
+    public function postComments(Request $request)
+    {
+        $data = $request->all();
 
         $id = $data['data_id'];
         $user_name = Sentinel::check()->username;
         $user_id = Sentinel::check()->id;
         $commentedDate = date("Y-m-d H:i:s");
-        if(!empty($data['data_parent_comment_id'])){
+        if (!empty($data['data_parent_comment_id'])) {
             $parentCommentId = $data['data_parent_comment_id'];
             $message = array(
                 'commentText' => $request->comments,
                 'userId' => $user_id,
-                'referenceDetailId' =>$request->data_id,
+                'referenceDetailId' => $request->data_id,
                 'commentedDate' => $commentedDate,
                 'parentCommentId' => $parentCommentId,
                 'userName' => $user_name,
@@ -80,7 +82,7 @@ class CsvManagementcontroller extends Controller
 
             );
 
-        }else{
+        } else {
             $message = array(
                 'commentText' => $request->comments,
                 'userId' => $user_id,
@@ -92,23 +94,22 @@ class CsvManagementcontroller extends Controller
         }
 
 
-
         Comments::insert($message);
-
 
 
     }
 
 
-    public function getDetails($id){
+    public function getDetails($id)
+    {
 
 
         $dataset = CsvReferenca::
-        leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+        leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
             ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
             ->where('emdefinitionstable.referenceDetailId', $id)
-            ->orderBy('emdefinitionstable.referenceDetailId','DESC')
+            ->orderBy('emdefinitionstable.referenceDetailId', 'DESC')
             ->groupBy('emdefinitionstable.dataItemName')
             ->get();
 
@@ -118,8 +119,8 @@ class CsvManagementcontroller extends Controller
 
     }
 
-    public function getDataItem(){
-
+    public function getDataItem()
+    {
 
 
         /*$dataset = DB::table('emconceptreferencedata')
@@ -130,16 +131,10 @@ class CsvManagementcontroller extends Controller
             ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
             ->get();*/
         $dataset = DB::table('emconceptreferencedata')
-            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-
+            ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
             ->where('codedValue', '<>', '')
             ->get();
-
-
-
-
 
 
         return view("admin.datamanagement.data-item", compact('dataset'));
@@ -147,52 +142,47 @@ class CsvManagementcontroller extends Controller
 
     }
 
-    public function getNationalData(){
+    public function getNationalData()
+    {
 
 
         $file_info = DB::table('emconceptreferencedata')
             ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
-            ->where('emconceptreferencedata.importDataType','=',"NATIONAL")
+            ->where('emconceptreferencedata.importDataType', '=', "NATIONAL")
             ->groupBy('emconceptreferencedata.conceptReferenceDataId')
-            ->orderBy('emconceptreferencedata.createdDate','DESC')
+            ->orderBy('emconceptreferencedata.createdDate', 'DESC')
             ->get();
 
 
-        $database_table =   DB::table('emnationalcodedvalues')->paginate(2000);
+        $database_table = DB::table('emnationalcodedvalues')->paginate(2000);
 
-        $data_item_level  =   DB::table('emaeadatadefinition')->get();
-
-
+        $data_item_level = DB::table('emaeadatadefinition')->get();
 
 
-        $definitions_data=   DB::table('emdefinitionstable')
-            ->select('codedValueType','definitionID','dataTypeSetStatus','dataItemName','codedValue')
+        $definitions_data = DB::table('emdefinitionstable')
+            ->select('codedValueType', 'definitionID', 'dataTypeSetStatus', 'dataItemName', 'codedValue')
             ->distinct('codedValueType')
             ->groupBy('codedValueType')->get();
 
-        if(count($definitions_data)>0){
-            foreach($definitions_data as $datas){
+        if (count($definitions_data) > 0) {
+            foreach ($definitions_data as $datas) {
 
-                $modified = $this->datatype(current(explode(' ',$datas->codedValueType)));
-                $items = current(explode(' ',$datas->codedValueType));
+                $modified = $this->datatype(current(explode(' ', $datas->codedValueType)));
+                $items = current(explode(' ', $datas->codedValueType));
                 $id = $datas->definitionID;
                 $status = $datas->dataTypeSetStatus;
 
 
-                $datatypeitems[] = array('items' =>$items, 'modified' => $modified,'dataid'=>$id,'status'=>$status);
+                $datatypeitems[] = array('items' => $items, 'modified' => $modified, 'dataid' => $id, 'status' => $status);
             }
 
 
-        }else{
-            $datatypeitems=null;
+        } else {
+            $datatypeitems = null;
         }
 
 
-
-
-
-
-        return view("admin.datamanagement.nationaldata",compact('definitions_data','dditems','datatypeitems','file_info','database_table','data_item_level'));
+        return view("admin.datamanagement.nationaldata", compact('definitions_data', 'dditems', 'datatypeitems', 'file_info', 'database_table', 'data_item_level'));
 
 
     }
@@ -215,7 +205,6 @@ class CsvManagementcontroller extends Controller
         $filedescription = $data['filedescription'];
 
 
-
         // SET UPLOAD PATH
         $destinationPath = 'media/uploads';
         // GET THE FILE EXTENSION
@@ -232,7 +221,7 @@ class CsvManagementcontroller extends Controller
 
         /* csv file upload */
         if ($upload_success) {
-            CsvReferenca::where('importDataType',"NATIONAL")->delete();
+            CsvReferenca::where('importDataType', "NATIONAL")->delete();
 
             $data = array(
                 'userId' => $user_id,
@@ -241,7 +230,7 @@ class CsvManagementcontroller extends Controller
                 'fileName' => $fileType,
                 'filePath' => $fileName,
                 'crossReferenceId' => 0,
-                'importDataType' =>"NATIONAL",
+                'importDataType' => "NATIONAL",
                 'status' => 1,
                 'createdDate' => $created,
 
@@ -250,10 +239,10 @@ class CsvManagementcontroller extends Controller
             $csvinsert = CsvReferenca::insert($data);
             /*Check if the csv file upload sucessfully*/
 
-            if($csvinsert){
-                $csv_id = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId','DESC')->first();
+            if ($csvinsert) {
+                $csv_id = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId', 'DESC')->first();
 
-                $fileD = fopen("media/uploads/$fileName","r");
+                $fileD = fopen("media/uploads/$fileName", "r");
 
                 if ($fileD) {
                     $info = new NAtionalData();
@@ -261,7 +250,7 @@ class CsvManagementcontroller extends Controller
 
 
                     $line = 0; // 1
-                    while ( ($value = fgetcsv($fileD)) !== false ) {
+                    while (($value = fgetcsv($fileD)) !== false) {
                         if ($line > 0) { // 2
 
                             // Keep logic here to add to database, line 1 onwards
@@ -273,21 +262,19 @@ class CsvManagementcontroller extends Controller
                             $ddCodedValueDescriptionChars = $value[4];
                             $isLatest = $value[5];
 
-                            $inserted_data=array(
-                                'nationalReferenceId'=>$csv_id->conceptReferenceDataId,
-                                'ddItemName'=>strip_tags($ddItemName),
-                                'ddItemAttrName'=>$ddItemAttrName,
-                                'ddItemCodeText'=>strip_tags($ddItemCodeText),
-                                'ddCodedValueDescription'=>strip_tags($ddCodedValueDescription),
-                                'ddCodedValueDescriptionChars'=>strip_tags($ddCodedValueDescriptionChars),
-                                'isLatest'=>$isLatest,
+                            $inserted_data = array(
+                                'nationalReferenceId' => $csv_id->conceptReferenceDataId,
+                                'ddItemName' => strip_tags($ddItemName),
+                                'ddItemAttrName' => $ddItemAttrName,
+                                'ddItemCodeText' => strip_tags($ddItemCodeText),
+                                'ddCodedValueDescription' => strip_tags($ddCodedValueDescription),
+                                'ddCodedValueDescriptionChars' => strip_tags($ddCodedValueDescriptionChars),
+                                'isLatest' => $isLatest,
 
 
                             );
 
                             NAtionalData::insert($inserted_data);
-
-
 
 
                         }
@@ -296,35 +283,28 @@ class CsvManagementcontroller extends Controller
                 }
 
 
-
             }
         }
 
         return redirect('admin/reference-data/national-data');
     }
 
-    public function getHelpData(){
+    public function getHelpData()
+    {
 
 
         $file_info = DB::table('emconceptreferencedata')
             ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
-            ->where('emconceptreferencedata.importDataType','=',"HELP")
+            ->where('emconceptreferencedata.importDataType', '=', "HELP")
             ->groupBy('emconceptreferencedata.conceptReferenceDataId')
-            ->orderBy('emconceptreferencedata.createdDate','DESC')
+            ->orderBy('emconceptreferencedata.createdDate', 'DESC')
             ->get();
 
 
+        $definitions_data = HelpModel::orderBy('helpTabName', 'ASC')->get();
 
 
-
-
-
-        $definitions_data=   HelpModel::orderBy('helpTabName','ASC')->get();
-
-
-
-
-        return view("admin.datamanagement.help",compact('definitions_data','dditems','datatypeitems','file_info','database_table','data_item_level'));
+        return view("admin.datamanagement.help", compact('definitions_data', 'dditems', 'datatypeitems', 'file_info', 'database_table', 'data_item_level'));
 
 
     }
@@ -346,7 +326,6 @@ class CsvManagementcontroller extends Controller
         $filedescription = $data['filedescription'];
 
 
-
         // SET UPLOAD PATH
         $destinationPath = 'media/uploads';
         // GET THE FILE EXTENSION
@@ -363,7 +342,7 @@ class CsvManagementcontroller extends Controller
 
         /* csv file upload */
         if ($upload_success) {
-            CsvReferenca::where('importDataType',"HELP")->delete();
+            CsvReferenca::where('importDataType', "HELP")->delete();
 
             $data = array(
                 'userId' => $user_id,
@@ -372,7 +351,7 @@ class CsvManagementcontroller extends Controller
                 'fileName' => $fileType,
                 'filePath' => $fileName,
                 'crossReferenceId' => 0,
-                'importDataType' =>"HELP",
+                'importDataType' => "HELP",
                 'status' => 1,
                 'createdDate' => $created,
 
@@ -381,10 +360,10 @@ class CsvManagementcontroller extends Controller
             $csvinsert = CsvReferenca::insert($data);
             /*Check if the csv file upload sucessfully*/
 
-            if($csvinsert){
-                $csv_id = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId','DESC')->first();
+            if ($csvinsert) {
+                $csv_id = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId', 'DESC')->first();
 
-                $fileD = fopen("media/uploads/$fileName","r");
+                $fileD = fopen("media/uploads/$fileName", "r");
 
                 if ($fileD) {
                     $info = new HelpModel();
@@ -392,7 +371,7 @@ class CsvManagementcontroller extends Controller
 
 
                     $line = 0; // 1
-                    while ( ($value = fgetcsv($fileD)) !== false ) {
+                    while (($value = fgetcsv($fileD)) !== false) {
                         if ($line > 0) { // 2
 
                             // Keep logic here to add to database, line 1 onwards
@@ -403,14 +382,13 @@ class CsvManagementcontroller extends Controller
                             $objectDescription = $value[2];
 
 
-                            $inserted_data=array(
-                                'helpReferenceId'=>$csv_id->conceptReferenceDataId,
-                                'helpTabName'=>$helpTabName,
-                                'objectName'=>$objectName,
-                                'objectDescription'=>$objectDescription,
-                                'createdDate'=>$created,
-                                'updatedDate'=>$created
-
+                            $inserted_data = array(
+                                'helpReferenceId' => $csv_id->conceptReferenceDataId,
+                                'helpTabName' => $helpTabName,
+                                'objectName' => $objectName,
+                                'objectDescription' => $objectDescription,
+                                'createdDate' => $created,
+                                'updatedDate' => $created
 
 
                             );
@@ -418,13 +396,10 @@ class CsvManagementcontroller extends Controller
                             HelpModel::insert($inserted_data);
 
 
-
-
                         }
                         $line++;
                     }
                 }
-
 
 
             }
@@ -442,12 +417,12 @@ class CsvManagementcontroller extends Controller
     {
         $data = $request->all();
 
-        $inserted_data=array(
-            'email'=>$data['emailvalue'],
+        $inserted_data = array(
+            'email' => $data['emailvalue'],
         );
         $email = $data['emailvalue'];
 
-        DB::table('emfeedback')->where('feedbackId',$data['ID'])->update($inserted_data);
+        DB::table('emfeedback')->where('feedbackId', $data['ID'])->update($inserted_data);
 
         echo "<span  class=\"text investigated\">$email</span>";
 
@@ -457,7 +432,7 @@ class CsvManagementcontroller extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -468,7 +443,7 @@ class CsvManagementcontroller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -479,7 +454,7 @@ class CsvManagementcontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -490,8 +465,8 @@ class CsvManagementcontroller extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -502,28 +477,28 @@ class CsvManagementcontroller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function postDestroy(Request $request)
     {
         $data = $request->all();
-        $data_itemid= DB::table('emdefinitionstable')->select('definitionID')
-            ->where('referenceDetailId',$data['data_id'])->get();
+        $data_itemid = DB::table('emdefinitionstable')->select('definitionID')
+            ->where('referenceDetailId', $data['data_id'])->get();
 
-        foreach ($data_itemid as $wizarddata){
+        foreach ($data_itemid as $wizarddata) {
             DB::table('emdatawizard')
-                ->where('referenceDetailId',$wizarddata->definitionID)
+                ->where('referenceDetailId', $wizarddata->definitionID)
                 ->delete();
         }
 
-        if($data['data_id']){
-            DB::table('emconceptreferencedata')->where('conceptReferenceDataId',$data['data_id'])->delete();
-            DB::table('emaeadatadefinition')->where('referenceId',$data['data_id'])->delete();
-            DB::table('emdefinitionstable')->where('referenceDetailId',$data['data_id'])->delete();
+        if ($data['data_id']) {
+            DB::table('emconceptreferencedata')->where('conceptReferenceDataId', $data['data_id'])->delete();
+            DB::table('emaeadatadefinition')->where('referenceId', $data['data_id'])->delete();
+            DB::table('emdefinitionstable')->where('referenceDetailId', $data['data_id'])->delete();
 
-            DB::table('emmappedcoded')->where('referenceDetailId',$data['data_id'])->delete();
-            DB::table('emhelpdata')->where('helpReferenceId',$data['data_id'])->delete();
+            DB::table('emmappedcoded')->where('referenceDetailId', $data['data_id'])->delete();
+            DB::table('emhelpdata')->where('helpReferenceId', $data['data_id'])->delete();
         }
 
     }
@@ -531,14 +506,14 @@ class CsvManagementcontroller extends Controller
     public function postDestroyDatabase(Request $request)
     {
         $data = $request->all();
-            DB::table('emaeadatadefinition')
-                ->where('tableName',$data['tablename'])
-                ->delete();
+        DB::table('emaeadatadefinition')
+            ->where('tableName', $data['tablename'])
+            ->delete();
 
-        $database_table =   DB::table('emaeadatadefinition')
-            ->select('dataBaseName','tableName','tnrId')
+        $database_table = DB::table('emaeadatadefinition')
+            ->select('dataBaseName', 'tableName', 'tnrId')
             ->groupBy('tableName')->get();
-        foreach ($database_table as $data){
+        foreach ($database_table as $data) {
             echo "<tr>
 
 				<td class=\"text-center\">$data->dataBaseName</td>
@@ -558,9 +533,9 @@ class CsvManagementcontroller extends Controller
     public function postDestroyTnritem(Request $request)
     {
         $data = $request->all();
-            DB::table('emaeadatadefinition')
-                ->where('tnrId',$data['data_id'])
-                ->delete();
+        DB::table('emaeadatadefinition')
+            ->where('tnrId', $data['data_id'])
+            ->delete();
 
 
     }
@@ -569,7 +544,7 @@ class CsvManagementcontroller extends Controller
     {
         $data = $request->all();
         DB::table('emdefinitionstable')
-            ->where('definitionID',$data['data_id'])
+            ->where('definitionID', $data['data_id'])
             ->delete();
 
 
@@ -579,54 +554,79 @@ class CsvManagementcontroller extends Controller
     {
         $data = $request->all();
         DB::table('emdefinitionstable')
-            ->where('definitionID',$data['data_id'])
+            ->where('definitionID', $data['data_id'])
             ->delete();
 
 
     }
+
     public function postDestroyGroupingData(Request $request)
     {
         $data = $request->all();
-        DB::table('emgroupinfo')
-            ->where('groupId',$data['data_id'])
-            ->delete();
 
+        if(!empty($data['data_id'])){
+            
+            $group_info_data = GroupData::getGroupId($data['data_id']); 
+            $group_id = $group_info_data->group_id;
+            $group_info_data_count = GroupData::GroupIdCount($group_id);
 
+            if($group_info_data_count ==1){
+
+                $condition_group_main = array('groupId'=>$group_id);
+                Groupinginfo::deleteData($condition_group_main);
+
+                $condition = array('group_id'=>$group_id);
+                GroupData::deleteData($condition);
+
+                return "success";
+            }
+            else{
+                $condition = array('id'=>$data['data_id']);
+                GroupData::deleteData($condition);
+
+                return "success";
+            }
+        }
+        else{
+            return "Error";
+        }
     }
 
 
-    public function getMapping(){
+    public function getMapping()
+    {
 
-        $latestrecord = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId','DESC')->first();
+        $latestrecord = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId', 'DESC')->first();
 
 
-       /* $definitions_data = DB::table('emconceptreferencedata')
-            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-            ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-            ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-            ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
-            ->get();*/
+        /* $definitions_data = DB::table('emconceptreferencedata')
+             ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+             ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+             ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+             ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
+             ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
+             ->get();*/
 
         $definitions_data = DB::table('emconceptreferencedata')
-            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
             ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-            ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-            ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+            ->join('emmappedcoded', 'emdefinitionstable.definitionID', '=', 'emmappedcoded.localDataId')
+            ->leftjoin('emnationalcodedvalues', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
             ->orderBy('emdefinitionstable.dataItemName')
             ->get();
 
 
-        $dditems =Dditems::all();
-        $selected=[];
+        $dditems = Dditems::all();
+        $selected = [];
 
-        return view('admin.datamanagement.mapping',compact('definitions_data','dditems','selected'));
+        return view('admin.datamanagement.mapping', compact('definitions_data', 'dditems', 'selected'));
 
 
     }
 
-    public function postSelectedDataMoremappingFinal(Request $request){
+    public function postSelectedDataMoremappingFinal(Request $request)
+    {
         $data = $request->all();
         $data_id = $data['data_selected'];
         $user = Sentinel::getUser();
@@ -634,36 +634,28 @@ class CsvManagementcontroller extends Controller
 
 
         $definitions_data = DB::table('emconceptreferencedata')
-            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-            ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-
-            ->where('dataItemName','=',$data['data_item'])
-
+            ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+            ->join('emmappedcoded', 'emdefinitionstable.definitionID', '=', 'emmappedcoded.localDataId')
+            ->where('dataItemName', '=', $data['data_item'])
             ->get();
 
 
-
-        if(!empty($data['nationalvalue'])){
-            $nationalstatus="datafound";
-            $datanational=$data['nationalvalue'];
+        if (!empty($data['nationalvalue'])) {
+            $nationalstatus = "datafound";
+            $datanational = $data['nationalvalue'];
 
             $national_codes = DB::table('emnationalcodedvalues')
-                ->where('emnationalcodedvalues.ddItemName', 'LIKE', '%'.$data['nationalvalue'].'%')
-                ->join('emmappedcoded','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
-                ->orderBy('ddItemCodeText','ASC')
+                ->where('emnationalcodedvalues.ddItemName', 'LIKE', '%' . $data['nationalvalue'] . '%')
+                ->join('emmappedcoded', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
+                ->orderBy('ddItemCodeText', 'ASC')
                 ->groupBy('emmappedcoded.mappedColor')
                 ->get();
-        }else{
-            $nationalstatus="nodatafound";
+        } else {
+            $nationalstatus = "nodatafound";
             $national_codes = "";
 
         }
-
-
-
-
-
 
 
         echo "<tr  style='border: 0px;' colspan='2'>
@@ -671,34 +663,27 @@ class CsvManagementcontroller extends Controller
                   <table class=\"table  table-striped  definitions-table horizontal_scroll\">
                ";
 
-        if(!empty($definitions_data)){
-            foreach($definitions_data as $data) {
+        if (!empty($definitions_data)) {
+            foreach ($definitions_data as $data) {
 
 
-                if($data->mappedCodedStatus==1) {
+                if ($data->mappedCodedStatus == 1) {
                     echo "<tr class='localtable stileone' style='background-color: $data->mappedColor'>";
-                }else{
+                } else {
                     echo "<tr class='localtable stileone'>";
                 }
 
 
-                echo"<td class='text-center'>$data->codedValue</td>";
-                echo"<td class='text-center' >$data->codedValueDescription</td>";
-
-
+                echo "<td class='text-center'>$data->codedValue</td>";
+                echo "<td class='text-center' >$data->codedValueDescription</td>";
 
 
                 echo "</tr>";
 
             }
-        }else{
+        } else {
             echo "<tr> <td class='text-center' colspan='2'>No Records Found</td></tr>";
         }
-
-
-
-
-
 
 
         echo "</table>
@@ -706,19 +691,11 @@ class CsvManagementcontroller extends Controller
          </tr>";
 
 
-
-
-
-
-
-
-
-
-
     }
 
 
-    public function postSelectedDataMoremappingDataitem(Request $request){
+    public function postSelectedDataMoremappingDataitem(Request $request)
+    {
         $data = $request->all();
         $data_id = $data['data_selected'];
         $user = Sentinel::getUser();
@@ -726,36 +703,28 @@ class CsvManagementcontroller extends Controller
 
 
         $definitions_data = DB::table('emconceptreferencedata')
-            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-            ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-
-            ->where('dataItemName','=',$data['data_item'])
-
+            ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+            ->join('emmappedcoded', 'emdefinitionstable.definitionID', '=', 'emmappedcoded.localDataId')
+            ->where('dataItemName', '=', $data['data_item'])
             ->get();
 
 
-
-        if(!empty($data['nationalvalue'])){
-            $nationalstatus="datafound";
-            $datanational=$data['nationalvalue'];
+        if (!empty($data['nationalvalue'])) {
+            $nationalstatus = "datafound";
+            $datanational = $data['nationalvalue'];
 
             $national_codes = DB::table('emnationalcodedvalues')
-                ->where('emnationalcodedvalues.ddItemName', 'LIKE', '%'.$data['nationalvalue'].'%')
-                ->join('emmappedcoded','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
-                ->orderBy('ddItemCodeText','ASC')
+                ->where('emnationalcodedvalues.ddItemName', 'LIKE', '%' . $data['nationalvalue'] . '%')
+                ->join('emmappedcoded', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
+                ->orderBy('ddItemCodeText', 'ASC')
                 ->groupBy('emmappedcoded.mappedColor')
                 ->get();
-        }else{
-            $nationalstatus="nodatafound";
+        } else {
+            $nationalstatus = "nodatafound";
             $national_codes = "";
 
         }
-
-
-
-
-
 
 
         echo "<tr style='border: 0px;'>
@@ -768,31 +737,30 @@ class CsvManagementcontroller extends Controller
                     <th class=\"text-center\"> </th>
                </tr>";
 
-        foreach($definitions_data as $data) {
+        foreach ($definitions_data as $data) {
 
 
-            if($data->mappedCodedStatus==1) {
+            if ($data->mappedCodedStatus == 1) {
                 echo "<tr class='localtable stileone' style='background-color: $data->mappedColor'>";
-            }else{
+            } else {
                 echo "<tr class='localtable stileone'>";
             }
 
 
-            echo"<td class='text-center'>$data->codedValue</td>";
-            echo"<td class='text-center' >$data->codedValueDescription</td>";
-            echo"<td class='text-center'>
+            echo "<td class='text-center'>$data->codedValue</td>";
+            echo "<td class='text-center' >$data->codedValueDescription</td>";
+            echo "<td class='text-center'>
                                     <span> ";
-            if($data->mappedCodedStatus==1) {
+            if ($data->mappedCodedStatus == 1) {
                 echo "<span  class='btn' style='border: 1px solid #0099cc;'>Mapped To</span>";
-            }else{
+            } else {
                 echo "<span class='btn'  style='border: 1px solid #0099cc;'>Local</span>";
 
             }
-            echo"</span>
+            echo "</span>
                                
                  </td>
                  <td style='background-color: white'> </td>";
-
 
 
             echo "</tr>";
@@ -810,12 +778,12 @@ class CsvManagementcontroller extends Controller
                    <th class=\"text-center\">Coded Value Description </th>
                </tr>";
 
-        if($nationalstatus=="datafound"){
-            foreach($national_codes as $nat) {
+        if ($nationalstatus == "datafound") {
+            foreach ($national_codes as $nat) {
 
-                if($nat->mappedCodedStatus==1){
+                if ($nat->mappedCodedStatus == 1) {
                     echo "<tr class='nationaltablemapped stileone' style='background-color: $nat->mappedColor !important;height: 55px'>";
-                }else{
+                } else {
                     "  <tr class='nationaltable stileone' style='height: 55px'>";
                 }
 
@@ -825,7 +793,7 @@ class CsvManagementcontroller extends Controller
                     ";
             }
 
-        }else{
+        } else {
 
             echo "<tr>
                         <td class='text-center' colspan='2'>No Record Found</td>
@@ -837,27 +805,18 @@ class CsvManagementcontroller extends Controller
         }
 
 
-
         echo "</table>
           </td>
          </tr>";
 
 
-
-
-
-
-
-
-
-
-
     }
 
-    public function postMappingApproval(Request $request){
-        $data =$request->all();
+    public function postMappingApproval(Request $request)
+    {
+        $data = $request->all();
         $id = $data['data_id'];
-        $datadefinition = Definitions::where('definitionID', '=',  $id)->first();
+        $datadefinition = Definitions::where('definitionID', '=', $id)->first();
         $updated_date = date("Y-m-d H:i:s");
         $message = array(
             'status' => $request->status,
@@ -869,68 +828,83 @@ class CsvManagementcontroller extends Controller
             'isMappedApprove' => 1,
         );
 
-        Definitions::where('dataItemName','=',$datadefinition['dataItemName'])
+        Definitions::where('dataItemName', '=', $datadefinition['dataItemName'])
             ->update($infostatus);
         Datawizard::where('referenceDetailId', '=', $id)->update($message);
 
 
-
     }
 
-    public function getGrouping(){
+    public function getGrouping()
+    {
 
-        $latestrecord = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId','DESC')->first();
+        $latestrecord = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId', 'DESC')->first();
 
-        if(!empty($latestrecord)){
-            $definitions_data =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+        if (!empty($latestrecord)) {
 
-                ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
-                ->groupBy('emgroupinfo.referenceDetailId')
+//            $definitions_data = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+//                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+//                ->groupBy('emgroupinfo.referenceDetailId')
+//                ->get();
+
+            $definitions_data =  DB::table('emgroupinfo')
+                ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.group_id')
+                ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
+                ->orderBy('emgroupinfo.groupId', 'ASC')
                 ->get();
-        }else{
-            $definitions_data =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-                ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
-                ->groupBy('emgroupinfo.referenceDetailId')
+//                dd($definitions_data);
+        } else {
+//            $definitions_data = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+//                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+//                ->groupBy('emgroupinfo.referenceDetailId')
+//                ->get();
+            
+            $definitions_data =  DB::table('emgroupinfo')
+                ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.id')
+                ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
+                ->groupBy('emgroupinfo.groupName')
+                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
                 ->get();
+
+
         }
 
-        $dditems =Dditems::all();
-        $selected=[];
+        $dditems = Dditems::all();
+        $selected = [];
 
 
-
-        return view('admin.datamanagement.grouping',compact('definitions_data','dditems','selected'));
+        return view('admin.datamanagement.grouping', compact('definitions_data', 'dditems', 'selected'));
 
 
     }
 
 
-    public function getDatatypes(){
+    public function getDatatypes()
+    {
 
 
-
-        $definitions_data=   DB::table('emdefinitionstable')
+        $definitions_data = DB::table('emdefinitionstable')
             ->leftjoin('emdatatypemapp', 'emdefinitionstable.definitionID', '=', 'emdatatypemapp.dataMappedId')
-            ->select('dataTypeMapName','dataTypeId','dataTypeName','codedValueType','definitionID','dataTypeSetStatus','dataItemName','codedValue','datatypeMapStatus')
-          /* ->distinct('codedValueType')*/
+            ->select('dataTypeMapName', 'dataTypeId', 'dataTypeName', 'codedValueType', 'definitionID', 'dataTypeSetStatus', 'dataItemName', 'codedValue', 'datatypeMapStatus')
+            /* ->distinct('codedValueType')*/
             ->groupBy('codedValueType')
             ->get();
 
-        if(count($definitions_data)>0){
-            foreach($definitions_data as $datas){
+        if (count($definitions_data) > 0) {
+            foreach ($definitions_data as $datas) {
 
-                $modified = $this->datatype(current(explode(' ',$datas->codedValueType)));
-                $items = current(explode(' ',$datas->codedValueType));
+                $modified = $this->datatype(current(explode(' ', $datas->codedValueType)));
+                $items = current(explode(' ', $datas->codedValueType));
                 $id = $datas->definitionID;
                 $status = $datas->dataTypeSetStatus;
 
 
-                $datatypeitems[] = array('items' =>$items, 'modified' => $modified,'dataid'=>$id,'status'=>$status);
+                $datatypeitems[] = array('items' => $items, 'modified' => $modified, 'dataid' => $id, 'status' => $status);
             }
 
 
-        }else{
-            $datatypeitems=null;
+        } else {
+            $datatypeitems = null;
         }
 
         $datatypes = array('Text' => 'Text',
@@ -940,44 +914,39 @@ class CsvManagementcontroller extends Controller
             'Date Time' => 'Date Time');
 
 
-
-        return view('admin.datamanagement.datatype',compact('definitions_data','dditems','datatypeitems','datatypes'));
+        return view('admin.datamanagement.datatype', compact('definitions_data', 'dditems', 'datatypeitems', 'datatypes'));
 
 
     }
 
-    public function postDataTypeChange(Request $request){
+    public function postDataTypeChange(Request $request)
+    {
         $data = $request->all();
 
 
         $getid = DB::table('emdatatypemapp')->where('dataMappedId', '=', $data['data_id'])->get();
 
-        if(!empty($getid))
-        {
-            $datatype_map=array(
-                'dataMappedId'=>$data['data_id'],
-                'dataTypeName'=>$data['data_name'],
-                'dataTypeMapName'=>$data['value'],
-                'datatypeMapStatus'=>1,
+        if (!empty($getid)) {
+            $datatype_map = array(
+                'dataMappedId' => $data['data_id'],
+                'dataTypeName' => $data['data_name'],
+                'dataTypeMapName' => $data['value'],
+                'datatypeMapStatus' => 1,
             );
 
-            DB::table('emdatatypemapp')->where('dataMappedId',$data['data_id'])->update($datatype_map);
+            DB::table('emdatatypemapp')->where('dataMappedId', $data['data_id'])->update($datatype_map);
 
-        }else{
-            $datatype_map=array(
-                'dataMappedId'=>$data['data_id'],
-                'dataTypeName'=>$data['data_name'],
-                'dataTypeMapName'=>$data['value'],
-                'datatypeMapStatus'=>1,
+        } else {
+            $datatype_map = array(
+                'dataMappedId' => $data['data_id'],
+                'dataTypeName' => $data['data_name'],
+                'dataTypeMapName' => $data['value'],
+                'datatypeMapStatus' => 1,
             );
 
             DB::table('emdatatypemapp')->insert($datatype_map);
 
         }
-
-
-
-
 
 
         /*$getid = Definitions::select('codedValueType')->where('definitionID', '=', $data['data_id'])->first();
@@ -996,68 +965,59 @@ class CsvManagementcontroller extends Controller
         }*/
 
 
-
-
-
-
-       /* if($info){
-            echo "sucess";
-        }*/
-
-
-
-
+        /* if($info){
+             echo "sucess";
+         }*/
 
 
     }
 
-    public function getTnr(){
+    public function getTnr()
+    {
 
         $file_info = DB::table('emconceptreferencedata')
             ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
-            ->where('emconceptreferencedata.importDataType','=',"TNR")
+            ->where('emconceptreferencedata.importDataType', '=', "TNR")
             ->groupBy('emconceptreferencedata.conceptReferenceDataId')
-            ->orderBy('emconceptreferencedata.createdDate','DESC')
+            ->orderBy('emconceptreferencedata.createdDate', 'DESC')
             ->get();
 
 
-        $database_table =   DB::table('emaeadatadefinition')
-            ->select('dataBaseName','tableName','tnrId')
+        $database_table = DB::table('emaeadatadefinition')
+            ->select('dataBaseName', 'tableName', 'tnrId')
             ->groupBy('tableName')->get();
 
-        $data_item_level  =   DB::table('emaeadatadefinition')->get();
+        $data_item_level = DB::table('emaeadatadefinition')->get();
 
 
-
-
-        $definitions_data=   DB::table('emdefinitionstable')
-            ->select('codedValueType','definitionID','dataTypeSetStatus','dataItemName','codedValue')
+        $definitions_data = DB::table('emdefinitionstable')
+            ->select('codedValueType', 'definitionID', 'dataTypeSetStatus', 'dataItemName', 'codedValue')
             ->distinct('codedValueType')
             ->groupBy('codedValueType')->get();
 
-        if(count($definitions_data)>0){
-            foreach($definitions_data as $datas){
+        if (count($definitions_data) > 0) {
+            foreach ($definitions_data as $datas) {
 
-                $modified = $this->datatype(current(explode(' ',$datas->codedValueType)));
-                $items = current(explode(' ',$datas->codedValueType));
+                $modified = $this->datatype(current(explode(' ', $datas->codedValueType)));
+                $items = current(explode(' ', $datas->codedValueType));
                 $id = $datas->definitionID;
                 $status = $datas->dataTypeSetStatus;
 
 
-                $datatypeitems[] = array('items' =>$items, 'modified' => $modified,'dataid'=>$id,'status'=>$status);
+                $datatypeitems[] = array('items' => $items, 'modified' => $modified, 'dataid' => $id, 'status' => $status);
             }
 
 
-        }else{
-            $datatypeitems=null;
+        } else {
+            $datatypeitems = null;
         }
 
 
-
-        return view('admin.datamanagement.tnr',compact('definitions_data','dditems','datatypeitems','file_info','database_table','data_item_level'));
+        return view('admin.datamanagement.tnr', compact('definitions_data', 'dditems', 'datatypeitems', 'file_info', 'database_table', 'data_item_level'));
 
 
     }
+
     public function postStoreTnr(Request $request)
     {
 
@@ -1072,7 +1032,6 @@ class CsvManagementcontroller extends Controller
 
         $fileTitle = $data['file_title'];
         $filedescription = $data['filedescription'];
-
 
 
         // SET UPLOAD PATH
@@ -1099,7 +1058,7 @@ class CsvManagementcontroller extends Controller
                 'fileName' => $fileType,
                 'filePath' => $fileName,
                 'crossReferenceId' => 0,
-                'importDataType' =>"TNR",
+                'importDataType' => "TNR",
                 'status' => 1,
                 'createdDate' => $created,
 
@@ -1108,15 +1067,15 @@ class CsvManagementcontroller extends Controller
             $csvinsert = CsvReferenca::insert($data);
             /*Check if the csv file upload sucessfully*/
 
-            if($csvinsert){
-                $csv_id = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId','DESC')->first();
+            if ($csvinsert) {
+                $csv_id = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId', 'DESC')->first();
 
-                $fileD = fopen("media/uploads/$fileName","r");
+                $fileD = fopen("media/uploads/$fileName", "r");
 
                 if ($fileD) {
 
                     $line = 0; // 1
-                    while ( ($value = fgetcsv($fileD)) !== false ) {
+                    while (($value = fgetcsv($fileD)) !== false) {
                         if ($line > 0) { // 2
 
                             // Keep logic here to add to database, line 1 onwards
@@ -1137,24 +1096,24 @@ class CsvManagementcontroller extends Controller
                             $dataDictionaryLinks = $value[12];
 
 
-                                $inserted_data=array(
-                                    'referenceId'=>$csv_id->conceptReferenceDataId,
-                                    'dataBaseName'=>strip_tags($dataBaseName),
-                                    'tableName'=>$tableName,
-                                    'tnrItemName'=>strip_tags($dataItemName),
-                                    'tnrDataItemDescription'=>strip_tags($dataItemDescription),
-                                    'dataType'=>strip_tags($dataType),
-                                    'required'=>"",
-                                    'codeTbc'=>$codeTbc,
-                                    'codeDescriptionTbc'=>$codeDescriptionTbc,
-                                    'isDerivedItem'=>$isDerivedItem,
-                                    'derivationMethodology'=>$derivationMethodology,
-                                    'authorName'=>$author,
-                                    'createdDate'=>$createdDate,
-                                    'dataDictionaryName'=>$dataDictionaryName,
-                                    'dataDictionaryLinks'=>$dataDictionaryLinks,
+                            $inserted_data = array(
+                                'referenceId' => $csv_id->conceptReferenceDataId,
+                                'dataBaseName' => strip_tags($dataBaseName),
+                                'tableName' => $tableName,
+                                'tnrItemName' => strip_tags($dataItemName),
+                                'tnrDataItemDescription' => strip_tags($dataItemDescription),
+                                'dataType' => strip_tags($dataType),
+                                'required' => "",
+                                'codeTbc' => $codeTbc,
+                                'codeDescriptionTbc' => $codeDescriptionTbc,
+                                'isDerivedItem' => $isDerivedItem,
+                                'derivationMethodology' => $derivationMethodology,
+                                'authorName' => $author,
+                                'createdDate' => $createdDate,
+                                'dataDictionaryName' => $dataDictionaryName,
+                                'dataDictionaryLinks' => $dataDictionaryLinks,
 
-                                );
+                            );
 
                             Aeadata::insert($inserted_data);
 
@@ -1165,7 +1124,6 @@ class CsvManagementcontroller extends Controller
                 }
 
 
-
             }
         }
 
@@ -1173,51 +1131,44 @@ class CsvManagementcontroller extends Controller
     }
 
 
-
-
-
-    function datatype($str){
+    function datatype($str)
+    {
 
         if ($str == "varchar") {
             $str = 'Text';
-        }elseif($str == "int"){
+        } elseif ($str == "int") {
             $str = 'integer';
-        }
-        elseif($str == "bigint"){
+        } elseif ($str == "bigint") {
             $str = 'integer';
-        }
-        elseif($str == "nvarchar"){
+        } elseif ($str == "nvarchar") {
             $str = 'text';
-        }
-        elseif($str == "date"){
+        } elseif ($str == "date") {
             $str = 'date';
-        }
-        elseif($str == "time"){
+        } elseif ($str == "time") {
             $str = 'time';
-        }
-        elseif($str == "datetime"){
+        } elseif ($str == "datetime") {
             $str = 'datetime';
         }
         return $str;
     }
 
-    public function getFeedback(){
+    public function getFeedback()
+    {
 
         $feedback = DB::table('emfeedback')->get();
 
 
-
-
-        return view('admin.datamanagement.feedback',compact('feedback'));
+        return view('admin.datamanagement.feedback', compact('feedback'));
 
 
     }
 
-    public function postFeedbackSubmit(Request $request){
+    public function postFeedbackSubmit(Request $request)
+    {
 
         $data = $request->all();
 
-        $userdetails    = [
+        $userdetails = [
             'subject' => $request->get('subject'),
             'description' => $request->get('description'),
             'name' => $request->get('name'),
@@ -1226,7 +1177,7 @@ class CsvManagementcontroller extends Controller
             'title' => $request->get('title'),
         ];
 
-        $mail = Mail::send('dashboards.feedback-message',$userdetails, function($message) use ($userdetails) {  //it wont return anything coz its void
+        $mail = Mail::send('dashboards.feedback-message', $userdetails, function ($message) use ($userdetails) {  //it wont return anything coz its void
 
             $message->to('najum.khan@iboxdashboards.com')->subject($userdetails['subject']);
             $message->sender('no-reply@DSfC.com', 'DSfC');
@@ -1240,9 +1191,9 @@ class CsvManagementcontroller extends Controller
     }
 
 
-
-    public function postGroupingApproval(Request $request){
-        $data =$request->all();
+    public function postGroupingApproval(Request $request)
+    {
+        $data = $request->all();
         $id = $data['data_id'];
         $updated_date = date("Y-m-d H:i:s");
         $message = array(
@@ -1254,38 +1205,39 @@ class CsvManagementcontroller extends Controller
         Groupinginfo::where('referenceDetailId', '=', $id)->update($message);
 
 
+    }
+
+    public function getChangeRequest()
+    {
+
+        $latestrecord = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId', 'DESC')->first();
+
+        $request_open = Definitions::join('emchangerequest', 'emdefinitionstable.definitionID', '=', 'emchangerequest.referenceDetailId')
+            ->orderBy('emchangerequest.requestId', ' DESC')
+            ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+            ->get();
+
+        $request_pending = Definitions::join('emchangerequest', 'emdefinitionstable.definitionID', '=', 'emchangerequest.referenceDetailId')
+            ->where('emchangerequest.status', '=', 0)
+            ->orderBy('emchangerequest.requestId', ' DESC')
+            ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+            ->get();
+        $request_closed = Definitions::join('emchangerequest', 'emdefinitionstable.definitionID', '=', 'emchangerequest.referenceDetailId')
+            ->where('emchangerequest.status', '=', 1)
+            ->orderBy('emchangerequest.requestId', ' DESC')
+            ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+            ->get();
+        $dditems = Dditems::all();
+        $selected = [];
+
+        return view('admin.datamanagement.changerequest', compact('request_open', 'dditems', 'selected', 'request_pending', 'request_closed'));
+
 
     }
 
-    public function getChangeRequest(){
-
-        $latestrecord = CsvReferenca::select('conceptReferenceDataId')->orderBy('conceptReferenceDataId','DESC')->first();
-
-        $request_open =  Definitions::join('emchangerequest', 'emdefinitionstable.definitionID', '=', 'emchangerequest.referenceDetailId')
-            ->orderBy('emchangerequest.requestId',' DESC')
-            ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
-            ->get();
-
-        $request_pending =  Definitions::join('emchangerequest', 'emdefinitionstable.definitionID', '=', 'emchangerequest.referenceDetailId')
-            ->where('emchangerequest.status','=',0)
-            ->orderBy('emchangerequest.requestId',' DESC')
-            ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
-            ->get();
-        $request_closed =  Definitions::join('emchangerequest', 'emdefinitionstable.definitionID', '=', 'emchangerequest.referenceDetailId')
-            ->where('emchangerequest.status','=',1)
-            ->orderBy('emchangerequest.requestId',' DESC')
-            ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
-            ->get();
-        $dditems =Dditems::all();
-        $selected=[];
-
-        return view('admin.datamanagement.changerequest',compact('request_open','dditems','selected','request_pending','request_closed'));
-
-
-    }
-
-    public function postChangeRequest(Request $request){
-        $data =$request->all();
+    public function postChangeRequest(Request $request)
+    {
+        $data = $request->all();
         $id = $data['data_id'];
         $updated_date = date("Y-m-d H:i:s");
         $message = array(
@@ -1297,37 +1249,36 @@ class CsvManagementcontroller extends Controller
         ChangeRequest::where('referenceDetailId', '=', $id)->update($message);
 
 
-
     }
 
 
-   /* csv conversion*/
-    public function postExportPagesImported(Request $request) {
+    /* csv conversion*/
+    public function postExportPagesImported(Request $request)
+    {
         $data = $request->all();
 
 
-
-        if(!empty($data['startdate']) && !empty($data['enddate'])){
+        if (!empty($data['startdate']) && !empty($data['enddate'])) {
             $startdate = $data['startdate'];
-            $date =$data['enddate'];
+            $date = $data['enddate'];
             $date = strtotime($date);
             $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date) ;
+            $endate = date('Y-m-d', $date);
             $file_info = DB::table('emconceptreferencedata')
                 ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
                 ->leftjoin('comment', 'emconceptreferencedata.conceptReferenceDataId', '=', 'comment.referenceDetailId')
                 ->whereRaw("emconceptreferencedata.createdDate BETWEEN '$startdate%' AND '$endate%' ")
                 ->groupBy('emconceptreferencedata.conceptReferenceDataId')
-                ->orderBy('emconceptreferencedata.createdDate','DESC')
+                ->orderBy('emconceptreferencedata.createdDate', 'DESC')
                 ->get();
 
 
-        }else{
+        } else {
             $file_info = DB::table('emconceptreferencedata')
                 ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
                 ->leftjoin('comment', 'emconceptreferencedata.conceptReferenceDataId', '=', 'comment.referenceDetailId')
                 ->groupBy('emconceptreferencedata.conceptReferenceDataId')
-                ->orderBy('emconceptreferencedata.createdDate','DESC')
+                ->orderBy('emconceptreferencedata.createdDate', 'DESC')
                 ->get();
 
 
@@ -1336,7 +1287,7 @@ class CsvManagementcontroller extends Controller
         $filename = "importeddata_" . date('Y-M-d') . ".csv";
         $fp = fopen('php://output', 'w');
         $header = array('Sl.No', 'File Title', 'File Description', 'Created Date',
-            'Created By','Approved Date','Status');
+            'Created By', 'Approved Date', 'Status');
 
         header('Content-type: application/csv');
         header('Content-Disposition: attachment; filename=' . $filename);
@@ -1345,49 +1296,50 @@ class CsvManagementcontroller extends Controller
         $i = 1;
         foreach ($file_info as $pages) {
 
-            if($pages->status==1){
+            if ($pages->status == 1) {
                 $approveddate = date('jS M G:i A', strtotime($pages->updatedDate));
-                $status ="Approved";
-            }else{
+                $status = "Approved";
+            } else {
                 $approveddate = " ";
-                $status ="Pending Approval";
+                $status = "Pending Approval";
 
             }
 
 
             fputcsv($fp, array($i, $pages->fileTitle, $pages->fileDescription,
-                $pages->createdDate, $pages->username,$approveddate,$status));
+                $pages->createdDate, $pages->username, $approveddate, $status));
             $i = $i + 1;
         }
         exit;
 
         $reply_comments = DB::table('comment')->get();
-        return view('admin.datamanagement.index', compact('file_info','reply_comments'));
+        return view('admin.datamanagement.index', compact('file_info', 'reply_comments'));
     }
 
-    public function postExportPagesTnr(Request $request) {
+    public function postExportPagesTnr(Request $request)
+    {
         $data = $request->all();
 
-        if(!empty($data['startdate']) && !empty($data['enddate'])){
+        if (!empty($data['startdate']) && !empty($data['enddate'])) {
             $startdate = $data['startdate'];
-            $date =$data['enddate'];
+            $date = $data['enddate'];
             $date = strtotime($date);
             $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date) ;
-            $file_info =Aeadata::
-                leftjoin('emconceptreferencedata', 'emaeadatadefinition.referenceId', '=', 'emconceptreferencedata.conceptReferenceDataId')
+            $endate = date('Y-m-d', $date);
+            $file_info = Aeadata::
+            leftjoin('emconceptreferencedata', 'emaeadatadefinition.referenceId', '=', 'emconceptreferencedata.conceptReferenceDataId')
                 ->whereRaw("emconceptreferencedata.createdDate BETWEEN '$startdate%' AND '$endate%' ")
-            ->get();
-        }else{
-            $file_info =Aeadata::all();
+                ->get();
+        } else {
+            $file_info = Aeadata::all();
         }
 
 
         $filename = "TNR_" . date('Y-M-d') . ".csv";
         $fp = fopen('php://output', 'w');
         $header = array('Sl.No', 'Database', 'Table Name', 'Data_Item_Name',
-            'Data_Item_Description','Data_Type','Requirement','Code_(TBC)','Code_Description_(TBC)',
-            'Is_Derived_Item','Derivation_Methodology','Author','Created_Date','Data Dictionary Name',
+            'Data_Item_Description', 'Data_Type', 'Requirement', 'Code_(TBC)', 'Code_Description_(TBC)',
+            'Is_Derived_Item', 'Derivation_Methodology', 'Author', 'Created_Date', 'Data Dictionary Name',
             'Data Dictionary Links');
 
         header('Content-type: application/csv');
@@ -1402,8 +1354,8 @@ class CsvManagementcontroller extends Controller
                 $pages->tnrItemName, $pages->tnrDataItemDescription,
                 $pages->dataType, $pages->required,
                 $pages->codeTbc, $pages->codeDescriptionTbc,
-                $pages->isDerivedItem,$pages->derivationMethodology,
-                $pages->author,$pages->createdDate,
+                $pages->isDerivedItem, $pages->derivationMethodology,
+                $pages->author, $pages->createdDate,
                 $pages->dataDictionaryName,
                 $pages->dataDictionaryLinks
             ));
@@ -1412,42 +1364,37 @@ class CsvManagementcontroller extends Controller
         exit;
 
 
-
         return redirect('admin/reference-data/tnr');
     }
 
-    public function postExportPagesDataItem(Request $request){
+    public function postExportPagesDataItem(Request $request)
+    {
         $data = $request->all();
 
-        if(!empty($data['startdate']) && !empty($data['enddate'])){
+        if (!empty($data['startdate']) && !empty($data['enddate'])) {
             $startdate = $data['startdate'];
-            $date =$data['enddate'];
+            $date = $data['enddate'];
             $date = strtotime($date);
             $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date) ;
+            $endate = date('Y-m-d', $date);
             $dataset = DB::table('emconceptreferencedata')
-                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
                 ->whereRaw("emdefinitionstable.createdDate BETWEEN '$startdate%' AND '$endate%' ")
                 ->where('codedValue', '<>', '')
                 ->get();
-        }else{
+        } else {
             $dataset = DB::table('emconceptreferencedata')
-                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+                ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
                 ->where('codedValue', '<>', '')
                 ->get();
         }
 
 
-
-
-
-
-
         $filename = "data_item_" . date('Y-M-d') . ".csv";
         $fp = fopen('php://output', 'w');
-        $header = array('Sl.No','Data Item  ','Coded Value', 'Coded Value Description', 'Version','Coded Values ID ','Coded Values Version ID','Uploaded Date','Created Date',);
+        $header = array('Sl.No', 'Data Item  ', 'Coded Value', 'Coded Value Description', 'Version', 'Coded Values ID ', 'Coded Values Version ID', 'Uploaded Date', 'Created Date',);
 
         header('Content-type: application/csv');
         header('Content-Disposition: attachment; filename=' . $filename);
@@ -1459,38 +1406,36 @@ class CsvManagementcontroller extends Controller
         $temp = array();
         foreach ($dataset as $pages) {
 
-            if (!in_array($pages->dataItemName, $temp)){
+            if (!in_array($pages->dataItemName, $temp)) {
                 $i++;
-                $j = 1 ;
+                $j = 1;
             }
 
 
-
-            if($pages->status==1){
+            if ($pages->status == 1) {
                 $approveddate = date('jS M G:i A', strtotime($pages->updatedDate));
-                $status ="Approved";
-            }else{
+                $status = "Approved";
+            } else {
                 $approveddate = " ";
-                $status ="Pending Approval";
+                $status = "Pending Approval";
 
             }
 
 
-            fputcsv($fp, array("0000".$i, $pages->dataItemName, $pages->codedValue,
+            fputcsv($fp, array("0000" . $i, $pages->dataItemName, $pages->codedValue,
                 $pages->codedValueDescription,
                 $pages->dataItemVersionId,
-                "0000".$i."."."0000".$j,
+                "0000" . $i . "." . "0000" . $j,
                 $pages->codedValueDescription,
                 $pages->createdDate,
                 $pages->uploadedDate));
             $k = $k + 1;
 
-        $temp[]= $pages->dataItemName;
+            $temp[] = $pages->dataItemName;
 
-         $j++;
+            $j++;
         }
         exit;
-
 
 
         return view("admin.datamanagement.data-item", compact('dataset'));
@@ -1498,47 +1443,46 @@ class CsvManagementcontroller extends Controller
 
     }
 
-    public function postExportPagesMapping(Request $request){
+    public function postExportPagesMapping(Request $request)
+    {
 
         $data = $request->all();
 
-        if(!empty($data['startdate']) && !empty($data['enddate'])){
+        if (!empty($data['startdate']) && !empty($data['enddate'])) {
             $startdate = $data['startdate'];
-            $date =$data['enddate'];
+            $date = $data['enddate'];
             $date = strtotime($date);
             $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date) ;
+            $endate = date('Y-m-d', $date);
             $definitions_data = DB::table('emconceptreferencedata')
-                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
                 ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-                ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-                ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
+                ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+                ->join('emmappedcoded', 'emdefinitionstable.definitionID', '=', 'emmappedcoded.localDataId')
+                ->leftjoin('emnationalcodedvalues', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
                 ->whereRaw("emdefinitionstable.createdDate BETWEEN '$startdate%' AND '$endate%' ")
                 ->get();
-        }else{
+        } else {
             $definitions_data = DB::table('emconceptreferencedata')
-                ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
                 ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-                ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-                ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
+                ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+                ->join('emmappedcoded', 'emdefinitionstable.definitionID', '=', 'emmappedcoded.localDataId')
+                ->leftjoin('emnationalcodedvalues', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
                 ->get();
 
         }
 
 
-
-
-        $dditems =Dditems::all();
-        $selected=[];
+        $dditems = Dditems::all();
+        $selected = [];
 
 
         $filename = "mapping" . date('Y-M-d') . ".csv";
         $fp = fopen('php://output', 'w');
-        $header = array('Sl.No', 'Data Item Name','Local/National','Data Set',
-            'Comments','Share Point Link',
-            'Coded Value','Coded Value Description ','National Coded Value','National Coded Value Description ','Created Date');
+        $header = array('Sl.No', 'Data Item Name', 'Local/National', 'Data Set',
+            'Comments', 'Share Point Link',
+            'Coded Value', 'Coded Value Description ', 'National Coded Value', 'National Coded Value Description ', 'Created Date');
 
         header('Content-type: application/csv');
         header('Content-Disposition: attachment; filename=' . $filename);
@@ -1547,61 +1491,59 @@ class CsvManagementcontroller extends Controller
         $i = 1;
         foreach ($definitions_data as $pages) {
 
-            if($pages->dataItem=="National"){
+            if ($pages->dataItem == "National") {
 
-                $status ="National";
-            }else{
+                $status = "National";
+            } else {
 
-                $status ="Local";
+                $status = "Local";
 
             }
 
 
             fputcsv($fp, array($i, $pages->dataItemName, $pages->dataItem,
-                $pages->datasetBelongs, $pages->mappingComments,$pages->sharePointLink,
-                $pages->codedValue,$pages->codedValueDescription,$pages->ddItemCodeText,
-                $pages->ddCodedValueDescription,$pages->createdDate));
+                $pages->datasetBelongs, $pages->mappingComments, $pages->sharePointLink,
+                $pages->codedValue, $pages->codedValueDescription, $pages->ddItemCodeText,
+                $pages->ddCodedValueDescription, $pages->createdDate));
             $i = $i + 1;
         }
         exit;
 
-        return view('admin.datamanagement.mapping',compact('definitions_data','dditems','selected'));
+        return view('admin.datamanagement.mapping', compact('definitions_data', 'dditems', 'selected'));
 
 
     }
 
-    public function postExportPagesGrouping(Request $request){
+    public function postExportPagesGrouping(Request $request)
+    {
 
         $data = $request->all();
 
-        if(!empty($data['startdate']) && !empty($data['enddate'])){
+        if (!empty($data['startdate']) && !empty($data['enddate'])) {
             $startdate = $data['startdate'];
-            $date =$data['enddate'];
+            $date = $data['enddate'];
             $date = strtotime($date);
             $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date) ;
-            $definitions_data =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+            $endate = date('Y-m-d', $date);
+            $definitions_data = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
                 ->whereRaw("emdefinitionstable.createdDate BETWEEN '$startdate%' AND '$endate%' ")
-                ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
+                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
                 ->groupBy('emgroupinfo.referenceDetailId')
                 ->get();
 
-        }else{
-            $definitions_data =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-
-                ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
+        } else {
+            $definitions_data = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
                 ->groupBy('emgroupinfo.referenceDetailId')
                 ->get();
 
         }
 
 
-
-
         $filename = "mapping" . date('Y-M-d') . ".csv";
         $fp = fopen('php://output', 'w');
-        $header = array('Sl.No', 'Data Item Name','Data Type','Group Name',
-            'Group Type','Created Date');
+        $header = array('Sl.No', 'Data Item Name', 'Data Type', 'Group Name',
+            'Group Type', 'Created Date');
 
         header('Content-type: application/csv');
         header('Content-Disposition: attachment; filename=' . $filename);
@@ -1610,163 +1552,391 @@ class CsvManagementcontroller extends Controller
         $i = 1;
         foreach ($definitions_data as $pages) {
 
-            if($pages->dataItem=="National"){
+            if ($pages->dataItem == "National") {
 
-                $status ="National";
-            }else{
+                $status = "National";
+            } else {
 
-                $status ="Local";
+                $status = "Local";
 
             }
 
 
             fputcsv($fp, array($i, $pages->dataItemName, $pages->codedValueType,
-                $pages->groupName, $pages->groupType,$pages->createdDate));
+                $pages->groupName, $pages->groupType, $pages->createdDate));
             $i = $i + 1;
         }
         exit;
 
-        return view('admin.datamanagement.grouping',compact('definitions_data','dditems','selected'));
+        return view('admin.datamanagement.grouping', compact('definitions_data', 'dditems', 'selected'));
 
 
     }
 
 
-    public function postExportPagesExport(Request $request){
+    public function postExportPagesExport(Request $request)
+    {
 
         $data = $request->all();
 
-        if(!empty($data['startdate']) && !empty($data['enddate'])){
+        if (!empty($data['startdate']) && !empty($data['enddate'])) {
             $startdate = $data['startdate'];
-            $date =$data['enddate'];
+            $date = $data['enddate'];
             $date = strtotime($date);
             $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date) ;
+            $endate = date('Y-m-d', $date);
 
-            $definitions_data =  CsvReferenca::
-            leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-                ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
-                ->leftjoin('emgroupinfo','emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+            $definitions_data = CsvReferenca::
+            leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+                ->leftjoin('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
                 ->whereRaw("emdefinitionstable.createdDate BETWEEN '$startdate%' AND '$endate%' ")
+                ->where('codedValue', '<>', '')
                 ->orderBy('emdefinitionstable.dataItemName')
                 ->get();
 
 
-        }else{
-            $definitions_data =  CsvReferenca::
-            leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-                ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
-                ->leftjoin('emgroupinfo','emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-                ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+        } else {
+            $definitions_data = CsvReferenca::
+            leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+                ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+                ->leftjoin('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+                ->where('dataItemName', '<>', '')
                 ->orderBy('emdefinitionstable.dataItemName')
                 ->get();
-
         }
-
-
 
 
         $filename = "Export" . date('Y-M-d') . ".csv";
         $fp = fopen('php://output', 'w');
-        $header = array('Sl.No', 'Definition ID','Definition Version','Database','Table','Definition Name ',
-            'Definition Description', 'Data Type','Requirement','Code','Code Description','Code ID',
-            'Code Version', 'Derived','Derivation Methodology','Author','Created Date','Data Dictionary Name',
-            'Data Dictionary Link', 'Group ID','Group Name','Group Version','Group Description','Definition Type',
-            'Field Mapping', 'Code Mapping','Upload Date'
-            );
-
+        $header = array('Sl.No', 'Portal Tab', 'Data Item ID', 'Data Item', 'Coded Value', 'Coded Value Description',
+            'Version', 'Coded Values ID', 'Uploaded Date', 'Created Date', 'Mapping ID', 'Mapping Data Item ID',
+            'Group ID', 'Group Name', 'Group Type', 'Unique ID');
         header('Content-type: application/csv');
         header('Content-Disposition: attachment; filename=' . $filename);
         fputcsv($fp, $header);
 
 
 
-        $k = 0;
-        $i = 1;
-        $j = 1;
-        $l = 0;
-        $m = 0;
-        $tempdataset = array();
-        $temptnr = array();
+        $dataitemid_rep = 0;
+        $tempdataitem_rep = array();
+        foreach ($definitions_data as $pages_rep) {
+            if (!in_array($pages_rep->dataItemName, $tempdataitem_rep)) {
+                $dataitemid_rep++;
+            }
+            $tempdataitem_rep[] = $pages_rep->dataItemName;
+        }
+
+
+        $dataitemid = 0;
+        $groupuniid = 0;
+        $uniquecodeId = 1;
+        $slno = 0;
+        $mappunid = 0;
+        $mappcodedid = 0;
+        $tempdataitem = array();
+        $tempgroupname = array();
+        $nationaldataidarr = array();
+        $nationaldatanamearr = array();
+        $dataarraystore = array();
+        $arraycountdata = 0;
+        $checkmaparr    =   array();
+        $checkmapindex  =   0;
+        $uniquecodeId_rep_show =1;
+
+
         foreach ($definitions_data as $pages) {
 
-            if (!in_array($pages->tableName, $tempdataset)){
-                $l=0;
-                $i=$j;
-                if($k!=0) {
-                    $j = $k;
+            $slno++;
+            $cnt_map_un_id      =   0;
+            if (!in_array($pages->dataItemName, $tempdataitem)) {
+                $dataitemid++;
+                $uniquecodeId = 1;
+                $uniquecodeId_rep_show =0;
+            }
+
+            if ($pages->groupName != "") {
+                if (!in_array($pages->groupName, $tempgroupname)) {
+                    $groupuniid++;
+                }
+            }
+
+            $definitions_data_mapping           = array();
+            $mapped_nationaldataId              = "";
+            $mapped_nationaldataname            = "";
+            $unique_id_print                    = "";
+            $mapped_nationaldataId_ref_val      = "";
+            $definitions_data_mapping           = DB::table('emmappedcoded')
+                ->leftjoin('emnationalcodedvalues', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
+                ->where('emmappedcoded.localDataId', '=', $pages->definitionID)
+                ->get();
+
+            if (!empty($definitions_data_mapping))
+            {
+                foreach ($definitions_data_mapping as $maped_data)
+                {
+                    $mapped_nationaldataId      = $maped_data->nationaldataId;
+                    $mapped_nationaldataname    = $maped_data->ddItemName;
+                }
+
+                if (!in_array($mapped_nationaldataId, $nationaldataidarr)) {
+                    $nationaldataidarr[] = $mapped_nationaldataId;
+                }
+
+                if (!in_array($mapped_nationaldataname, $nationaldatanamearr)) {
+                    $nationaldatanamearr[] = $mapped_nationaldataname;
+                }
+                $checkmaparr[$checkmapindex]["mapname"] =   $mapped_nationaldataname;
+                $checkmaparr[$checkmapindex]["mapid"]   =   $mapped_nationaldataId;
+                $checkmapindex++;
+
+                if (!empty($checkmaparr)) {
+                        $cnt_map_un_id      =   0;
+                        foreach ($checkmaparr as $maped_data_uni_id)
+                        {
+                            if($maped_data_uni_id["mapname"]==$mapped_nationaldataname) {
+                                $cnt_map_un_id++;
+                            }
+                            if($maped_data_uni_id["mapid"]==$mapped_nationaldataId){
+                                break;
+                            }
+                        }
 
                 }
-                $k++;
-                $tempdataset[]= $pages->tableName;
+
+
+
+
+                $mapped_nationaldataId_ref      =   array_search($mapped_nationaldataname, $nationaldatanamearr);
+                $mapped_nationaldataId_ref_val  =  $dataitemid_rep+$mapped_nationaldataId_ref+1;
+                $mappunid++;
             }
 
-            if (!in_array($pages->tnrItemName, $temptnr)){
-                $m++;
+            if($pages->codedValue==""){
+                $uniquecodeId = 0;
+            }
+            else{
+                if($uniquecodeId==1){
 
+                    $zero_x_padded = sprintf("%05d", 0);
+                    $dataitemid_padded = "\t" . sprintf("%05d", $dataitemid);
+                    $uniquecodeId_rep_show=1;
+                    $dataarraystore[$arraycountdata]['rbukh'] = "RDI";
+                    $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
+                    $dataarraystore[$arraycountdata]['dataItemName'] = $pages->dataItemName;
+                    $dataarraystore[$arraycountdata]['codedValue'] = "";
+                    $dataarraystore[$arraycountdata]['codedValueDescription'] = "";
+                    $dataarraystore[$arraycountdata]['dataItemVersionId'] = "";
+                    $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $zero_x_padded;
+                    $dataarraystore[$arraycountdata]['uploadedDate'] = "";
+                    $dataarraystore[$arraycountdata]['created_at'] = "";
+                    $dataarraystore[$arraycountdata]['mappin_uni_id_print'] = "";
+                    $dataarraystore[$arraycountdata]['mappedId_padded_print'] = "";
+                    $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
+                    $dataarraystore[$arraycountdata]['groupName'] = "";
+                    $dataarraystore[$arraycountdata]['groupType'] = "";
+                    $dataarraystore[$arraycountdata]['unique_id_print'] = "";
+
+                    $arraycountdata++;
+                }
             }
 
-            $l++;
 
 
-            $i_padded = sprintf("%04d", $i);
-            $j_padded = sprintf("%04d", $j);
-            $k_padded = sprintf("%04d", $k);
-            $l_padded = sprintf("%04d", $l);
-            $m_padded = sprintf("%04d", $m);
+            $dataitemid_padded = "\t" . sprintf("%05d", $dataitemid);
+            $uniquecodeId_padded = sprintf("%05d", $uniquecodeId);
+            $groupuniid_padded = sprintf("%05d", $groupuniid);
+            $mappunid_padded = sprintf("%05d", $mappunid);
+            $mappcodedid_padded = sprintf("%05d", $mappcodedid);
+            $cnt_map_un_id_padded = sprintf("%05d", $cnt_map_un_id);
+            $zero_x_padded          =   sprintf("%05d", 0);
+            $mapped_nationaldataId_padded = "\t" . sprintf("%05d", $mapped_nationaldataId_ref_val);
+            $groupuniid_padded_print = $dataitemid_padded . "." . $uniquecodeId_padded . "." . $groupuniid_padded;
+            $mappin_uni_id_print = $dataitemid_padded . "." . $mappunid_padded;
+            $mappedId_padded_print = $mapped_nationaldataId_padded . "." . $cnt_map_un_id_padded;
 
 
-            fputcsv($fp, array($i, $m_padded, $i_padded.".".$j_padded.".".$k_padded.".".$l_padded,
-                $pages->dataBaseName, $pages->tableName,$pages->tnrItemName,$pages->tnrDataItemDescription,
-                $pages->dataType,$pages->required,$pages->codeTbc,$pages->codeDescriptionTbc,
-                "","",$pages->isDerivedItem,$pages->derivationMethodology,$pages->authorName,$pages->createdDate,
-                $pages->dataDictionaryName,$pages->dataDictionaryLinks,$pages->groupId,$pages->groupName,
-                "",$pages->groupName,"","",$pages->updatedDate
-            ));
+            $groupuniid_padded_ins = $groupuniid_padded;
+            $mappcodedid_padded_ins = $cnt_map_un_id_padded;
+            $mappunid_padded_ins = $mappunid_padded;
+            if ($pages->groupName == "") {
+                $groupuniid_padded_ins = sprintf("%05d", 0);
+            }
+
+            if (empty($definitions_data_mapping)) {
+                $mappunid_padded_ins = sprintf("%05d", 0);
+                $mappcodedid_padded_ins = sprintf("%05d", 0);
+            }
 
 
-            //$k = $k + 1;
-            //$j = $j + 1;
+            $unique_id_print = $dataitemid_padded . "." . $uniquecodeId_padded . "." . $mappunid_padded_ins .".".$mapped_nationaldataId_padded."." . $mappcodedid_padded_ins . "." . $groupuniid_padded_ins;
 
 
-            $temptnr[]= $pages->tnrItemName;
+            if ($pages->groupName == "") {
+                $groupuniid_padded_print = "";
+            }
+            if (empty($definitions_data_mapping)) {
+                $mappin_uni_id_print = "";
+                $mappedId_padded_print = "";
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            $dataarraystore[$arraycountdata]['rbukh']              =   "RDI";
+            $dataarraystore[$arraycountdata]['dataitemid_padded']  =   $dataitemid_padded;
+            $dataarraystore[$arraycountdata]['dataItemName']  =   $pages->dataItemName;
+            $dataarraystore[$arraycountdata]['codedValue']  =    $pages->codedValue;
+            $dataarraystore[$arraycountdata]['codedValueDescription']  =   $pages->codedValueDescription;
+            $dataarraystore[$arraycountdata]['dataItemVersionId']  =   $pages->dataItemVersionId;
+            $dataarraystore[$arraycountdata]['dataitemid_padded_new']  =    $dataitemid_padded . "." . $uniquecodeId_padded;
+            $dataarraystore[$arraycountdata]['uploadedDate']  =   $pages->uploadedDate;
+            $dataarraystore[$arraycountdata]['created_at']  =   $pages->created_at;
+            $dataarraystore[$arraycountdata]['mappin_uni_id_print']  =   $mappin_uni_id_print;
+            $dataarraystore[$arraycountdata]['mappedId_padded_print']  =   $mappedId_padded_print;
+            $dataarraystore[$arraycountdata]['groupuniid_padded_print']  =   $groupuniid_padded_print;
+            $dataarraystore[$arraycountdata]['groupName']  =   $pages->groupName;
+            $dataarraystore[$arraycountdata]['groupType']  =   $pages->groupType;
+            $dataarraystore[$arraycountdata]['unique_id_print']  =   $unique_id_print;
+
+            $arraycountdata++;
+
+
+
+
+            $tempdataitem[] = $pages->dataItemName;
+            $tempgroupname[] = $pages->groupName;
+            $uniquecodeId++;
+            if (!empty($definitions_data_mapping)) {
+                $mappcodedid++;
+            }
+        }
+
+        $ddtempdataitem     = array();
+        $uniquecodeId       = 1;
+        foreach ($nationaldataidarr as $keynational => $itemnational)
+        {
+            $definitions_data_mapping_national           = DB::table('emnationalcodedvalues')
+                ->leftjoin('emconceptreferencedata', 'emnationalcodedvalues.nationalReferenceId', '=', 'emconceptreferencedata.conceptReferenceDataId')
+                ->where('emnationalcodedvalues.codedValueId', '=', $itemnational)
+                ->get();
+
+
+
+
+
+
+
+
+
+            foreach ($definitions_data_mapping_national as $keynational_ret => $itemnational_ret) {
+
+
+                if (!in_array($itemnational_ret->ddItemName, $ddtempdataitem)) {
+                    $dataitemid++;
+                    $uniquecodeId = 1;
+                }
+                if($itemnational_ret->ddItemCodeText==""){
+                    $uniquecodeId = 0;
+                }else{
+                    if($uniquecodeId==1){
+
+                        $zero_x_padded = sprintf("%05d", 0);
+                        $dataitemid_padded = "\t" . sprintf("%05d", $dataitemid);
+                        $uniquecodeId_rep_show=1;
+                        $dataarraystore[$arraycountdata]['rbukh'] = "UKHF";
+                        $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
+                        $dataarraystore[$arraycountdata]['dataItemName'] = $itemnational_ret->ddItemName;
+                        $dataarraystore[$arraycountdata]['codedValue'] = "";
+                        $dataarraystore[$arraycountdata]['codedValueDescription'] = "";
+                        $dataarraystore[$arraycountdata]['dataItemVersionId'] = "";
+                        $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $zero_x_padded;
+                        $dataarraystore[$arraycountdata]['uploadedDate'] = "";
+                        $dataarraystore[$arraycountdata]['created_at'] = "";
+                        $dataarraystore[$arraycountdata]['mappin_uni_id_print'] = "";
+                        $dataarraystore[$arraycountdata]['mappedId_padded_print'] = "";
+                        $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
+                        $dataarraystore[$arraycountdata]['groupName'] = "";
+                        $dataarraystore[$arraycountdata]['groupType'] = "";
+                        $dataarraystore[$arraycountdata]['unique_id_print'] = "";
+
+                        $arraycountdata++;
+                    }
+                }
+                $dataitemid_padded      = "\t" . sprintf("%05d", $dataitemid);
+                $uniquecodeId_padded    = sprintf("%05d", $uniquecodeId);
+                $zero_padded    = sprintf("%05d", 0);
+
+
+                $unique_id_print        = $dataitemid_padded . "." . $uniquecodeId_padded . "." . $zero_padded . "." . $zero_padded . "." . $zero_padded. "." . $zero_padded;
+
+
+                $dataarraystore[$arraycountdata]['rbukh'] = "UKHF";
+                $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
+                $dataarraystore[$arraycountdata]['dataItemName'] = $itemnational_ret->ddItemName;
+                $dataarraystore[$arraycountdata]['codedValue'] = $itemnational_ret->ddItemCodeText;
+                $dataarraystore[$arraycountdata]['codedValueDescription'] = $itemnational_ret->ddCodedValueDescription;
+                $dataarraystore[$arraycountdata]['dataItemVersionId'] = 1;
+                $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $uniquecodeId_padded;
+                $dataarraystore[$arraycountdata]['uploadedDate'] = $itemnational_ret->createdDate;
+                $dataarraystore[$arraycountdata]['created_at'] = $itemnational_ret->createdDate;
+                $dataarraystore[$arraycountdata]['mappin_uni_id_print'] = "";
+                $dataarraystore[$arraycountdata]['mappedId_padded_print'] = "";
+                $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
+                $dataarraystore[$arraycountdata]['groupName'] = "";
+                $dataarraystore[$arraycountdata]['groupType'] = "";
+                $dataarraystore[$arraycountdata]['unique_id_print'] = $unique_id_print;
+                $arraycountdata++;
+                $ddtempdataitem[] = $itemnational_ret->ddItemName;
+                $uniquecodeId++;
+            }
 
 
         }
 
-
-
-
-
-
-
-
-
-
-
+        $slnorep=0;
+        foreach ($dataarraystore as $itemputcsv) {
+            $slnorep++;
+            fputcsv($fp, array($slnorep, $itemputcsv["rbukh"], $itemputcsv["dataitemid_padded"], $itemputcsv["dataItemName"], $itemputcsv["codedValue"],
+                $itemputcsv["codedValueDescription"], $itemputcsv["dataItemVersionId"], $itemputcsv["dataitemid_padded_new"],$itemputcsv["uploadedDate"],
+                $itemputcsv["created_at"],$itemputcsv["mappin_uni_id_print"], $itemputcsv["mappedId_padded_print"],$itemputcsv["groupuniid_padded_print"],
+                $itemputcsv["groupName"], $itemputcsv["groupType"], $itemputcsv["unique_id_print"]));
+        }
 
         exit;
-
-        return view('admin.datamanagement.export-data',compact('definitions_data','dditems','selected'));
-
+        return view('admin.datamanagement.export-data', compact('definitions_data', 'dditems', 'selected'));
 
     }
 
-    public function getExportData(){
+    public function getExportData()
+    {
 
 
-        $definitions_data =  DB::table('emconceptreferencedata')
-        ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-        ->leftjoin('emdatawizard','emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-        ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
-        ->leftjoin('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-        ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-        ->orderBy('emdefinitionstable.dataItemName')
-        ->get();
+        $definitions_data = DB::table('emconceptreferencedata')
+            ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+            ->leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
+            ->leftjoin('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+            ->orderBy('emdefinitionstable.dataItemName')
+            ->get();
 
 
-        return view('admin.datamanagement.export-data',compact('definitions_data','dditems','selected'));
+        return view('admin.datamanagement.export-data', compact('definitions_data', 'dditems', 'selected'));
 
 
     }

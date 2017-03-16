@@ -259,10 +259,20 @@ class DatawizardController extends Controller
 
 
 
-        $groupitemlist = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-            ->groupBy('emgroupinfo.groupName')
-            ->orderBy('emgroupinfo.groupName', 'ASC')
-            ->lists('groupName','groupName')->all();
+//        $groupitemlist = Definitions::join('emgroupinfo_data', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.	reference_data_id')
+//            ->groupBy('emgroupinfo.groupName')
+//            ->orderBy('emgroupinfo.groupName', 'ASC')
+//            ->lists('groupName','groupName')->all();
+        $groupitemlist =array();
+                $groupitemlist_data = DB::table('emgroupinfo')
+                    ->join('emgroupinfo_data', 'emgroupinfo_data.group_id', '=', 'emgroupinfo.groupId')
+                    ->groupBy('emgroupinfo.groupId')
+                    ->orderBy('emgroupinfo.groupName', 'ASC')
+                    ->get();
+                foreach($groupitemlist_data as $data)
+                {
+                        $groupitemlist[$data->groupName]=$data->groupName;
+                }
 
 
          $groupitemlist_coded = CsvReferenca::leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
@@ -297,18 +307,28 @@ class DatawizardController extends Controller
             ->get();*/
 
         if(!empty($datare['grouped_data_item'])){
+
             Session::put('grouped_selected_name', $datare['grouped_data_item']);
-        $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+
+            $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
             ->where('emdefinitionstable.dataItemName','=',$datare['grouped_data_item'])
             ->groupBy('emgroupinfo.groupName')
             ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
             ->get();
+
         }else{
-            $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
-                ->groupBy('emgroupinfo.groupName')
+            $dataset_group =DB::table('emgroupinfo')
+                ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.group_id')
+                ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
+                ->groupBy('emgroupinfo.groupId')
                 ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
                 ->get();
 
+
+//            $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+//                ->groupBy('emgroupinfo.groupName')
+//                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+//                ->get();
         }
 
         $dataset_group_nongroup =DB::table('emconceptreferencedata')

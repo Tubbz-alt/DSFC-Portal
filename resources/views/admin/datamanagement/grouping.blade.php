@@ -174,7 +174,7 @@
 						@endif
 
 					@endif
-					{{--*/ $num_padded_k = sprintf("%04d", $k); /*--}}
+					{{--*/ $num_padded_k = sprintf("%04d", $pl->groupId); /*--}}
 					<tr>
 
 						<td  class="text-center">{{$num_padded_k}}</td>
@@ -188,7 +188,7 @@
 						<td  class='text-center' style='vertical-align:middle;'>
 							<a class="btn btn-small btn-danger btn-sm destroygrouping"
 							   href="javascript:void(0)"
-							   data-id="{{$pl->groupId}}" data-status="1"
+							   data-id="{{$pl->id}}" data-status="1"
 							   data-item="{{$pl->groupName}}">Delete</a>
 						</td>
 
@@ -306,7 +306,12 @@
 					data: {"data_id": data_id,"_token": token,"status":status,"dataitemname":dataitemname},
 					cache: false,
 					success: function (data) {
-						window.location.reload();
+						if(data=="success"){
+							window.location.reload();
+						}else{
+							alert("error");
+						}
+
 					}
 				});
 

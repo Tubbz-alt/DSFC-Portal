@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Definitions;
 use App\Models\Dditems;
+use App\Models\GroupData;
 use Sentinel;
 use Validator;
 use Input;
@@ -94,11 +95,11 @@ class GroupingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function postGroupData(Request $request){
+    public function postGroupDataOld(Request $request){
         $data = $request->all();
 
 
-        $data_id = $data['groupdata'];
+
 
 
         if(!empty($data['groupdata'])){
@@ -155,8 +156,60 @@ class GroupingController extends Controller
 
     }
 
+    public function postGroupData(Request $request){
+        $data = $request->all();
 
-    public function postGroupDataCoded(Request $request){
+        if(!empty($data['groupdata']) && !empty($data['groupname']))
+        {
+            $group_data = GroupData::getGroupName($data['groupname']);
+            $created = date("Y-m-d H:i:s");
+
+            if(empty($group_data)){
+
+                $groupinfo=array(
+
+                    'groupName'=> $data['groupname'],
+                    'addressFormatCode'=>$request->input('addressformatcode'),
+                    'createdDate' => $created,
+                    'groupStatus' => 1,
+                    'groupType' => "DataType",
+
+                );
+
+                Groupinginfo::insertData($groupinfo);
+
+                $group_id = DB::getPdo()->lastInsertId();
+                if($group_id){
+                    foreach($data['groupdata'] as $referen_data_id){
+                        $group_details = array(
+                            'group_id'=> $group_id,
+                            'reference_data_id' =>$referen_data_id
+                        );
+                        $group_data_insert = GroupData::insertData($group_details);
+                    }
+
+                    if($group_data_insert){
+                        return "success";
+                    }
+                }
+                else{
+                    return "Database Error";
+                }
+
+            }
+            else{
+              return "name_error";  
+            }
+
+        }else{
+
+            return "error";
+
+        }
+
+    }
+
+    public function postGroupDataCodedold(Request $request){
         $data = $request->all();
 
         $data_id = $data['groupdata'];
@@ -219,6 +272,61 @@ class GroupingController extends Controller
 
 
     }
+    public function postGroupDataCoded(Request $request)
+    {
+        $data = $request->all();
+
+        if(!empty($data['groupdata']) && !empty($data['groupname']))
+        {
+            $group_data = GroupData::getGroupNameCoded($data['groupname']);
+            $created = date("Y-m-d H:i:s");
+
+            if(empty($group_data)){
+
+                $groupinfo=array(
+
+                    'groupName'=> $data['groupname'],
+                    'addressFormatCode'=>$request->input('addressformatcode'),
+                    'createdDate' => $created,
+                    'groupStatus' => 1,
+                    'groupType' => "coded",
+
+                );
+
+                Groupinginfo::insertData($groupinfo);
+
+                $group_id = DB::getPdo()->lastInsertId();
+                if($group_id){
+                    foreach($data['groupdata'] as $referen_data_id){
+                        $group_details = array(
+                            'group_id'=> $group_id,
+                            'reference_data_id' =>$referen_data_id
+                        );
+                        $group_data_insert = GroupData::insertData($group_details);
+                    }
+
+                    if($group_data_insert){
+                        return "success";
+                    }
+                }
+                else{
+                    return "Database Error";
+                }
+
+            }
+            else{
+                return "name_error";
+            }
+
+        }else{
+
+            return "error";
+
+        }
+
+
+
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -258,6 +366,7 @@ class GroupingController extends Controller
     public function getGroupFilter(Request $request)
     {
         $data = $request->all();
+//        dd($data);
         if($data['status']=="pending"){
             $grouped_pending =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
                 ->where('emgroupinfo.groupStatus','=',0)
@@ -267,12 +376,21 @@ class GroupingController extends Controller
                 ->groupBy('emgroupinfo.referenceDetailId')
                 ->get();
         }else{
-            $grouped_pending =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+//            $grouped_pending =  Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+//                ->where('emgroupinfo.groupStatus','=',1)
+//
+//                ->where('emgroupinfo.groupName','=',$data['localPatientID'])
+//                ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
+//                ->groupBy('emgroupinfo.referenceDetailId')
+//                ->get();
+
+            $grouped_pending =  DB::table('emgroupinfo')
+                ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.group_id')
+                ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
                 ->where('emgroupinfo.groupStatus','=',1)
 
-                ->where('emgroupinfo.groupName','=',$data['localPatientID'])
-                ->orderBy('emdefinitionstable.referenceDetailId',' DESC')
-                ->groupBy('emgroupinfo.referenceDetailId')
+                ->where('emgroupinfo_data.group_id','=',$data['localPatientID'])
+
                 ->get();
 
 
