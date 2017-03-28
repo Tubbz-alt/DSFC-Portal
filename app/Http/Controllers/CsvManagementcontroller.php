@@ -20,6 +20,8 @@ use App\Models\GroupData;
 use App\Models\NAtionalData;
 use App\Models\Aeadata;
 use Sentinel;
+use App\Models\Mappedcoded;
+use Config;
 use Mail;
 use Session;
 use Input;
@@ -122,30 +124,27 @@ class CsvManagementcontroller extends Controller
     public function getDataItem()
     {
 
-
-        /*$dataset = DB::table('emconceptreferencedata')
-            ->leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
-            ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
-            ->join('emmappedcoded','emdefinitionstable.definitionID','=','emmappedcoded.localDataId')
-            ->leftjoin('emnationalcodedvalues','emnationalcodedvalues.codedValueId','=','emmappedcoded.nationaldataId')
-            ->get();*/
         $dataset = DB::table('emconceptreferencedata')
             ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
             ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
             ->where('codedValue', '<>', '')
+            ->orderBy('emdefinitionstable.dataItemName', 'ASC')
             ->get();
 
+        $dataset_dataitem = DB::table('emconceptreferencedata')
+            ->leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+            ->where('codedValue', '<>', '')
+            ->groupBy('emdefinitionstable.dataItemName')
+            ->orderBy('emdefinitionstable.dataItemName', 'ASC')
+            ->get();    
 
-        return view("admin.datamanagement.data-item", compact('dataset'));
-
+        return view("admin.datamanagement.data-item", compact('dataset','dataset_dataitem'));
 
     }
 
-    public function getNationalData()
+    public function getNationalData(Request $request)
     {
-
-
         $file_info = DB::table('emconceptreferencedata')
             ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
             ->where('emconceptreferencedata.importDataType', '=', "NATIONAL")
@@ -153,8 +152,29 @@ class CsvManagementcontroller extends Controller
             ->orderBy('emconceptreferencedata.createdDate', 'DESC')
             ->get();
 
+            if(isset($_GET['search_data']))
+            {
+                $field = $_GET['search_data'];
+                $search = $_GET['national_search'];
+                $field_set = session()->put('field', $field);
+                $search_set = session()->put('search_data', $search );
+            }
+                $data = $request->session()->all();
 
-        $database_table = DB::table('emnationalcodedvalues')->paginate(2000);
+            if(isset($data['search_data']) && $data['search_data']!="")
+            {
+                $field =$data['field'];
+                $search = $data['search_data'];
+                $database_table = NAtionalData::getSearchData($field,$search);
+            }
+            else{
+                
+                $database_table = DB::table('emnationalcodedvalues')->paginate(Config::get('constants.pagination_limit'));
+            }
+
+
+
+       // $database_table = DB::select(" select * from view_emnationalcodedvalues");
 
         $data_item_level = DB::table('emaeadatadefinition')->get();
 
@@ -181,7 +201,7 @@ class CsvManagementcontroller extends Controller
             $datatypeitems = null;
         }
 
-
+        $this->makeUniqueNationalDataId();
         return view("admin.datamanagement.nationaldata", compact('definitions_data', 'dditems', 'datatypeitems', 'file_info', 'database_table', 'data_item_level'));
 
 
@@ -263,6 +283,7 @@ class CsvManagementcontroller extends Controller
                             $isLatest = $value[5];
 
                             $inserted_data = array(
+                                'uiquenationaldataid' => 0,
                                 'nationalReferenceId' => $csv_id->conceptReferenceDataId,
                                 'ddItemName' => strip_tags($ddItemName),
                                 'ddItemAttrName' => $ddItemAttrName,
@@ -285,9 +306,48 @@ class CsvManagementcontroller extends Controller
 
             }
         }
-
+        $this->makeUniqueNationalDataId();
         return redirect('admin/reference-data/national-data');
     }
+
+
+    public function makeUniqueNationalDataId()
+    {
+        $maxofuniqueid              =   DB::table('emnationalcodedvalues')->max('uiquenationaldataid');
+
+        $natonalcoddedarray         =   DB::table('emnationalcodedvalues')
+            ->orderBy('emnationalcodedvalues.ddItemName', 'ASC')
+            ->where('emnationalcodedvalues.uiquenationaldataid', '=', 0)
+            ->get();
+
+        if(!empty($natonalcoddedarray))
+        {
+            foreach ($natonalcoddedarray as $natonalcoddedarrayvalues)
+            {
+                $national_data_search           = DB::table('emnationalcodedvalues')
+                    ->where('emnationalcodedvalues.ddItemName', '=', "$natonalcoddedarrayvalues->ddItemName")
+                    ->where('emnationalcodedvalues.uiquenationaldataid', '<>', 0)
+                    ->first();
+
+                if(!empty($national_data_search))
+                {
+                    DB::table('emnationalcodedvalues')
+                    ->where('emnationalcodedvalues.codedValueId', '=', $natonalcoddedarrayvalues->codedValueId)
+                    ->update(['uiquenationaldataid' => $national_data_search->uiquenationaldataid]);
+                }
+                else
+                {
+                    $maxofuniqueid++;
+                    DB::table('emnationalcodedvalues')
+                        ->where('emnationalcodedvalues.codedValueId', '=', $natonalcoddedarrayvalues->codedValueId)
+                        ->update(['uiquenationaldataid' =>$maxofuniqueid]);
+                }
+
+            }
+        }
+    }
+
+
 
     public function getHelpData()
     {
@@ -553,9 +613,26 @@ class CsvManagementcontroller extends Controller
     public function postDestroyMappingData(Request $request)
     {
         $data = $request->all();
-        DB::table('emdefinitionstable')
-            ->where('definitionID', $data['data_id'])
-            ->delete();
+        $mapping_id = $data['data_id'];
+            
+        if(isset($mapping_id)){
+
+            $mapped_data = Mappedcoded::getMappedData($mapping_id);
+            $reference_id = $mapped_data->referenceDetailId;
+            if(isset($reference_id)){
+
+                $condition = array('referenceDetailId'=>$reference_id);
+                $value = array('isMapped'=>0);
+                $update = Definitions::updateIsMapped($value, $condition);
+                if($update){
+                    $delete_mapiing_data = Mappedcoded::deleteRecord($mapping_id);
+                    return "success";
+                }
+            }
+
+            
+        }
+        
 
 
     }
@@ -564,30 +641,28 @@ class CsvManagementcontroller extends Controller
     {
         $data = $request->all();
 
-        if(!empty($data['data_id'])){
-            
-            $group_info_data = GroupData::getGroupId($data['data_id']); 
+        if (!empty($data['data_id'])) {
+
+            $group_info_data = GroupData::getGroupId($data['data_id']);
             $group_id = $group_info_data->group_id;
             $group_info_data_count = GroupData::GroupIdCount($group_id);
 
-            if($group_info_data_count ==1){
+            if ($group_info_data_count == 1) {
 
-                $condition_group_main = array('groupId'=>$group_id);
+                $condition_group_main = array('groupId' => $group_id);
                 Groupinginfo::deleteData($condition_group_main);
 
-                $condition = array('group_id'=>$group_id);
+                $condition = array('group_id' => $group_id);
+                GroupData::deleteData($condition);
+
+                return "success";
+            } else {
+                $condition = array('id' => $data['data_id']);
                 GroupData::deleteData($condition);
 
                 return "success";
             }
-            else{
-                $condition = array('id'=>$data['data_id']);
-                GroupData::deleteData($condition);
-
-                return "success";
-            }
-        }
-        else{
+        } else {
             return "Error";
         }
     }
@@ -847,10 +922,10 @@ class CsvManagementcontroller extends Controller
 //                ->groupBy('emgroupinfo.referenceDetailId')
 //                ->get();
 
-            $definitions_data =  DB::table('emgroupinfo')
+            $definitions_data = DB::table('emgroupinfo')
                 ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.group_id')
                 ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
-                ->orderBy('emgroupinfo.groupId', 'ASC')
+                ->orderBy('emgroupinfo.groupName', 'ASC')
                 ->get();
 //                dd($definitions_data);
         } else {
@@ -858,12 +933,12 @@ class CsvManagementcontroller extends Controller
 //                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
 //                ->groupBy('emgroupinfo.referenceDetailId')
 //                ->get();
-            
-            $definitions_data =  DB::table('emgroupinfo')
+
+            $definitions_data = DB::table('emgroupinfo')
                 ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.id')
                 ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
                 ->groupBy('emgroupinfo.groupName')
-                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+                ->orderBy('emgroupinfo.groupName', ' ASC')
                 ->get();
 
 
@@ -1577,14 +1652,14 @@ class CsvManagementcontroller extends Controller
     public function postExportPagesExport(Request $request)
     {
 
-        $data = $request->all();
+          $data = $request->all();
 
         if (!empty($data['startdate']) && !empty($data['enddate'])) {
-            $startdate = $data['startdate'];
-            $date = $data['enddate'];
-            $date = strtotime($date);
-            $date = strtotime("+1 day", $date);
-            $endate = date('Y-m-d', $date);
+            $startdate          = $data['startdate'];
+            $date               = $data['enddate'];
+            $date               = strtotime($date);
+            $date               = strtotime("+1 day", $date);
+            $endate             = date('Y-m-d', $date);
 
             $definitions_data = CsvReferenca::
             leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
@@ -1597,138 +1672,116 @@ class CsvManagementcontroller extends Controller
                 ->get();
 
 
-        } else {
+        }
+        else
+        {
             $definitions_data = CsvReferenca::
             leftjoin('emdefinitionstable', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
                 ->leftjoin('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
-                ->leftjoin('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
+                ->leftjoin('emgroupinfo_data', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
+                ->leftjoin('emgroupinfo', 'emgroupinfo_data.group_id', '=', 'emgroupinfo.groupId')
                 ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
                 ->where('dataItemName', '<>', '')
                 ->orderBy('emdefinitionstable.dataItemName')
                 ->get();
         }
 
+        $filename           = "Export" . date('Y-M-d') . ".csv";
+        $fp                 = fopen('php://output', 'w');
+        $header             = array('Sl.No', 'Portal Tab', 'Data Item ID', 'Data Item', 'Coded Value', 'Coded Value Description', 'Version', 'Coded Values ID', 'Uploaded Date', 'Created Date','Database','Table','Definition Description','Data Type','Derived Flag','Derivation Methodology','Author','Data Dictionary Name','Data Dictionary Description','Mapping ID', 'Mapping Data Item ID', 'Group ID', 'Group Name', 'Group Type', 'Unique ID');
 
-        $filename = "Export" . date('Y-M-d') . ".csv";
-        $fp = fopen('php://output', 'w');
-        $header = array('Sl.No', 'Portal Tab', 'Data Item ID', 'Data Item', 'Coded Value', 'Coded Value Description',
-            'Version', 'Coded Values ID', 'Uploaded Date', 'Created Date', 'Mapping ID', 'Mapping Data Item ID',
-            'Group ID', 'Group Name', 'Group Type', 'Unique ID');
         header('Content-type: application/csv');
-        header('Content-Disposition: attachment; filename=' . $filename);
+        header('Content-Disposition: attachment; filename='.$filename);
         fputcsv($fp, $header);
 
+        $zero_x_padded                      = sprintf("%05d", 0);
+        $unique_map_data_id                 = 0;
+        $slno                               = 0;
+        $arraycountdata                     = 0;
+        $dataarraystore                     = array();
+        $temp_data_item_name                = "";
 
-
-        $dataitemid_rep = 0;
-        $tempdataitem_rep = array();
-        foreach ($definitions_data as $pages_rep) {
-            if (!in_array($pages_rep->dataItemName, $tempdataitem_rep)) {
-                $dataitemid_rep++;
-            }
-            $tempdataitem_rep[] = $pages_rep->dataItemName;
-        }
-
-
-        $dataitemid = 0;
-        $groupuniid = 0;
-        $uniquecodeId = 1;
-        $slno = 0;
-        $mappunid = 0;
-        $mappcodedid = 0;
-        $tempdataitem = array();
-        $tempgroupname = array();
-        $nationaldataidarr = array();
-        $nationaldatanamearr = array();
-        $dataarraystore = array();
-        $arraycountdata = 0;
-        $checkmaparr    =   array();
-        $checkmapindex  =   0;
-        $uniquecodeId_rep_show =1;
-
-
-        foreach ($definitions_data as $pages) {
-
+        foreach ($definitions_data as $pages)
+        {
             $slno++;
-            $cnt_map_un_id      =   0;
-            if (!in_array($pages->dataItemName, $tempdataitem)) {
-                $dataitemid++;
-                $uniquecodeId = 1;
-                $uniquecodeId_rep_show =0;
+            $mapping_unique_id              = 0;
+            $mapped_data_item_id            = 0;
+            $group_unique_id                = 0;
+            $definitions_data_mapping       = array();
+
+         if($pages->group_uniq_id!="")
+            {
+                $group_unique_id            = $pages->group_uniq_id;
             }
 
-            if ($pages->groupName != "") {
-                if (!in_array($pages->groupName, $tempgroupname)) {
-                    $groupuniid++;
-                }
-            }
-
-            $definitions_data_mapping           = array();
-            $mapped_nationaldataId              = "";
-            $mapped_nationaldataname            = "";
-            $unique_id_print                    = "";
-            $mapped_nationaldataId_ref_val      = "";
-            $definitions_data_mapping           = DB::table('emmappedcoded')
+            $definitions_data_mapping       = DB::table('emmappedcoded')
                 ->leftjoin('emnationalcodedvalues', 'emnationalcodedvalues.codedValueId', '=', 'emmappedcoded.nationaldataId')
                 ->where('emmappedcoded.localDataId', '=', $pages->definitionID)
-                ->get();
+                ->first();
+            if(!empty($definitions_data_mapping)) {
+                if ($definitions_data_mapping->codedValueId != "") {
+                    $unique_map_data_id++;
+                    $mapped_data_item_id = $definitions_data_mapping->uiquenationaldataid;
+                    $definitions_data_mapping_array = DB::table('emnationalcodedvalues')
+                        ->where('emnationalcodedvalues.ddItemName', '=', $definitions_data_mapping->ddItemName)
+                        ->orderBy('emnationalcodedvalues.ddItemName')
+                        ->get();
 
-            if (!empty($definitions_data_mapping))
-            {
-                foreach ($definitions_data_mapping as $maped_data)
-                {
-                    $mapped_nationaldataId      = $maped_data->nationaldataId;
-                    $mapped_nationaldataname    = $maped_data->ddItemName;
-                }
-
-                if (!in_array($mapped_nationaldataId, $nationaldataidarr)) {
-                    $nationaldataidarr[] = $mapped_nationaldataId;
-                }
-
-                if (!in_array($mapped_nationaldataname, $nationaldatanamearr)) {
-                    $nationaldatanamearr[] = $mapped_nationaldataname;
-                }
-                $checkmaparr[$checkmapindex]["mapname"] =   $mapped_nationaldataname;
-                $checkmaparr[$checkmapindex]["mapid"]   =   $mapped_nationaldataId;
-                $checkmapindex++;
-
-                if (!empty($checkmaparr)) {
-                        $cnt_map_un_id      =   0;
-                        foreach ($checkmaparr as $maped_data_uni_id)
-                        {
-                            if($maped_data_uni_id["mapname"]==$mapped_nationaldataname) {
-                                $cnt_map_un_id++;
-                            }
-                            if($maped_data_uni_id["mapid"]==$mapped_nationaldataId){
+                    if (!empty($definitions_data_mapping_array)) {
+                        foreach ($definitions_data_mapping_array as $mapitems_single) {
+                            $mapping_unique_id++;
+                            if ($mapitems_single->codedValueId == $definitions_data_mapping->codedValueId) {
                                 break;
                             }
                         }
-
+                    }
                 }
-
-
-
-
-                $mapped_nationaldataId_ref      =   array_search($mapped_nationaldataname, $nationaldatanamearr);
-                $mapped_nationaldataId_ref_val  =  $dataitemid_rep+$mapped_nationaldataId_ref+1;
-                $mappunid++;
             }
+            $dataitemid_padded                          = "\t" . sprintf("%05d", $pages->dataItemId);
+            $uniquecodeId_padded                        = sprintf("%05d", $pages->codedValueId);
+            $groupuniid_padded                          = sprintf("%05d", $group_unique_id);
 
-            if($pages->codedValue==""){
-                $uniquecodeId = 0;
+            $unique_map_data_id_padded                  = sprintf("%05d", $unique_map_data_id);
+            $mapped_data_item_id_padded                 = "\t" .sprintf("%05d", $mapped_data_item_id);
+            $mapping_unique_id_padded                   = sprintf("%05d", $mapping_unique_id);
+
+
+            $unique_id_print                            =   "RDI.".$dataitemid_padded . "." . $uniquecodeId_padded . ".V1." . $pages->dataItemVersionId.".";
+            if(!empty($definitions_data_mapping))
+            {
+                $print_mapping_id                       =   $dataitemid_padded.".".$unique_map_data_id_padded;
+                $print_mapping_data_item_id             =   $mapped_data_item_id_padded.".".$mapping_unique_id_padded;
+                $unique_id_print                        =   $unique_id_print.$unique_map_data_id_padded."."."UKHF.".$print_mapping_data_item_id.".";
             }
-            else{
-                if($uniquecodeId==1){
-
-                    $zero_x_padded = sprintf("%05d", 0);
-                    $dataitemid_padded = "\t" . sprintf("%05d", $dataitemid);
-                    $uniquecodeId_rep_show=1;
+            else
+            {
+                $print_mapping_id                       =  "";
+                $print_mapping_data_item_id             =  "";
+                $unique_id_print                        =   $unique_id_print.$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded.".";
+            }
+            if($pages->groupName!="")
+            {
+                $print_group_unique_id                  =  $dataitemid_padded . "." . $uniquecodeId_padded.".".$groupuniid_padded;
+                $unique_id_print                        =  $unique_id_print.$groupuniid_padded;
+            }
+            else
+            {
+                $print_group_unique_id                  =   "";
+                $unique_id_print                        =   $unique_id_print.$zero_x_padded;
+            }
+            $print_coded_value_id                       =   $dataitemid_padded . "." . $uniquecodeId_padded;
+            if ($pages->codedValue != "")
+            {
+                if ($temp_data_item_name != $pages->dataItemName)
+                {
+                    $temp_data_item_name                =   $pages->dataItemName;
+                    $unique_id_print_first              =   "RDI." . $dataitemid_padded . "." . $zero_x_padded . ".V1.0" . "." . $zero_x_padded . "." . $zero_x_padded . "." . $zero_x_padded . "." . $zero_x_padded;
                     $dataarraystore[$arraycountdata]['rbukh'] = "RDI";
                     $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
                     $dataarraystore[$arraycountdata]['dataItemName'] = $pages->dataItemName;
                     $dataarraystore[$arraycountdata]['codedValue'] = "";
                     $dataarraystore[$arraycountdata]['codedValueDescription'] = "";
-                    $dataarraystore[$arraycountdata]['dataItemVersionId'] = "";
+                    $dataarraystore[$arraycountdata]['dataItemVersionId'] = "V1.0";
                     $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $zero_x_padded;
                     $dataarraystore[$arraycountdata]['uploadedDate'] = "";
                     $dataarraystore[$arraycountdata]['created_at'] = "";
@@ -1737,133 +1790,91 @@ class CsvManagementcontroller extends Controller
                     $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
                     $dataarraystore[$arraycountdata]['groupName'] = "";
                     $dataarraystore[$arraycountdata]['groupType'] = "";
-                    $dataarraystore[$arraycountdata]['unique_id_print'] = "";
-
+                    $dataarraystore[$arraycountdata]['unique_id_print'] = $unique_id_print_first;
+                    $dataarraystore[$arraycountdata]['database'] = "";
+                    $dataarraystore[$arraycountdata]['table'] = "";
+                    $dataarraystore[$arraycountdata]['definition_description'] = "";
+                    $dataarraystore[$arraycountdata]['data_type'] = "";
+                    $dataarraystore[$arraycountdata]['derived_flag'] = "";
+                    $dataarraystore[$arraycountdata]['derivation_methodology'] = "";
+                    $dataarraystore[$arraycountdata]['author'] = "";
+                    $dataarraystore[$arraycountdata]['data_dictionary_name'] = "";
+                    $dataarraystore[$arraycountdata]['data_dictionary_description'] = "";
                     $arraycountdata++;
+
+                }
+            }
+            else
+            {
+                if ($temp_data_item_name != $pages->dataItemName)
+                {
+                    $temp_data_item_name = $pages->dataItemName;
                 }
             }
 
-
-
-            $dataitemid_padded = "\t" . sprintf("%05d", $dataitemid);
-            $uniquecodeId_padded = sprintf("%05d", $uniquecodeId);
-            $groupuniid_padded = sprintf("%05d", $groupuniid);
-            $mappunid_padded = sprintf("%05d", $mappunid);
-            $mappcodedid_padded = sprintf("%05d", $mappcodedid);
-            $cnt_map_un_id_padded = sprintf("%05d", $cnt_map_un_id);
-            $zero_x_padded          =   sprintf("%05d", 0);
-            $mapped_nationaldataId_padded = "\t" . sprintf("%05d", $mapped_nationaldataId_ref_val);
-            $groupuniid_padded_print = $dataitemid_padded . "." . $uniquecodeId_padded . "." . $groupuniid_padded;
-            $mappin_uni_id_print = $dataitemid_padded . "." . $mappunid_padded;
-            $mappedId_padded_print = $mapped_nationaldataId_padded . "." . $cnt_map_un_id_padded;
-
-
-            $groupuniid_padded_ins = $groupuniid_padded;
-            $mappcodedid_padded_ins = $cnt_map_un_id_padded;
-            $mappunid_padded_ins = $mappunid_padded;
-            if ($pages->groupName == "") {
-                $groupuniid_padded_ins = sprintf("%05d", 0);
-            }
-
-            if (empty($definitions_data_mapping)) {
-                $mappunid_padded_ins = sprintf("%05d", 0);
-                $mappcodedid_padded_ins = sprintf("%05d", 0);
-            }
-
-
-            $unique_id_print = $dataitemid_padded . "." . $uniquecodeId_padded . "." . $mappunid_padded_ins .".".$mapped_nationaldataId_padded."." . $mappcodedid_padded_ins . "." . $groupuniid_padded_ins;
-
-
-            if ($pages->groupName == "") {
-                $groupuniid_padded_print = "";
-            }
-            if (empty($definitions_data_mapping)) {
-                $mappin_uni_id_print = "";
-                $mappedId_padded_print = "";
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            $dataarraystore[$arraycountdata]['rbukh']              =   "RDI";
-            $dataarraystore[$arraycountdata]['dataitemid_padded']  =   $dataitemid_padded;
-            $dataarraystore[$arraycountdata]['dataItemName']  =   $pages->dataItemName;
-            $dataarraystore[$arraycountdata]['codedValue']  =    $pages->codedValue;
-            $dataarraystore[$arraycountdata]['codedValueDescription']  =   $pages->codedValueDescription;
-            $dataarraystore[$arraycountdata]['dataItemVersionId']  =   $pages->dataItemVersionId;
-            $dataarraystore[$arraycountdata]['dataitemid_padded_new']  =    $dataitemid_padded . "." . $uniquecodeId_padded;
-            $dataarraystore[$arraycountdata]['uploadedDate']  =   $pages->uploadedDate;
-            $dataarraystore[$arraycountdata]['created_at']  =   $pages->created_at;
-            $dataarraystore[$arraycountdata]['mappin_uni_id_print']  =   $mappin_uni_id_print;
-            $dataarraystore[$arraycountdata]['mappedId_padded_print']  =   $mappedId_padded_print;
-            $dataarraystore[$arraycountdata]['groupuniid_padded_print']  =   $groupuniid_padded_print;
-            $dataarraystore[$arraycountdata]['groupName']  =   $pages->groupName;
-            $dataarraystore[$arraycountdata]['groupType']  =   $pages->groupType;
-            $dataarraystore[$arraycountdata]['unique_id_print']  =   $unique_id_print;
-
+            $dataarraystore[$arraycountdata]['rbukh']   = "RDI";
+            $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
+            $dataarraystore[$arraycountdata]['dataItemName'] = $pages->dataItemName;
+            $dataarraystore[$arraycountdata]['codedValue'] = $pages->codedValue;
+            $dataarraystore[$arraycountdata]['codedValueDescription'] = $pages->codedValueDescription;
+            $dataarraystore[$arraycountdata]['dataItemVersionId'] = "V1." . $pages->dataItemVersionId;
+            $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $print_coded_value_id;
+            $dataarraystore[$arraycountdata]['uploadedDate'] = $pages->uploadedDate;
+            $dataarraystore[$arraycountdata]['created_at'] = $pages->created_at;
+            $dataarraystore[$arraycountdata]['mappin_uni_id_print'] = $print_mapping_id;
+            $dataarraystore[$arraycountdata]['mappedId_padded_print'] = $print_mapping_data_item_id;
+            $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = $print_group_unique_id;
+            $dataarraystore[$arraycountdata]['groupName'] = $pages->groupName;
+            $dataarraystore[$arraycountdata]['groupType'] = $pages->groupType;
+            $dataarraystore[$arraycountdata]['unique_id_print'] = $unique_id_print;
+            $dataarraystore[$arraycountdata]['database'] = "";
+            $dataarraystore[$arraycountdata]['table'] = "";
+            $dataarraystore[$arraycountdata]['definition_description'] = "";
+            $dataarraystore[$arraycountdata]['data_type'] = "";
+            $dataarraystore[$arraycountdata]['derived_flag'] = "";
+            $dataarraystore[$arraycountdata]['derivation_methodology'] = "";
+            $dataarraystore[$arraycountdata]['author'] = "";
+            $dataarraystore[$arraycountdata]['data_dictionary_name'] = "";
+            $dataarraystore[$arraycountdata]['data_dictionary_description'] = "";
             $arraycountdata++;
-
-
-
-
-            $tempdataitem[] = $pages->dataItemName;
-            $tempgroupname[] = $pages->groupName;
-            $uniquecodeId++;
-            if (!empty($definitions_data_mapping)) {
-                $mappcodedid++;
-            }
         }
 
-        $ddtempdataitem     = array();
-        $uniquecodeId       = 1;
-        foreach ($nationaldataidarr as $keynational => $itemnational)
+
+
+        $uniquecodeId                   = 1;
+        $temp_data_item_name            = "";
+        $data_national_coded_values     = DB::table('emnationalcodedvalues')
+            ->leftjoin('emconceptreferencedata', 'emnationalcodedvalues.nationalReferenceId', '=', 'emconceptreferencedata.conceptReferenceDataId')
+            ->where('emnationalcodedvalues.ddItemName', '<>', '')
+            ->get();
+
+        if(!empty($data_national_coded_values))
         {
-            $definitions_data_mapping_national           = DB::table('emnationalcodedvalues')
-                ->leftjoin('emconceptreferencedata', 'emnationalcodedvalues.nationalReferenceId', '=', 'emconceptreferencedata.conceptReferenceDataId')
-                ->where('emnationalcodedvalues.codedValueId', '=', $itemnational)
-                ->get();
-
-
-
-
-
-
-
-
-
-            foreach ($definitions_data_mapping_national as $keynational_ret => $itemnational_ret) {
-
-
-                if (!in_array($itemnational_ret->ddItemName, $ddtempdataitem)) {
-                    $dataitemid++;
-                    $uniquecodeId = 1;
+            foreach ($data_national_coded_values as $data_national_coded_item)
+            {
+                if ($temp_data_item_name != $data_national_coded_item->ddItemName)
+                {
+                    $uniquecodeId                   = 1;
                 }
-                if($itemnational_ret->ddItemCodeText==""){
-                    $uniquecodeId = 0;
-                }else{
-                    if($uniquecodeId==1){
 
-                        $zero_x_padded = sprintf("%05d", 0);
-                        $dataitemid_padded = "\t" . sprintf("%05d", $dataitemid);
-                        $uniquecodeId_rep_show=1;
+                $dataitemid_padded              = "\t" . sprintf("%05d", $data_national_coded_item->uiquenationaldataid);
+                $uniquecodeId_padded            = sprintf("%05d", $uniquecodeId);
+                $unique_id_print                = "UKHF.".$dataitemid_padded.".".$uniquecodeId_padded.".V1.0".".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded;
+
+
+
+                if ($data_national_coded_item->ddItemCodeText != "")
+                {
+                    if ($temp_data_item_name != $data_national_coded_item->ddItemName)
+                    {
+                        $temp_data_item_name    = $data_national_coded_item->ddItemName;
+                        $unique_id_print_first  = "UKHF.".$dataitemid_padded.".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded;
                         $dataarraystore[$arraycountdata]['rbukh'] = "UKHF";
                         $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
-                        $dataarraystore[$arraycountdata]['dataItemName'] = $itemnational_ret->ddItemName;
+                        $dataarraystore[$arraycountdata]['dataItemName'] = $data_national_coded_item->ddItemName;
                         $dataarraystore[$arraycountdata]['codedValue'] = "";
                         $dataarraystore[$arraycountdata]['codedValueDescription'] = "";
-                        $dataarraystore[$arraycountdata]['dataItemVersionId'] = "";
+                        $dataarraystore[$arraycountdata]['dataItemVersionId'] ="V1.0";
                         $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $zero_x_padded;
                         $dataarraystore[$arraycountdata]['uploadedDate'] = "";
                         $dataarraystore[$arraycountdata]['created_at'] = "";
@@ -1872,53 +1883,136 @@ class CsvManagementcontroller extends Controller
                         $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
                         $dataarraystore[$arraycountdata]['groupName'] = "";
                         $dataarraystore[$arraycountdata]['groupType'] = "";
-                        $dataarraystore[$arraycountdata]['unique_id_print'] = "";
-
+                        $dataarraystore[$arraycountdata]['unique_id_print'] = $unique_id_print_first;
+                        $dataarraystore[$arraycountdata]['database'] = "";
+                        $dataarraystore[$arraycountdata]['table'] = "";
+                        $dataarraystore[$arraycountdata]['definition_description'] = "";
+                        $dataarraystore[$arraycountdata]['data_type'] = "";
+                        $dataarraystore[$arraycountdata]['derived_flag'] = "";
+                        $dataarraystore[$arraycountdata]['derivation_methodology'] = "";
+                        $dataarraystore[$arraycountdata]['author'] = "";
+                        $dataarraystore[$arraycountdata]['data_dictionary_name'] = "";
+                        $dataarraystore[$arraycountdata]['data_dictionary_description'] = "";
                         $arraycountdata++;
                     }
                 }
-                $dataitemid_padded      = "\t" . sprintf("%05d", $dataitemid);
-                $uniquecodeId_padded    = sprintf("%05d", $uniquecodeId);
-                $zero_padded    = sprintf("%05d", 0);
-
-
-                $unique_id_print        = $dataitemid_padded . "." . $uniquecodeId_padded . "." . $zero_padded . "." . $zero_padded . "." . $zero_padded. "." . $zero_padded;
-
 
                 $dataarraystore[$arraycountdata]['rbukh'] = "UKHF";
                 $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
-                $dataarraystore[$arraycountdata]['dataItemName'] = $itemnational_ret->ddItemName;
-                $dataarraystore[$arraycountdata]['codedValue'] = $itemnational_ret->ddItemCodeText;
-                $dataarraystore[$arraycountdata]['codedValueDescription'] = $itemnational_ret->ddCodedValueDescription;
-                $dataarraystore[$arraycountdata]['dataItemVersionId'] = 1;
+                $dataarraystore[$arraycountdata]['dataItemName'] = $data_national_coded_item->ddItemName;
+                $dataarraystore[$arraycountdata]['codedValue'] = $data_national_coded_item->ddItemCodeText;
+                $dataarraystore[$arraycountdata]['codedValueDescription'] = $data_national_coded_item->ddCodedValueDescription;
+                $dataarraystore[$arraycountdata]['dataItemVersionId'] = "V1.0";
                 $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $uniquecodeId_padded;
-                $dataarraystore[$arraycountdata]['uploadedDate'] = $itemnational_ret->createdDate;
-                $dataarraystore[$arraycountdata]['created_at'] = $itemnational_ret->createdDate;
+                $dataarraystore[$arraycountdata]['uploadedDate'] = $data_national_coded_item->createdDate;
+                $dataarraystore[$arraycountdata]['created_at'] = $data_national_coded_item->createdDate;
                 $dataarraystore[$arraycountdata]['mappin_uni_id_print'] = "";
                 $dataarraystore[$arraycountdata]['mappedId_padded_print'] = "";
                 $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
                 $dataarraystore[$arraycountdata]['groupName'] = "";
                 $dataarraystore[$arraycountdata]['groupType'] = "";
                 $dataarraystore[$arraycountdata]['unique_id_print'] = $unique_id_print;
+                $dataarraystore[$arraycountdata]['database'] = "";
+                $dataarraystore[$arraycountdata]['table'] = "";
+                $dataarraystore[$arraycountdata]['definition_description'] = "";
+                $dataarraystore[$arraycountdata]['data_type'] = "";
+                $dataarraystore[$arraycountdata]['derived_flag'] = "";
+                $dataarraystore[$arraycountdata]['derivation_methodology'] = "";
+                $dataarraystore[$arraycountdata]['author'] = "";
+                $dataarraystore[$arraycountdata]['data_dictionary_name'] = "";
+                $dataarraystore[$arraycountdata]['data_dictionary_description'] = "";
                 $arraycountdata++;
-                $ddtempdataitem[] = $itemnational_ret->ddItemName;
                 $uniquecodeId++;
             }
-
-
         }
 
-        $slnorep=0;
+
+
+
+
+
+
+
+
+
+        $uniquecodeId                   = 0;
+        $dataitem_id                    = 0;
+        $temp_data_item_name            = "";
+        $tnr_data = CsvReferenca::
+        leftjoin('emaeadatadefinition', 'emconceptreferencedata.conceptReferenceDataId', '=', 'emaeadatadefinition.referenceId')
+            ->leftjoin('users', 'emconceptreferencedata.userId', '=', 'users.id')
+            ->where('tnrItemName', '<>', '')
+            ->orderBy('emaeadatadefinition.tnrItemName')
+            ->get();
+
+        if(!empty($tnr_data))
+        {
+            foreach ($tnr_data as $tnr_data_item)
+            {
+                if ($temp_data_item_name != $tnr_data_item->tnrItemName)
+                {
+                    $uniquecodeId                   = 1;
+                    $dataitem_id++;
+                    $temp_data_item_name            =   $tnr_data_item->tnrItemName;
+                }
+
+
+                $dataitemid_padded              = "\t" . sprintf("%05d", $dataitem_id);
+                $uniquecodeId_padded            = sprintf("%05d", $uniquecodeId);
+                $unique_id_print                = "TNR.".$dataitemid_padded.".".$uniquecodeId_padded.".V1.0".".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded.".".$zero_x_padded;
+
+                $dataarraystore[$arraycountdata]['rbukh'] = "TNR";
+                $dataarraystore[$arraycountdata]['dataitemid_padded'] = $dataitemid_padded;
+                $dataarraystore[$arraycountdata]['dataItemName'] = $tnr_data_item->tnrItemName;
+                $dataarraystore[$arraycountdata]['codedValue'] = "";
+                $dataarraystore[$arraycountdata]['codedValueDescription'] = "";
+                $dataarraystore[$arraycountdata]['dataItemVersionId'] = "V1.0";;
+                $dataarraystore[$arraycountdata]['dataitemid_padded_new'] = $dataitemid_padded . "." . $uniquecodeId_padded;
+                $dataarraystore[$arraycountdata]['uploadedDate'] = $tnr_data_item->createdDate;
+                $dataarraystore[$arraycountdata]['created_at'] = $tnr_data_item->createdDate;
+                $dataarraystore[$arraycountdata]['mappin_uni_id_print'] = "";
+                $dataarraystore[$arraycountdata]['mappedId_padded_print'] = "";
+                $dataarraystore[$arraycountdata]['groupuniid_padded_print'] = "";
+                $dataarraystore[$arraycountdata]['groupName'] = "";
+                $dataarraystore[$arraycountdata]['groupType'] = "";
+                $dataarraystore[$arraycountdata]['unique_id_print'] = $unique_id_print;
+                $dataarraystore[$arraycountdata]['database'] = $tnr_data_item->dataBaseName;
+                $dataarraystore[$arraycountdata]['table'] = $tnr_data_item->tableName;
+                $dataarraystore[$arraycountdata]['definition_description'] = $tnr_data_item->tnrDataItemDescription;
+                $dataarraystore[$arraycountdata]['data_type'] = $tnr_data_item->dataType;
+                $dataarraystore[$arraycountdata]['derived_flag'] = $tnr_data_item->isDerivedItem;
+                $dataarraystore[$arraycountdata]['derivation_methodology'] = $tnr_data_item->derivationMethodology;
+                $dataarraystore[$arraycountdata]['author'] = $tnr_data_item->authorName;
+                $dataarraystore[$arraycountdata]['data_dictionary_name'] = $tnr_data_item->dataDictionaryName;
+                $dataarraystore[$arraycountdata]['data_dictionary_description'] = $tnr_data_item->dataDictionaryLinks;
+                $arraycountdata++;
+                $uniquecodeId++;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        $slnorep = 0;
         foreach ($dataarraystore as $itemputcsv) {
             $slnorep++;
             fputcsv($fp, array($slnorep, $itemputcsv["rbukh"], $itemputcsv["dataitemid_padded"], $itemputcsv["dataItemName"], $itemputcsv["codedValue"],
-                $itemputcsv["codedValueDescription"], $itemputcsv["dataItemVersionId"], $itemputcsv["dataitemid_padded_new"],$itemputcsv["uploadedDate"],
-                $itemputcsv["created_at"],$itemputcsv["mappin_uni_id_print"], $itemputcsv["mappedId_padded_print"],$itemputcsv["groupuniid_padded_print"],
+                $itemputcsv["codedValueDescription"], $itemputcsv["dataItemVersionId"], $itemputcsv["dataitemid_padded_new"], $itemputcsv["uploadedDate"],
+                $itemputcsv["created_at"],$itemputcsv["database"],$itemputcsv["table"],$itemputcsv["definition_description"],$itemputcsv["data_type"],
+                $itemputcsv["derived_flag"],$itemputcsv["derivation_methodology"],$itemputcsv["author"],$itemputcsv["data_dictionary_name"],
+                $itemputcsv["data_dictionary_description"], $itemputcsv["mappin_uni_id_print"], $itemputcsv["mappedId_padded_print"], $itemputcsv["groupuniid_padded_print"],
                 $itemputcsv["groupName"], $itemputcsv["groupType"], $itemputcsv["unique_id_print"]));
         }
 
         exit;
         return view('admin.datamanagement.export-data', compact('definitions_data', 'dditems', 'selected'));
+
 
     }
 
@@ -1940,6 +2034,8 @@ class CsvManagementcontroller extends Controller
 
 
     }
+
+   
 
 
 }

@@ -21,4 +21,16 @@ class Groupinginfo extends Model
         $response = DB::table('emgroupinfo')->where($condition)->delete();
         return $response;
     }
+
+    public static function getAllGroupInfo()
+    {
+        $response = DB::table('emgroupinfo')->get();
+        return $response;
+    }
+
+    public static function updateRecord($condition=array(),$data=array())
+    {
+        $response = DB::table('emgroupinfo')->where($condition)->update($data);
+        return $response;
+    }
 }

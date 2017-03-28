@@ -194,11 +194,11 @@
  						/*--}}
 
                     @endif
-
+					{{--*/ $i_padded = sprintf("%04d", $i); /*--}}
 
 					<tr class='localtable stileone'>
 
-                        <td class='text-center'>0000{{$i}}.{{$data->codedValueId}}.{{$data->definitionID}}</td>
+                        <td class='text-left'>{{$i_padded}}.{{$data->codedValueId}}.{{$data->definitionID}}</td>
 						<td class="text-center ">{{$data->dataItemName}} </td>
 
 
@@ -215,7 +215,7 @@
 						<td  class='text-center' style='vertical-align:middle;'>
 							<a class="btn btn-small btn-danger btn-sm destroymapping"
 							   href="javascript:void(0)"
-							   data-id="{{$data->definitionID}}" data-status="1"
+							   data-id="{{$data->mappedItemId}}" data-status="1"
 							   data-item="{{$data->dataItemName}}">Delete</a>
 						</td>
 

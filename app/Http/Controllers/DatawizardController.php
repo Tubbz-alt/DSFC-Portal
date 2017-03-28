@@ -135,6 +135,8 @@ class DatawizardController extends Controller
                     ->orderBy('emdefinitionstable.referenceDetailId','DESC')
                     ->get();
 
+                    
+
             }
 
         }else{
@@ -258,6 +260,16 @@ class DatawizardController extends Controller
             ->lists('dataItemName','dataItemName')->all();
 
 
+        $dataitemlist_latest = CsvReferenca::
+        leftjoin('emdefinitionstable','emconceptreferencedata.conceptReferenceDataId', '=', 'emdefinitionstable.referenceDetailId')
+            // ->join('emdatawizard', 'emdefinitionstable.definitionID', '=', 'emdatawizard.referenceDetailId')
+            ->leftjoin('users','emconceptreferencedata.userId','=','users.id')
+            // ->where('emdatawizard.status','=',1)
+            ->where('emdefinitionstable.mappedCodedStatus','=',1)
+            ->orderBy('emdefinitionstable.dataItemName','ASC')
+            ->lists('dataItemName','dataItemName')->all();
+
+
 
 //        $groupitemlist = Definitions::join('emgroupinfo_data', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.	reference_data_id')
 //            ->groupBy('emgroupinfo.groupName')
@@ -307,7 +319,7 @@ class DatawizardController extends Controller
             ->get();*/
 
         if(!empty($datare['grouped_data_item'])){
-
+            
             Session::put('grouped_selected_name', $datare['grouped_data_item']);
 
             $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
@@ -321,8 +333,9 @@ class DatawizardController extends Controller
                 ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.group_id')
                 ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
                 ->groupBy('emgroupinfo.groupId')
-                ->orderBy('emdefinitionstable.referenceDetailId', ' DESC')
+                ->orderBy('emgroupinfo.groupId','ASC')
                 ->get();
+
 
 
 //            $dataset_group = Definitions::join('emgroupinfo', 'emdefinitionstable.definitionID', '=', 'emgroupinfo.referenceDetailId')
@@ -355,7 +368,7 @@ class DatawizardController extends Controller
             'definitions_data','start_time','end_time','csv_list_pending','pending_approval','approved',
             'approved_grouped','mapped_item','aeadatas','aeadatasdatabaelist','aeadatastablelist',
             'tab_id_wizard','dataset_group','dataset_group_nongroup','datatypegroup',
-            'database_selected_name','table_selected_name','dataitemlist','dataitem_selected_name','mapped_selected_name',
+            'database_selected_name','table_selected_name','dataitemlist','dataitemlist_latest','dataitem_selected_name','mapped_selected_name',
             'grouped_selected_name','groupitemlist','groupitemlist_coded'));
 
 
@@ -471,6 +484,27 @@ class DatawizardController extends Controller
 
                                 else {
 
+                                    $dtitnameval                =   strip_tags($dataItemName);
+                                    $dataversionunid            =   0;
+                                    $definitions_data_items     =   DB::table('emdefinitionstable')
+                                        ->orderBy('emdefinitionstable.dataItemVersionId', 'DESC')
+                                        ->where('emdefinitionstable.dataItemName', '=', $dtitnameval)
+                                        ->get();
+
+                                    if (count($definitions_data_items) > 0) {
+                                        $flagversionId          =   0;
+                                        foreach ($definitions_data_items as $definitions_data_items_list) {
+                                            $flagversionId      =   $definitions_data_items_list->dataItemVersionId;
+                                            if($flagversionId !=0) {
+                                                break;
+                                            }
+                                        }
+                                        $dataversionunid        =   $flagversionId+1;
+                                    }
+                                    else{
+                                        $dataversionunid        =   0;
+                                    }
+
 
                                     $inserted_data=array(
                                         'referenceDetailId'=>$csv_id->conceptReferenceDataId,
@@ -479,9 +513,9 @@ class DatawizardController extends Controller
                                         'codedValue'=>strip_tags($codedValue),
                                         'codedValueType'=>strip_tags($codedValueType),
                                         'codedValueDescription'=>strip_tags($codedValueDescription),
-                                        'dataItemId'=>"00000".$dataItemId,
-                                        'dataItemVersionId'=>"1.00",
-                                        'codedValueId'=>"00000".$dataItemId."."."001",
+                                        'dataItemId'=>0,
+                                        'dataItemVersionId'=>$dataversionunid,
+                                        'codedValueId'=>0,
                                         'codedValueVersionId'=>"1.00",
                                         'author'=>$user_id,
                                         'createdDate'=>$created,
@@ -547,8 +581,8 @@ class DatawizardController extends Controller
             foreach($data_additional as $additionalinfo){
 
                 $inserted_info=array(
-                    'dataItemId'=>"00000".$dataitemid,
-                    'codedValueId'=>"00000".$dataitemid."."."001",
+                    'dataItemId'=>0,
+                    'codedValueId'=>0,
                 );
 
                 Definitions::where('dataItemName', '=', $additionalinfo->dataItemName)->update($inserted_info);
@@ -658,7 +692,7 @@ class DatawizardController extends Controller
 
         }
 
-
+        $this->makeUniqueDataId();
     }
 
     public function postAddNewData(Request $request){
@@ -694,6 +728,7 @@ class DatawizardController extends Controller
             Definitions::insert($inserted_data);
 
         }
+        $this->makeUniqueDataId();
         echo "sucess";
 
 
@@ -1527,6 +1562,56 @@ class DatawizardController extends Controller
 
     }
 
+    public function makeUniqueDataId(){
+
+
+        $dataitemmaxnext            =   1;
+        $tempdataitem               =   array();
+        $uniquecodeId               =   1;
+
+        DB::table('emdefinitionstable')
+            ->update(['dataItemId' => 0,'codedValueId' => 0]);
+        $dataitemarray              =   DB::table('emdefinitionstable')
+            ->orderBy('emdefinitionstable.dataItemName', 'ASC')
+            ->where('emdefinitionstable.dataItemId', '=', 0)
+            ->get();
+
+        if(!empty($dataitemarray)) {
+            foreach ($dataitemarray as $dataitemindividual) {
+
+
+                if (!in_array($dataitemindividual->dataItemName, $tempdataitem)) {
+                    $uniquecodeId = 1;
+                }
+
+
+                $definitions_data_search           = DB::table('emdefinitionstable')
+                    ->where('emdefinitionstable.dataItemId', '!=', 0)
+                    ->where('emdefinitionstable.dataItemName', '=', "$dataitemindividual->dataItemName")
+                    ->get();
+
+                if(!empty($definitions_data_search)) {
+                    $vardataidupdate        =   0;
+                    foreach ($definitions_data_search as $definitions_data_search_item) {
+                        $vardataidupdate    =   $definitions_data_search_item->dataItemId;
+                    }
+                    if($vardataidupdate!=0) {
+                        DB::table('emdefinitionstable')
+                            ->where('definitionID', $dataitemindividual->definitionID)
+                            ->update(['dataItemId' => $vardataidupdate,'codedValueId' => $uniquecodeId]);
+                    }
+                }
+                else{
+                    DB::table('emdefinitionstable')
+                        ->where('definitionID', $dataitemindividual->definitionID)
+                        ->update(['dataItemId' =>  $dataitemmaxnext,'codedValueId' => $uniquecodeId]);
+                    $dataitemmaxnext =  $dataitemmaxnext+1;
+                }
+                $uniquecodeId++;
+                $tempdataitem[] = $dataitemindividual->dataItemName;
+            }
+        }
+    }
 
 
 
