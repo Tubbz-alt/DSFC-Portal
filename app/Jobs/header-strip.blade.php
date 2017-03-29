@@ -1,4 +1,3 @@
- <link rel="stylesheet" href="{{ url('css/frontend/pretty.css') }}">
 <style>
  .collapse {
             display: block !important;
@@ -6,29 +5,26 @@
         .navbar-inner-color{
 			 background: #0072c6 none repeat scroll 0 0;
 		}
-		#wrap .navbar .nav > li > a{
+		/*#wrap .navbar .nav > li > a{
 		border-right: 1px solid #fff;
         padding-top: 8px !important;
 		color:#ffffff !important;
 		}
-		#wrap .nav > li > a:focus, .nav > li > a:hover{
-			background-color: #a00054;
-		}
 		#wrap .nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
 			background-color: #a00054;
-		}
-	 	#wrap .dropdown-menu{
+		}*/
+	 	/*#wrap .dropdown-menu{
 			background:#A00054;
 			color:white;
-		}
+		}*/
 		/*#wrap .dropdown-menu a {
 		background: #0072c6 none repeat scroll 0 0;
 		border-bottom: 1px solid #fff;
 		} */
-		#wrap .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
+		/*#wrap .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
 			background:#a00054;
 			color:white;
-		}
+		}*/
 </style>
 <div class="header-strip">
 

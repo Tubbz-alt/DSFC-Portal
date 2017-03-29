@@ -12,7 +12,7 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-	mix		
+	mix
 		.copy('resources/assets/jquery/dist/jquery.min.js', 'resources/assets/js/jquery.min.js')
 		.copy('resources/assets/bootstrap/dist/css/bootstrap.min.css', 'resources/assets/css/bootstrap.min.css')
 		.copy('resources/assets/bootstrap/dist/js/bootstrap.min.js', 'resources/assets/js/bootstrap.min.js')
@@ -27,12 +27,12 @@ elixir(function(mix) {
 			'c3.min.css',
 			'common.css'
 		])
-		.scripts([
-			'jquery.min.js',
-			'bootstrap.min.js',
-			'angular.min.js',
-			'd3.min.js',
-			'c3.min.js',
-			'common.js'
-		])
+		// .scripts([
+		// 	'jquery.min.js',
+		// 	'bootstrap.min.js',
+		// 	'angular.min.js',
+		// 	'd3.min.js',
+		// 	'c3.min.js',
+		// 	'common.js'
+		// ])
 });

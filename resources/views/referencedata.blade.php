@@ -133,6 +133,7 @@
       <script src="../../Template/js/google-code-prettify/prettify.js"> </script>
       <script>
 				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
-				</script>
+        debugger;
+			</script>
    </body>
 </html>

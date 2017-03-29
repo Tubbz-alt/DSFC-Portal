@@ -34,32 +34,20 @@
         color:white;
     }
 </style>
-<div class="header-strip">
-
-    <div class="col-md-5">
-        <div class="logo-cover">
-            <a href="{{ url('/') }}">
-                <img src="{{ url('images/logo.png') }}" alt="">
-            </a>
-        </div>
+<header class="super-masthead">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        @include('partials.logo')
+      </div>
     </div>
-    <div class="col-md-6">
-      {{--  @yield('top-right-menu')--}}
-        <span class="user-cover pull-right">
-      {{--      <h2><a href="#">{{ucfirst(strtolower(Sentinel::check()->first_name)) . " " . ucfirst(strtolower(Sentinel::check()->last_name))}}</a></h2>
-            <p>Logged in as {{Sentinel::check()->username}}</p>--}}
-        </span>
-    </div>
-    <div class="col-md-1 top-drop-down">
-        <nav>
-            <ul class="drop-down-menu">
-              {{--  <li><a href="#">Profile</a></li>--}}
-                <li><a href="{{ url('admin') }}">Admin</a></li>
-                <li><a href="{{ url('user/logout') }}">Logout</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+    <nav>
+      <div class="row nav-wrapper">
+        @include('partials.admin-login')
+      </div>
+    </nav>
+  </div>
+</header>
 <div class="main-menu-strip">
     <div class="container">
         <nav>
@@ -101,7 +89,7 @@
                     <div class="nav-collapse collapse">
                         <p class="navbar-text pull-right" style="margin: 10px;color: white;">
                             <b>Version: </b>0.1; <b>Status: </b>Draft</p>
-                        <ul class="nav">
+                        <ul class="admin-nav nav">
                             <li class="dropdown">
 
                                 <ul class="dropdown-menu">

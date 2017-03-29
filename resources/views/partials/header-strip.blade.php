@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="{{ url('css/frontend/pretty.css') }}">
+
 <style>
  .collapse {
             display: block !important;
@@ -6,80 +6,76 @@
         .navbar-inner-color{
 			 background: #0072c6 none repeat scroll 0 0;
 		}
-		#wrap .navbar .nav > li > a{
+		/*#wrap .navbar .nav > li > a{
 		border-right: 1px solid #fff;
         padding-top: 8px ;
 		color:#ffffff ;
-		}
-		#wrap .nav > li > a:focus, .nav > li > a:hover{
-			background-color: #a00054;
-		}
+		}*/
+
+    /*
 		#wrap .nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
 			background-color: #a00054;
 		}
-	 	#wrap .dropdown-menu{
-			background:#A00054;
-			color:white;
-		}
+    */
+
 		/*#wrap .dropdown-menu a {
 		background: #0072c6 none repeat scroll 0 0;
 		border-bottom: 1px solid #fff;
 		} */
-		#wrap .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
+		/*#wrap .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
 			background:#a00054;
 			color:white;
-		}
-         a.current {
-             background:#FFFFEF;
-             color:#000000 !important;
-         }
-         a.current:hover {
+		}*/
 
-             color: #ffffff !important;
-         }
  .nav-collapse.collapse.user-nav li {
      text-align: center;
      width: 160px;
  }
 </style>
-<div class="header-strip">
+<header class="super-masthead">
+  <div class="container">
+    @include('partials.logo')
+    <nav>
+      <div id="wrap" class="row nav-wrapper">
+        <ul class="nav pull-left">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li >
+                        <a href="{{url('/dashboard/overview')}}">About</a>
+                    </li>
+                    <li id="change-request" class="change-request">
+                        <a href="{{url('/dashboard/overview/change-request') }}" >Change Request</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/dashboard/overview/glossary')}}">Glossary</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{url('/dashboard/data-wizard')}}">Reference Data</a>
+            </li>
+           <li>
+                <a href="{{url('/dashboard/data-wizard/help')}}">Help </a>
+            </li>
+            {{--   <li>
+                  <a href="{{url('/dashboard/mapping')}}">Mappings</a>
+              </li>
+              <li>
+                  <a href="{{url('/dashboard/grouping')}}">Group</a>
+              </li>--}}
+           {{-- <li>
+                <a href="{{url('/dashboard/data-definitions')}}">Data Definitions</a>
+            </li>--}}
+        </ul>
+        @include('partials.admin-login')
+      </div>
+    </nav>
+  </div>
+</header>
 
-{{--    <div class="col-md-1">
-        <nav class="main-menu-button"><span></span><span></span><span></span></nav>
-    </div>--}}
-		<div class="col-md-1">
-			<div class="logo-cover"><a href="{{ url('/dashboard') }}"><img src="{{ url('images/logo.png') }}" alt=""></a></div>
-		</div>
-	<div class="col-md-4">
-			<div class="span8" style="margin-left: 7px;padding: 10px;">
-				<h3 class="pack-title ">@yield('page-title')</h3>
-			</div>
-	</div>
-    <div class="col-md-6">
-        @yield('top-right-menu')
-        <span class="user-cover pull-right">
-         {{--   <h2><a href="#">{{ucfirst(strtolower(Sentinel::check()->first_name)) . " " . ucfirst(strtolower(Sentinel::check()->last_name))}}</a></h2>
-            <p>Logged in as {{Sentinel::check()->username}}</p>--}}
-        </span>
-    </div>
-    <div class="col-md-1 top-drop-down">
 
-        <nav>
-            <ul class="drop-down-menu">
-               {{-- <li><a href="#">Profile</a></li>--}}
-
-                <?php
-                $user = Sentinel::getUser();
-                if($user->inRole('administrator')) {
-                ?>
-                <li><a href="{{ url('admin') }}">Admin </a></li>
-                <?php }
-                ?>
-                <li><a href="{{ url('user/logout') }}">Logout</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
 <div class="main-menu-strip user-header">
     <div class="container">
         <nav>
@@ -100,63 +96,17 @@
 </div>
 
 
-            <div id="wrap">
-                <div class="container-fluid">
-                    <div class="container row">
-                   {{--     <div class="span4">
-                            <img src="{{url('images/logo.png')}}"/>
-                        </div>--}}
-                        {{--<div class="span8" >
-                            <h3 class="pack-title ">DSfC Reference Data</h3>
-                        </div>--}}
-                    </div>
-                    <div class="navbar ">
-                        <div class="navbar-inner navbar-inner-color">
-                            <div class="">
-
-                                <div class="nav-collapse collapse user-nav">
-                                    <p class="navbar-text pull-right" style="margin: 10px;color: white;">
-                                        <a class="header_links" href="{{url('/dashboard/version')}}">
-                                        <b>Version: </b>0.1;</a>
-                                         <b>Status: </b>Draft</p>
-                                    <ul class="nav">
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li >
-                                                    <a href="{{url('/dashboard/overview')}}">About</a>
-                                                </li>
-                                                <li id="change-request" class="change-request">
-                                                    <a href="{{url('/dashboard/overview/change-request') }}" >Change Request</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{url('/dashboard/overview/glossary')}}">Glossary</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="{{url('/dashboard/data-wizard')}}">Reference Data</a>
-                                        </li>
-                                       <li>
-                                            <a href="{{url('/dashboard/data-wizard/help')}}">Help </a>
-                                        </li>
-                                        {{--   <li>
-                                              <a href="{{url('/dashboard/mapping')}}">Mappings</a>
-                                          </li>
-                                          <li>
-                                              <a href="{{url('/dashboard/grouping')}}">Group</a>
-                                          </li>--}}
-                                       {{-- <li>
-                                            <a href="{{url('/dashboard/data-definitions')}}">Data Definitions</a>
-                                        </li>--}}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				 </div>
+<div id="wrap">
+    <div class="container-fluid">
+        <div class="container row">
+       {{--     <div class="span4">
+                <img src="{{url('images/logo.png')}}"/>
+            </div>--}}
+            {{--<div class="span8" >
+                <h3 class="pack-title ">DSfC Reference Data</h3>
+            </div>--}}
         </div>
+</div>
 
 
  <!-- Modal -->

@@ -789,7 +789,7 @@ function datatype($str)
                     <div id="searchhistory"></div>
 
 
-                   
+
 
 
 
@@ -2052,12 +2052,10 @@ function datatype($str)
     <script src="{{ url('js/tipuesearch/tipuesearch.js') }}"></script>
     <script src="{{ url('js/searchbox.js') }}"></script>
       <script src="{{ url('js/jquery.cookie.js') }}"></script>
-    
+
     <script>
-
         $(document).ready(function () {
-
-            jQuery(window).load(function () 
+            jQuery(window).on("load", function ()
             {
                 if($.cookie('master_search') === 'ref')
                 {
@@ -2083,17 +2081,10 @@ function datatype($str)
                    $(".search-query").val(search_input);
 
                    $("#search_input").trigger("keypress");
-
-
                }
 
             });
             // master search in reference data check cookie for open tab
-            
-
-
-
-
 
             $('input.search').searchbox({
                 url: '/dashboard/data-wizard',
@@ -2268,7 +2259,7 @@ function datatype($str)
                 $(this).find("name").focus();
             });
 
-            $(document).on('click', '#sqlButton_popup', function (e) 
+            $(document).on('click', '#sqlButton_popup', function (e)
             {
                 var id = $(this).attr("data-name");
                 $("#sql_modal_"+id).modal("show");
@@ -2291,21 +2282,21 @@ function datatype($str)
                 });
             });
 
-            $(document).on('click', '#search_reference', function (e) 
+            $(document).on('click', '#search_reference', function (e)
             {
                 var search_data = $(".search-query").val();
                 $.cookie("master_search", 'ref');
                 $.cookie("type_val", search_data);
             });
 
-            $(document).on('click', '#search_grouping', function (e) 
+            $(document).on('click', '#search_grouping', function (e)
             {
                 var search_data = $(".search-query").val();
                 $.cookie("master_search", 'grp');
                 $.cookie("type_val", search_data);
             });
 
-            $(document).on('click', '#search_mapping', function (e) 
+            $(document).on('click', '#search_mapping', function (e)
             {
                 var search_data = $(".search-query").val();
                 $.cookie("master_search", 'map');
@@ -2313,8 +2304,8 @@ function datatype($str)
             });
 
 
-            
-            
+
+
             $(document).on('click', '.group_list_filterdata', function (e) {
 
                 if ($(this).is(':checked')) {
@@ -2480,7 +2471,7 @@ function datatype($str)
             //     });
             // });
 
-            
+
 
             $(document).on("change", ".grouped_data_item", function (e) {
                 var grouped_data_item = $(this).val();
@@ -2854,7 +2845,7 @@ function datatype($str)
 
                 }
             } );
-            
+
             //mapping main tab select filter mapping_data_item
             $(document).on('change', '#mapping_data_item', function (e)
             {

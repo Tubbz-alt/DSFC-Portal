@@ -16,9 +16,9 @@
 	<div id="content-wrapper" class="container">
 		<div class="row  margin-top-90">
 			<h1 class="text-center text-white text-lato-hairline" style="visibility:hidden;">Login</h1>
-			<div id="box-wrapper" class="col-xs-12 col-md-4 col-md-offset-4 bordered rounded-6">
+			<div id="box-wrapper" class="col-xs-12 col-md-4 col-md-offset-4 bordered rounded-6 login-box">
 				<h1 class="text-center">
-					<img src="{{ url('images/login-logo.png') }}" alt="Logo">
+					<img src="{{ url('images/nhs-england-logo-rev.svg') }}" alt="Logo">
 				</h1>
 				@if (count($errors) > 0)
 					<div class="alert alert-danger">
@@ -32,7 +32,7 @@
 						<div class='alert alert-success'>{{ Session::get('success') }}</div>
 					@endif
 				</div>
-			
+
 
 				{!! Form::open(array('url' => 'user/login', 'method' => 'POST')) !!}
 					<div class="form-group">
@@ -60,7 +60,7 @@
 						{!! Form::submit('Login', array('class' => 'btn btn-info login-buttons-info')) !!}
 					</div>
 
-					
+
 				{!! Form::close() !!}
 			</div>
 		</div>
