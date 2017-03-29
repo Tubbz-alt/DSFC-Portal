@@ -58,6 +58,7 @@ function datatype($str){
 	.data-type td:nth-child(2), .table-wrapper th:nth-child(2) {
 		width:12% !important;
 	}
+	.national_search { margin-top: -14px;}
 </style>
 @section('content')
 
@@ -67,11 +68,8 @@ function datatype($str){
 
 			<ul class="tabBlock-tabs datachallenge-info">
 
-				<li class="tabname tabBlock-tab set-tab is-active">
-					Files </li>
-				<li class="tabname tabBlock-tab set-tab ">
-					Data
-				</li>
+				<li class="tabname tabBlock-tab set-tab " id="files">Files </li>
+				<li class="tabname tabBlock-tab set-tab is-active" id="data">Data</li>
 			</ul>
 			<div class="tabBlock-content" >
 
@@ -139,7 +137,47 @@ function datatype($str){
 				<div class="tabBlock-pane">
 
 					<section class="col-sm-12 table-responsive" style="margin-top: -65px;">
-						<div class="panel panel-default">
+					<div>
+						{!! Form::open(array('url' => '/admin/reference-data/national-data', 'method'=>'GET','id'=>'form_national_filter')) !!}
+								<div class="row">
+									<div class="form-group"> 
+										<div class="col-lg-3">
+											{!! Form::select('search_data', [
+											'ddItemName' => 'Table Name',
+											'ddItemAttrName' => 'Attr Name',
+											'ddItemCodeText' => 'Main Code Text',
+											'ddCodedValueDescription' => 'Main Description',
+											'ddCodedValueDescriptionChars' => 'Main Description 60 Chars',
+											'isLatest' => 'Is Latest'],
+											'null',['class' => 'form-control col-md-3','id' =>'search_data'])!!}
+										</div>
+									</div>
+									<div class="form-group"> 
+									 {{--*/
+									$val = Session::get('search_data');
+									/*--}}
+										@if($val)
+										<div class="col-lg-4">
+									 		{!! Form::text('national_search',$val, array('class' => 'form-control col-md-3 national_search' ,'id' => 'national_search', 'autocomplete' => 'off','placeholder'=>'Search')) !!}
+										</div>
+										@else
+										<div class="col-lg-4">
+											{!! Form::text('national_search',$val, array('class' => 'form-control col-md-3 national_search' ,'id' => 'national_search', 'autocomplete' => 'off','placeholder'=>'Search')) !!}
+										</div>
+										@endif
+									
+									
+									</div>
+									<div > 
+										<div class="col-lg-4">
+									 	{!! Form::submit('Search', ['id'=>'search_national','class' => 'btn btn-primary search_national']) !!}
+										</div>
+									</div>
+								</div>
+						{!! Form::close() !!}
+					</div>
+						<div class="panel panel-default" id="content_place">
+							
 							<table class="table table-striped table-bordered nationaldata">
 								<thead>
 								@if(count($database_table)>0)
@@ -179,7 +217,9 @@ function datatype($str){
 									<tr><h4 class="text-center">Sorry!! No records found</h4></tr>
 								@endif
 							</table>
+								<div class="pagination" id="pagenate_national"> {!! $database_table->render() !!} </div>
 						</div>
+						
 					</section>
 
 				</div>
@@ -212,7 +252,7 @@ function datatype($str){
 					<section class="col-sm-12 table-responsive margin-top-10">
 						<div >
 
-							{!! Form::open(array('url' => 'admin/reference-data/store-national-data','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
+							{!! Form::open(array('url' => 'admin/reference-data/store-national-data','files' => true,'onsubmit'=>' return checkfileformatvalid()', 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
 
 							<div>
@@ -268,13 +308,39 @@ function datatype($str){
 
 @section('footer')
 	@parent
-
+	
 	<script src="{{ url('js/users/index.js') }}"></script>
+
 	<script src="{{ url('js/dashboards/SimpleTabs.js') }}"></script>
 	<script src="{{ url('js/datepicker/jquery-ui.js') }}"></script>
 	<script src="{{ url('js/jquery.bootstrap-growl.js') }}"></script>
 	<script src="{{ url('js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ url('js/jquery.cookie.js') }}"></script>
+
 	<script>
+
+		function checkfileformatvalid()
+		{
+
+			var valtxtFileUpload = $("#txtFileUpload").val();
+			if(valtxtFileUpload == ''){
+				alert("Please Choose File");
+				return false;
+			}
+			else{
+				var extvaltxtFileUpload = valtxtFileUpload.split('.').pop();
+				if(extvaltxtFileUpload!="csv") {
+					$("#txtFileUpload").val('');
+					alert("Please Choose The File In Right Format");
+					return false;
+				}
+			}
+
+		}
+
+
+
+
 		$( function() {
 			$( "#datepicker1" ).datepicker({
 				dateFormat: "yy-mm-dd"
@@ -285,9 +351,23 @@ function datatype($str){
 		} );
 		$(document).ready(function () {
 
-			$('.nationaldata').DataTable({
+
+			jQuery(window).load(function () 
+            {
+                if($.cookie('paginate') === 'pagination')
+                {
+                    $("#data").trigger("click");
+                }
+                
+                $.cookie("paginate", null);
+                $.cookie("filter_by", null);
+                $.cookie("search", null);
+
+            });
+
+			$('.nationaldata_notuse').DataTable({
 				"lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "All"]],
-				"bPaginate": true,
+				"bPaginate": false,
 				"searching": true,
 
 				"dom": '<"top"f>rt<"bottom"ilp><"clear">',
@@ -308,6 +388,55 @@ function datatype($str){
 
 
 
+			});
+
+			$(document).on("click", "#pagenate_national", function(e){
+				$.cookie("paginate", 'pagination');
+
+			});
+
+			$(document).on("change", "#national_search", function(e){
+				
+				var token = "{{csrf_token()}}";
+				var filter_by = $("#search_data").val();
+				var search = $(this).val();
+
+				$.cookie("filter_by", filter_by);
+				$.cookie("search", search);
+
+				$.ajax({
+                    url: "{{ url('admin/reference-data/national-data-search') }}",
+                    // data: {"filter_by": filter_by, "_token": token, "search": search},
+                    type: 'GET',
+                    success: function (data) {
+                    	console.log(data);
+                    	// var data = data.data;
+                    	// var count_result = data.lenth;
+                        $("#content_place").empty();
+                        $("#content_place").append(data);
+
+          //               var eachtr ="";
+          //               var a = "<table class='table table-striped table-bordered nationaldata'><thead><tr><th class='text-center'>Table Name</th>"+
+										// "<th class='text-center'>Attr Name</th>"+
+										// "<th class='text-center'>Main Code Text</th>"+
+										// "<th class='text-center'>Main Description</th>"+
+										// "<th class='text-center'>Main Description 60 Chars</th>"+
+										// "<th class='text-center'>Is Latest</th></tr></thead>"+
+										// "<tbody id='databasfilterdata'></tbody>";
+										// $.each(data, function (index, item) {
+          //                       			 a+= "<tr><td class='text-center'>"+item['ddItemName']+"</td>"+
+          //                       			" <td class='text-center'>"+item['ddItemAttrName']+"</td>"+
+          //                       			" <td class='text-center'>"+item['ddItemCodeText']+"</td>"+
+          //                       			" <td class='text-center'>"+item['ddCodedValueDescription']+"</td>"+
+          //                       			" <td class='text-center'>"+item['ddCodedValueDescriptionChars']+"</td>"+
+          //                       			" <td class='text-center'>"+item['isLatest']+"</td>"+
+          //                       			"</tr>";
+          //                       			});
+										// a+="</table>";
+          //           	$("#content_place").append(a);
+                    }
+
+                });
 			});
 
 			$(document).on('click', '.oneormoremappingfinal ', function(e){

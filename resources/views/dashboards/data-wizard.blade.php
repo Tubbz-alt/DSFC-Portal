@@ -28,7 +28,6 @@ function datatype($str)
     <link rel="stylesheet" type="text/css" href="{{url('css/bed-management/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('css/jquery.dataTables.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('css/datawizard.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('css/tipuesearch/tipuesearch.css')}}">
 
 
 
@@ -37,57 +36,41 @@ function datatype($str)
 
 @section('content')
     <style>
-      #search_field{
-          color: #000000;
-      }
-      .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
-          height: 27px;
-          margin-top: 2px;
-          min-width: 13px;
-          padding: 6px 27px;
-          width: 13px;
-      }
-        .reference_data_item_search_cover{
-            width:auto;
-        }
-        .ref_close{
-            width:25px;
-        }
-      .connect-this-tnr-finish{ margin-right:70px ; }
+        #search_field{ color: #000000; }
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+height: 27px;margin-top: 2px;min-width: 13px;padding: 6px 27px;width: 13px;}
+.reference_data_item_search_cover{ width:auto; }
+.ref_close {width:25px; }
+.connect-this-tnr-finish{ margin-right:70px ; }
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {
+cursor: default; }
+.hide-modal-header-line{ border-bottom:0px; }
+.mapping_data_item_new  { width:280px;}
+.data_item_group_header{ min-height:59px;}
+#datatypegroup .dataTables_filter { margin-top: -14px; }
+.data_item_text {width: 120%;}
+.finishdatatypegroup{ margin-right: 13px;}
+#datatypegroup .dataTables_filter { margin-top: -85px;}
+#codedvaluegroup .dataTables_filter { margin-top: -42px;margin-right:32px;}
+#DataTables_Table_1_wrapper .dataTables_filter input{ margin-left: 0.5em;display : none; }
+#reference-datatable_wrapper .dataTables_filter input{ margin-left: 0.5em;display : none; }
+#mapping-datatable_wrapper .dataTables_filter input { margin-left: 0.5em;display : none; }
+.group_name_text_dt { width:280px;margin-left: 32px;}
+.group_name_select_dt {  width:500px;margin-left: 25px;}
+.coded_value_group_finish{ margin-right: 11px;}
 
-      table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {
-          cursor: default;
-      }
-        .hide-modal-header-line{ border-bottom:0px; }
-        .mapping_data_item_new  { width:280px;}
-        .data_item_group_header{ min-height:59px;}
-      #datatypegroup .dataTables_filter { margin-top: -14px; }
-      .data_item_text {width: 120%;}
-        .finishdatatypegroup{ margin-right: 13px;}
-      #datatypegroup .dataTables_filter {
-          margin-top: -85px;
-      }
-      #codedvaluegroup .dataTables_filter {
-          margin-top: -84px;
-      }
-      #DataTables_Table_1_wrapper .dataTables_filter input{ margin-left: 0.5em;display : none; }
-     #reference-datatable_wrapper .dataTables_filter input{ margin-left: 0.5em;display : none; }
-      #mapping-datatable_wrapper .dataTables_filter input { margin-left: 0.5em;display : none; }
+table.groupingtable.border_no tbody th,
+table.groupingtable.border_no tbody td,
+.table.groupingtable.border_no>thead:first-child>tr:first-child>th {border:medium none; }
 
-      .group_name_text_dt {    margin-top: -63px; margin-left: 180px;}
-      .group_name_select_dt {    margin-top: -63px; margin-left: 129px; width:167px;}
-        .coded_value_group_finish{ margin-right: 11px;}
+table.groupingtable.code-val-grp tbody th,
+table.groupingtable.code-val-grp tbody td,
+.table.groupingtable.code-val-grp>thead:first-child>tr:first-child>th {border:medium none; }
 
-      table.groupingtable.border_no tbody th,
-      table.groupingtable.border_no tbody td,
-      .table.groupingtable.border_no>thead:first-child>tr:first-child>th {border:medium none; }
-
-      table.groupingtable.code-val-grp tbody th,
-      table.groupingtable.code-val-grp tbody td,
-      .table.groupingtable.code-val-grp>thead:first-child>tr:first-child>th {border:medium none; }
-
-
-
+#DataTables_Table_3_filter  input { margin-left: 9.5em;margin-top: -60px; }
+.data_item_desc { margin-left: 42px; }
+.data_value_desc { width: 463px;margin-left: -20px;}
+/*#DataTables_Table_2_wrapper table{ max-height: 390px; overflow-x: hidden; overflow-y: scroll; }*/
 
     </style>
     {{--*/ $user = Sentinel::getUser(); /*--}}
@@ -483,17 +466,17 @@ function datatype($str)
                             <div class="col-md-12">
                                 <div class="pull-left">
                                     <!-- @if(!empty($mapped_selected_name))
-                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,$mapped_selected_name,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist_latest,$mapped_selected_name,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
                                         ) !!}
                                     @else
-                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,null,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist_latest,null,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
                                    ) !!}
                                     @endif -->
                                      @if(!empty($mapped_selected_name))
-                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,$mapped_selected_name,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist_latest,$mapped_selected_name,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
                                         ) !!}
                                     @else
-                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist,null,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
+                                        {!! Form::select('mapping_data_item', ['' => "Data Item"]  + $dataitemlist_latest,null,['class' => 'mapping_data_item form-control col-md-4','id' => 'mapping_data_item','data-token'=>csrf_token()]
                                    ) !!}
                                     @endif
                                 </div>
@@ -668,31 +651,30 @@ function datatype($str)
 
                                 <tr class="myHead">
 
+                                   <!--  <th class="text-center ">SL No:</th> -->
                                     <th class="text-center ">Group Name</th>
+                                    <th class="text-center ">Group Description</th>
                                     <th class="text-center ">Group Type</th>
-                                    <th class="text-center ">Group ID</th>
-
                                     <th class="text-center ">Group Values</th>
 
 
                                 </tr>
                                 </thead>
                                 <tbody id="groupfilter">
-
+                                {{--*/ $k_l = 0 ;/*--}}
                                     @foreach ($dataset_group as $data)
-
+                                        {{--*/ $k_l++;/*--}}
                                         <tr class=' stileone'>
 
 
+                                            <!-- <td class='text-center'>{{$k_l}}</td> -->
                                             <td class='text-center'>{{$data->groupName}}</td>
+                                             <td class='text-center'>{{$data->group_description}}</td>
                                             @if($data->groupType=="coded")
                                                 <td class='text-center'>Coded Value</td>
                                             @else
                                                 <td class='text-center'>Data Item</td>
                                             @endif
-                                            <td class='text-center'>0000{{$data->groupId}}</td>
-
-
                                             <td class="text-center ">
                                                 @if($data->groupStatus==1)
                                                     <a class="btn btn-small btn-primary btn-sm groupingfilter showhidegroupdata"
@@ -813,12 +795,11 @@ function datatype($str)
 
 
 
-    <!-- Modal -->
+    <!-- Modal style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;" -->
 
     <div class="modal fade" id="codedvaluegroup" tabindex="-1" role="dialog" aria-labelledby="wizardcsvDataModelLabel">
-        <div class="modal-dialog" role="document"
-             style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;">
-            <div class="modal-content">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;">
 
                 {!! Form::open(array('url' => 'dashboard/data-wizard/store-info','files' => true, 'method'=>'post', 'enctype' => 'multipart/form-data','id'=>'wizard_form_file')) !!}
 
@@ -833,93 +814,62 @@ function datatype($str)
                     @endif
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="wizardcsvDataModelLabel">Coded Value Group </h4>
+                    <h4 class="modal-title" align="center" id="wizardcsvDataModelLabel">Coded Value Group </h4>
                 </div>
                 <div class="modal-body">
                     <section>
                         <div class="wizard">
-
-
-
                             <div class="tab-content">
-
                                 <div class="tab-pane active" role="tabpanel" id="step1">
-
-                                    <div class="col-md-5">
-
-
-                                    <div class="form-group pull-left col-md-6">
-
-
-                                        {!! Form::text('groupnamecoded', '', array('class' => 'form-control col-md-3 group_name_text_dt' ,'id' => 'groupnamecoded', 'autocomplete' => 'off','placeholder'=>'Group Name')) !!}
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group pull-left col-md-6">
+                                                {!! Form::text('groupnamecoded', '', array('class' => 'form-control col-md-3 group_name_text_dt' ,'id' => 'groupnamecoded', 'autocomplete' => 'off','placeholder'=>'Group Name')) !!}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                             <div class="col-lg-6">
+                                                {!! Form::textarea('data_value_desc', null, ['class' => 'data_value_desc form-control','rows' => 1, 'placeholder' => 'Enter Coded Value Description','id'=>'data_value_desc']) !!}
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-2" style="margin-left:20px;">
+                                            {!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4 group_name_select_dt','id' => 'select_coded_val_group','data-token'=>csrf_token()]) !!}
+                                        </div>
                                     </div>
-
-                                    {{--<div class="col-md-3" style="margin-left:-74px;">--}}
-                                    {{--{!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4','id' => 'groupitemlist_coded','data-token'=>csrf_token()]) !!}--}}
-                                    {{--</div>--}}
-
-                                    <div class="col-md-2" style="margin-left:-74px;">
-                                        {!! Form::select('groupitemlist_coded', ['' => "Group Name"]  + $groupitemlist_coded,null,['class' => 'groupitemlist_coded form-control col-md-4 group_name_select_dt','id' => 'select_coded_val_group','data-token'=>csrf_token()]) !!}
-                                    </div>
-
                                     <div class="col-md-12">
-
                                         <div class="col-md-6">
                                             <h5 class="text-danger" id="recordscount"></h5>
                                         </div>
-
                                         <div class="datagrid" id="recordslist">
-
                                             <table class=" table groupingtable code-val-grp table-striped table-bordered  horizontal_scroll">
                                                 <thead>
-                                                <tr>
-
-                                                    <th class="text-center"></th>
-
-                                                    <th class="text-center">Data Item </th>
-                                                    <th class="text-center">Coded Value</th>
-
-                                                    <th class="text-center">Coded Value Description</th>
-
-
-                                                </tr>
+                                                    <tr>
+                                                        <th class="text-center"></th>
+                                                        <th class="text-center">Data Item </th>
+                                                        <th class="text-center">Coded Value</th>
+                                                        <th class="text-center">Coded Value Description</th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody id="tbodyrecords">
-
                                                 </tbody>
-
-
                                             </table>
-
-
                                         </div>
-
-
                                     </div>
-
-
                                     <ul class="list-inline pull-right groupstart">
-
-
                                         <li>
                                             <button type="button"
                                                     class="groupcomplete btn btn-primary btn-info-full finishcodedvaluegroup"
                                                     data-dismiss="modal ">Finish
                                             </button>
                                         </li>
-
                                     </ul>
-
                                 </div>
-
-
                                 <div class="clearfix"></div>
                             </div>
-
                         </div>
                     </section>
-
                 </div>
 
                 {!! Form::close() !!}
@@ -946,17 +896,25 @@ function datatype($str)
                     @endif
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <div class="col-md-3">
-                            <h4 class="modal-title" id="wizardcsvDataModelLabel">Data Item Group </h4>
-                        </div>
-                        <div class="form-group col-md-3">
+	                <div class="row">
+	                        <div class="col-md-3">
+	                            <h4 class="modal-title" id="wizardcsvDataModelLabel">Data Item Group </h4>
+	                        </div>
+
+	                        <div class="form-group col-md-3">
 
 
-                            {!! Form::text('groupnamegroup', '', array('class' => 'form-control data_item_text' , 'id'=> 'groupnamegroup', 'autocomplete' => 'off','placeholder'=>'Please enter name for this group')) !!}
-                        </div>
-                        <div class="col-md-6">
-                            <div id="data_item_group_search" align="right"></div>
-                        </div>
+	                            {!! Form::text('groupnamegroup', '', array('class' => 'form-control data_item_text' , 'id'=> 'groupnamegroup', 'autocomplete' => 'off','placeholder'=>'Please enter name for this group')) !!}
+	                        </div>
+
+	                </div>
+	                <div class="row">
+	                    <div class="form-group">
+	                        <div class="col-lg-6">
+	                            {!! Form::textarea('data_item_desc', null, ['class' => 'data_item_desc form-control','rows' => 2, 'placeholder' => 'Enter Data Item Description','id'=>'data_item_desc']) !!}
+	                        </div>
+	                    </div>
+	                </div>
                 </div>
                 <div class="modal-body ">
                     <section>
@@ -2049,9 +2007,8 @@ function datatype($str)
     <script src="{{ url('js/filter/initializers.js') }}"></script>
     <script src="{{ url('js/jquery.validate.min.js') }}"></script>
     <script src="{{ url('js/jquery.stickytableheaders.min.js') }}"></script>
-    <script src="{{ url('js/tipuesearch/tipuesearch.js') }}"></script>
     <script src="{{ url('js/searchbox.js') }}"></script>
-      <script src="{{ url('js/jquery.cookie.js') }}"></script>
+    <script src="{{ url('js/jquery.cookie.js') }}"></script>
 
     <script>
         $(document).ready(function () {
@@ -2060,14 +2017,17 @@ function datatype($str)
                 if($.cookie('master_search') === 'ref')
                 {
                     $("#dataitem").trigger("click");
+                    $("#data_item").trigger("change");
                 }
                 else if($.cookie('master_search') === 'grp')
                 {
                     $("#group").trigger("click");
+                    $("#mapping_data_item_new").trigger("change");
                 }
                 else if($.cookie('master_search') === 'map')
                 {
                    $("#mapping").trigger("click");
+                   $("#mapping_data_item").trigger("change");
                 }
                 else{
 
@@ -3866,40 +3826,52 @@ function datatype($str)
             $(document).on('click', '.finishdatatypegroup', function (e) {
                 e.preventDefault();
                 var checked = []
-                var patientid = $('#localpatientidgroup').val();
-                var groupname = $('#groupnamegroup').val();
-                var sex = $('#sexgroup:checked').val();
-                var addressformatcode = $('#addressformatcodegroup').val();
+                var description = $("#data_item_desc").val();
+                description = $.trim(description);
 
-                var token = "{{csrf_token()}}";
-                $("input[name='wizard_list_filter[]']:checked").each(function () {
-                    checked.push(parseInt($(this).val()));
-                });
-                $.ajax({
-                    url: "{{ url("dashboard/grouping/group-data") }}",
-                    data: {
-                        "groupdata": checked, "patientid": patientid, "_token": token,
-                        "groupname": groupname, "sex": sex,
-                        "addressformatcode": addressformatcode
-                    },
-                    type: 'POST',
-                    success: function (data) {
-                        if(data == "success"){
-                           window.location.reload();
+                if(description == ""){
+                    alert("Please Enter Group Description");
+                }else{
+
+                    var patientid = $('#localpatientidgroup').val();
+                    var groupname = $('#groupnamegroup').val();
+                    var sex = $('#sexgroup:checked').val();
+                    var addressformatcode = $('#addressformatcodegroup').val();
+
+                    var token = "{{csrf_token()}}";
+                    $("input[name='wizard_list_filter[]']:checked").each(function () {
+                        checked.push(parseInt($(this).val()));
+                    });
+                    $.ajax({
+                        url: "{{ url("dashboard/grouping/group-data") }}",
+                        data: {
+                            "groupdata": checked, "patientid": patientid, "_token": token,
+                            "groupname": groupname, "sex": sex,
+                            "addressformatcode": addressformatcode,
+                            "group_description" : description
+                        },
+                        type: 'POST',
+                        success: function (data) {
+                            if(data == "success"){
+                               window.location.reload();
+                            }
+                            else if(data == "error"){
+                                alert("Please add group name and data Item");
+                            }else if(data == "name_error"){
+                                alert("Group name already Exists");
+                            }
+                            else{
+
+                            }
+
                         }
-                        else if(data == "error"){
-                            alert("Please add group name and data Item");
-                        }else if(data == "name_error"){
-                            alert("Group name already Exists");
-                        }
-                        else{
-
-                        }
-
-                    }
 
 
-                });
+                    });
+                }
+
+
+
 
 
             });
@@ -3913,7 +3885,7 @@ function datatype($str)
                     "bInfo": false,
                     "bAutoWidth": false
                 });
-                table.columns(1).search( this.value ).draw();
+                table.columns(1).search('^'+this.value+'$', true, false ).draw();
             });
 
             $(document).on('click', '.codedvaluegroupselecter', function (e) {
@@ -4006,48 +3978,63 @@ function datatype($str)
 //                var checked = []
                 var patientid = $('#localpatientidcoded').val();
                 var groupname = $('#groupnamecoded').val();
+                var description = $("#data_value_desc").val();
+                description = $.trim(description);
+
+
                 if(groupname == "")
                 {
                     alert("Please Enter Group Name");
                 }
                 else{
 
-                    var sex = $('#sexcoded:checked').val();
-                    var addressformatcode = $('#addressformatcodecoded').val();
+                    if(description == ""){
 
-                    var token = "{{csrf_token()}}";
-//                $("input[name='wizard_list_filter_coded[]']:checked").each(function () {
-//
-//                    checked.push(parseInt($(this).val()));
-//                });
+                        alert("Please Enter Group Description");
+                    }
+                    else{
+
+                        var sex = $('#sexcoded:checked').val();
+                        var addressformatcode = $('#addressformatcodecoded').val();
+
+                        var token = "{{csrf_token()}}";
+    //                $("input[name='wizard_list_filter_coded[]']:checked").each(function () {
+    //
+    //                    checked.push(parseInt($(this).val()));
+    //                });
 
 
-                    $.ajax({
-                        url: "{{ url("dashboard/grouping/group-data-coded") }}",
-                        data: {
-                            "groupdata": arr_zz, "patientid": patientid, "_token": token,
-                            "groupname": groupname, "sex": sex,
-                            "addressformatcode": addressformatcode
-                        },
-                        type: 'POST',
-                        success: function (data) {
-                            if(data =="success"){
-                                window.location.reload();
+                        $.ajax({
+                            url: "{{ url("dashboard/grouping/group-data-coded") }}",
+                            data: {
+                                "groupdata": arr_zz, "patientid": patientid, "_token": token,
+                                "groupname": groupname, "sex": sex,
+                                "addressformatcode": addressformatcode,
+                                "group_description" : description
+                            },
+                            type: 'POST',
+                            success: function (data) {
+                                if(data =="success"){
+                                    window.location.reload();
+                                }
+                                else if(data=="name_error") {
+                                    alert("Group Name already Exists");
+                                }
+                                else if(data=="error"){
+                                    alert("Please add data item and group name");
+                                }
+                                else{
+
+                                }
+
                             }
-                            else if(data=="name_error") {
-                                alert("Group Name already Exists");
-                            }
-                            else if(data=="error"){
-                                alert("Please add data item and group name");
-                            }
-                            else{
-
-                            }
-
-                        }
 
 
-                    });
+                        });
+
+                    }
+
+
                 }
 
 

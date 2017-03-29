@@ -8965,6 +8965,10 @@ img {
   /*height: 200px;*/
 }
 
+.footer-cover {
+  margin-top: 170px;
+}
+
 footer.site-footer {
   background-color: #e8edee;
   background-image: none;
@@ -8973,7 +8977,7 @@ footer.site-footer {
   width: 100%;
   z-index: 600;
   bottom: 0;
-  position: absolute;
+  position: fixed;
 }
 
 footer.site-footer .nav {

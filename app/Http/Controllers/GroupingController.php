@@ -158,8 +158,8 @@ class GroupingController extends Controller
 
     public function postGroupData(Request $request){
         $data = $request->all();
-
-        if(!empty($data['groupdata']) && !empty($data['groupname']))
+        
+        if(!empty($data['groupdata']) && !empty($data['groupname']) && !empty($data['group_description'] ))
         {
             $group_data = GroupData::getGroupName($data['groupname']);
             $created = date("Y-m-d H:i:s");
@@ -172,20 +172,34 @@ class GroupingController extends Controller
                     'addressFormatCode'=>$request->input('addressformatcode'),
                     'createdDate' => $created,
                     'groupStatus' => 1,
+                    'group_description' => $data['group_description'],
                     'groupType' => "DataType",
 
                 );
 
-                Groupinginfo::insertData($groupinfo);
+               $insert = Groupinginfo::insertData($groupinfo);
 
-                $group_id = DB::getPdo()->lastInsertId();
+               $group_id = DB::getPdo()->lastInsertId();
                 if($group_id){
-                    foreach($data['groupdata'] as $referen_data_id){
+                    foreach($data['groupdata'] as $referen_data_id)
+                    {
                         $group_details = array(
                             'group_id'=> $group_id,
                             'reference_data_id' =>$referen_data_id
                         );
                         $group_data_insert = GroupData::insertData($group_details);
+
+                        $all_datas = Groupinginfo::getAllGroupInfo();
+                        $i=1;
+                        foreach($all_datas as $group_data)
+                        {
+                            
+                            $data = array('group_uniq_id'=>$i);
+                            $condition = array('groupId'=>$group_data->groupId);
+                            
+                            Groupinginfo::updateRecord($condition,$data);
+                            $i++;
+                        }
                     }
 
                     if($group_data_insert){
@@ -276,7 +290,7 @@ class GroupingController extends Controller
     {
         $data = $request->all();
 
-        if(!empty($data['groupdata']) && !empty($data['groupname']))
+        if(!empty($data['groupdata']) && !empty($data['groupname']) && !empty($data['group_description']))
         {
             $group_data = GroupData::getGroupNameCoded($data['groupname']);
             $created = date("Y-m-d H:i:s");
@@ -289,6 +303,7 @@ class GroupingController extends Controller
                     'addressFormatCode'=>$request->input('addressformatcode'),
                     'createdDate' => $created,
                     'groupStatus' => 1,
+                    'group_description' => $data['group_description'],
                     'groupType' => "coded",
 
                 );
@@ -303,6 +318,17 @@ class GroupingController extends Controller
                             'reference_data_id' =>$referen_data_id
                         );
                         $group_data_insert = GroupData::insertData($group_details);
+
+                        $all_datas = Groupinginfo::getAllGroupInfo();
+                        $i=1;
+                        foreach($all_datas as $group_data)
+                        {
+                            $data = array('group_uniq_id'=>$i);
+                            $condition = array('groupId'=>$group_data->groupId);
+                            
+                            Groupinginfo::updateRecord($condition,$data);
+                            $i++;
+                        }
                     }
 
                     if($group_data_insert){
@@ -388,9 +414,7 @@ class GroupingController extends Controller
                 ->join('emgroupinfo_data', 'emgroupinfo.groupId', '=', 'emgroupinfo_data.group_id')
                 ->join('emdefinitionstable', 'emdefinitionstable.definitionID', '=', 'emgroupinfo_data.reference_data_id')
                 ->where('emgroupinfo.groupStatus','=',1)
-
                 ->where('emgroupinfo_data.group_id','=',$data['localPatientID'])
-
                 ->get();
 
 
@@ -398,15 +422,17 @@ class GroupingController extends Controller
 
         if($data['type']=="DataType"){
             echo'<div class="container" style="text-align: center">
-            <table  class="table definitions-table" style="display: inline-block;text-align: center;width: 10%"><tr class="additionaldata"> <td class="invisible-data-final " colspan="11" id="group_data_hidden_'.$data['localPatientID'].'" align="center">
+            <table  class="table definitions-table" style="display: inline-block;text-align: center;width: 40%"><tr class="additionaldata"> <td class="invisible-data-final " colspan="11" id="group_data_hidden_'.$data['localPatientID'].'" align="center">
          <div class="table  table-striped table-bordered  horizontal_scroll " style="width: 79%;">
                <tr style="background-color: #979797; color:white;">
             <th class="text-center">Data Item</th>
+            <th class="text-center" >Data Item Information</th>
            
             </tr>';
             foreach($grouped_pending as $data){
                 echo "<tr class='stileone'> 
                    	<td class=\"text-center\"> $data->dataItemName</td>
+                    <td class=\"text-center\"> $data->dataItemDescription</td>
 						
 							
 							
@@ -419,15 +445,18 @@ class GroupingController extends Controller
             <table class="table definitions-table" style="display: inline-block;text-align: center;width: 50%"><tr class="additionaldata"> <td class="invisible-data-final " colspan="11" id="group_data_hidden_'.$data['localPatientID'].'" align="center">
          <div class="table  table-striped table-bordered  horizontal_scroll " style="width: 79%;">
                <tr style="background-color: #979797; color:white;">
-          
+            
+            
             <th class="text-center">Coded Value</th>
              <th class="text-center">Coded Value Description</th>
+             <th class="text-center">Coded Value Information</th>
             </tr>';
             foreach($grouped_pending as $data){
                 echo "<tr class='stileone'> 
-                 
-							<td class=\"text-center\"> $data->codedValue</td>
+                            
+                            <td class=\"text-center\"> $data->codedValue</td>
 							<td class=\"text-center\"> $data->codedValueDescription</td>
+                            <td class=\"text-center\"> $data->dataItemName</td>
 							
 							
                 </tr>";

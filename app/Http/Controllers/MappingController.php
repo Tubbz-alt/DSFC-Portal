@@ -498,7 +498,7 @@ class MappingController extends Controller
                             <div class='modal-content'>
                                 <div class='modal-header'>
                                     <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-                                    <h4 class='modal-title'>SQL Code Information</h4>
+                                    <h4 class='modal-title'>SQL Code</h4>
                                 </div>
                                 <div class='modal-body'><div class='row'><div class='col-md-6' >";
                                   echo("<div style='text-align:left;'>CASE</div>");
@@ -523,7 +523,7 @@ class MappingController extends Controller
                                            echo("THEN '$code'<br>");
                                         }
 
-                               echo " </div></div><div style='text-align:left;'>ELSE null<br>END AS '$dataItem_value_sql'  ;</div></div>
+                               echo " </div></div><div style='text-align:left;'>ELSE null<br>END AS '$dataItem_value_sql'  </div></div>
                                 <div class='modal-footer'>
                                     
                                 </div>
