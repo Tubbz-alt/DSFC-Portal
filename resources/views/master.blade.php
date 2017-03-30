@@ -27,18 +27,15 @@
     @section('header')
     <div class="outer-wrpaer container-fluid">
         @include('partials.header-strip')
-		@include('partials.feedback')
+    		@include('partials.feedback')
 
 		   @show
         <!-- The content area seciton comes here -->
         @yield('content')
         <!-- The content area seciton comes here -->
-        @include('partials.footer')
     </div>
     @section('footer')
-
-
-
+        @include('partials.footer')
     @show
 </body>
 </html>

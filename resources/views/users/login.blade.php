@@ -5,20 +5,38 @@
 @section('header')
 	@parent
 	<link rel="stylesheet" href="{{ url('css/users/login.css') }}">
-	<style>
-	.login-buttons-info{
-		width:100%;
-	}
-	</style>
 @endsection
 
 @section('content')
+<header class="super-masthead">
+  <div class="container">
+		<div class="header-wrapper">
+		  <div class="row">
+		    <div class="top-logo">
+		      <hgroup class="header-strapline">
+		        <a class="logo" href="http://www.england.nhs.uk"><img src="{{ url('images/nhs-england-logo-rev.svg') }}" alt="NHS Choices" title="NHS Choices Logo" /></a>
+		        <h2>Reference Library Portal</h2>
+		      </hgroup>
+		    </div>
+		  </div>
+		</div>
+		<nav>
+			<div id="wrap" class="row nav-wrapper">
+				<ul class="nav pull-left">
+						<li>
+							<!-- <a href="/">The Data Catalogue</a> -->
+						</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
 	<div id="content-wrapper" class="container">
 		<div class="row  margin-top-90">
 			<h1 class="text-center text-white text-lato-hairline" style="visibility:hidden;">Login</h1>
 			<div id="box-wrapper" class="col-xs-12 col-md-4 col-md-offset-4 bordered rounded-6 login-box">
 				<h1 class="text-center">
-					<img src="{{ url('images/nhs-england-logo-rev.svg') }}" alt="Logo">
+					Log in
 				</h1>
 				@if (count($errors) > 0)
 					<div class="alert alert-danger">
@@ -65,4 +83,8 @@
 			</div>
 		</div>
 	</div>
+	@include('partials.footer')
 @endsection
+
+@section('footer')
+@show
